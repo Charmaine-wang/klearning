@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { modernNormalize } from "styled-modern-normalize";
+import { modernNormalize } from "modern-normalize";
 
 const GlobalStyle = createGlobalStyle`
   ${modernNormalize}
@@ -22,3 +22,5 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 `;
+
+export default GlobalStyle;
