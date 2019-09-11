@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
-import Layout from './Layout'
+import GridLayout from './GridLayout'
+import styled from 'styled-components'
+import SearchField from '../components/SearchField'
+
+const StyledApp = styled.div `
+  display: flex;
+  width:100vw;
+  height: ${props => (props.expandHeight ? '400px' : '10vh')};
+`
 export default class index extends Component {
     render() {
         return (
-          <div>
-                <Layout bgColor='grey'>
+          <StyledApp>
+                <GridLayout bgColor='grey' colLayout='1fr 1fr 1fr'>
               <p>HEJ</p>
-            </Layout>
-          </div>
+            </GridLayout>
+            <SearchField />
+          </StyledApp>
         );
     }
 }
