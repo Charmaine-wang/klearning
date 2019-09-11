@@ -9,6 +9,7 @@ const StyledGridLayout = styled.div`
 	transition: all 1s ease;
 	margin: ${props => props.margin};
 	position: relative;
+	
 	display: ${props => (props.hidden ? 'none' : 'grid')};
 	grid-template-columns: ${props => props.colLayout};
 	grid-template-rows: ${props => props.rowLayout};
