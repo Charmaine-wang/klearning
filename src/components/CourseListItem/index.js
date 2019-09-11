@@ -7,15 +7,21 @@ const StyledCourseListItem = styled.div `
   display: flex;
   flex-direction: row;
   background-color: blue;
-  width: 100%;
-  height: ${props => (props.expandHeight ? '400px' : '10vh')};
+  
+  width: 95%;
+  height: ${props => (props.expandHeight ? props.expandHeight : '13vh')};
+  border-radius: 10px;
+  
+  > & div > p{
+      
+  }
 `
 const CourseListItem = (props) => {
 
 
     return (
         <StyledCourseListItem>
-            <img src={props.courseImg} alt={props.courseImg}/>
+            <img src={props.courseImg} alt={props.courseAlt}/>
             <div>
             <p>{props.courseLength}</p>
             <h3>{props.courseTitle}</h3>
