@@ -7,16 +7,15 @@ const StyledButton = styled.button `
   justify-content: center;
   background-color: white;
   border: 1px solid #gray;
-  width: ${props => ''}
+  width: ${props => (props.buttonWidth ? "20%" : props.buttonWidth)};
 `
 const Button = (props) => {
 
     return (
-        <StyledButton >
+        <StyledButton {...props} >
             <p>{props.buttonText}</p>
         </StyledButton>
     )
 }
 
-export default CourseListItem
-
+export default Button;

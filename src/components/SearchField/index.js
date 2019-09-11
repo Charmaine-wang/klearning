@@ -3,12 +3,14 @@ import Select from "react-select";
 
 const content = {
   dans: { videos: ["dansvideo 1", "dansvideo 2"] },
-  foto: { videos: ["fotovideo 1", "fotovideo 2"] }
+  foto: { videos: ["fotovideo 1", "fotovideo 2"] },
+  film: {videos: ['filmvideo 1', 'filmvideo 2'] }
 };
 
 const options = [
   { label: "Dans", value: content.dans.videos },
-  { label: "Foto", value: content.foto.videos }
+  { label: "Foto", value: content.foto.videos },
+  { label: "Film", value: content.foto.videos }
 ];
 
 class Search extends Component {
