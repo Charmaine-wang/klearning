@@ -7,15 +7,17 @@ import GlobalStyle from "./GlobalStyle";
 
 const StyledApp = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100vw;
-  height: ${props => (props.expandHeight ? "400px" : "10vh")};
+  height: ${props => (props.expandHeight ? "auto" : "100vh")};
 `;
 
 const App = () => {
   return (
     <StyledApp>
       <GlobalStyle></GlobalStyle>
-      <GridLayout bgColor="grey" colLayout="1fr 1fr 1fr">
+      <GridLayout bgColor="grey" colLayout="1fr">
         <p>HEJ</p>
       </GridLayout>
       <SearchField />
