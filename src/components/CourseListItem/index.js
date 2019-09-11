@@ -12,15 +12,14 @@ const StyledCourseListItem = styled.div `
 `
 const CourseListItem = (props) => {
 
-    const [isExpanded, setExpanded] = useState(false)
-
 
     return (
-        <StyledCourseListItem >
-            <h1>{props.courseList}</h1>
+        <StyledCourseListItem>
+            <img src={props.courseImg} alt={props.courseImg}/>
             <div>
+            <p>{props.courseLength}</p>
             <h3>{props.courseTitle}</h3>
-            <p>{props.description}</p>
+            <p>{props.courseTimeLeft}</p>
             </div>
         </StyledCourseListItem>
     )
