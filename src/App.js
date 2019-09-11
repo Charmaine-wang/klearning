@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import GridLayout from './components/GridLayout'
+import styled from 'styled-components'
+import SearchField from './components/SearchField'
 
-function App() {
+const StyledApp = styled.div `
+  display: flex;
+  width:100vw;
+  height: ${props => (props.expandHeight ? '400px' : '10vh')};
+`
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <StyledApp>
+                <GridLayout bgColor='grey' colLayout='1fr 1fr 1fr'>
+              <p>HEJ</p>
+            </GridLayout>
+            <SearchField />
+          </StyledApp>
+  )
 }
 
-export default App;
+export default App
+
