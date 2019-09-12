@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
   ${modernNormalize}
   @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
   :root {
-  --bg-color: white;
+  --bg-color: #D5D5D5;
+  --card-color: white;
   --accent-color: orange;
   --font-color: black;
   --accent-font: "Great Vibes", Cursive;
