@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { modernNormalize } from "modern-normalize";
+import { modernNormalize } from "styled-modern-normalize";
 
 const GlobalStyle = createGlobalStyle`
   ${modernNormalize}
@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   --backup-font: "cursive";
   }
 
-  body{
+  body {
     background-color: var(--bg-color);
     color: var(--font-color);
     font-family: var(--main-font);

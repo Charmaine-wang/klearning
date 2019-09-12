@@ -1,9 +1,9 @@
-import "./App.css";
-import React, { Component } from "react";
+// import "./App.css";
+import React from "react";
 import GridLayout from "./components/GridLayout";
 import styled from "styled-components";
 import SearchField from "./components/SearchField";
-import GlobalStyle from "./GlobalStyle";
+import GlobalStyle from "./styles/GlobalStyle";
 
 const StyledApp = styled.div`
   display: flex;
@@ -15,13 +15,13 @@ const StyledApp = styled.div`
 
 const App = () => {
   return (
-    <StyledApp>
-      <GlobalStyle></GlobalStyle>
-      <GridLayout bgColor="grey" colLayout="1fr">
-        <p>HEJ</p>
-      </GridLayout>
-      <SearchField />
-    </StyledApp>
+    <>
+      <GlobalStyle />
+      <StyledApp>
+        <GridLayout bgColor="grey" colLayout="1fr"></GridLayout>
+        <SearchField />
+      </StyledApp>
+    </>
   );
 };
 
