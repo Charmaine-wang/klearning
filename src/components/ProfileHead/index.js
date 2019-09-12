@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledProfileHead = styled.div``;
+const StyledProfileHead = styled.div`
+  width: 95%;
+  height: 50wh;
+  border-radius: 5px;
+  background-color: var(--card-color);
+`;
 
 const ProfileHead = props => {
   return (
