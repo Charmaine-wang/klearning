@@ -7,9 +7,9 @@ const GlobalStyle = createGlobalStyle`
   :root {
   --bg-color: #D5D5D5;
   --card-color: white;
-  --accent-color: orange;
-  --font-color: black;
-  --accent-font: "Great Vibes", Cursive;
+  --accent-color: #C97C36;
+  --font-color: #6D6D6D;
+  --accent-font:  Cursive;
   --main-font: "Open sans";
   --backup-font: "cursive";
   }
