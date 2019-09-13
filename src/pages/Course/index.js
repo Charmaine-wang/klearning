@@ -18,9 +18,15 @@ const Course = (props) => {
       <div className="image-container">
       <img src="images/courseImage.png" alt="course image"/>
       </div>
-      <div className="buttonContainer">
+      <div className="button-container">
         <Button>Om Kurs</Button>
         <Button>Kursflöde</Button>
+      </div>
+      <div>
+      Dynamiskt content beroende på vilken knapp som är intryckt 
+      </div>
+      <div className="apply-button">
+        <Button>Ansök</Button>
       </div>
     </StyledCourse>
   );
