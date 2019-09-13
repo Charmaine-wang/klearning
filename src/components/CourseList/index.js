@@ -12,16 +12,18 @@ const StyledCourseList = styled.div`
   align-items: center;
   background-color: red;
   padding: 10% 0;
+ 
 `;
 
 const CourseList = (props) => {
     return (
         <StyledCourseList {...props}>
             <CourseListItem 
-                courseImg='images/rectangle2.png'
+            courseImg='images/rectangle2.png'
             courseLength='4h' 
             courseTitle='dans dans dans'
-            courseTimeLeft='3min'/>
+            courseTimeLeft='3min'
+             />
         </StyledCourseList>
     )
        
