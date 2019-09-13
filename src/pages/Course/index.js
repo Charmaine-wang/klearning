@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 
 const StyledCourse = styled.div`
-margin-top:64px
+margin-top:64px;
 
 .tempDiv{
   display:flex;
