@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import { NavLink } from "react-router-dom";
 
 const StyledProfileButtonSwitch = styled.div`
   width: 90vw;
@@ -14,9 +15,15 @@ const StyledProfileButtonSwitch = styled.div`
 const ProfileButtonSwitch = props => {
   return (
     <StyledProfileButtonSwitch>
-      <Button>Intyg</Button>
-      <Button>CV</Button>
-      <Button>Kurser</Button>
+      <NavLink to="/profile/intyg">
+        <Button>Intyg</Button>
+      </NavLink>
+      <NavLink to="/profile/cv">
+        <Button>CV</Button>
+      </NavLink>
+      <NavLink to="/profile/kurser">
+        <Button>Kurser</Button>
+      </NavLink>
     </StyledProfileButtonSwitch>
   );
 };
