@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ProfileHead from "../../components/ProfileHead";
-import Navbar from "../../components/Navbar";
+import ProfileButtonSwitch from "../../components/ProfileButtonSwitch";
 import CV from "../../components/CV";
 
 const StyledProfile = styled.div`
@@ -12,6 +12,7 @@ const Profile = props => {
   return (
     <StyledProfile>
       <ProfileHead></ProfileHead>
+      <ProfileButtonSwitch></ProfileButtonSwitch>
       <CV></CV>
     </StyledProfile>
   );

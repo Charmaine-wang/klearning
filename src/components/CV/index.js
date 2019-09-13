@@ -12,7 +12,7 @@ const StyledCV = styled.div`
   justify-content: center;
 
   & > div {
-    padding: 5vw;
+    padding: 5vw 5vw 0 5vw;
   }
 
   & > div:first-of-type {
@@ -27,6 +27,7 @@ const StyledCV = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 5vw;
   }
   .profileImage {
     width: 30%;
@@ -40,6 +41,11 @@ const StyledCV = styled.div`
 
   .orange {
     color: var(--soft-orange);
+  }
+
+  .center {
+    align-self: center;
+    justify-self: center;
   }
 
   ul {
@@ -65,7 +71,9 @@ const CV = props => {
           <h2>Brandon Lane</h2>
           <h3 className="orange">Filmskapare & Regissör</h3>
           <div className="row">
-            <Button textColor="var(--soft-orange)">Film</Button>
+            <Button textColor="var(--soft-orange)" margin="0 15px 0 0">
+              Film
+            </Button>
             <Button textColor="var(--soft-orange)">Foto</Button>
           </div>
         </div>
@@ -95,7 +103,15 @@ const CV = props => {
           </li>
         </ul>
       </div>
-      <Button textColor="var(--soft-orange)">Ladda ner CV</Button>
+      <Button
+        className="center"
+        buttonWidth="50vw"
+        textColor="var(--soft-orange)"
+        margin="0 0 15px 0"
+        fontSize="12px"
+      >
+        Ladda ner CV
+      </Button>
     </StyledCV>
   );
 };
