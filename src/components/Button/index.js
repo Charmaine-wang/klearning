@@ -9,8 +9,7 @@ color: ${props => (props.textColor ? props.textColor : "black" )}
 padding: 8px 22px;
 text-align: center;
 text-decoration: none;
-font-size: 16px;
-margin: 8px 4px;
+font-size: ${props => (props.fontSize ? props.fontSize : "16px" )}
 border-radius: 8px;
 
 &:hover {
