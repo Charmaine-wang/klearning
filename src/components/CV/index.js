@@ -44,14 +44,9 @@ const StyledCV = styled.div`
 
   ul {
     padding: 0;
+    list-style: none;
   }
-  ul li::before {
-    color: var(--soft-orange);
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
+
   li {
     font-size: 12px;
     border: solid 1px #e0e0e0;
@@ -70,8 +65,8 @@ const CV = props => {
           <h2>Brandon Lane</h2>
           <h3 className="orange">Filmskapare & Regissör</h3>
           <div className="row">
-            <Button>Film</Button>
-            <Button>Foto</Button>
+            <Button textColor="var(--soft-orange)">Film</Button>
+            <Button textColor="var(--soft-orange)">Foto</Button>
           </div>
         </div>
       </div>
@@ -100,7 +95,7 @@ const CV = props => {
           </li>
         </ul>
       </div>
-      <Button>Ladda ner CV</Button>
+      <Button textColor="var(--soft-orange)">Ladda ner CV</Button>
     </StyledCV>
   );
 };
