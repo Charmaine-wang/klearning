@@ -5,19 +5,21 @@ import GlobalStyle from "../../styles/GlobalStyle";
 
 const StyledNavbar = styled.nav`
   background-color: white;
-  
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px 24px;
   }
-  
   .navbarItems{
     display: flex;
     justify-content: space-around;
     align-items:center;
-    
   }
   .searchIcon{
       padding-right: 18px;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 import SearchField from "./components/SearchField";
 import GlobalStyle from "./styles/GlobalStyle";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import Course from "./pages/Course";
 import Profile from "./pages/Profile";
@@ -20,6 +20,7 @@ const StyledApp = styled.div`
 
 const App = () => {
   return (
+    
     <>
       {/* Jag har flyttat över detta och din css till pages/home. /Linn */}
       {/* <GlobalStyle />
@@ -29,7 +30,9 @@ const App = () => {
       </StyledApp> */}
 
       {/* Endast detta behöver vara kvar, resten sköter vi under respektive page. */}
+     
       <BrowserRouter>
+      <Navbar></Navbar>
         <div>
           <Switch>
             <Route path="/home" component={Home} />
