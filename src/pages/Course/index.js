@@ -5,24 +5,22 @@ import Button from "../../components/Button";
 const StyledCourse = styled.div`
 margin-top:64px;
 
-.tempDiv{
-  display:flex;
-  width: 100%;
-  margin 24 px;
-  background-color: white;
+.image-container{
+
 }
+
 
 `;
 
-const Course = props => {
+const Course = (props) => {
   return (
     <StyledCourse>
-      <h1>Här är kurssidan!</h1>
-      <div className="tempDiv">yo
-      <Button>FilmFilmFilm</Button>
-      <Button>TV</Button>
-      <Button>Film</Button>
-      <Button>Film</Button>
+      <div className="image-container">
+      <img src="images/courseImage.png" alt="course image"/>
+      </div>
+      <div className="buttonContainer">
+        <Button>Om Kurs</Button>
+        <Button>Kursflöde</Button>
       </div>
     </StyledCourse>
   );

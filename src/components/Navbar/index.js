@@ -9,6 +9,7 @@ const StyledNavbar = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 3;
 
   .navbar {
     display: flex;
