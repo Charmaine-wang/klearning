@@ -16,7 +16,11 @@ const StyledNavbar = styled.nav`
   .navbarItems{
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    align-items:center;
+    
+  }
+  .searchIcon{
+      padding-right: 18px;
   }
 `;
 
@@ -29,7 +33,9 @@ const Navbar = () => {
           <NavLink to="/home"><img src="images/logo.svg" alt="" /></NavLink>
           {/* <NavLink to="/course">Kurs</NavLink> */}
           <div className="navbarItems">
+            <div className="searchIcon">
             <img src="images/search.png" alt="" />
+            </div>
             <NavLink to="/profile"><img src="images/profile.svg" alt="" /></NavLink>
           </div>
         </div>
