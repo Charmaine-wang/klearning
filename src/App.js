@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import Course from "./pages/Course";
 import Profile from "./pages/Profile";
@@ -9,8 +10,10 @@ const StyledApp = styled.div``;
 
 const App = () => {
   return (
+    
     <>
       <BrowserRouter>
+      <Navbar></Navbar>
         <div>
           <Switch>
             <Route path="/home" component={Home} />
