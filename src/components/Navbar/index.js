@@ -9,6 +9,7 @@ const StyledNavbar = styled.nav`
   // height: 200px;
   // position: fixed;
 
+  height: 50%;
   .navbar {
     display: flex;
     justify-content: space-between;
