@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
   :root {
     /* Colors */
-  --bg-color: #D5D5D5;
+  --bg-color: #F5F5F5;
   --card-color: white;
   --soft-orange: #C97C36;
   --bright-orange: #EC733F;
