@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "../../components/Navbar";
 import SearchField from "../../components/SearchField";
 import GridLayout from "../../components/GridLayout";
 
@@ -10,12 +9,12 @@ const StyledHome = styled.div`
   justify-content: center;
   width: 100vw;
   height: ${props => (props.expandHeight ? "auto" : "100vh")};
+  margin-top: 74px;
 `;
 
 const Home = props => {
   return (
     <StyledHome>
-      <Navbar />
       <StyledHome>
         <GridLayout bgColor="grey" colLayout="1fr"></GridLayout>
         <SearchField />

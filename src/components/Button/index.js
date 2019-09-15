@@ -1,21 +1,29 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-const StyledButton = styled.button `
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+const StyledButton = styled.button`
+  width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   background-color: white;
-  border: 1px solid #gray;
-  width: ${props => (props.buttonWidth ? "20%" : props.buttonWidth)};
-`
-const Button = (props) => {
+  border: 1px solid #e0e0e0;
+  color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
+  border-radius: 8px;
+  margin: ${props => (props.margin ? props.margin : "0")};
 
-    return (
-        <StyledButton {...props} >
-            <p>{props.buttonText}</p>
-        </StyledButton>
-    )
-}
+  &:hover {
+    color: #cd7b2a;
+    text-decoration: underline;
+  }
+  &:active {
+    color: #cd7b2a;
+    text-decoration: underline;
+  }
+`;
+const Button = props => {
+  return <StyledButton {...props}></StyledButton>;
+};
 
 export default Button;
