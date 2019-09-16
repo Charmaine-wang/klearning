@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const Styledindex = styled.div`
+const StyledContainer = styled.div`
   width: 94vw;
   height: auto;
   margin: 3vw auto;
 `;
 
-const index = ({ props, children }) => {
-  return <Styledindex>{children}</Styledindex>;
+const Container = ({ props, children }) => {
+  return <StyledContainer>{children}</StyledContainer>;
 };
 
-export default index;
+export default Container;
