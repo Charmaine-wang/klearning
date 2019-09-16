@@ -10,41 +10,68 @@ border-radius: 10px;
 
 .choices{
     display: flex;
-    // flex-direction: row;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 .information-numbers{
-    display:flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 img{
+    height: 36px;
+    width: 100%;
+    margin-bottom: 10px;
 }
+
+div.big-numbers{
+    display:flex;
+    justify-content:center;
+    font-size: 36px;
+}
+
 
 `
 
-const CourseChoicesCard = () => {
+const CourseChoicesCard = (props) => {
     return(
         <StyledCourseChoicesCard>
             <div className="choices-card">
                 <div className="choices">
-                    <img src="images/volume.png" alt="Volume"/>
-                    <p>Lyssna</p>
-                    <img src="images/read.png" alt="Read"/>
-                    <p>Läs</p>
-                    <img src="images/watch.png" alt="Watch"/>
-                    <p>Titta</p>
+                    <div>
+                        <img src="images/volume.png" alt="Volume"/>
+                        <p>Lyssna</p>
+                    </div>
+                    <div>
+                        <img src="images/read.png" alt="Read"/>
+                        <p>Läs</p>
+                    </div>
+                    <div>
+                        <img src="images/watch.png" alt="Watch"/>
+                        <p>Titta</p>
+                    </div>
                 </div>
-                <div>----</div>
+                <hr></hr>
                 <div className="information-numbers">
-                    <p>8 lektioner</p>
-                    <p> 3 inlämmingr</p>
-                    <p>4 timmar</p>
+                    <div>
+                        <div className="big-numbers">{props.lessonAmount}</div>
+                        <p>lektioner</p>
+                    </div>
+                    <div>
+                        <div className="big-numbers">{props.handInAmount}</div>
+                        <p>inlämmingar</p>
+                    </div>
+                    <div>
+                        <div className="big-numbers">{props.hoursAmount}</div>
+                        <p>timmar</p>
+                    </div>
                 </div>
-
             </div>
-
         </StyledCourseChoicesCard>
     )
 }

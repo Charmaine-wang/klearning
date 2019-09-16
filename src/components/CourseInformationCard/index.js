@@ -5,8 +5,8 @@ const StyledCourseInformationCard = styled.div`
 
     .course-information-card{
         background-color: white;
-        margin: 4%;
-        padding: 4%;
+        margin: 16px;
+        padding: 16px;
         border-radius: 10px;
     }
     
