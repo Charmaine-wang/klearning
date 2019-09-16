@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
+import CourseChoicesCard from '../CourseChoicesCard';
 
 
 const StyledAboutCourse = styled.div`
@@ -11,6 +12,7 @@ const AboutCourse = (props) =>{
 
     return(
         <>
+        <CourseChoicesCard></CourseChoicesCard>
         <CourseInformationCard
          header="Om denna kurs"
          paragraph="Dolor ut amet culpa voluptate culpa cillum velit reprehenderit

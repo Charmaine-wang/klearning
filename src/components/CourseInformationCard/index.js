@@ -12,7 +12,7 @@ const StyledCourseInformationCard = styled.div`
     
     h1{
         color: var(--soft-orange);
-        padding-bottom: 16px;
+        padding-bottom: 1.7vw;
         font-weight: 500;
     }
     p{
