@@ -6,13 +6,10 @@ import MyCourses from "../../components/MyCourses";
 import MyCertificates from "../../components/MyCertificates";
 import FixedContainer from "../../components/FixedContainer";
 import Button from "../../components/Button";
+import Container from "../../components/Container";
 
 const StyledProfile = styled.div`
   margin-top: 74px;
-  .recommended {
-    width: 94vw;
-    margin: auto;
-  }
 
   .buttonSwitch {
     width: 90vw;
@@ -26,7 +23,7 @@ const StyledProfile = styled.div`
 `;
 
 const Profile = props => {
-  const [profileComponent, setProfileComponent] = useState("intyg");
+  const [profileComponent, setProfileComponent] = useState("certificates");
 
   function switchComponent() {
     if (profileComponent === "certificates") {
@@ -51,10 +48,12 @@ const Profile = props => {
         <Button onClick={() => setProfileComponent("courses")}>Kurser</Button>
       </div>
       {switchComponent()}
-      <div className="recommended">
+      <Container>
         <h1>Rekommenderade kurser</h1>
-      </div>
-      <FixedContainer></FixedContainer>
+      </Container>
+      <Container>
+        <FixedContainer></FixedContainer>
+      </Container>
     </StyledProfile>
   );
 };
