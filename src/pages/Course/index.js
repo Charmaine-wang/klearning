@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
+import CourseEpisodes from "../../components/CourseEpisodes";
 
 const StyledCourse = styled.div`
 margin-top:64px;
