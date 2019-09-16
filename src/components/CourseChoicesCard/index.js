@@ -13,9 +13,13 @@ border-radius: 10px;
     // flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 .information-numbers{
     display:flex;
+}
+
+img{
 }
 
 `
@@ -25,9 +29,12 @@ const CourseChoicesCard = () => {
         <StyledCourseChoicesCard>
             <div className="choices-card">
                 <div className="choices">
-                    <img src="" alt="yo"/>
-                    <img src="" alt="hej"/>
-                    <img src="" alt="pa"/>
+                    <img src="images/volume.png" alt="Volume"/>
+                    <p>Lyssna</p>
+                    <img src="images/read.png" alt="Read"/>
+                    <p>Läs</p>
+                    <img src="images/watch.png" alt="Watch"/>
+                    <p>Titta</p>
                 </div>
                 <div>----</div>
                 <div className="information-numbers">
