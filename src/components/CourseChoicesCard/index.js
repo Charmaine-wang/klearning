@@ -35,6 +35,11 @@ div.big-numbers{
     font-size: 36px;
 }
 
+icons{
+    display:flex;
+    justify-content:center;
+}
+
 
 `
 
@@ -44,15 +49,15 @@ const CourseChoicesCard = (props) => {
             <div className="choices-card">
                 <div className="choices">
                     <div>
-                        <img src="images/volume.png" alt="Volume"/>
+                        <img className="icons" src="images/volume.png" alt="Volume"/>
                         <p>Lyssna</p>
                     </div>
                     <div>
-                        <img src="images/read.png" alt="Read"/>
+                        <img className="icons" src="images/read.png" alt="Read"/>
                         <p>Läs</p>
                     </div>
                     <div>
-                        <img src="images/watch.png" alt="Watch"/>
+                        <img className="icons" src="images/watch.png" alt="Watch"/>
                         <p>Titta</p>
                     </div>
                 </div>

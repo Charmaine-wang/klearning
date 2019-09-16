@@ -21,13 +21,27 @@ img {
   margin: 16px;
 }
 
+.course-header{
+  position:absolute;
+  color:white;
+  font-weight: 400;
+  top:10%;
+  left: 5%;
+}
+
+.apply-button{
+  // position:absolute;
+}
+
 `;
 
 const Course = (props) => {
   return (
     <StyledCourse>
       <div className="image-container">
-      <img src="images/courseImage.png" alt="course image"/>
+        <h1 className="course-header">Kursnamnet är här, bästa danslektionen ever</h1>
+        <img src="images/courseImage.png" alt="course image"/>
+        <Button className="apply-button">Ansök till kurs</Button>
       </div>
       <div className="button-container">
         <Button>Om Kurs</Button>
