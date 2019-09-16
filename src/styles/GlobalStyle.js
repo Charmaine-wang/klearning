@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
   :root {
     /* Colors */
-  --bg-color: #D5D5D5;
+  --bg-color: #F5F5F5;
   --card-color: white;
   --soft-orange: #C97C36;
   --bright-orange: #EC733F;
@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
   h2{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
     /* @media only screen and (max-width: 800px) {
       font-size: 24px;
@@ -63,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
   h5{
     font-size: 12px;
     margin: 0;
+    font-weight: 400;
   }
 `;
 

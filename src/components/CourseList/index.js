@@ -6,12 +6,11 @@ import styled from 'styled-components'
 
 const StyledCourseList = styled.div`
   width: ${props => (props.courseWidth ? "100%" : props.courseWidth)};
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: red;
-  padding: 10% 0;
+  align-items: center; 
+  /* padding: 10% 0; */
  
 `;
 

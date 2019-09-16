@@ -1,44 +1,46 @@
-import React, {
-    useState
-} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  width: 85%;
-  height: ${props => (props.expandHeight ? props.expandHeight : "55vh")};
+  width: 75vw;
+  height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
   border-radius: 10px;
-  margin: 2%;
+  margin: 0 2% 0 0;
+  justify-content: space-between;
   
   & > div {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      height: 5vh;
+
      
   }
     & > div:first-of-type{
         color: #C97C36;
+
   }
-      & > div > img{
-        height: 55%;
-        width: 10%;
-        align-self: center;
-  }
-  & > div, h3, h5{ padding: 0 10px;}
+
+  
 `;
 const ActiveCourseCard = (props) => {
 
 
     return (
+ 
         <StyledActiveCourseCard>
             <img src={props.activeCourseImg} alt={props.activeCourseAlt}/>
+            
+                      
             <div>
                 <h5>{props.courseCat}</h5>
                 <h5>{props.courseTime}</h5>
             </div>
 
-            <h3>{props.cardHeader}</h3>
+            <h2>{props.cardHeader}</h2>
             <h5>{props.cardParagraph}</h5>
 
             <div>
@@ -48,6 +50,7 @@ const ActiveCourseCard = (props) => {
             </div>
 
         </StyledActiveCourseCard>
+
     )
 }
 
