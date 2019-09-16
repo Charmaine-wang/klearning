@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import CourseInformation from "../../components/CourseInformation";
+import CourseInformationCard from "../CourseInformationCard";
 
 
 const StyledAboutCourse = styled.div`
@@ -10,7 +10,9 @@ const StyledAboutCourse = styled.div`
 
 const AboutCourse = (props) =>{
 
-    return(hej)
+    return(
+        <CourseInformationCard></CourseInformationCard>
+    )
  }
 
  export default AboutCourse;

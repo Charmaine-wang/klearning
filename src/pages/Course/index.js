@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
+import AboutCourse from "../../components/AboutCourse";
 
 const StyledCourse = styled.div`
 margin-top:64px;
@@ -23,10 +24,8 @@ const Course = (props) => {
         <Button>Kursflöde</Button>
       </div>
       <div>
-      Dynamiskt content beroende på vilken knapp som är intryckt 
-      </div>
-      <div className="apply-button">
-        <Button>Ansök</Button>
+      {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
+      <AboutCourse></AboutCourse>
       </div>
     </StyledCourse>
   );
