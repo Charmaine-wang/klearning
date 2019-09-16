@@ -6,7 +6,9 @@ import MiscInfoCard from '../MiscInfoCard';
 
 
 const StyledAboutCourse = styled.div`
-
+.information-header{
+    margin-left: 16px;
+}
 `;
 
 const AboutCourse = (props) =>{
@@ -41,6 +43,7 @@ const AboutCourse = (props) =>{
                     musik, design, arkitektur,
                     mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel.">
             </CourseInformationCard>
+            <h1 className="information-header">Mer information</h1>
             <MiscInfoCard
                 seatsAmouts="20"
                 startDate="25 maj"

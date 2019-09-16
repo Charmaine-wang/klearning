@@ -9,7 +9,12 @@ border-radius: 10px;
 
 h2{
     color: var(--soft-orange);
-    
+    margin-top: 16px;
+    margin-bottom: 4px;
+
+}
+p{
+    line-height: 1.7em;
 }
 
 `
