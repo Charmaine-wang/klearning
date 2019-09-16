@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from "styled-components";
 
-import CourseList from '../CourseList'
+
 
 const StyledGridLayout = styled.div`
-	height: ${props => (props.autoHeight ? 'auto' : '100vh')};
+	height: ${props => (props.autoHeight ? props.autoHeight : 'auto')
+	};
 	width: 100%;
 	transition: all 1s ease;
 	margin: ${props => props.margin};
@@ -14,13 +15,13 @@ const StyledGridLayout = styled.div`
 	grid-template-columns: ${props => props.colLayout};
 	grid-template-rows: ${props => props.rowLayout};
     padding: ${props => (props.padding ? props.padding : '0')};
-    background-color: ${props => (props.bgColor ? props.bgColor : 'yellow')};
+    background-color: ${props => (props.bgColor ? props.bgColor : '#ffffff')};
     `
 
 const GridLayout = (props) => {
     return (
         <StyledGridLayout {...props}>
-		<CourseList courseWidth/>
+		
             
         </StyledGridLayout>
     )

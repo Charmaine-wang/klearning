@@ -10,7 +10,7 @@ const StyledCourseListItem = styled.div `
   width: 95%;
   height: ${props => (props.expandHeight ? props.expandHeight : '13vh')};
   border-radius: 10px;
-  margin: 15%;
+  /* margin: 15%; */
   & > div{
       display: flex;
       flex-direction: column;

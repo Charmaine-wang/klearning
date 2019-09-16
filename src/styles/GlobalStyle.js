@@ -44,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
   }
   h2{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
     /* @media only screen and (max-width: 800px) {
       font-size: 24px;
@@ -63,6 +63,7 @@ const GlobalStyle = createGlobalStyle`
   h5{
     font-size: 12px;
     margin: 0;
+    font-weight: 400;
   }
 `;
 
