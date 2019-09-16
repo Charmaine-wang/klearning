@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 const StyledProfileButtonSwitch = styled.div`
   width: 90vw;
   margin: auto;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
