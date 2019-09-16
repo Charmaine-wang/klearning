@@ -41,7 +41,7 @@ const Course = (props) => {
       <div className="image-container">
         <h1 className="course-header">Kursnamnet är här, bästa danslektionen ever</h1>
         <img src="images/courseImage.png" alt="course image"/>
-        <Button className="apply-button">Ansök till kurs</Button>
+        {/* <Button className="apply-button">Ansök till kurs</Button> */}
       </div>
       <div className="button-container">
         <Button>Om Kurs</Button>
@@ -53,6 +53,7 @@ const Course = (props) => {
       <div>
       {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
       <AboutCourse></AboutCourse>
+      <CourseEpisodes></CourseEpisodes>
       </div>
     </StyledCourse>
   );
