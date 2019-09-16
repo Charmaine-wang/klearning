@@ -16,7 +16,7 @@ const StyledProfileButtonSwitch = styled.div`
 const ProfileButtonSwitch = props => {
   return (
     <StyledProfileButtonSwitch>
-      <NavLink to="/profile/intyg">
+      {/* <NavLink to="/profile/intyg">
         <Button>Intyg</Button>
       </NavLink>
       <NavLink to="/profile/cv">
@@ -24,7 +24,11 @@ const ProfileButtonSwitch = props => {
       </NavLink>
       <NavLink to="/profile/kurser">
         <Button>Kurser</Button>
-      </NavLink>
+      </NavLink> */}
+
+      <Button>Intyg</Button>
+      <Button>CV</Button>
+      <Button>Kurser</Button>
     </StyledProfileButtonSwitch>
   );
 };
