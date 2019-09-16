@@ -8,7 +8,7 @@ margin-top:64px;
 .tempDiv{
   display:flex;
   width: 100%;
-  margin 24 px;
+  margin: 24 px;
   background-color: white;
 }
 
