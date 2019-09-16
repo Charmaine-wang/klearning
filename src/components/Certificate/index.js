@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledCourseListItem = styled.div`
+const StyledCertificate = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
-  width: 95%;
-  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
+  width: 94vw;
+  height: 13vh;
   border-radius: 10px;
-  /* margin: 15%; */
+  margin: 10px auto;
   & > div {
     display: flex;
     flex-direction: column;
@@ -33,6 +33,8 @@ const StyledCourseListItem = styled.div`
   & > div > h3 {
     font-size: 16px;
     line-height: 135%;
+    font-weight: 600;
+    width: 40vw;
   }
 
   & > div > p {
@@ -44,21 +46,20 @@ const StyledCourseListItem = styled.div`
     align-self: flex-end;
   }
 `;
-const CourseListItem = props => {
+const Certificate = props => {
   return (
-    <StyledCourseListItem>
+    <StyledCertificate>
       <img src={props.courseImg} alt={props.courseAlt} />
       <div>
         <p>{props.courseLength}</p>
         <h3>{props.courseTitle}</h3>
         <div>
-          <p>{props.courseTimeLeft} kvar av lektion</p>
-          {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
-          <img src={props.bookmark} alt={props.bookmarkAlt} />
+          <p>{props.courseCreator}</p>
+          <img src="images/check" alt="checkbox" />
         </div>
       </div>
-    </StyledCourseListItem>
+    </StyledCertificate>
   );
 };
 
-export default CourseListItem;
+export default Certificate;
