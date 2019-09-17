@@ -5,7 +5,8 @@ const StyledButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
 
-  background-color: white;
+  background-color: ${props => (props.bgColor ? props.bgColor : "white")};
+
   border: 1px solid #e0e0e0;
   color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
   padding: 8px 22px;

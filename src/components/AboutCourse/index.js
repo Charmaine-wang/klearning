@@ -4,9 +4,28 @@ import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from "../CourseChoicesCard";
 import MiscInfoCard from "../MiscInfoCard";
 
+import TempCourseCard from "../TempCourseCard";
+
 const StyledAboutCourse = styled.div`
   .information-header {
     margin-left: 16px;
+
+    color: black;
+  }
+  .recommended-course-header {
+    margin: 16px;
+    color: black;
+  }
+  .recommended-course {
+    margin: 16px;
+  }
+
+  .similar-header {
+    margin: 16px;
+    color: black;
+  }
+  .similar-courses {
+    margin: 16px;
   }
 `;
 
@@ -35,8 +54,17 @@ const AboutCourse = () => {
                     Västra Götaland. Vi ser med fördel att det är en bredd av kreatörer och konstnärliga
                     utövare, dels för att stimulera mötet men också det gemensamma lärandet. * Scenkonst,
                     musik, design, arkitektur,
+
                     mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel."
       />
+      <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
+      <div clasName="recommended-course">
+        <TempCourseCard
+          courseImg="images/rectangle2.png"
+          courseLength="4h"
+          courseTitle="Kom igång med ditt filmskapande"
+        />
+      </div>
       <h1 className="information-header">Mer information</h1>
       <MiscInfoCard
         seatsAmouts="20"
@@ -53,6 +81,25 @@ const AboutCourse = () => {
                 på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
                 innan aktiviteten startar."
       />
+
+      <h1 className="similar-header">Liknande Material</h1>
+      <div clasName="similar-courses">
+        <TempCourseCard
+          courseImg="images/rectangle2.png"
+          courseLength="4h"
+          courseTitle="Kom igång med ditt filmskapande"
+        />
+        <TempCourseCard
+          courseImg="images/rectangle2.png"
+          courseLength="4h"
+          courseTitle="Kom igång med ditt filmskapande"
+        />
+        <TempCourseCard
+          courseImg="images/rectangle2.png"
+          courseLength="4h"
+          courseTitle="Kom igång med ditt filmskapande"
+        />
+      </div>
     </StyledAboutCourse>
   );
 };

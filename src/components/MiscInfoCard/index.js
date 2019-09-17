@@ -11,6 +11,8 @@ const StyledMiscInfoCard = styled.div`
     color: var(--soft-orange);
     margin-top: 16px;
     margin-bottom: 4px;
+
+    font-weight: bold;
   }
   p {
     line-height: 1.7em;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
@@ -9,9 +9,9 @@ const StyledCourse = styled.div`
   .button-container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 16px;
+    padding: 16px 16px 0px;
   }
 
   img {
@@ -20,6 +20,8 @@ const StyledCourse = styled.div`
 
   .course-choices-container {
     margin: 16px;
+    color: black;
+    font-weight: 400;
   }
 
   .course-header {
@@ -33,9 +35,28 @@ const StyledCourse = styled.div`
   .apply-button {
     // position:absolute;
   }
+  h1 {
+    font-weight: 400;
+  }
+
+  .apply-button {
+    // position:absolute;
+  }
 `;
 
 const Course = () => {
+  const [courseComponent, setCourseComponent] = useState("aboutCourse");
+
+  const switchComponent = () => {
+    if (courseComponent === "aboutCourse") {
+      return <AboutCourse />;
+    }
+    if (courseComponent === "courseEpisodes") {
+      return <CourseEpisodes />;
+    }
+    return null;
+  };
+
   return (
     <StyledCourse>
       <div className="image-container">
@@ -46,17 +67,21 @@ const Course = () => {
         {/* <Button className="apply-button">Ansök till kurs</Button> */}
       </div>
       <div className="button-container">
-        <Button>Om Kurs</Button>
-        <Button>Kursflöde</Button>
+        <Button
+          btnName="Om kurs"
+          buttonWidth="45%"
+          onClick={() => setCourseComponent("aboutCourse")}
+        />
+        <Button
+          btnName="Kursavsnitt"
+          buttonWidth="45%"
+          onClick={() => setCourseComponent("courseEpisodes")}
+        />
       </div>
       <div className="course-choices-container">
         <h1>Kursalternativ</h1>
       </div>
-      <div>
-        {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
-        <AboutCourse />
-        <CourseEpisodes />
-      </div>
+      <div>{switchComponent()}</div>
     </StyledCourse>
   );
 };
