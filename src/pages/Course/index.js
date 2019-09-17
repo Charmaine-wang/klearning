@@ -35,6 +35,9 @@ img {
 .apply-button{
   // position:absolute;
 }
+h1{
+  font-weight:400;
+}
 
 `;
 

@@ -13,6 +13,15 @@ const StyledCourseEpisodes = styled.div`
     justify-content:center;
     margin: 16px 0px;
 }
+.similar-header{
+    margin: 16px;
+    color: black;
+    font-weight:400;
+  }
+.similar-courses{
+    margin: 16px;
+    
+  }
 ` 
 const CourseEpisodes = () => {
     return(
@@ -39,6 +48,9 @@ const CourseEpisodes = () => {
                 courseLength="4h"
                 courseTitle="Kom igång med ditt filmskapande"
                 />
+            </div>
+            <div className="apply-button">
+                <Button btnName="Gå till kurser" textColor="white" buttonWidth="40%" bgColor="var(--soft-orange)"/>
             </div>
         </StyledCourseEpisodes>
     )

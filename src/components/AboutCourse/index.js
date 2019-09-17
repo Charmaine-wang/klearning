@@ -19,11 +19,11 @@ const StyledAboutCourse = styled.div`
     margin:16px;
 }
 
-.similiar-header{
+.similar-header{
     margin: 16px;
     color: black;
   }
-.similiar-courses{
+.similar-courses{
     margin: 16px;
     
   }
@@ -87,8 +87,8 @@ const AboutCourse = (props) =>{
             >
       
             </MiscInfoCard>
-            <h1 className="similiar-header">Liknande Material</h1>
-            <div clasName="similiar-courses">
+            <h1 className="similar-header">Liknande Material</h1>
+            <div clasName="similar-courses">
                 <TempCourseCard
                 courseImg="images/rectangle2.png"
                 courseLength="4h"
