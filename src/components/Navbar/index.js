@@ -8,7 +8,8 @@ const StyledNavbar = styled.nav`
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
+  z-index: 3;
 
   .navbar {
     display: flex;
