@@ -1,3 +1,4 @@
+
 import React from "react";
 import styled from "styled-components";
 
@@ -5,16 +6,18 @@ const StyledCourseListItem = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
-  width: 95%;
-  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
+  align-self: flex-start;
+  width: 85vw;
+  height: ${props => (props.expandHeight ? props.expandHeight : '13vh')};
   border-radius: 10px;
+  
   /* margin: 15%; */
-  & > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
+  & > div{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width:50%;
+      height:100%;
   }
   & > div > div {
     display: flex;

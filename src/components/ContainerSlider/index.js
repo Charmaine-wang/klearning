@@ -1,56 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import ActiveCourseCard from '../ActiveCourseCard';
 
 
 const StyledContainerSlide= styled.div `
 display: flex;
 position: relative;
-width: auto;
+/* width: auto; */
+width: 100%;
+height: 100%;
+align-items: center;
+ & > div {
+   margin: 0 4% 0 0; 
+ }
+/* background-color:pink; */
 
 
 `
 
-const ContainerSlider = () => {
+const ContainerSlider = (props) => {
     return (
-      <StyledContainerSlide>
-          <ActiveCourseCard
-            activeCourseImg="images/Bild.png"
-            courseCat="Dans"
-            courseTime="4h"
-            cardHeader="Dans Workshop med Connie Roberson "
-            cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
-            courseTeacher="Connie Robertson"
-            bookmark="images/bookmark.png"
-          />
+      <StyledContainerSlide {...props}>
 
-          <ActiveCourseCard
-            activeCourseImg="images/Bild.png"
-            courseCat="Dans"
-            courseTime="4h"
-            cardHeader="Dans Workshop med Connie Roberson "
-            cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
-            courseTeacher="Connie Robertson"
-            bookmark="images/bookmark.png"
-          />
-          <ActiveCourseCard
-            activeCourseImg="images/Bild.png"
-            courseCat="Dans"
-            courseTime="4h"
-            cardHeader="Dans Workshop med Connie Roberson "
-            cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
-            courseTeacher="Connie Robertson"
-            bookmark="images/bookmark.png"
-          />
-          <ActiveCourseCard
-            activeCourseImg="images/Bild.png"
-            courseCat="Dans"
-            courseTime="4h"
-            cardHeader="Dans Workshop med Connie Roberson "
-            cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
-            courseTeacher="Connie Robertson"
-            bookmark="images/bookmark.png"
-          />
         
       </StyledContainerSlide>
     );
