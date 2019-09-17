@@ -55,7 +55,7 @@ const Certificate = props => {
         <h3>{props.courseTitle}</h3>
         <div>
           <p>{props.courseCreator}</p>
-          <img src="images/check" alt="checkbox" />
+          <img src="images/search.png" alt="checkbox" />
         </div>
       </div>
     </StyledCertificate>
