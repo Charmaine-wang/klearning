@@ -23,7 +23,7 @@ const StyledAboutCourse = styled.div`
     margin: 16px;
     color: black;
   }
-  .similiar-courses{
+.similiar-courses{
     margin: 16px;
     
   }

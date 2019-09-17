@@ -56,7 +56,7 @@ const Course = (props) => {
       </div>
       <div>
         {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
-        <AboutCourse></AboutCourse>
+        {/* <AboutCourse></AboutCourse> */}
         <CourseEpisodes></CourseEpisodes>
       </div>
     </StyledCourse>
