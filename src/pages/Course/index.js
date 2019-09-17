@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
 import CourseEpisodes from "../../components/CourseEpisodes";
-import TempCourseCard from "../../components/TempCourseCard";
 
 const StyledCourse = styled.div`
 margin-top:64px;

@@ -1,23 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
 import CourseEpisodesCard from '../CourseEpisodesCard';
+import Button from '../../components/Button';
+import TempCourseCard from '../../components/TempCourseCard';
+
 
 const StyledCourseEpisodes = styled.div`
 
+.apply-button{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin: 16px 0px;
+}
 ` 
-
 const CourseEpisodes = () => {
     return(
         <StyledCourseEpisodes>
-            <CourseEpisodesCard 
-                courseAmount="8"
-                courseHours="4"
-                lessonNumber="1"
-                lessonName="Introduktion"
-                lessonLength="03:53"
-                paragraph="Vad kan Connie om dans? Lär dig om vem han är och hans magiska tekniker."
-            />
+            <CourseEpisodesCard/>
+            <div className="apply-button">
+                <Button btnName="Ansök" textColor="white" buttonWidth="40%" bgColor="var(--soft-orange)"/>
+            </div>
 
+            <h1 className="similar-header">Liknande Material</h1>
+            <div clasName="similar-courses">
+                <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+                />
+                <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+                />
+                <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+                />
+            </div>
         </StyledCourseEpisodes>
     )
 }
