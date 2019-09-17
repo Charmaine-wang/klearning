@@ -45,8 +45,8 @@ const Course = (props) => {
         {/* <Button className="apply-button">Ansök till kurs</Button> */}
       </div>
       <div className="button-container">
-        <Button>Om Kurs</Button>
-        <Button>Kursflöde</Button>
+        <Button btnName="Om kurs"></Button>
+        <Button btnName="Kursavsnitt"></Button>
       </div>
       <div className="course-choices-container">
       <h1>Kursalternativ</h1>
@@ -55,6 +55,7 @@ const Course = (props) => {
       {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
       <AboutCourse></AboutCourse>
       <CourseEpisodes></CourseEpisodes>
+      <h1>Liknande Material</h1>
       </div>
     </StyledCourse>
   );
