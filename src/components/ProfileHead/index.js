@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../Button';
+import React from "react";
+import styled from "styled-components";
+import Button from "../Button";
 
 const StyledProfileHead = styled.div`
   width: 94vw;
@@ -30,7 +30,7 @@ const StyledProfileHead = styled.div`
   .profileImage {
     width: 30%;
     padding-top: 30%;
-    background: url('images/logo192.png');
+    background: url("images/logo192.png");
     background-size: cover;
     background-position: center;
     border-radius: 50%;

@@ -1,4 +1,3 @@
-
 import React from "react";
 import styled from "styled-components";
 
@@ -8,16 +7,16 @@ const StyledCourseListItem = styled.div`
   background-color: #ffffff;
   align-self: flex-start;
   width: 85vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : '13vh')};
+  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
-  
+
   /* margin: 15%; */
-  & > div{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width:50%;
-      height:100%;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
   }
   & > div > div {
     display: flex;
@@ -47,17 +46,25 @@ const StyledCourseListItem = styled.div`
     align-self: flex-end;
   }
 `;
-const CourseListItem = props => {
+const CourseListItem = (
+  courseImg,
+  courseAlt,
+  courseLength,
+  courseTitle,
+  courseTimeLeft,
+  bookmark,
+  bookmarkAlt
+) => {
   return (
     <StyledCourseListItem>
-      <img src={props.courseImg} alt={props.courseAlt} />
+      <img src={courseImg} alt={courseAlt} />
       <div>
-        <p>{props.courseLength}</p>
-        <h3>{props.courseTitle}</h3>
+        <p>{courseLength}</p>
+        <h3>{courseTitle}</h3>
         <div>
-          <p>{props.courseTimeLeft} kvar av lektion</p>
-          {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
-          <img src={props.bookmark} alt={props.bookmarkAlt} />
+          <p>{courseTimeLeft} kvar av lektion</p>
+          {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
+          <img src={bookmark} alt={bookmarkAlt} />
         </div>
       </div>
     </StyledCourseListItem>

@@ -1,16 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const StyledCourseEpisodesCard = styled.div`
+const StyledCourseEpisodesCard = styled.div``;
 
-`
-
-CourseEpisodesCard = () => {
-    return(
-        <StyledCourseEpisodesCard>
-
-        </StyledCourseEpisodesCard>
-    )
-}
+const CourseEpisodesCard = () => {
+  return <StyledCourseEpisodesCard />;
+};
 
 export default CourseEpisodesCard;

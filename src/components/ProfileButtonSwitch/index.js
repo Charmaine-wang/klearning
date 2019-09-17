@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../Button';
+import React from "react";
+import styled from "styled-components";
+import Button from "../Button";
 
 const StyledProfileButtonSwitch = styled.div`
   width: 90vw;

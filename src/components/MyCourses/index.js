@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import FixedContainer from '../FixedContainer';
-import Container from '../Container';
-import ContainerSlider from '../ContainerSlider';
-import ActiveCourseCard from '../ActiveCourseCard';
+import React from "react";
+import styled from "styled-components";
+import FixedContainer from "../FixedContainer";
+import Container from "../Container";
+import ContainerSlider from "../ContainerSlider";
+import ActiveCourseCard from "../ActiveCourseCard";
 
 const StyledMyCourses = styled.div``;
 

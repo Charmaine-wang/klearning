@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Course from './pages/Course';
-import Profile from './pages/Profile';
-import Footer from './components/Footer';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Course from "./pages/Course";
+import Profile from "./pages/Profile";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (

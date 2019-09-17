@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import CourseInformationCard from '../CourseInformationCard';
-import CourseChoicesCard from '../CourseChoicesCard';
-import MiscInfoCard from '../MiscInfoCard';
+import React from "react";
+import styled from "styled-components";
+import CourseInformationCard from "../CourseInformationCard";
+import CourseChoicesCard from "../CourseChoicesCard";
+import MiscInfoCard from "../MiscInfoCard";
 
 const StyledAboutCourse = styled.div`
   .information-header {

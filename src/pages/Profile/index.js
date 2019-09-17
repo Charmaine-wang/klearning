@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import ProfileHead from '../../components/ProfileHead';
-import CV from '../../components/CV';
-import MyCourses from '../../components/MyCourses';
-import MyCertificates from '../../components/MyCertificates';
-import FixedContainer from '../../components/FixedContainer';
-import Button from '../../components/Button';
-import Container from '../../components/Container';
-import ContainerSlider from '../../components/ContainerSlider';
-import ActiveCourseCard from '../../components/ActiveCourseCard';
+import React, { useState } from "react";
+import styled from "styled-components";
+import ProfileHead from "../../components/ProfileHead";
+import CV from "../../components/CV";
+import MyCourses from "../../components/MyCourses";
+import MyCertificates from "../../components/MyCertificates";
+import FixedContainer from "../../components/FixedContainer";
+import Button from "../../components/Button";
+import Container from "../../components/Container";
+import ContainerSlider from "../../components/ContainerSlider";
+import ActiveCourseCard from "../../components/ActiveCourseCard";
 
 const StyledProfile = styled.div`
   margin-top: 74px;
@@ -25,16 +25,16 @@ const StyledProfile = styled.div`
 `;
 
 const Profile = () => {
-  const [profileComponent, setProfileComponent] = useState('certificates');
+  const [profileComponent, setProfileComponent] = useState("certificates");
 
   function switchComponent() {
-    if (profileComponent === 'certificates') {
+    if (profileComponent === "certificates") {
       return <MyCertificates />;
     }
-    if (profileComponent === 'cv') {
+    if (profileComponent === "cv") {
       return <CV />;
     }
-    if (profileComponent === 'courses') {
+    if (profileComponent === "courses") {
       return <MyCourses />;
     }
     return null;
@@ -46,12 +46,12 @@ const Profile = () => {
       <div className="buttonSwitch">
         <Button
           btnName="Intyg"
-          onClick={() => setProfileComponent('certificates')}
+          onClick={() => setProfileComponent("certificates")}
         />
-        <Button btnName="CV" onClick={() => setProfileComponent('cv')} />
+        <Button btnName="CV" onClick={() => setProfileComponent("cv")} />
         <Button
           btnName="Kurser"
-          onClick={() => setProfileComponent('courses')}
+          onClick={() => setProfileComponent("courses")}
         />
       </div>
       {switchComponent()}

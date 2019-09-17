@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
-  
+
   background-color: white;
   border: 1px solid #e0e0e0;
   color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
@@ -24,8 +24,9 @@ const StyledButton = styled.button`
     text-decoration: underline;
   }
 `;
-const Button = props => {
-  return <StyledButton {...props}>{props.btnName}</StyledButton>;
+const Button = btnName => {
+  // eslint-disable-next-line no-undef
+  return <StyledButton {...props}>{btnName}</StyledButton>;
 };
 
 export default Button;

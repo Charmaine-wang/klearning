@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from '../Button';
+import React from "react";
+import styled from "styled-components";
+import Button from "../Button";
 
 const StyledCV = styled.div`
   width: 94vw;
@@ -32,7 +32,7 @@ const StyledCV = styled.div`
   .profileImage {
     width: 30%;
     padding-top: 30%;
-    background: url('images/logo192.png');
+    background: url("images/logo192.png");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -93,14 +93,14 @@ const CV = () => {
         <h2>Jobs</h2>
         <ul>
           <li>
-            Johnson & Johnson Film AB -{' '}
+            Johnson & Johnson Film AB -{" "}
             <span className="orange">Filmfotograf</span>
           </li>
           <li>
             Sony Films - <span className="orange">Regisör</span>
           </li>
           <li>
-            Multimedia AB -{' '}
+            Multimedia AB -{" "}
             <span className="orange">Assisterande filmfotograf</span>
           </li>
         </ul>

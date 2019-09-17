@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 // import SearchField from "../../components/SearchField";
-import FixedContainer from '../../components/FixedContainer';
-import GridLayout from '../../components/GridLayout';
-import CourseList from '../../components/CourseList';
-import ContainerSlider from '../../components/ContainerSlider';
-import ActiveCourseCard from '../../components/ActiveCourseCard';
-import AllCourses from '../../components/AllCourses';
-import Button from '../../components/Button';
+import FixedContainer from "../../components/FixedContainer";
+import GridLayout from "../../components/GridLayout";
+import CourseList from "../../components/CourseList";
+import ContainerSlider from "../../components/ContainerSlider";
+import ActiveCourseCard from "../../components/ActiveCourseCard";
+import AllCourses from "../../components/AllCourses";
+import Button from "../../components/Button";
 
 const StyledHome = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const StyledHome = styled.div`
   margin: 15% 0;
   width: 100vw;
 
-  height: ${props => (props.expandHeight ? 'auto' : '100%')};
+  height: ${props => (props.expandHeight ? "auto" : "100%")};
 
   .btnDiv {
     display: flex;
@@ -31,7 +31,7 @@ const StyledHome = styled.div`
     position: relative;
     height: 400px;
     top: 0;
-    background-image: url('images/home.png');
+    background-image: url("images/home.png");
     & > .overlayer {
       height: 100%;
       width: 100%;

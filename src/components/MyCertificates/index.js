@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Certificate from '../Certificate';
-import Container from '../Container';
+import React from "react";
+import styled from "styled-components";
+import Certificate from "../Certificate";
+import Container from "../Container";
 
 const StyledMyCertificates = styled.div`
   display: flex;

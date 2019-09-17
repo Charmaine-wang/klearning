@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   width: 75vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : '45vh')};
+  height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
