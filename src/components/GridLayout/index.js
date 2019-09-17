@@ -16,7 +16,7 @@ const StyledGridLayout = styled.div`
 	grid-gap: 2% 0;
     padding: ${props => (props.padding ? props.padding : '0')};
     background-color: ${props => (props.bgColor ? props.bgColor : '#F5F5F5')};
-	margin: 0 8%;
+	/* margin: 0 8%; */
 	/* & > img{
 		height: 400px;
 	} */
