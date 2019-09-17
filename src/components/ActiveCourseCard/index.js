@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
+import Bookmark from '../Icons/Bookmark'
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
@@ -22,11 +23,14 @@ const StyledActiveCourseCard = styled.div`
 
   }
 
+
   
 `;
+
 const ActiveCourseCard = (props) => {
+    const [isClicked, setClicked] = useState(false)
 
-
+console.log(props)
     return (
  
         <StyledActiveCourseCard>
@@ -42,7 +46,8 @@ const ActiveCourseCard = (props) => {
 
             <div>
                 <h5>{props.courseTeacher}</h5>
-                <img src={props.bookmark} alt={props.bookmarkAlt} />
+
+                <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked}/>
 
             </div>
 

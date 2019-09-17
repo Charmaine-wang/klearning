@@ -1,9 +1,9 @@
 
 import React from 'react'
 import styled from 'styled-components'
+import Bookmark from '../Icons/Bookmark'
+const StyledCourseListItem = styled.div `
 
-
-const StyledCourseListItem = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
@@ -47,22 +47,28 @@ const StyledCourseListItem = styled.div`
   & > div > p:first-child {
     align-self: flex-end;
   }
-`;
-const CourseListItem = props => {
-  return (
-    <StyledCourseListItem>
-      <img src={props.courseImg} alt={props.courseAlt} />
-      <div>
-        <p>{props.courseLength}</p>
-        <h3>{props.courseTitle}</h3>
-        <div>
-          <p>{props.courseTimeLeft} kvar av lektion</p>
-          {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
-          <img src={props.bookmark} alt={props.bookmarkAlt} />
-        </div>
-      </div>
-    </StyledCourseListItem>
-  );
-};
+
+`
+const CourseListItem = (props) => {
+  // const [isClicked, setClicked] = useState(false)
+
+
+    return (
+        <StyledCourseListItem>
+            <img src={props.courseImg} alt={props.courseAlt}/>
+            <div>
+                <p>{props.courseLength}</p>
+                <h3>{props.courseTitle}</h3>
+                <div>
+                    <p>{props.courseTimeLeft} kvar av lektion</p>
+    {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
+                    <Bookmark />
+
+                </div>
+            </div>
+        </StyledCourseListItem>
+    )
+}
+
 
 export default CourseListItem;
