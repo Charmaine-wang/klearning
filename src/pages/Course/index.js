@@ -9,9 +9,9 @@ margin-top:64px;
 .button-container{
   display: flex;
   width:100%;
-  justify-content:space-around;
+  justify-content:space-between;
   align-items:center;
-  margin-top:16px;
+  padding: 16px 16px 0px;
 }
 
 img {
@@ -51,17 +51,20 @@ const Course = (props) => {
         {/* <Button className="apply-button">Ansök till kurs</Button> */}
       </div>
       <div className="button-container">
-        <Button btnName="Om kurs"></Button>
-        <Button btnName="Kursavsnitt"></Button>
+        <Button btnName="Om kurs" buttonWidth="45%"></Button>
+        <Button btnName="Kursavsnitt" buttonWidth="45%"></Button>
       </div>
       <div className="course-choices-container">
       <h1>Kursalternativ</h1>
       </div>
       <div>
-      {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
-      <AboutCourse></AboutCourse>
-      <CourseEpisodes></CourseEpisodes>
-      <h1 className="similar-header">Liknande Material</h1>
+        {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
+        <AboutCourse></AboutCourse>
+        <CourseEpisodes></CourseEpisodes>
+      </div>
+      <div>
+        <h1 className="similar-header">Liknande Material</h1>
+       
       </div>
     </StyledCourse>
   );
