@@ -7,6 +7,8 @@ import MyCertificates from "../../components/MyCertificates";
 import FixedContainer from "../../components/FixedContainer";
 import Button from "../../components/Button";
 import Container from "../../components/Container";
+import ContainerSlider from "../../components/ContainerSlider";
+import ActiveCourseCard from "../../components/ActiveCourseCard";
 
 const StyledProfile = styled.div`
   margin-top: 74px;
@@ -41,18 +43,62 @@ const Profile = props => {
     <StyledProfile>
       <ProfileHead></ProfileHead>
       <div className="buttonSwitch">
-        <Button onClick={() => setProfileComponent("certificates")}>
-          Intyg
-        </Button>
-        <Button onClick={() => setProfileComponent("cv")}>CV</Button>
-        <Button onClick={() => setProfileComponent("courses")}>Kurser</Button>
+        <Button
+          btnName="Intyg"
+          onClick={() => setProfileComponent("certificates")}
+        />
+        <Button btnName="CV" onClick={() => setProfileComponent("cv")} />
+        <Button
+          btnName="Kurser"
+          onClick={() => setProfileComponent("courses")}
+        />
       </div>
       {switchComponent()}
       <Container>
         <h1>Rekommenderade kurser</h1>
       </Container>
       <Container>
-        <FixedContainer></FixedContainer>
+        <FixedContainer>
+          <ContainerSlider>
+            <ActiveCourseCard
+              activeCourseImg="images/Bild.png"
+              courseCat="Dans"
+              courseTime="4h"
+              cardHeader="Dans Workshop med Connie Roberson "
+              cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
+              courseTeacher="Connie Robertson"
+              bookmark="images/bookmark.png"
+            />
+
+            <ActiveCourseCard
+              activeCourseImg="images/Bild.png"
+              courseCat="Dans"
+              courseTime="4h"
+              cardHeader="Dans Workshop med Connie Roberson "
+              cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
+              courseTeacher="Connie Robertson"
+              bookmark="images/bookmark.png"
+            />
+            <ActiveCourseCard
+              activeCourseImg="images/Bild.png"
+              courseCat="Dans"
+              courseTime="4h"
+              cardHeader="Dans Workshop med Connie Roberson "
+              cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
+              courseTeacher="Connie Robertson"
+              bookmark="images/bookmark.png"
+            />
+            <ActiveCourseCard
+              activeCourseImg="images/Bild.png"
+              courseCat="Dans"
+              courseTime="4h"
+              cardHeader="Dans Workshop med Connie Roberson "
+              cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
+              courseTeacher="Connie Robertson"
+              bookmark="images/bookmark.png"
+            />
+          </ContainerSlider>
+        </FixedContainer>
       </Container>
     </StyledProfile>
   );
