@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 
 const StyledCourseList = styled.div`
-  width: ${props => (props.courseWidth ? "100%" : props.courseWidth)};
+  width: ${props => (props.courseWidth ? props.courseWidth : "100%")};
   height: auto;
   display: flex;
   flex-direction: column;

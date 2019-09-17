@@ -8,16 +8,14 @@ const StyledActiveCourseCard = styled.div`
   width: 75vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
   border-radius: 10px;
-  margin: 0 2% 0 0;
   justify-content: space-between;
+  position: relative;
   
   & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 5vh;
-
-     
+      height: 5vh;  
   }
     & > div:first-of-type{
         color: #C97C36;
@@ -33,8 +31,7 @@ const ActiveCourseCard = (props) => {
  
         <StyledActiveCourseCard>
             <img src={props.activeCourseImg} alt={props.activeCourseAlt}/>
-            
-                      
+         
             <div>
                 <h5>{props.courseCat}</h5>
                 <h5>{props.courseTime}</h5>
