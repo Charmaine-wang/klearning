@@ -58,6 +58,7 @@ const StyledCertificate = styled.div`
     & > p {
       align-self: flex-end;
       color: var(--soft-orange);
+      font-size: 12px;
     }
 
     & > div {
@@ -66,6 +67,10 @@ const StyledCertificate = styled.div`
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      p {
+        font-size: 12px;
+      }
     }
 
     h2 {
