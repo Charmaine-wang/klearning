@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
@@ -42,6 +42,19 @@ h1{
 `;
 
 const Course = (props) => {
+
+  const [courseComponent, setCourseComponent] = useState("aboutCourse");
+
+  const switchComponent = () => { 
+    if (courseComponent === "aboutCourse") {
+      return <AboutCourse></AboutCourse>;
+    }
+    if (courseComponent === "courseEpisodes") {
+      return <CourseEpisodes></CourseEpisodes>;
+    }
+  }
+
+
   return (
     <StyledCourse>
       <div className="image-container">
@@ -50,16 +63,14 @@ const Course = (props) => {
         {/* <Button className="apply-button">Ansök till kurs</Button> */}
       </div>
       <div className="button-container">
-        <Button btnName="Om kurs" buttonWidth="45%"></Button>
-        <Button btnName="Kursavsnitt" buttonWidth="45%"></Button>
+        <Button btnName="Om kurs" buttonWidth="45%" onClick={() => setCourseComponent("aboutCourse")}></Button>
+        <Button btnName="Kursavsnitt" buttonWidth="45%" onClick={() => setCourseComponent("courseEpisodes")}></Button>
       </div>
       <div className="course-choices-container">
       <h1>Kursalternativ</h1>
       </div>
       <div>
-        {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
-        {/* <AboutCourse></AboutCourse> */}
-        <CourseEpisodes></CourseEpisodes>
+        {switchComponent()}
       </div>
     </StyledCourse>
   );
