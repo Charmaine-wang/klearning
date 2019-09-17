@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
 import CourseEpisodes from "../../components/CourseEpisodes";
+import TempCourseCard from "../../components/TempCourseCard";
 
 const StyledCourse = styled.div`
 margin-top:64px;
@@ -22,10 +23,6 @@ img {
   margin: 16px;
   color: black;
   font-weight: 400;
-}
-.similar-header{
-  margin: 16px;
-  color: black;
 }
 
 .course-header{
@@ -61,10 +58,6 @@ const Course = (props) => {
         {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
         <AboutCourse></AboutCourse>
         <CourseEpisodes></CourseEpisodes>
-      </div>
-      <div>
-        <h1 className="similar-header">Liknande Material</h1>
-       
       </div>
     </StyledCourse>
   );

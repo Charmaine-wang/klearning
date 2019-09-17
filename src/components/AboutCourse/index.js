@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from '../CourseChoicesCard';
 import MiscInfoCard from '../MiscInfoCard';
+import TempCourseCard from '../../components/TempCourseCard';
 
 
 const StyledAboutCourse = styled.div`
@@ -10,6 +11,22 @@ const StyledAboutCourse = styled.div`
     margin-left: 16px;
     color:black;
 }
+.recommended-course-header{
+    margin:16px;
+    color:black
+}
+.recommended-course{
+    margin:16px;
+}
+
+.similiar-header{
+    margin: 16px;
+    color: black;
+  }
+  .similiar-courses{
+    margin: 16px;
+    
+  }
 `;
 
 const AboutCourse = (props) =>{
@@ -44,6 +61,14 @@ const AboutCourse = (props) =>{
                     musik, design, arkitektur,
                     mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel.">
             </CourseInformationCard>
+            <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
+            <div clasName="recommended-course">
+            <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+            />
+            </div>
             <h1 className="information-header">Mer information</h1>
             <MiscInfoCard
                 seatsAmouts="20"
@@ -60,7 +85,26 @@ const AboutCourse = (props) =>{
                 på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
                 innan aktiviteten startar."
             >
+      
             </MiscInfoCard>
+            <h1 className="similiar-header">Liknande Material</h1>
+            <div clasName="similiar-courses">
+                <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+                />
+                <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+                />
+                <TempCourseCard
+                courseImg="images/rectangle2.png"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande"
+                />
+        </div>
         </StyledAboutCourse>
     )
  }
