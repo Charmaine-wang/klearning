@@ -20,6 +20,12 @@ img {
 
 .course-choices-container{
   margin: 16px;
+  color: black;
+  font-weight: 400;
+}
+.similar-header{
+  margin: 16px;
+  color: black;
 }
 
 .course-header{
@@ -55,7 +61,7 @@ const Course = (props) => {
       {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
       <AboutCourse></AboutCourse>
       <CourseEpisodes></CourseEpisodes>
-      <h1>Liknande Material</h1>
+      <h1 className="similar-header">Liknande Material</h1>
       </div>
     </StyledCourse>
   );

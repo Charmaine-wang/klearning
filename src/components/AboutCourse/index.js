@@ -8,6 +8,7 @@ import MiscInfoCard from '../MiscInfoCard';
 const StyledAboutCourse = styled.div`
 .information-header{
     margin-left: 16px;
+    color:black;
 }
 `;
 

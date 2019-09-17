@@ -11,6 +11,7 @@ h2{
     color: var(--soft-orange);
     margin-top: 16px;
     margin-bottom: 4px;
+    font-weight: bold;
 
 }
 p{
