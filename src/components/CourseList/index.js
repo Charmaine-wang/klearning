@@ -15,6 +15,8 @@ const StyledCourseList = styled.div`
 `;
 
 const CourseList = (props) => {
+    //   const [isClicked, setClicked] = useState(false)
+
     return (
         <StyledCourseList {...props}>
             <CourseListItem 
@@ -22,6 +24,7 @@ const CourseList = (props) => {
             courseLength='4h' 
             courseTitle='dans dans dans'
             courseTimeLeft='3min'
+
              />
         </StyledCourseList>
     )

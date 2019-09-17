@@ -9,14 +9,19 @@ import ActiveCourseCard from '../../components/ActiveCourseCard'
 import AllCourses from "../../components/AllCourses";
 import Button from '../../components/Button'
 
+import ELearning from '../../components/ELearning'
+import Computer from '../../components/Icons/Computer'
+import People from "../../components/Icons/People";
+import Certificate from "../../components/Icons/Certificate";
+import ImgText from '../../components/ImgText'
+
 const StyledHome = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 15% 0;
+  margin: 15% 0 0 0;
   width: 100vw;
-  
-  height: ${props => (props.expandHeight ? "auto" : "100%")};
+  height: 100%;
   
   .btnDiv{
     display: flex;
@@ -28,7 +33,7 @@ const StyledHome = styled.div`
   }
 
 
-    & > div:first-child{
+    /* & > div:first-child{
       position: relative;
       height: 400px;
       top: 0;
@@ -56,31 +61,29 @@ const StyledHome = styled.div`
         }
 
     
-    }
+    } */
 `;
 
 const Home = props => {
+// const [isClicked, setClicked] = useState(false);
+
+
   return (
     <StyledHome expandHeight>
-      <div>
-        <div className="overlayer"></div>
+      <ImgText imgTextPic="images/home.png" imgTextHeader="Vi låter kulturen utvecklas." imgTextParagraph='Vi kynter ihop branshen och förser profisionella kulturarbetare med
+          spetskompetens.'/>
 
-      <h1>Vi låter kulturen utvecklas.</h1>
-      <p>Vi kynter ihop branshen och förser profisionella kulturarbetare med spetskompetens.</p>
-      </div>
-
-      <GridLayout marginGrid="0 4%">   
-      <FixedContainer heightContainer="10vh">
-  <ContainerSlider>
-<AllCourses />
-  </ContainerSlider>
-</FixedContainer>
-           
+      <GridLayout marginGrid="0 4%">
+        <FixedContainer heightContainer="10vh">
+          <ContainerSlider>
+            <AllCourses />
+          </ContainerSlider>
+        </FixedContainer>
 
         <h1>Mina ktiva Kurser</h1>
         <CourseList courseWidth />
         <h1>Aktiva biblotek</h1>
-        
+
         <FixedContainer heightContainer="45vh">
           <ContainerSlider>
             <ActiveCourseCard
@@ -90,7 +93,8 @@ const Home = props => {
               cardHeader="Dans Workshop med Connie Roberson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              // bookmark="images/bookmark.png"
+              // setClicked={() => setClicked(!isClicked)}
             />
 
             <ActiveCourseCard
@@ -124,20 +128,11 @@ const Home = props => {
         </FixedContainer>
 
         <h1>Kursbiblotek</h1>
-        <div className='btnDiv'>
-          <Button btnName='Kurser' buttonHeight='50%' buttonWidth="145px" />
-          <Button btnName='Kplay' buttonHeight='50%' buttonWidth='145px'/>
+        <div className="btnDiv">
+          <Button btnName="Kurser" buttonHeight="50%" buttonWidth="145px" />
+          <Button btnName="Kplay" buttonHeight="50%" buttonWidth="145px" />
         </div>
 
-
-          <FixedContainer heightContainer="13vh">
-          <ContainerSlider>
-          <CourseList courseWidth />
-          <CourseList courseWidth />
-          <CourseList courseWidth />
-          </ContainerSlider>
-          </FixedContainer>
-
         <FixedContainer heightContainer="13vh">
           <ContainerSlider>
             <CourseList courseWidth />
@@ -153,8 +148,29 @@ const Home = props => {
             <CourseList courseWidth />
           </ContainerSlider>
         </FixedContainer>
-  
 
+        <FixedContainer heightContainer="13vh">
+          <ContainerSlider>
+            <CourseList courseWidth />
+            <CourseList courseWidth />
+            <CourseList courseWidth />
+          </ContainerSlider>
+        </FixedContainer>
+        <GridLayout
+          gridRadius="10px"
+          gridGap="3em"
+          widthGrid="93%"
+          bgColor="#ffffff"
+          colLayout="1fr"
+          rowLayout="1fr 1fr 1fr"
+          padding="0 0 15% 0"
+        >
+          <ELearning iconElearning={<Computer />} />
+          <ELearning iconElearning={<People />} />
+          <ELearning iconElearning={<Certificate />} />
+        </GridLayout>
+
+          <ImgText imgTextPic="images/workshop.png" imgTextHeader="Vill du hålla en workshop?" imgTextParagraph='Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas.'/>
       </GridLayout>
     </StyledHome>
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import Bookmark from '../Icons/Bookmark'
 const StyledCourseListItem = styled.div `
   display: flex;
   flex-direction: row;
@@ -47,6 +47,7 @@ const StyledCourseListItem = styled.div `
   }
 `
 const CourseListItem = (props) => {
+  // const [isClicked, setClicked] = useState(false)
 
 
     return (
@@ -58,7 +59,7 @@ const CourseListItem = (props) => {
                 <div>
                     <p>{props.courseTimeLeft} kvar av lektion</p>
     {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
-                    <img src={props.bookmark} alt={props.bookmarkAlt} />
+                    <Bookmark />
 
                 </div>
             </div>
