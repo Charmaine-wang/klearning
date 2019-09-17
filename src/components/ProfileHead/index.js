@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../Button";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../Button';
 
 const StyledProfileHead = styled.div`
   width: 94vw;
@@ -30,7 +30,7 @@ const StyledProfileHead = styled.div`
   .profileImage {
     width: 30%;
     padding-top: 30%;
-    background: url("images/logo192.png");
+    background: url('images/logo192.png');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -38,17 +38,17 @@ const StyledProfileHead = styled.div`
   }
 `;
 
-const ProfileHead = props => {
+const ProfileHead = () => {
   return (
     <StyledProfileHead>
       <div className="row">
-        <div className="profileImage"></div>
+        <div className="profileImage" />
         <div>
           <h2>Brandon Lane</h2>
           <h3>Filmskapare & Regissör</h3>
           <div className="row">
-            <Button btnName="Film" margin="0 15px 0 0"></Button>
-            <Button btnName="Foto"></Button>
+            <Button btnName="Film" margin="0 15px 0 0" />
+            <Button btnName="Foto" />
           </div>
         </div>
       </div>

@@ -1,47 +1,48 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../../components/Button";
-import AboutCourse from "../../components/AboutCourse";
-import CourseEpisodes from "../../components/CourseEpisodes";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../../components/Button';
+import AboutCourse from '../../components/AboutCourse';
+import CourseEpisodes from '../../components/CourseEpisodes';
 
 const StyledCourse = styled.div`
-margin-top:64px;
-.button-container{
-  display: flex;
-  width:100%;
-  justify-content:space-around;
-  align-items:center;
-  margin-top:16px;
-}
+  margin-top: 64px;
+  .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+  }
 
-img {
-  width: 100%;
-}
+  img {
+    width: 100%;
+  }
 
-.course-choices-container{
-  margin: 16px;
-}
+  .course-choices-container {
+    margin: 16px;
+  }
 
-.course-header{
-  position:absolute;
-  color:white;
-  font-weight: 400;
-  top:10%;
-  left: 5%;
-}
+  .course-header {
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    top: 10%;
+    left: 5%;
+  }
 
-.apply-button{
-  // position:absolute;
-}
-
+  .apply-button {
+    // position:absolute;
+  }
 `;
 
-const Course = (props) => {
+const Course = () => {
   return (
     <StyledCourse>
       <div className="image-container">
-        <h1 className="course-header">Kursnamnet är här, bästa danslektionen ever</h1>
-        <img src="images/courseImage.png" alt="course image"/>
+        <h1 className="course-header">
+          Kursnamnet är här, bästa danslektionen ever
+        </h1>
+        <img src="images/courseImage.png" alt="course" />
         {/* <Button className="apply-button">Ansök till kurs</Button> */}
       </div>
       <div className="button-container">
@@ -49,12 +50,12 @@ const Course = (props) => {
         <Button>Kursflöde</Button>
       </div>
       <div className="course-choices-container">
-      <h1>Kursalternativ</h1>
+        <h1>Kursalternativ</h1>
       </div>
       <div>
-      {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
-      <AboutCourse></AboutCourse>
-      <CourseEpisodes></CourseEpisodes>
+        {/* Dynamiskt content beroende på vilken knapp som är intryckt switcha mellan AboutCourse och kursflöde  */}
+        <AboutCourse />
+        <CourseEpisodes />
       </div>
     </StyledCourse>
   );

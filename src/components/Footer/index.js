@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledFooter = styled.div`
   background-color: white;
@@ -26,7 +26,7 @@ const StyledFooter = styled.div`
   }
 `;
 
-const Footer = props => {
+const Footer = () => {
   return (
     <StyledFooter>
       <div>

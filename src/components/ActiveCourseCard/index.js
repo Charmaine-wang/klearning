@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
   width: 75vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
+  height: ${props => (props.expandHeight ? props.expandHeight : '45vh')};
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
@@ -32,22 +32,32 @@ const StyledActiveCourseCard = styled.div`
     font-weight: 600;
   }
 `;
-const ActiveCourseCard = props => {
+const ActiveCourseCard = (
+  activeCourseImg,
+  activeCourseAlt,
+  courseCat,
+  courseTime,
+  cardHeader,
+  cardParagraph,
+  courseTeacher,
+  bookmark,
+  bookmarkAlt
+) => {
   return (
     <StyledActiveCourseCard>
-      <img src={props.activeCourseImg} alt={props.activeCourseAlt} />
+      <img src={activeCourseImg} alt={activeCourseAlt} />
 
       <div>
-        <h5>{props.courseCat}</h5>
-        <h5>{props.courseTime}</h5>
+        <h5>{courseCat}</h5>
+        <h5>{courseTime}</h5>
       </div>
 
-      <h2>{props.cardHeader}</h2>
-      <h5>{props.cardParagraph}</h5>
+      <h2>{cardHeader}</h2>
+      <h5>{cardParagraph}</h5>
 
       <div>
-        <h5>{props.courseTeacher}</h5>
-        <img src={props.bookmark} alt={props.bookmarkAlt} />
+        <h5>{courseTeacher}</h5>
+        <img src={bookmark} alt={bookmarkAlt} />
       </div>
     </StyledActiveCourseCard>
   );
