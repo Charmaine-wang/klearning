@@ -46,6 +46,11 @@ const StyledCourseListItem = styled.div`
   & > div > p:first-child {
     align-self: flex-end;
   }
+  & > .progress-bar {
+    width: 100%;
+    height: 2vh;
+    background-color: red;
+  }
 `;
 
 const CourseListItem = ({
@@ -61,6 +66,7 @@ const CourseListItem = ({
 
   return (
     <StyledCourseListItem>
+      {/* <div className=""> */}
       <img src={courseImg} alt={courseAlt} />
       <div>
         <p>{courseLength}</p>
@@ -71,6 +77,8 @@ const CourseListItem = ({
           <Bookmark />
         </div>
       </div>
+      {/* </div> */}
+      {/* <div className="progress-bar" /> */}
     </StyledCourseListItem>
   );
 };

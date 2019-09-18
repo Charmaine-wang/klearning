@@ -9,6 +9,11 @@ const StyledCourseList = styled.div`
   flex-direction: column;
   align-items: center;
   /* padding: 10% 0; */
+  /* & >  .progress-bar{
+    width: 100%;
+    height: 2vh;
+    background-color: red;
+  } */
 `;
 
 const CourseList = props => {
@@ -22,6 +27,7 @@ const CourseList = props => {
         courseTitle="dans dans dans"
         courseTimeLeft="3min"
       />
+      {/* <div className="progress-bar" /> */}
     </StyledCourseList>
   );
 };
