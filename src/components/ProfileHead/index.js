@@ -47,8 +47,8 @@ const ProfileHead = props => {
           <h2>Brandon Lane</h2>
           <h3>Filmskapare & Regissör</h3>
           <div className="row">
-            <Button margin="0 15px 0 0">Film</Button>
-            <Button>Foto</Button>
+            <Button btnName="Film" margin="0 15px 0 0"></Button>
+            <Button btnName="Foto"></Button>
           </div>
         </div>
       </div>

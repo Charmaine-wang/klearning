@@ -11,12 +11,18 @@ const StyledActiveCourseCard = styled.div`
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
-  
+
+
+    & > div, & > h2, & > h5 {
+        padding: 0 5%;
+    }
+
   & > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 5vh;  
+      height: 5vh; 
+      /* padding: 0 10%;  */
   }
     & > div:first-of-type{
         color: #C97C36;

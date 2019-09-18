@@ -71,10 +71,12 @@ const CV = props => {
           <h2>Brandon Lane</h2>
           <h3 className="orange">Filmskapare & Regissör</h3>
           <div className="row">
-            <Button textColor="var(--soft-orange)" margin="0 15px 0 0">
-              Film
-            </Button>
-            <Button textColor="var(--soft-orange)">Foto</Button>
+            <Button
+              btnName="Film"
+              textColor="var(--soft-orange)"
+              margin="0 15px 0 0"
+            />
+            <Button btnName="Foto" textColor="var(--soft-orange)" />
           </div>
         </div>
       </div>
@@ -104,14 +106,13 @@ const CV = props => {
         </ul>
       </div>
       <Button
+        btnName="Ladda ner CV"
         className="center"
         buttonWidth="50vw"
         textColor="var(--soft-orange)"
         margin="0 0 15px 0"
         fontSize="12px"
-      >
-        Ladda ner CV
-      </Button>
+      />
     </StyledCV>
   );
 };

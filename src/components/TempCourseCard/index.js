@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledCertificate = styled.div`
+const StyledTempCourseCard = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
@@ -82,9 +82,9 @@ const StyledCertificate = styled.div`
     margin-bottom: 10px; */
   }
 `;
-const Certificate = props => {
+const TempCourseCard = props => {
   return (
-    <StyledCertificate>
+    <StyledTempCourseCard>
       <img src={props.courseImg} alt={props.courseAlt} />
       <div>
         <p>{props.courseLength}</p>
@@ -94,8 +94,8 @@ const Certificate = props => {
           <img className="icon" src="images/search.png" alt="checkbox" />
         </div>
       </div>
-    </StyledCertificate>
+    </StyledTempCourseCard>
   );
 };
 
-export default Certificate;
+export default TempCourseCard;
