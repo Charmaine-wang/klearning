@@ -9,6 +9,8 @@ const StyledFixedContainer = styled.div`
   height: ${props => props.heightContainer};
   overflow-x: scroll;
   scroll-behavior: smooth;
+  margin: ${props => (props.margin ? props.margin : "0")};
+  padding: ${props => (props.padding ? props.padding : "0")};
 
   ::-webkit-scrollbar {
     display: none;

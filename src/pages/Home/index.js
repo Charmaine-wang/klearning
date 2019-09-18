@@ -57,7 +57,11 @@ const Home = () => {
         <CourseList courseWidth />
         <h1>Aktiva biblotek</h1>
 
-        <FixedContainer heightContainer="45vh">
+        <FixedContainer
+          heightContainer="45vh"
+          margin="0 0 0 -4%"
+          padding="0 0 0 4%"
+        >
           <ContainerSlider>
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
@@ -106,7 +110,11 @@ const Home = () => {
           <Button btnName="Kplay" buttonHeight="50%" buttonWidth="145px" />
         </div>
 
-        <FixedContainer heightContainer="13vh">
+        <FixedContainer
+          heightContainer="13vh"
+          margin="0 0 0 -4%"
+          padding="0 0 0 4%"
+        >
           <ContainerSlider>
             <CourseList courseWidth />
             <CourseList courseWidth />
@@ -114,7 +122,11 @@ const Home = () => {
           </ContainerSlider>
         </FixedContainer>
 
-        <FixedContainer heightContainer="13vh">
+        <FixedContainer
+          heightContainer="13vh"
+          margin="0 0 0 -4%"
+          padding="0 0 0 4%"
+        >
           <ContainerSlider>
             <CourseList courseWidth />
             <CourseList courseWidth />
@@ -122,7 +134,11 @@ const Home = () => {
           </ContainerSlider>
         </FixedContainer>
 
-        <FixedContainer heightContainer="13vh">
+        <FixedContainer
+          heightContainer="13vh"
+          margin="0 0 0 -4%"
+          padding="0 0 0 4%"
+        >
           <ContainerSlider>
             <CourseList courseWidth />
             <CourseList courseWidth />

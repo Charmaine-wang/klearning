@@ -37,7 +37,6 @@ const StyledImgText = styled.div`
 `;
 
 const ImgText = ({ imgTextPic, imgTextHeader, imgTextParagraph }) => {
-  console.log(imgTextPic);
   return (
     <StyledImgText imgTextPic={imgTextPic}>
       <div className="overlayer" />
