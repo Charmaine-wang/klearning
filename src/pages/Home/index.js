@@ -12,7 +12,7 @@ import Button from "../../components/Button";
 import ELearning from '../../components/ELearning'
 import Computer from '../../components/Icons/Computer'
 import People from "../../components/Icons/People";
-import Certificate from "../../components/Icons/Certificate";
+import CertificateIcon from "../../components/Icons/CertificateIcon";
 import ImgText from '../../components/ImgText'
 
 const StyledHome = styled.div`
@@ -46,8 +46,9 @@ const Home = props => {
       <ImgText imgTextPic="images/home.png" imgTextHeader="Vi låter kulturen utvecklas." imgTextParagraph='Vi kynter ihop branshen och förser profisionella kulturarbetare med
           spetskompetens.'/>
 
-
-      <GridLayout marginGrid="0 4%">
+      <GridLayout 
+      // marginGrid="0 0 0 -4%"
+       padding="0 0 0 4%">
         <FixedContainer heightContainer="10vh">
           <ContainerSlider>
             <AllCourses />
@@ -134,7 +135,7 @@ const Home = props => {
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
-          widthGrid="93%"
+          widthGrid="96%"
           bgColor="#ffffff"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
@@ -142,12 +143,12 @@ const Home = props => {
         >
           <ELearning iconElearning={<Computer />} />
           <ELearning iconElearning={<People />} />
-          <ELearning iconElearning={<Certificate />} />
+          <ELearning iconElearning={<CertificateIcon />} />
         </GridLayout>
 
-          <ImgText imgTextPic="images/workshop.png" imgTextHeader="Vill du hålla en workshop?" imgTextParagraph='Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas.'/>
-
       </GridLayout>
+        <ImgText imgTextPic="images/workshop.png" imgTextHeader="Vill du hålla en workshop?" imgTextParagraph='Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas.'/>
+
     </StyledHome>
   );
 };

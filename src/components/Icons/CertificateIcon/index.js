@@ -7,7 +7,7 @@ const StyledCertificate = styled.svg`
   
   }
 `
-const Certificate= (props) => {
+const CertificateIcon= (props) => {
     return (
       <StyledCertificate
         {...props}
@@ -51,4 +51,4 @@ const Certificate= (props) => {
     );
 }
 
-export default Certificate
+export default CertificateIcon
