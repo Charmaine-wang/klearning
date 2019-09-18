@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
-  
+
   background-color: ${props => (props.bgColor ? props.bgColor : "white")};
   border: 1px solid #e0e0e0;
   color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
@@ -25,7 +25,7 @@ const StyledButton = styled.button`
   }
 `;
 const Button = props => {
-  return <StyledButton {...props} onClick={() => props.onClick}>{props.btnName}</StyledButton>;
+  return <StyledButton {...props}>{props.btnName}</StyledButton>;
 };
 
 export default Button;
