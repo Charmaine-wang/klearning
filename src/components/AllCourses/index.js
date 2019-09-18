@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
 
-const StyledAllCourses = styled.button`
+const StyledAllCourses = styled.div`
   /* width: 100%; */
   padding: 0;
   display: flex;
