@@ -27,10 +27,8 @@ const StyledHome = styled.div`
 
     display: flex;
     width: 90vw;
-    /* height: 10vh; */
     align-items: center;
     justify-content: space-between;
-    /* margin: 0 10% 0 0; */
   }
 
 
