@@ -19,7 +19,7 @@ const StyledCourseInformationCard = styled.div`
   }
 `;
 
-const CourseInformationCard = (header, paragraph) => {
+const CourseInformationCard = ({ header, paragraph }) => {
   return (
     <StyledCourseInformationCard>
       <div>

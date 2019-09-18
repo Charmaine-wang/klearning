@@ -25,7 +25,7 @@ const StyledButton = styled.button`
     text-decoration: underline;
   }
 `;
-const Button = btnName => {
+const Button = ({ btnName, ...props }) => {
   // eslint-disable-next-line no-undef
   return <StyledButton {...props}>{btnName}</StyledButton>;
 };

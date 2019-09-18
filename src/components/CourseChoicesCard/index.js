@@ -40,7 +40,7 @@ const StyledCourseChoicesCard = styled.div`
   }
 `;
 
-const CourseChoicesCard = (lessonAmount, handInAmount, hoursAmount) => {
+const CourseChoicesCard = ({ lessonAmount, handInAmount, hoursAmount }) => {
   return (
     <StyledCourseChoicesCard>
       <div className="choices-card">

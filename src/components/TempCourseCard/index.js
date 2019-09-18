@@ -82,13 +82,13 @@ const StyledTempCourseCard = styled.div`
     margin-bottom: 10px; */
   }
 `;
-const TempCourseCard = (
+const TempCourseCard = ({
   courseImg,
   courseAlt,
   courseLength,
   courseTitle,
   courseCreator
-) => {
+}) => {
   return (
     <StyledTempCourseCard>
       <img src={courseImg} alt={courseAlt} />

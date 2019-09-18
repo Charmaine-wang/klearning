@@ -58,7 +58,7 @@ const AboutCourse = () => {
                     mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel."
       />
       <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
-      <div clasName="recommended-course">
+      <div className="recommended-course">
         <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"
@@ -83,7 +83,7 @@ const AboutCourse = () => {
       />
 
       <h1 className="similar-header">Liknande Material</h1>
-      <div clasName="similar-courses">
+      <div className="similar-courses">
         <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"

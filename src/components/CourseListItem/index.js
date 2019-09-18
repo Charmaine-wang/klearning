@@ -46,7 +46,7 @@ const StyledCourseListItem = styled.div`
     align-self: flex-end;
   }
 `;
-const CourseListItem = (
+const CourseListItem = ({
   courseImg,
   courseAlt,
   courseLength,
@@ -54,7 +54,7 @@ const CourseListItem = (
   courseTimeLeft,
   bookmark,
   bookmarkAlt
-) => {
+}) => {
   return (
     <StyledCourseListItem>
       <img src={courseImg} alt={courseAlt} />

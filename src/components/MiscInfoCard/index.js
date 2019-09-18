@@ -19,7 +19,7 @@ const StyledMiscInfoCard = styled.div`
   }
 `;
 
-const MiscInfoCard = (
+const MiscInfoCard = ({
   seatsAmouts,
   startDate,
   endDate,
@@ -28,7 +28,7 @@ const MiscInfoCard = (
   activity,
   language,
   moreInfo
-) => {
+}) => {
   return (
     <StyledMiscInfoCard>
       <div>

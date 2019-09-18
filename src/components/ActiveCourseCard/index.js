@@ -32,7 +32,7 @@ const StyledActiveCourseCard = styled.div`
     font-weight: 600;
   }
 `;
-const ActiveCourseCard = (
+const ActiveCourseCard = ({
   activeCourseImg,
   activeCourseAlt,
   courseCat,
@@ -42,7 +42,7 @@ const ActiveCourseCard = (
   courseTeacher,
   bookmark,
   bookmarkAlt
-) => {
+}) => {
   return (
     <StyledActiveCourseCard>
       <img src={activeCourseImg} alt={activeCourseAlt} />

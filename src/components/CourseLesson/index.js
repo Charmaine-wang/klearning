@@ -32,7 +32,7 @@ const StyledCourseLesson = styled.div`
   }
 `;
 
-const CourseLesson = (lessonNumber, lessonName, lessonLength) => {
+const CourseLesson = ({ lessonNumber, lessonName, lessonLength }) => {
   return (
     <StyledCourseLesson>
       <div className="lesson">

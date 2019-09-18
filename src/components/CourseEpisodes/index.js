@@ -34,7 +34,7 @@ const CourseEpisodes = () => {
       </div>
 
       <h1 className="similar-header">Liknande Material</h1>
-      <div clasName="similar-courses">
+      <div className="similar-courses">
         <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"
