@@ -13,10 +13,10 @@ const StyledGridLayout = styled.div`
 	display: ${props => (props.hidden ? 'none' : 'grid')};
 	grid-template-columns: ${props => props.colLayout};
 	grid-template-rows: ${props => props.rowLayout};
-	grid-gap: ${props => props.gridGap ? props.gridGap : '2% 0'};
+	grid-gap: ${props => props.gridGap ? props.gridGap : '20px 0'};
     padding: ${props => (props.padding ? props.padding : '0')};
     background-color: ${props => (props.bgColor ? props.bgColor : '#F5F5F5')};
-	border-radius: ${props => props.gridRadius}
+	border-radius: ${props => props.gridRadius};
 	/* margin: 0 8%; */
 	/* & > img{
 		height: 400px;
