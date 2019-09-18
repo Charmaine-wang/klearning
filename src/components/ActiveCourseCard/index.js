@@ -33,25 +33,44 @@ const StyledActiveCourseCard = styled.div`
     padding: 0 15px;
   }
 `;
-
-const ActiveCourseCard = props => {
+const ActiveCourseCard = ({
+  activeCourseImg,
+  activeCourseAlt,
+  courseCat,
+  courseTime,
+  cardHeader,
+  cardParagraph,
+  courseTeacher,
+  bookmark,
+  bookmarkAlt
+}) => {
   const [isClicked, setClicked] = useState(false);
+  console.log(
+    activeCourseImg,
+    activeCourseAlt,
+    courseCat,
+    courseTime,
+    cardHeader,
+    cardParagraph,
+    courseTeacher,
+    bookmark,
+    bookmarkAlt
+  );
 
-  console.log(props);
   return (
     <StyledActiveCourseCard>
-      <img src={props.activeCourseImg} alt={props.activeCourseAlt} />
+      <img src={activeCourseImg} alt={activeCourseAlt} />
 
       <div>
-        <h5>{props.courseCat}</h5>
-        <h5>{props.courseTime}</h5>
+        <h5>{courseCat}</h5>
+        <h5>{courseTime}</h5>
       </div>
 
-      <h2>{props.cardHeader}</h2>
-      <h5>{props.cardParagraph}</h5>
+      <h2>{cardHeader}</h2>
+      <h5>{cardParagraph}</h5>
 
       <div>
-        <h5>{props.courseTeacher}</h5>
+        <h5>{courseTeacher}</h5>
 
         <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked} />
       </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../../components/Button";
-import { NavLink } from "react-router-dom";
+import Button from "../Button";
 
 const StyledProfileButtonSwitch = styled.div`
   width: 90vw;
@@ -13,7 +12,7 @@ const StyledProfileButtonSwitch = styled.div`
   justify-content: space-around;
 `;
 
-const ProfileButtonSwitch = props => {
+const ProfileButtonSwitch = () => {
   return (
     <StyledProfileButtonSwitch>
       <Button>Intyg</Button>

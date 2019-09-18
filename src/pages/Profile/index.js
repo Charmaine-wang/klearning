@@ -24,24 +24,25 @@ const StyledProfile = styled.div`
   }
 `;
 
-const Profile = props => {
+const Profile = () => {
   const [profileComponent, setProfileComponent] = useState("certificates");
 
   function switchComponent() {
     if (profileComponent === "certificates") {
-      return <MyCertificates></MyCertificates>;
+      return <MyCertificates />;
     }
     if (profileComponent === "cv") {
-      return <CV></CV>;
+      return <CV />;
     }
     if (profileComponent === "courses") {
-      return <MyCourses></MyCourses>;
+      return <MyCourses />;
     }
+    return null;
   }
 
   return (
     <StyledProfile>
-      <ProfileHead></ProfileHead>
+      <ProfileHead />
       <div className="buttonSwitch">
         <Button
           btnName="Intyg"
@@ -57,7 +58,7 @@ const Profile = props => {
       <Container>
         <h1>Rekommenderade kurser</h1>
       </Container>
-      <Container>
+      <Container padding="0 0 16px 16px">
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
