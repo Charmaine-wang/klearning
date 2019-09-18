@@ -28,12 +28,17 @@ const StyledCourseListItem = styled.div`
       width: 12%;
       align-self: center;
     }
+    > h5 {
+      align-self: center;
+    }
   }
   & > div > p,
-  h3 {
+  h2 {
     margin: 2% 5%;
   }
-  & > div > h3 {
+  & > div > h2 {
+    color: #333333;
+    font-weight: 600;
     font-size: 16px;
     line-height: 135%;
   }
@@ -64,9 +69,9 @@ const CourseListItem = ({
       <img src={courseImg} alt={courseAlt} />
       <div>
         <p>{courseLength}</p>
-        <h3>{courseTitle}</h3>
+        <h2>{courseTitle}</h2>
         <div>
-          <p>{courseTimeLeft} kvar av lektion</p>
+          <h5>{courseTimeLeft} kvar av lektion</h5>
           {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
           <Bookmark />
         </div>
