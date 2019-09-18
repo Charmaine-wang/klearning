@@ -5,7 +5,8 @@ const StyledImgText = styled.div`
   position: relative;
   height: 400px;
   top: 0;
-  background-image: url(${props => props.imgTextPic});
+  background-image: url(${props =>
+    props.imgTextPic ? props.imgTextPic : "images/home.png"});
 
   /* background-image: url("images/home.png"); */
   & > .overlayer {
@@ -36,8 +37,9 @@ const StyledImgText = styled.div`
 `;
 
 const ImgText = ({ imgTextPic, imgTextHeader, imgTextParagraph }) => {
+  console.log(imgTextPic);
   return (
-    <StyledImgText {...imgTextPic}>
+    <StyledImgText imgTextPic={imgTextPic}>
       <div className="overlayer" />
 
       <h1>{imgTextHeader}</h1>
