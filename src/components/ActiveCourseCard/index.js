@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
-import styled from 'styled-components'
-import Bookmark from '../Icons/Bookmark'
+import React, { useState } from "react";
+import styled from "styled-components";
+import Bookmark from "../Icons/Bookmark";
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
@@ -12,54 +12,51 @@ const StyledActiveCourseCard = styled.div`
   justify-content: space-between;
   position: relative;
 
-
-    & > div, & > h2, & > h5 {
-        padding: 0 5%;
-    }
+  & > div,
+  & > h2,
+  & > h5 {
+    padding: 0 5%;
+  }
 
   & > div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 5vh; 
-      /* padding: 0 10%;  */
-  }
-    & > div:first-of-type{
-        color: #C97C36;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    /* padding: 0 10%;  */
   }
 
-
-  
+  h5,
+  h2,
+  h3,
+  div > img {
+    padding: 0 15px;
+  }
 `;
 
-const ActiveCourseCard = (props) => {
-    const [isClicked, setClicked] = useState(false)
+const ActiveCourseCard = props => {
+  const [isClicked, setClicked] = useState(false);
 
-console.log(props)
-    return (
- 
-        <StyledActiveCourseCard>
-            <img src={props.activeCourseImg} alt={props.activeCourseAlt}/>
-         
-            <div>
-                <h5>{props.courseCat}</h5>
-                <h5>{props.courseTime}</h5>
-            </div>
+  console.log(props);
+  return (
+    <StyledActiveCourseCard>
+      <img src={props.activeCourseImg} alt={props.activeCourseAlt} />
 
-            <h2>{props.cardHeader}</h2>
-            <h5>{props.cardParagraph}</h5>
+      <div>
+        <h5>{props.courseCat}</h5>
+        <h5>{props.courseTime}</h5>
+      </div>
 
-            <div>
-                <h5>{props.courseTeacher}</h5>
+      <h2>{props.cardHeader}</h2>
+      <h5>{props.cardParagraph}</h5>
 
-                <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked}/>
+      <div>
+        <h5>{props.courseTeacher}</h5>
 
-            </div>
+        <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked} />
+      </div>
+    </StyledActiveCourseCard>
+  );
+};
 
-        </StyledActiveCourseCard>
-
-    )
-}
-
-export default ActiveCourseCard
+export default ActiveCourseCard;
