@@ -26,7 +26,7 @@ const StyledGridLayout = styled.div`
 const GridLayout = (props) => {
     return (
         <StyledGridLayout {...props}>
-			{/* <img src={props.imgHeader} alt=""/> */}
+	
 		
             
         </StyledGridLayout>

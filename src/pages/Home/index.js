@@ -3,11 +3,11 @@ import styled from "styled-components";
 // import SearchField from "../../components/SearchField";
 import FixedContainer from "../../components/FixedContainer";
 import GridLayout from "../../components/GridLayout";
-import CourseList from '../../components/CourseList'
-import ContainerSlider from '../../components/ContainerSlider'
-import ActiveCourseCard from '../../components/ActiveCourseCard'
+import CourseList from "../../components/CourseList";
+import ContainerSlider from "../../components/ContainerSlider";
+import ActiveCourseCard from "../../components/ActiveCourseCard";
 import AllCourses from "../../components/AllCourses";
-import Button from '../../components/Button'
+import Button from "../../components/Button";
 
 import ELearning from '../../components/ELearning'
 import Computer from '../../components/Icons/Computer'
@@ -24,6 +24,7 @@ const StyledHome = styled.div`
   height: 100%;
   
   .btnDiv{
+
     display: flex;
     width: 90vw;
     /* height: 10vh; */
@@ -33,35 +34,6 @@ const StyledHome = styled.div`
   }
 
 
-    /* & > div:first-child{
-      position: relative;
-      height: 400px;
-      top: 0;
-      background-image: url('images/home.png');
-       & > .overlayer{
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 13.29%, rgba(0, 0, 0, 0.8) 100%);
-        position: absolute;
-        }
-
-
-          & > h1, p{
-          position: absolute;
-          color: #ffffff;
-          z-index:2;
-          text-align: center;
-        }
-        & > h1{
-          top: 40%;
-          font-size: 40px;
-        }
-          & > p{
-          top: 70%;
-        }
-
-    
-    } */
 `;
 
 const Home = props => {
@@ -70,6 +42,7 @@ const Home = props => {
 
   return (
     <StyledHome expandHeight>
+
       <ImgText imgTextPic="images/home.png" imgTextHeader="Vi låter kulturen utvecklas." imgTextParagraph='Vi kynter ihop branshen och förser profisionella kulturarbetare med
           spetskompetens.'/>
 
@@ -158,6 +131,7 @@ const Home = props => {
             <CourseList courseWidth />
           </ContainerSlider>
         </FixedContainer>
+
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
