@@ -12,6 +12,8 @@ const StyledCourseList = styled.div`
 `;
 
 const CourseList = props => {
+  //   const [isClicked, setClicked] = useState(false)
+
   return (
     <StyledCourseList {...props}>
       <CourseListItem

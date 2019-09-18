@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Bookmark from "../Icons/Bookmark";
 
 const StyledCourseListItem = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const StyledCourseListItem = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 50%;
+    width: 100%;
     height: 100%;
   }
   & > div > div {
@@ -46,15 +47,18 @@ const StyledCourseListItem = styled.div`
     align-self: flex-end;
   }
 `;
+
 const CourseListItem = ({
   courseImg,
   courseAlt,
   courseLength,
   courseTitle,
-  courseTimeLeft,
-  bookmark,
-  bookmarkAlt
+  courseTimeLeft
+  // bookmark,
+  // bookmarkAlt
 }) => {
+  // const [isClicked, setClicked] = useState(false)
+
   return (
     <StyledCourseListItem>
       <img src={courseImg} alt={courseAlt} />
@@ -64,7 +68,7 @@ const CourseListItem = ({
         <div>
           <p>{courseTimeLeft} kvar av lektion</p>
           {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
-          <img src={bookmark} alt={bookmarkAlt} />
+          <Bookmark />
         </div>
       </div>
     </StyledCourseListItem>
