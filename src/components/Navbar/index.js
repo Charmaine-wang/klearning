@@ -33,7 +33,7 @@ const Navbar = () => {
       <GlobalStyle />
       <StyledNavbar>
         <div className="navbar">
-          <NavLink to="/home">
+          <NavLink to="/">
             <img src="images/logo.svg" alt="" />
           </NavLink>
           {/* <NavLink to="/course">Kurs</NavLink> */}

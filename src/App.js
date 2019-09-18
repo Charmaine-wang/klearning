@@ -13,7 +13,7 @@ const App = () => {
         <Navbar />
         <div>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/course" component={Course} />
             <Route path="/profile" component={Profile} />
           </Switch>
