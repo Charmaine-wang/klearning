@@ -9,16 +9,22 @@ import ActiveCourseCard from "../../components/ActiveCourseCard";
 import AllCourses from "../../components/AllCourses";
 import Button from "../../components/Button";
 
+import ELearning from '../../components/ELearning'
+import Computer from '../../components/Icons/Computer'
+import People from "../../components/Icons/People";
+import Certificate from "../../components/Icons/Certificate";
+import ImgText from '../../components/ImgText'
+
 const StyledHome = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 15% 0;
+  margin: 15% 0 0 0;
   width: 100vw;
+  height: 100%;
+  
+  .btnDiv{
 
-  height: ${props => (props.expandHeight ? "auto" : "100%")};
-
-  .btnDiv {
     display: flex;
     width: 90vw;
     /* height: 10vh; */
@@ -27,51 +33,19 @@ const StyledHome = styled.div`
     /* margin: 0 10% 0 0; */
   }
 
-  & > div:first-child {
-    position: relative;
-    height: 400px;
-    top: 0;
-    background-image: url("images/home.png");
-    & > .overlayer {
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 13.29%,
-        rgba(0, 0, 0, 0.8) 100%
-      );
-      position: absolute;
-    }
 
-    & > h1,
-    p {
-      position: absolute;
-      color: #ffffff;
-      z-index: 2;
-      text-align: center;
-    }
-    & > h1 {
-      top: 40%;
-      font-size: 40px;
-    }
-    & > p {
-      top: 70%;
-    }
-  }
 `;
 
 const Home = props => {
+// const [isClicked, setClicked] = useState(false);
+
+
   return (
     <StyledHome expandHeight>
-      <div>
-        <div className="overlayer"></div>
 
-        <h1>Vi låter kulturen utvecklas.</h1>
-        <p>
-          Vi kynter ihop branshen och förser profisionella kulturarbetare med
-          spetskompetens.
-        </p>
-      </div>
+      <ImgText imgTextPic="images/home.png" imgTextHeader="Vi låter kulturen utvecklas." imgTextParagraph='Vi kynter ihop branshen och förser profisionella kulturarbetare med
+          spetskompetens.'/>
+
 
       <GridLayout marginGrid="0 4%">
         <FixedContainer heightContainer="10vh">
@@ -93,7 +67,8 @@ const Home = props => {
               cardHeader="Dans Workshop med Connie Roberson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              // bookmark="images/bookmark.png"
+              // setClicked={() => setClicked(!isClicked)}
             />
 
             <ActiveCourseCard
@@ -155,6 +130,23 @@ const Home = props => {
             <CourseList courseWidth />
           </ContainerSlider>
         </FixedContainer>
+
+        <GridLayout
+          gridRadius="10px"
+          gridGap="3em"
+          widthGrid="93%"
+          bgColor="#ffffff"
+          colLayout="1fr"
+          rowLayout="1fr 1fr 1fr"
+          padding="0 0 15% 0"
+        >
+          <ELearning iconElearning={<Computer />} />
+          <ELearning iconElearning={<People />} />
+          <ELearning iconElearning={<Certificate />} />
+        </GridLayout>
+
+          <ImgText imgTextPic="images/workshop.png" imgTextHeader="Vill du hålla en workshop?" imgTextParagraph='Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas.'/>
+
       </GridLayout>
     </StyledHome>
   );

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import Bookmark from "../Icons/Bookmark";
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
@@ -11,14 +12,18 @@ const StyledActiveCourseCard = styled.div`
   justify-content: space-between;
   position: relative;
 
+  & > div,
+  & > h2,
+  & > h5 {
+    padding: 0 5%;
+  }
+
   & > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5vh;
-  }
-  & > div:first-of-type {
-    color: var(--soft-orange);
+    /* padding: 0 10%;  */
   }
 
   h5,
@@ -27,12 +32,12 @@ const StyledActiveCourseCard = styled.div`
   div > img {
     padding: 0 15px;
   }
-
-  h2 {
-    font-weight: 600;
-  }
 `;
+
 const ActiveCourseCard = props => {
+  const [isClicked, setClicked] = useState(false);
+
+  console.log(props);
   return (
     <StyledActiveCourseCard>
       <img src={props.activeCourseImg} alt={props.activeCourseAlt} />
@@ -47,7 +52,8 @@ const ActiveCourseCard = props => {
 
       <div>
         <h5>{props.courseTeacher}</h5>
-        <img src={props.bookmark} alt={props.bookmarkAlt} />
+
+        <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked} />
       </div>
     </StyledActiveCourseCard>
   );
