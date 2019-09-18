@@ -26,12 +26,21 @@ const StyledActiveCourseCard = styled.div`
     /* padding: 0 10%;  */
   }
 
-  h5,
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  div:first-of-type {
+    color: var(--soft-orange);
+    font-weight: 600;
+  }
+  /* h5,
   h2,
   h3,
   div > img {
     padding: 0 15px;
-  }
+  } */
 `;
 const ActiveCourseCard = ({
   activeCourseImg,
