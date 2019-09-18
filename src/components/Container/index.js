@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  width: 94vw;
   height: auto;
-  margin: 3vw auto;
+  margin: auto;
+  padding: ${props => (props.padding ? props.padding : "16px")};
 `;
 
 const Container = ({ props, children }) => {
-  return <StyledContainer>{children}</StyledContainer>;
+  return <StyledContainer {...props}>{children}</StyledContainer>;
 };
 
 export default Container;

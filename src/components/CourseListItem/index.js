@@ -1,24 +1,23 @@
+import React from "react";
+import styled from "styled-components";
+import Bookmark from "../Icons/Bookmark";
 
-import React from 'react'
-import styled from 'styled-components'
-import Bookmark from '../Icons/Bookmark'
-const StyledCourseListItem = styled.div `
-
+const StyledCourseListItem = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
   align-self: flex-start;
   width: 85vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : '13vh')};
+  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
-  
+
   /* margin: 15%; */
-  & > div{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width:100%;
-      height:100%;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
   }
   & > div > div {
     display: flex;
@@ -47,28 +46,33 @@ const StyledCourseListItem = styled.div `
   & > div > p:first-child {
     align-self: flex-end;
   }
+`;
 
-`
-const CourseListItem = (props) => {
+const CourseListItem = ({
+  courseImg,
+  courseAlt,
+  courseLength,
+  courseTitle,
+  courseTimeLeft
+  // bookmark,
+  // bookmarkAlt
+}) => {
   // const [isClicked, setClicked] = useState(false)
 
-
-    return (
-        <StyledCourseListItem>
-            <img src={props.courseImg} alt={props.courseAlt}/>
-            <div>
-                <p>{props.courseLength}</p>
-                <h3>{props.courseTitle}</h3>
-                <div>
-                    <p>{props.courseTimeLeft} kvar av lektion</p>
-    {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
-                    <Bookmark />
-
-                </div>
-            </div>
-        </StyledCourseListItem>
-    )
-}
-
+  return (
+    <StyledCourseListItem>
+      <img src={courseImg} alt={courseAlt} />
+      <div>
+        <p>{courseLength}</p>
+        <h3>{courseTitle}</h3>
+        <div>
+          <p>{courseTimeLeft} kvar av lektion</p>
+          {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
+          <Bookmark />
+        </div>
+      </div>
+    </StyledCourseListItem>
+  );
+};
 
 export default CourseListItem;

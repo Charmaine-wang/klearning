@@ -1,10 +1,13 @@
+/* eslint-disable react/no-access-state-in-setstate */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from "react";
 import Select from "react-select";
 
 const content = {
   dans: { videos: ["dansvideo 1", "dansvideo 2"] },
   foto: { videos: ["fotovideo 1", "fotovideo 2"] },
-  film: {videos: ['filmvideo 1', 'filmvideo 2'] }
+  film: { videos: ["filmvideo 1", "filmvideo 2"] }
 };
 
 const options = [
@@ -21,15 +24,17 @@ class Search extends Component {
       values: []
     };
   }
+
   onChange = (opt, { option }) => {
-    let newOpts = opt;
-    let string = this.state.searchField;
+    const newOpts = opt;
+    const string = this.state.searchField;
 
     this.setState({
       searchField: string,
       values: newOpts
     });
   };
+
   onInputChange = (string, { action }) => {
     if (action === "input-change") {
       this.setState({

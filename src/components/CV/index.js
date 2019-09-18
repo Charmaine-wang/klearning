@@ -62,11 +62,11 @@ const StyledCV = styled.div`
   }
 `;
 
-const CV = props => {
+const CV = () => {
   return (
     <StyledCV>
       <div className="row">
-        <div className="profileImage"></div>
+        <div className="profileImage" />
         <div>
           <h2>Brandon Lane</h2>
           <h3 className="orange">Filmskapare & Regissör</h3>

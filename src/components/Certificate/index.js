@@ -87,15 +87,21 @@ const StyledCertificate = styled.div`
     margin-bottom: 10px; */
   }
 `;
-const Certificate = props => {
+const Certificate = ({
+  courseImg,
+  courseAlt,
+  courseLength,
+  courseTitle,
+  courseCreator
+}) => {
   return (
     <StyledCertificate>
-      <img src={props.courseImg} alt={props.courseAlt} />
+      <img src={courseImg} alt={courseAlt} />
       <div>
-        <p>{props.courseLength}</p>
-        <h2>{props.courseTitle}</h2>
+        <p>{courseLength}</p>
+        <h2>{courseTitle}</h2>
         <div>
-          <p>{props.courseCreator}</p>
+          <p>{courseCreator}</p>
           <img className="icon" src="images/search.png" alt="checkbox" />
         </div>
       </div>

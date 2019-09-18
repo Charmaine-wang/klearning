@@ -7,7 +7,7 @@ import ActiveCourseCard from "../ActiveCourseCard";
 
 const StyledMyCourses = styled.div``;
 
-const MyCourses = props => {
+const MyCourses = () => {
   return (
     <StyledMyCourses>
       <Container>

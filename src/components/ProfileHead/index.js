@@ -38,17 +38,17 @@ const StyledProfileHead = styled.div`
   }
 `;
 
-const ProfileHead = props => {
+const ProfileHead = () => {
   return (
     <StyledProfileHead>
       <div className="row">
-        <div className="profileImage"></div>
+        <div className="profileImage" />
         <div>
           <h2>Brandon Lane</h2>
           <h3>Filmskapare & Regissör</h3>
           <div className="row">
-            <Button btnName="Film" margin="0 15px 0 0"></Button>
-            <Button btnName="Foto"></Button>
+            <Button btnName="Film" margin="0 15px 0 0" />
+            <Button btnName="Foto" />
           </div>
         </div>
       </div>

@@ -9,11 +9,11 @@ import ActiveCourseCard from "../../components/ActiveCourseCard";
 import AllCourses from "../../components/AllCourses";
 import Button from "../../components/Button";
 
-import ELearning from '../../components/ELearning'
-import Computer from '../../components/Icons/Computer'
+import ELearning from "../../components/ELearning";
+import Computer from "../../components/Icons/Computer";
 import People from "../../components/Icons/People";
 import CertificateIcon from "../../components/Icons/CertificateIcon";
-import ImgText from '../../components/ImgText'
+import ImgText from "../../components/ImgText";
 
 const StyledHome = styled.div`
   display: flex;
@@ -22,9 +22,8 @@ const StyledHome = styled.div`
   margin: 15% 0 0 0;
   width: 100vw;
   height: 100%;
-  
-  .btnDiv{
 
+  .btnDiv {
     display: flex;
     width: 90vw;
     /* height: 10vh; */
@@ -32,23 +31,24 @@ const StyledHome = styled.div`
     justify-content: space-between;
     /* margin: 0 10% 0 0; */
   }
-
-
 `;
 
-const Home = props => {
-// const [isClicked, setClicked] = useState(false);
-
+const Home = () => {
+  // const [isClicked, setClicked] = useState(false);
 
   return (
     <StyledHome expandHeight>
+      <ImgText
+        imgTextPic="images/home.png"
+        imgTextHeader="Vi låter kulturen utvecklas."
+        imgTextParagraph="Vi kynter ihop branshen och förser profisionella kulturarbetare med
+          spetskompetens."
+      />
 
-      <ImgText imgTextPic="images/home.png" imgTextHeader="Vi låter kulturen utvecklas." imgTextParagraph='Vi kynter ihop branshen och förser profisionella kulturarbetare med
-          spetskompetens.'/>
-
-      <GridLayout 
-      // marginGrid="0 0 0 -4%"
-       padding="0 0 0 4%">
+      <GridLayout
+        // marginGrid="0 0 0 -4%"
+        padding="0 0 0 4%"
+      >
         <FixedContainer heightContainer="10vh">
           <ContainerSlider>
             <AllCourses />
@@ -145,10 +145,12 @@ const Home = props => {
           <ELearning iconElearning={<People />} />
           <ELearning iconElearning={<CertificateIcon />} />
         </GridLayout>
-
       </GridLayout>
-        <ImgText imgTextPic="images/workshop.png" imgTextHeader="Vill du hålla en workshop?" imgTextParagraph='Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas.'/>
-
+      <ImgText
+        imgTextPic="images/workshop.png"
+        imgTextHeader="Vill du hålla en workshop?"
+        imgTextParagraph="Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas."
+      />
     </StyledHome>
   );
 };

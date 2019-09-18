@@ -10,7 +10,7 @@ const StyledMyCertificates = styled.div`
   align-items: center;
 `;
 
-const MyCertificates = props => {
+const MyCertificates = () => {
   return (
     <StyledMyCertificates>
       <Container>
