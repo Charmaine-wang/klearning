@@ -22,13 +22,23 @@ const StyledCourseChoicesCard = styled.div`
     width: 100%;
   }
 
-  img {
-    height: 36px;
-    width: 100%;
+  .information-numbers > div {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .choices > div > img {
+    // height: 36px;
+    width: 80%;
     margin-bottom: 10px;
   }
 
-  div.big-numbers {
+  .choices > div {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  div > .big-numbers {
     display: flex;
     justify-content: center;
     font-size: 36px;
