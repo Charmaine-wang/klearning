@@ -3,8 +3,8 @@ import styled from "styled-components";
 import Button from "../Button";
 
 const StyledCV = styled.div`
-  width: 94vw;
-  margin: 3vw auto;
+  width: 100%;
+  /* margin: 3vw auto; */
   background-color: var(--card-color);
   border-radius: 10px;
   display: flex;

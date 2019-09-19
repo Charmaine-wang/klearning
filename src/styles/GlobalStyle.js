@@ -41,24 +41,30 @@ const GlobalStyle = createGlobalStyle`
   p{
     font-size: 16px;
     margin: 0;
+
+    @media only screen and (max-width: 700px) {
+    font-size: 12px;
+  }
   }
   h2{
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 400;
     margin: 0;
-    /* @media only screen and (max-width: 800px) {
-      font-size: 24px;
-    } */
+
+    @media only screen and (max-width: 700px) {
+    font-size: 16px;
+    font-weight: 600;
+  }
   }
   h3{
-    font-size: 14px;
-    font-weight: 400;
     margin: 0;
     line-height: 24px;
-    /* @media only screen and (max-width: 800px) {
-      font-size: 16px;
-      font-weight: 700;  DETTA STÄMMER INTE? 
-    } */
+    font-size: 16px;
+    font-weight: 400;
+    @media only screen and (max-width: 700px) {
+    font-size: 14px;
+    font-weight: 400;
+    }
   }
   h5{
     font-size: 12px;

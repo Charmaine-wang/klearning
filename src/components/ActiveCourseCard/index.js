@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from "react";
 import styled from "styled-components";
 import Bookmark from "../Icons/Bookmark";
@@ -23,14 +24,20 @@ const StyledActiveCourseCard = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 5vh;
-    /* padding: 0 10%;  */
   }
 
-  h5,
-  h2,
-  h3,
-  div > img {
-    padding: 0 15px;
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  div:first-of-type {
+    color: var(--soft-orange);
+    font-weight: 600;
+  }
+
+  & > img {
+    /* image should take up higher percantage of div */
   }
 `;
 const ActiveCourseCard = ({
@@ -67,7 +74,7 @@ const ActiveCourseCard = ({
       </div>
 
       <h2>{cardHeader}</h2>
-      <h5>{cardParagraph}</h5>
+      {/* <h5>{cardParagraph}</h5> */}
 
       <div>
         <h5>{courseTeacher}</h5>

@@ -42,7 +42,9 @@ const Profile = () => {
 
   return (
     <StyledProfile>
-      <ProfileHead />
+      <Container>
+        <ProfileHead />
+      </Container>
       <div className="buttonSwitch">
         <Button
           btnName="Intyg"
@@ -54,7 +56,7 @@ const Profile = () => {
           onClick={() => setProfileComponent("courses")}
         />
       </div>
-      {switchComponent()}
+      <Container>{switchComponent()}</Container>
       <Container>
         <h1>Rekommenderade kurser</h1>
       </Container>

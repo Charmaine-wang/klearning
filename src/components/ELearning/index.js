@@ -11,13 +11,18 @@ const StyledELearning = styled.div`
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
+
+  & > h1 {
+    font-size: 16px;
+    font-weight: 600;
+  }
 `;
-const ELearning = ({ iconElearning }) => {
+const ELearning = ({ iconElearning, title, text }) => {
   return (
     <StyledELearning>
       <>{iconElearning}</>
-      <h1>Praktisk nlärning</h1>
-      <p>Genomför projekt och uppdrag som du kan nyttja i arbetslivet.</p>
+      <h1>{title}</h1>
+      <p>{text}</p>
     </StyledELearning>
   );
 };
