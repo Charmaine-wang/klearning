@@ -12,6 +12,7 @@ import ActiveCourseCard from "../../components/ActiveCourseCard";
 
 const StyledProfile = styled.div`
   margin-top: 74px;
+  width: 100%;
 
   .buttonSwitch {
     width: 90vw;
@@ -67,7 +68,7 @@ const Profile = () => {
               activeCourseImg="images/Bild.png"
               courseCat="Dans"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Dans Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
@@ -77,7 +78,7 @@ const Profile = () => {
               activeCourseImg="images/Bild.png"
               courseCat="Dans"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Film Workshop med Connie Robertson  "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"

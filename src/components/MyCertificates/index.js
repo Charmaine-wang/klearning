@@ -16,19 +16,19 @@ const MyCertificates = () => {
       <Certificate
         courseImg="images/rectangle2.png"
         courseLength="4h"
-        courseTitle="Kom igång med ditt filmskapande"
-        courseCreator="Connie Robertsson"
+        courseTitle="Röstteknik, ljudboksinläsning..."
+        courseCreator="Jan Cruseman"
       />
       <Certificate
         courseImg="images/rectangle2.png"
         courseLength="4h"
-        courseTitle="Kom igång med ditt filmskapande"
-        courseCreator="Connie Robertsson"
+        courseTitle="Kurs i filmskådespeleri"
+        courseCreator="Lisa Ohlin"
       />
       <Certificate
         courseImg="images/rectangle2.png"
         courseLength="4h"
-        courseTitle="Kom igång med ditt filmskapande"
+        courseTitle="Kom igång med ditt filmskapande 1"
         courseCreator="Connie Robertsson"
       />
     </StyledMyCertificates>
