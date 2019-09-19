@@ -36,7 +36,7 @@ const StyledCourse = styled.div`
     position: relative;
   }
 
-  .apply-button {
+  .image-apply-button {
     position: absolute;
     top: 80%;
     left: 30%;
@@ -71,7 +71,7 @@ const Course = () => {
           bgColor="var(--soft-orange)"
           textColor="white"
           btnName="Ansök till kurs"
-          className="apply-button"
+          className="image-apply-button"
           border="none"
         />
       </div>
