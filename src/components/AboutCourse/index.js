@@ -22,6 +22,7 @@ const StyledAboutCourse = styled.div`
 
   .similar-header {
     margin: 16px;
+    margin-top: 64px;
     color: black;
   }
   .similar-courses {
@@ -57,14 +58,14 @@ const AboutCourse = () => {
 
                     mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel."
       />
-      <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
+      {/* <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
       <div className="recommended-course">
         <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"
           courseTitle="Kom igång med ditt filmskapande"
         />
-      </div>
+      </div> */}
       <h1 className="information-header">Mer information</h1>
       <MiscInfoCard
         seatsAmouts="20"
