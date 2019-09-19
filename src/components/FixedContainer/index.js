@@ -12,6 +12,10 @@ const StyledFixedContainer = styled.div`
   margin: ${props => (props.margin ? props.margin : "0")};
   padding: ${props => (props.padding ? props.padding : "0")};
 
+  @media only screen and (min-width: 700px) {
+    /* Ska vi göra nånting här så slidern blir bättre inramad i desktop? */
+  }
+
   ::-webkit-scrollbar {
     display: none;
   }

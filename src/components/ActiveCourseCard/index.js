@@ -24,7 +24,6 @@ const StyledActiveCourseCard = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 5vh;
-    /* padding: 0 10%;  */
   }
 
   h2 {
@@ -36,12 +35,10 @@ const StyledActiveCourseCard = styled.div`
     color: var(--soft-orange);
     font-weight: 600;
   }
-  /* h5,
-  h2,
-  h3,
-  div > img {
-    padding: 0 15px;
-  } */
+
+  & > img {
+    /* image should take up higher percantage of div */
+  }
 `;
 const ActiveCourseCard = ({
   activeCourseImg,
@@ -77,7 +74,7 @@ const ActiveCourseCard = ({
       </div>
 
       <h2>{cardHeader}</h2>
-      <h5>{cardParagraph}</h5>
+      {/* <h5>{cardParagraph}</h5> */}
 
       <div>
         <h5>{courseTeacher}</h5>
