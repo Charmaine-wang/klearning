@@ -18,6 +18,7 @@ const StyledCourseLesson = styled.div`
   .lesson-header {
     color: black;
     display: flex;
+    align-items: center;
     // justify-content:space-between;
   }
   .lesson-header > .time {
@@ -32,12 +33,12 @@ const StyledCourseLesson = styled.div`
   }
 `;
 
-const CourseLesson = ({ lessonNumber, lessonName, lessonLength }) => {
+const CourseLesson = ({ lessonNumber, lessonName, lessonLength, image }) => {
   return (
     <StyledCourseLesson>
       <div className="lesson">
         <div className="lesson-header">
-          <img src="images/watch.png" alt="" />
+          <img src={image} alt="" />
           <p className="title">
             {lessonNumber}. {lessonName}
           </p>
