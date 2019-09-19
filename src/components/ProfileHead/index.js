@@ -45,7 +45,7 @@ const ProfileHead = () => {
         <div className="profileImage" />
         <div>
           <h2>Brandon Lane</h2>
-          <h3>Filmskapare & Regissör</h3>
+          <h3>Skådespelare</h3>
           <div className="row">
             <Button btnName="Film" margin="0 15px 0 0" />
             <Button btnName="Foto" />
@@ -53,10 +53,10 @@ const ProfileHead = () => {
         </div>
       </div>
       <div>
-        <h2>About</h2>
+        <h2>Om mig</h2>
         <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Har en lång bakgrund inom friteatergrupper samt independentfilm runt
+          om i Skandinavien.
         </h3>
       </div>
     </StyledProfileHead>
