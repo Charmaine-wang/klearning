@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from "../CourseChoicesCard";
 import MiscInfoCard from "../MiscInfoCard";
+import Button from "../Button";
 
 import TempCourseCard from "../TempCourseCard";
 
@@ -22,10 +23,16 @@ const StyledAboutCourse = styled.div`
 
   .similar-header {
     margin: 16px;
+    // margin-top: 16px;
     color: black;
   }
   .similar-courses {
     margin: 16px;
+  }
+  .button-div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 `;
 
@@ -57,15 +64,15 @@ const AboutCourse = () => {
 
                     mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel."
       />
-      <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
+      {/* <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
       <div className="recommended-course">
         <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"
           courseTitle="Kom igång med ditt filmskapande"
         />
-      </div>
-      <h1 className="information-header">Mer information</h1>
+      </div> */}
+      <h1 className="information-header">Kursinformation</h1>
       <MiscInfoCard
         seatsAmouts="20"
         startDate="25 maj"
@@ -81,6 +88,14 @@ const AboutCourse = () => {
                 på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
                 innan aktiviteten startar."
       />
+      <div className="button-div">
+        <Button
+          bgColor="var(--soft-orange)"
+          textColor="white"
+          btnName="Ansök till kurs"
+          border="none"
+        />
+      </div>
 
       <h1 className="similar-header">Liknande Material</h1>
       <div className="similar-courses">

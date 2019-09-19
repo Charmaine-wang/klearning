@@ -32,15 +32,18 @@ const StyledCourse = styled.div`
     left: 5%;
   }
 
-  .apply-button {
-    // position:absolute;
-  }
-  h1 {
-    font-weight: 400;
+  .image-container {
+    position: relative;
   }
 
-  .apply-button {
-    // position:absolute;
+  .image-apply-button {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+  }
+
+  h1 {
+    font-weight: 400;
   }
 `;
 
@@ -64,7 +67,13 @@ const Course = () => {
           Kursnamnet är här, bästa danslektionen ever
         </h1>
         <img src="images/courseImage.png" alt="course" />
-        {/* <Button className="apply-button">Ansök till kurs</Button> */}
+        <Button
+          bgColor="var(--soft-orange)"
+          textColor="white"
+          btnName="Ansök till kurs"
+          className="image-apply-button"
+          border="none"
+        />
       </div>
       <div className="button-container">
         <Button

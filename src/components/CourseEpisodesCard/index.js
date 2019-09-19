@@ -13,26 +13,31 @@ const CourseEpisodesCard = () => {
   return (
     <StyledCourseEpisodesCard>
       <CourseLesson
+        image="images/watch.png"
         lessonNumber="1"
         lessonName="Introduktion"
         lessonLength="03:53"
       />
       <CourseLesson
+        image="images/read.png"
         lessonNumber="2"
         lessonName="Nästa steg"
         lessonLength="05:55"
       />
       <CourseLesson
+        image="images/write.png"
         lessonNumber="3"
         lessonName="Nästa steg"
         lessonLength="05:55"
       />
       <CourseLesson
+        image="images/read.png"
         lessonNumber="4"
         lessonName="Nästa steg"
         lessonLength="05:55"
       />
       <CourseLesson
+        image="images/star.png"
         lessonNumber="5"
         lessonName="Nästa steg"
         lessonLength="05:55"
