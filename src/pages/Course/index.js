@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
 import CourseEpisodes from "../../components/CourseEpisodes";
+import Container from "../../components/Container";
 
 const StyledCourse = styled.div`
   margin-top: 64px;
@@ -62,35 +63,37 @@ const Course = () => {
 
   return (
     <StyledCourse>
-      <div className="image-container">
-        <h1 className="course-header">
-          Kursnamnet är här, bästa danslektionen ever
-        </h1>
-        <img src="images/courseImage.png" alt="course" />
-        <Button
-          bgColor="var(--soft-orange)"
-          textColor="white"
-          btnName="Ansök till kurs"
-          className="image-apply-button"
-          border="none"
-        />
-      </div>
-      <div className="button-container">
-        <Button
-          btnName="Om kurs"
-          buttonWidth="45%"
-          onClick={() => setCourseComponent("aboutCourse")}
-        />
-        <Button
-          btnName="Kursavsnitt"
-          buttonWidth="45%"
-          onClick={() => setCourseComponent("courseEpisodes")}
-        />
-      </div>
-      <div className="course-choices-container">
-        <h1>Kursalternativ</h1>
-      </div>
-      <div>{switchComponent()}</div>
+      <Container>
+        <div className="image-container">
+          <h1 className="course-header">
+            Kursnamnet är här, bästa danslektionen ever
+          </h1>
+          <img src="images/courseImage.png" alt="course" />
+          <Button
+            bgColor="var(--soft-orange)"
+            textColor="white"
+            btnName="Ansök till kurs"
+            className="image-apply-button"
+            border="none"
+          />
+        </div>
+        <div className="button-container">
+          <Button
+            btnName="Om kurs"
+            buttonWidth="45%"
+            onClick={() => setCourseComponent("aboutCourse")}
+          />
+          <Button
+            btnName="Kursavsnitt"
+            buttonWidth="45%"
+            onClick={() => setCourseComponent("courseEpisodes")}
+          />
+        </div>
+        <div className="course-choices-container">
+          <h1>Kursalternativ</h1>
+        </div>
+        <div>{switchComponent()}</div>
+      </Container>
     </StyledCourse>
   );
 };
