@@ -72,7 +72,8 @@ const Course = () => {
           textColor="white"
           btnName="Ansök till kurs"
           className="apply-button"
-         />
+          border="none"
+        />
       </div>
       <div className="button-container">
         <Button
