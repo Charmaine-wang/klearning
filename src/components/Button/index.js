@@ -13,6 +13,7 @@ const StyledButton = styled.button`
   text-align: center;
   text-decoration: none;
   font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
+  font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
   border-radius: 8px;
   margin: ${props => (props.margin ? props.margin : "0")};
 
