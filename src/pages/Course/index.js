@@ -15,7 +15,7 @@ const StyledCourse = styled.div`
     padding: 16px 16px 0px;
   }
 
-  img {
+  .hero-image-course {
     width: 100%;
   }
 
@@ -68,7 +68,11 @@ const Course = () => {
           <h1 className="course-header">
             Kursnamnet är här, bästa danslektionen ever
           </h1>
-          <img src="images/courseImage.png" alt="course" />
+          <img
+            className="hero-image-course"
+            src="images/courseImage.png"
+            alt="course"
+          />
           <Button
             bgColor="var(--soft-orange)"
             textColor="white"
