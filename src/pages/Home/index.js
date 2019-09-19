@@ -53,7 +53,7 @@ const Home = () => {
           </ContainerSlider>
         </FixedContainer>
 
-        <h1>Mina ktiva Kurser</h1>
+        <h1>Mina Aktiva Kurser</h1>
         <CourseList courseWidth />
         <h1>Aktiva biblotek</h1>
 
@@ -155,9 +155,21 @@ const Home = () => {
           rowLayout="1fr 1fr 1fr"
           padding="0 0 15% 0"
         >
-          <ELearning iconElearning={<Computer />} />
-          <ELearning iconElearning={<People />} />
-          <ELearning iconElearning={<CertificateIcon />} />
+          <ELearning
+            iconElearning={<Computer />}
+            title="Praktiskt inlärning"
+            text="Genomför projekt och uppdrag som du kan nyttja i arbetslivet."
+          />
+          <ELearning
+            iconElearning={<People />}
+            title="Utvecklas tillsammans"
+            text="Jobba med andra kursdeltagare och lär dela kunskap tillsammans."
+          />
+          <ELearning
+            iconElearning={<CertificateIcon />}
+            title="Belönas med intyg"
+            text="Jobba med andra kursdeltagare och lär dela kunskap tillsammans."
+          />
         </GridLayout>
       </GridLayout>
       <ImgText
