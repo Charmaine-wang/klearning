@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   height: auto;
+  width: 94vw;
   margin: auto;
   padding: ${props => (props.padding ? props.padding : "16px 0")};
 
