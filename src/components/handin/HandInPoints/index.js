@@ -22,7 +22,7 @@ const StyledHandInPoints = styled.div`
     color: black;
   }
   .point-list > li {
-    padding: 16px 0px;
+    padding: 8px 0px;
     font-size: 12px;
     font-weight: bold;
   }
