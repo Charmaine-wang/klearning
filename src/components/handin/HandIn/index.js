@@ -4,6 +4,7 @@ import HandInIntroCard from "../HandInIntroCard";
 import HandInChoice from "../HandInChoice";
 import HandInPoints from "../HandInPoints";
 import HandInExercise from "../HanInExercise";
+import HandInUpload from "../HandInUpload";
 
 const StyledHandIn = styled.div``;
 
@@ -31,6 +32,10 @@ const HandIn = () => {
         header="Inspelning"
         paragraph="Filma din self-tape själv eller ta hjälp av en vän. "
         paragraph2="När du är klar med filmningen, klipp ihop din Self-Tape, gratisprogram som Davinci resolve finns för alla att använda."
+      />
+      <HandInUpload
+        header="Lämna in inspelning"
+        paragraph="GUIDE om hur du överför, laddar upp filerna till kursen så att kursledare sedan kan ge feedback."
       />
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>
     </StyledHandIn>
