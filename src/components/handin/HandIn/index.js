@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HandInIntroCard from "../HandInIntroCard";
 import HandInChoice from "../HandInChoice";
+import HandInPoints from "../HandInPoints";
 
 const StyledHandIn = styled.div``;
 
@@ -18,8 +19,12 @@ const HandIn = () => {
       <HandInChoice
         header="Skapa ett self-tape"
         paragraph="Välj en utav de tre scenerna från vårt arkiv här nedan. Öva in den så att du sedan kan spela in dig själv med hjälp av de tips du lärt dig. 
-      Normalt sätt får du fyra dagar på dig att öva in en scen."
+        Normalt sätt får du fyra dagar på dig att öva in en scen."
         choiceHeader="Välj scen:"
+      />
+      <HandInPoints
+        header="Att tänka på"
+        paragraph="Förbered ditt self-tape genom att följa listan nedanför."
       />
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>
     </StyledHandIn>
