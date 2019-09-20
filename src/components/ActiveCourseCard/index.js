@@ -1,54 +1,88 @@
-import React, {
-    useState
-} from 'react'
-import styled from 'styled-components'
+/* eslint-disable no-console */
+import React, { useState } from "react";
+import styled from "styled-components";
+import Bookmark from "../Icons/Bookmark";
 
 const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  width: 85%;
-  height: ${props => (props.expandHeight ? props.expandHeight : "55vh")};
+  width: 75vw;
+  height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
   border-radius: 10px;
-  margin: 2%;
-  
+  justify-content: space-between;
+  position: relative;
+
+  & > div,
+  & > h2,
+  & > h5 {
+    padding: 0 5%;
+  }
+
   & > div {
-      display: flex;
-      justify-content: space-between;
-     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
   }
-    & > div:first-of-type{
-        color: #C97C36;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
   }
-      & > div > img{
-        height: 55%;
-        width: 10%;
-        align-self: center;
+
+  div:first-of-type {
+    color: var(--soft-orange);
+    font-weight: 600;
   }
-  & > div, h3, h5{ padding: 0 10px;}
+
+  & > img {
+    /* image should take up higher percantage of div */
+  }
 `;
-const ActiveCourseCard = (props) => {
+const ActiveCourseCard = ({
+  activeCourseImg,
+  activeCourseAlt,
+  courseCat,
+  courseTime,
+  cardHeader,
+  cardParagraph,
+  courseTeacher,
+  bookmark,
+  bookmarkAlt
+}) => {
+  const [isClicked, setClicked] = useState(false);
+  console.log(
+    activeCourseImg,
+    activeCourseAlt,
+    courseCat,
+    courseTime,
+    cardHeader,
+    cardParagraph,
+    courseTeacher,
+    bookmark,
+    bookmarkAlt
+  );
 
+  return (
+    <StyledActiveCourseCard>
+      <img src={activeCourseImg} alt={activeCourseAlt} />
 
-    return (
-        <StyledActiveCourseCard>
-            <img src={props.activeCourseImg} alt={props.activeCourseAlt}/>
-            <div>
-                <h5>{props.courseCat}</h5>
-                <h5>{props.courseTime}</h5>
-            </div>
+      <div>
+        <h5>{courseCat}</h5>
+        <h5>{courseTime}</h5>
+      </div>
 
-            <h3>{props.cardHeader}</h3>
-            <h5>{props.cardParagraph}</h5>
+      <h2>{cardHeader}</h2>
+      {/* <h5>{cardParagraph}</h5> */}
 
-            <div>
-                <h5>{props.courseTeacher}</h5>
-                <img src={props.bookmark} alt={props.bookmarkAlt} />
+      <div>
+        <h5>{courseTeacher}</h5>
 
-            </div>
+        <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked} />
+      </div>
+    </StyledActiveCourseCard>
+  );
+};
 
-        </StyledActiveCourseCard>
-    )
-}
-
-export default ActiveCourseCard
+export default ActiveCourseCard;

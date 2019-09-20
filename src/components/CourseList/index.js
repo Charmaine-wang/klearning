@@ -1,32 +1,35 @@
-import React from 'react'
-import CourseListItem from '../CourseListItem'
-import styled from 'styled-components'
-
-
+import React from "react";
+import styled from "styled-components";
+import CourseListItem from "../CourseListItem";
 
 const StyledCourseList = styled.div`
-  width: ${props => (props.courseWidth ? "100%" : props.courseWidth)};
-  height: 100%;
+  width: ${props => (props.courseWidth ? props.courseWidth : "100%")};
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: red;
-  padding: 10% 0;
- 
+  /* padding: 10% 0; */
+  /* & >  .progress-bar{
+    width: 100%;
+    height: 2vh;
+    background-color: red;
+  } */
 `;
 
-const CourseList = (props) => {
-    return (
-        <StyledCourseList {...props}>
-            <CourseListItem 
-            courseImg='images/rectangle2.png'
-            courseLength='4h' 
-            courseTitle='dans dans dans'
-            courseTimeLeft='3min'
-             />
-        </StyledCourseList>
-    )
-       
-}
+const CourseList = props => {
+  //   const [isClicked, setClicked] = useState(false)
 
-export default CourseList
+  return (
+    <StyledCourseList {...props}>
+      <CourseListItem
+        courseImg="images/rectangle2.png"
+        courseLength="4h"
+        courseTitle="dans dans dans"
+        courseTimeLeft="3min"
+      />
+      {/* <div className="progress-bar" /> */}
+    </StyledCourseList>
+  );
+};
+
+export default CourseList;

@@ -1,69 +1,91 @@
-import React, {
-    useState
-} from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import Bookmark from "../Icons/Bookmark";
 
-const StyledCourseListItem = styled.div `
+const StyledCourseListItem = styled.div`
   display: flex;
   flex-direction: row;
   background-color: #ffffff;
-  width: 95%;
-  height: ${props => (props.expandHeight ? props.expandHeight : '13vh')};
+  align-self: flex-start;
+  width: 85vw;
+  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
-  margin: 15%;
-  & > div{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      width:100%;
-      height:100%;
+
+  /* margin: 15%; */
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
   }
-    & > div > div {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 5%;
-       > img {
-        height: 50%;
-        width: 12%;
-        align-self: center;
-       }
-     
+  & > div > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+    > img {
+      height: 50%;
+      width: 12%;
+      align-self: center;
+    }
+    > h5 {
+      align-self: center;
+    }
   }
-  & > div > p, h3 {
-      margin: 2% 5%;
+  & > div > p,
+  h2 {
+    margin: 2% 5%;
   }
-  & >div >h3 {
+  & > div > h2 {
+    color: #333333;
+    font-weight: 600;
     font-size: 16px;
-     line-height: 135%;
+    line-height: 135%;
   }
 
-      & > div > p{
-    color: #C97C36;
-     font-size: 12px;
-     line-height: 135%;
+  & > div > p {
+    color: #c97c36;
+    font-size: 12px;
+    line-height: 135%;
   }
-    & > div > p:first-child{
-      align-self: flex-end;
+  & > div > p:first-child {
+    align-self: flex-end;
   }
-`
-const CourseListItem = (props) => {
+  & > .progress-bar {
+    width: 100%;
+    height: 2vh;
+    background-color: red;
+  }
+`;
 
+const CourseListItem = ({
+  courseImg,
+  courseAlt,
+  courseLength,
+  courseTitle,
+  courseTimeLeft
+  // bookmark,
+  // bookmarkAlt
+}) => {
+  // const [isClicked, setClicked] = useState(false)
 
-    return (
-        <StyledCourseListItem>
-            <img src={props.courseImg} alt={props.courseAlt}/>
-            <div>
-                <p>{props.courseLength}</p>
-                <h3>{props.courseTitle}</h3>
-                <div>
-                    <p>{props.courseTimeLeft} kvar av lektion</p>
-    {/*BOOLEAN IF PROPS.BOOKMARK or NONE */}
-                    <img src={props.bookmark} alt={props.bookmarkAlt} />
+  return (
+    <StyledCourseListItem>
+      {/* <div className=""> */}
+      <img src={courseImg} alt={courseAlt} />
+      <div>
+        <p>{courseLength}</p>
+        <h2>{courseTitle}</h2>
+        <div>
+          <h5>{courseTimeLeft} kvar av lektion</h5>
+          {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
+          <Bookmark />
+        </div>
+      </div>
+      {/* </div> */}
+      {/* <div className="progress-bar" /> */}
+    </StyledCourseListItem>
+  );
+};
 
-                </div>
-            </div>
-        </StyledCourseListItem>
-    )
-}
-
-export default CourseListItem
+export default CourseListItem;
