@@ -48,14 +48,14 @@ const Profile = () => {
       </Container>
       <div className="buttonSwitch">
         <Button
+          btnName="Kurser"
+          onClick={() => setProfileComponent("courses")}
+        />
+        <Button
           btnName="Intyg"
           onClick={() => setProfileComponent("certificates")}
         />
         <Button btnName="CV" onClick={() => setProfileComponent("cv")} />
-        <Button
-          btnName="Kurser"
-          onClick={() => setProfileComponent("courses")}
-        />
       </div>
       <Container>{switchComponent()}</Container>
       <Container>
