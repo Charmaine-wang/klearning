@@ -17,6 +17,7 @@ const StyledHandInCard = styled.div`
     text-align: center;
     // font-weight: bold;
     padding: 16px;
+    line-height: 1.4rem;
   }
 
   .intro-header-paragraph {
