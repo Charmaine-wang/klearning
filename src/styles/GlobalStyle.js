@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
 
     @media only screen and (max-width: 700px) {
-    font-size: 12px;
+    font-size: 16px;
   }
   }
   h2{
