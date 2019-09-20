@@ -3,6 +3,7 @@ import styled from "styled-components";
 import HandInIntroCard from "../HandInIntroCard";
 import HandInChoice from "../HandInChoice";
 import HandInPoints from "../HandInPoints";
+import HandInExercise from "../HanInExercise";
 
 const StyledHandIn = styled.div``;
 
@@ -25,6 +26,11 @@ const HandIn = () => {
       <HandInPoints
         header="Att tänka på"
         paragraph="Förbered ditt self-tape genom att följa listan nedanför."
+      />
+      <HandInExercise
+        header="Inspelning"
+        paragraph="Filma din self-tape själv eller ta hjälp av en vän. "
+        paragraph2="När du är klar med filmningen, klipp ihop din Self-Tape, gratisprogram som Davinci resolve finns för alla att använda."
       />
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>
     </StyledHandIn>

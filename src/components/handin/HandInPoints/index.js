@@ -29,6 +29,7 @@ const StyledHandInPoints = styled.div`
   .point-list {
     margin-left: 16px;
     padding: 0px;
+    line-height: 1.2rem;
   }
 `;
 
