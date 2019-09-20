@@ -6,8 +6,8 @@ const StyledQuizButton = styled.button`
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
   background-color: var(--card-color);
   border: ${props => (props.border ? props.border : "1px solid #e0e0e0")};
-  color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
-  padding: 8px 22px;
+  color: ${props => (props.textColor ? props.textColor : "var(--black-font)")};
+  padding: ${props => (props.padding ? props.padding : "10px 22px")};
   text-align: center;
   text-decoration: none;
   font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
@@ -27,6 +27,11 @@ const StyledQuizButton = styled.button`
   .correct {
     color: white;
     background-color: var(--teal);
+  }
+  .inCorrect {
+    color: var(--soft-orange);
+    background-color: var(--card-color);
+    border: solid 1px var(--soft-orange);
   }
 `;
 const QuizButton = ({ btnName, ...props }) => {
