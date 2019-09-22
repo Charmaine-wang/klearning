@@ -1,18 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Communication from "../../components/Communication";
-import Task from "../../components/Task";
-import Button from "../../components/Button";
-import GridLayout from "../../components/GridLayout";
-import AlternativeDrop from "../../components/AlternativeDrop";
-// import ModalAlternative from '../../components/ModalAlternative'
 
 const StyledOwerviewPage = styled.div`
-  /* display: flex;
-  flex-direction: column;
+  display: flex;
   width: 100vw;
   height: 100%;
-  align-items: center; */
+  justify-content: center;
   margin-top: 74px;
 `;
 
