@@ -1,3 +1,7 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from "react";
 import styled from "styled-components";
 import PlayVideo from "../Icons/PlayVideo";
@@ -38,20 +42,22 @@ const StyledAlternativeDrop = styled.div`
   }
 `;
 const AlternativeDrop = props => {
+  // const [selectedAlt, setSelectedAlt] = useState(false);
+
   return (
     <StyledAlternativeDrop {...props}>
       <h2>Välj metod:</h2>
-      <div>
+      <div onClick={() => console.log("video")}>
         <PlayVideo />
         <aside />
         <h3>Video</h3>
       </div>
-      <div>
+      <div onClick={() => console.log("sound")}>
         <Sound />
         <aside />
         <h3>Ljud</h3>
       </div>
-      <div>
+      <div onClick={() => console.log("text")}>
         <TextIcon />
         <aside />
         <h3>Text</h3>

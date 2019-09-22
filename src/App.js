@@ -26,8 +26,8 @@ const App = () => {
             <Route path="/media" component={Media} />
           </Switch>
         </div>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 };

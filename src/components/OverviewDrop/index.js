@@ -14,6 +14,7 @@ const StyledOverviewDrop = styled.div`
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
   z-index: 2;
+  margin: 0;
 
   & > div {
     display: flex;
