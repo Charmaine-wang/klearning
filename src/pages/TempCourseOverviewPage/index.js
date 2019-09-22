@@ -13,8 +13,24 @@ const StyledOwerviewPage = styled.div`
 const OwerviewPage = () => {
   return (
     <StyledOwerviewPage>
-      {/* <ModalAlternative isActive /> */}
-      <Communication />
+      <GridLayout padding="0 0 0 2.5%">
+        {/* <ModalAlternative isActive /> */}
+        <Communication />
+        <AlternativeDrop />
+        <Task
+          headerTask="Introduktion"
+          taskNr="1."
+          taskName="Dansa med korvar"
+          taskTime="03.53"
+        />
+
+        <Button
+          btnName="Starta kurs"
+          bgColor="#C97C36"
+          buttonWidth="135px"
+          textColor="#ffffff"
+        />
+      </GridLayout>
     </StyledOwerviewPage>
   );
 };

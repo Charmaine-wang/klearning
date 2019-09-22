@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import AlternativeDrop from "../../components/AlternativeDrop";
+import OverviewDrop from "../../components/OverviewDrop";
+import GridLayout from "../../components/GridLayout";
 
 const StyledMediaPage = styled.div`
-  margin-top: 74px;
+  margin-top: 65px;
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
 `;
 
 const MediaPage = () => {
+  const [isChanged, setChanged] = useState(true);
+
   return (
     <StyledMediaPage>
-      <h1>This is the page where we test media components/views.</h1>
+      <OverviewDrop changeMethod={() => setChanged(!isChanged)} />
+      <AlternativeDrop hideDrop={isChanged} />
+
+      <GridLayout padding="0 0 0 2.5%">
+        {/* <AlternativeDrop hideDrop={isChanged} /> */}
+        <div>
+          <h1>1. Introduktion</h1>
+        </div>
+      </GridLayout>
     </StyledMediaPage>
   );
 };
