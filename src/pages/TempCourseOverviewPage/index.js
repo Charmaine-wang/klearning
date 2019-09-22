@@ -5,9 +5,11 @@ import Task from "../../components/Task";
 import Button from "../../components/Button";
 import GridLayout from "../../components/GridLayout";
 
-// import ModalAlternative from '../../components/ModalAlternative'
-
 const StyledOwerviewPage = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  justify-content: center;
   margin-top: 74px;
   & > div > .start-course-btn {
     display: flex;

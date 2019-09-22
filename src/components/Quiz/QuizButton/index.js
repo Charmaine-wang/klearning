@@ -1,16 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledQuizButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
-
-  background-color: ${props => (props.bgColor ? props.bgColor : "white")};
-
+  background-color: var(--card-color);
   border: ${props => (props.border ? props.border : "1px solid #e0e0e0")};
-  color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
-  padding: 8px 22px;
-  text-align: ${props => (props.textAlign ? props.textAlign : "center")}
+  color: ${props => (props.textColor ? props.textColor : "var(--black-font)")};
+  padding: ${props => (props.padding ? props.padding : "10px 22px")};
+  text-align: center;
   text-decoration: none;
   font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
@@ -22,13 +20,23 @@ const StyledButton = styled.button`
     text-decoration: underline;
   }
   &:active {
-    color: #cd7b2a;
-    text-decoration: underline;
+    color: white;
+    background-color: var(--soft-orange);
+  }
+
+  .correct {
+    color: white;
+    background-color: var(--teal);
+  }
+  .inCorrect {
+    color: var(--soft-orange);
+    background-color: var(--card-color);
+    border: solid 1px var(--soft-orange);
   }
 `;
-const Button = ({ btnName, ...props }) => {
+const QuizButton = ({ btnName, ...props }) => {
   // eslint-disable-next-line no-undef
-  return <StyledButton {...props}>{btnName}</StyledButton>;
+  return <StyledQuizButton {...props}>{btnName}</StyledQuizButton>;
 };
 
-export default Button;
+export default QuizButton;

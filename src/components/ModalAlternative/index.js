@@ -45,11 +45,11 @@ const ModalAlternative = props => {
     <StyledModalAlternative {...props}>
       <h2>Hur vill du ta del av kursen?</h2>
       <div className="icon-div">
-        <PlayVideo /> <Sound /> <TextIcon />
+        <PlayVideo /> <Sound /> <TextIcon />{" "}
       </div>
       <div className="button-div">
-        <Button btnName="Avbryt" buttonWidth="135px" />
-        <Button btnName="Fortsätt" buttonWidth="135px" />
+        <Button btnName="Avbryt" buttonWidth="135px" />{" "}
+        <Button btnName="Fortsätt" buttonWidth="135px" />{" "}
       </div>
     </StyledModalAlternative>
   );
