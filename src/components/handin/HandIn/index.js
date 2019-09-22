@@ -6,6 +6,7 @@ import HandInPoints from "../HandInPoints";
 import HandInExercise from "../HanInExercise";
 import HandInUpload from "../HandInUpload";
 import HandInFeedBack from "../HandInFeedBack";
+import HandInFeedBackConfirm from "../HandInFeedBackConfirm";
 
 const StyledHandIn = styled.div``;
 
@@ -39,6 +40,10 @@ const HandIn = () => {
         paragraph="GUIDE om hur du överför, laddar upp filerna till kursen så att kursledare sedan kan ge feedback."
       />
       <HandInFeedBack header="Boka tid för feedback" />
+      <HandInFeedBackConfirm
+        header="Nu har du bokat en tid!"
+        paragraph="Feedback sker via Skype. Klicka på knappen nedan för att komma till mötet."
+      />
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>
     </StyledHandIn>
   );
