@@ -9,6 +9,13 @@ import GridLayout from "../../components/GridLayout";
 
 const StyledOwerviewPage = styled.div`
   margin-top: 74px;
+  & > div > .start-course-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+  }
 `;
 
 const OwerviewPage = () => {
@@ -24,12 +31,14 @@ const OwerviewPage = () => {
           taskTime="03.53"
         />
 
-        <Button
-          btnName="Starta kurs"
-          bgColor="#C97C36"
-          buttonWidth="135px"
-          textColor="#ffffff"
-        />
+        <div className="start-course-btn">
+          <Button
+            btnName="Starta kurs"
+            bgColor="#C97C36"
+            buttonWidth="135px"
+            textColor="#ffffff"
+          />
+        </div>
       </GridLayout>
     </StyledOwerviewPage>
   );

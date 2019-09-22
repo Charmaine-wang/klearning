@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 const StyledImgText = styled.div`
   position: relative;
-  height: 400px;
+  height: ${props => (props.imgHeight ? props.imgHeight : "400px")};
   top: 0;
+  margin: ${props => props.imgMargin};
   background-image: url(${props =>
     props.imgTextPic ? props.imgTextPic : "images/home.png"});
 
@@ -36,9 +37,19 @@ const StyledImgText = styled.div`
   }
 `;
 
-const ImgText = ({ imgTextPic, imgTextHeader, imgTextParagraph }) => {
+const ImgText = ({
+  imgTextPic,
+  imgTextHeader,
+  imgTextParagraph,
+  imgHeight,
+  imgMargin
+}) => {
   return (
-    <StyledImgText imgTextPic={imgTextPic}>
+    <StyledImgText
+      imgTextPic={imgTextPic}
+      imgHeight={imgHeight}
+      imgMargin={imgMargin}
+    >
       <div className="overlayer" />
 
       <h1>{imgTextHeader}</h1>
