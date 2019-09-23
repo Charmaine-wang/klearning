@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   border: ${props => (props.border ? props.border : "1px solid #e0e0e0")};
   color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
   padding: 8px 22px;
-  text-align: ${props => (props.textAlign ? props.textAlign : "center")}
+  text-align: ${props => (props.textAlign ? props.textAlign : "center")};
   text-decoration: none;
   font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
