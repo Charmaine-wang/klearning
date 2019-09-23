@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import CourseEpisodesCard from "../CourseEpisodesCard";
+// import CourseEpisodesCard from "../CourseEpisodesCard";
 import Button from "../Button";
 import TempCourseCard from "../TempCourseCard";
+import MiscInfoCard from "../MiscInfoCard";
 
 const StyledCourseEpisodes = styled.div`
   .apply-button {
@@ -23,7 +24,22 @@ const StyledCourseEpisodes = styled.div`
 const CourseEpisodes = () => {
   return (
     <StyledCourseEpisodes>
-      <CourseEpisodesCard />
+      {/* <CourseEpisodesCard /> */}
+      <MiscInfoCard
+        seatsAmouts="20"
+        startDate="25 maj"
+        endDate="1 juni"
+        applyDate="24 april, 2020"
+        participator="Juanita Alexander, Soham Alexander, Evan Webb"
+        activity="Danslektioner, tutorials"
+        language="Engelska"
+        moreInfo="Till ansökan ska CV bifogas samt en motivering till 
+                varför just du vill gå. Motiveringen kan vara avgörande vid uttagningen.
+                Urvalet sker veckan efter sista ansökningsdag. Anmälan är bindande, 
+                det är viktigt att du kan delta i de erbjudna aktiviteterna. Frånvaroavgift
+                på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
+                innan aktiviteten startar."
+      />
       <div className="apply-button">
         <Button
           btnName="Ansök"

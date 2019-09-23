@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from "../CourseChoicesCard";
-import MiscInfoCard from "../MiscInfoCard";
+// import MiscInfoCard from "../MiscInfoCard";
 import Button from "../Button";
 
 import TempCourseCard from "../TempCourseCard";
@@ -64,8 +64,8 @@ const AboutCourse = () => {
         linkText="Läs mer"
         linkHref="https://www.kulturakademin.com/viktigt-att-veta-om-vara-aktiviteter"
       />
-      <h1 className="information-header">Kursinformation</h1>
-      <MiscInfoCard
+      {/* <h1 className="information-header">Kursinformation</h1> */}
+      {/* <MiscInfoCard
         seatsAmouts="20"
         startDate="25 maj"
         endDate="1 juni"
@@ -79,7 +79,7 @@ const AboutCourse = () => {
                 det är viktigt att du kan delta i de erbjudna aktiviteterna. Frånvaroavgift
                 på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
                 innan aktiviteten startar."
-      />
+      /> */}
       <div className="button-div">
         <Button
           bgColor="var(--soft-orange)"
