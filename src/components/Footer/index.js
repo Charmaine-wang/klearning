@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router";
 
 const StyledFooter = styled.div`
   background-color: white;
   width: 100%;
   height: 15vh;
-  display: flex;
+  display: ${props => (props.hideFooter ? "none" : "flex")};
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -26,9 +27,9 @@ const StyledFooter = styled.div`
   }
 `;
 
-const Footer = () => {
+const Footer = ({ location }) => {
   return (
-    <StyledFooter>
+    <StyledFooter hideFooter={location.pathname === "/media"}>
       <div>
         <h3>About</h3>
         <h3>FAQ</h3>
@@ -39,4 +40,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default withRouter(Footer);

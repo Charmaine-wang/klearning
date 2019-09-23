@@ -11,7 +11,7 @@ import ContainerSlider from "../../components/ContainerSlider";
 import ActiveCourseCard from "../../components/ActiveCourseCard";
 
 const StyledProfile = styled.div`
-  margin-top: 74px;
+  margin-top: 64px;
   width: 100%;
 
   .buttonSwitch {

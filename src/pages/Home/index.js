@@ -111,38 +111,26 @@ const Home = () => {
         </div>
 
         <FixedContainer
-          heightContainer="13vh"
+          heightContainer="46vh"
           margin="0 0 0 -4%"
           padding="0 0 0 4%"
         >
-          <ContainerSlider>
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-          </ContainerSlider>
-        </FixedContainer>
-
-        <FixedContainer
-          heightContainer="13vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
-          <ContainerSlider>
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-          </ContainerSlider>
-        </FixedContainer>
-
-        <FixedContainer
-          heightContainer="13vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
-          <ContainerSlider>
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-            <CourseList courseWidth />
+          <ContainerSlider height="100%" marginBetween="4% 0 0 0">
+            <div>
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+            </div>
+            <div>
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+            </div>
+            <div>
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+            </div>
           </ContainerSlider>
         </FixedContainer>
 

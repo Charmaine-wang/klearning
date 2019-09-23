@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   --teal: #00C9AC;
   --dark-grey: #6D6D6D;
   --font-color: #6D6D6D;
+  --black-font: black;
 
   /* Fonts */
   --accent-font:  Cursive; /* WHAT FONT SHOULD WE HAVE HERE */
@@ -43,7 +44,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
 
     @media only screen and (max-width: 700px) {
-    font-size: 12px;
+    font-size: 16px;
   }
   }
   h2{
@@ -62,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-weight: 400;
     @media only screen and (max-width: 700px) {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     }
   }
