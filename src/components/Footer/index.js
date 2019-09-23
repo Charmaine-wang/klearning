@@ -11,6 +11,7 @@ const StyledFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1vh 3vh 3vh 3vh;
+  color: var(--dark-grey);
 
   & > div {
     width: 90%;
