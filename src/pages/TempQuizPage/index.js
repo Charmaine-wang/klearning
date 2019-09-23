@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Intro from "../../components/Quiz/Intro";
 import Question from "../../components/Quiz/Question";
 import ImageQuestion from "../../components/Quiz/ImageQuestion";
-import QuizButton from "../../components/Quiz/QuizButton";
 import Achievement from "../../components/Quiz/Achievement";
 import Container from "../../components/Container";
 
@@ -44,12 +43,6 @@ const QuizPage = () => {
           answerOptions={["Sant", "Falskt"]}
           buttonPadding="8px 10px"
           correctAnswer="Sant"
-        />
-        <QuizButton
-          btnName="Svarsalternativ"
-          buttonWidth="100%"
-          fontWeight="600"
-          margin="0 0 20px 0"
         />
         <Achievement buttonPadding="10px 15px" message="Bra jobbat!" />
       </Container>
