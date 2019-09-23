@@ -24,6 +24,7 @@ const StyledCourseInformationCard = styled.div`
   .course-information-card > a {
     text-decoration: none;
     color: var(--soft-orange);
+    line-height: 1.7em;
   }
 `;
 
@@ -43,7 +44,9 @@ const CourseInformationCard = ({
       <div className="course-information-card">
         <h2>{header}</h2>
         <p>{paragraph}</p>
-        <a href={linkHref}>{linkText}</a>
+        <a className="link-tag" href={linkHref}>
+          {linkText}
+        </a>
       </div>
     </StyledCourseInformationCard>
   );
