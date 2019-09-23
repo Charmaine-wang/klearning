@@ -24,6 +24,8 @@ const StyledImageQuestion = styled.div`
 
   & > div:first-of-type {
     background-image: url(${({ image }) => image || "images/Bild.png"});
+    /* background-image: url(${props =>
+      props.image ? props.image : "images/Bild.png"}); */
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -65,7 +67,7 @@ const ImageQuestion = ({
   headerQuestion
 }) => {
   return (
-    <StyledImageQuestion {...image}>
+    <StyledImageQuestion image={image}>
       <div />
       <div className="row">
         <h3>{headerQuestion || "VAD ÄR DET PÅ BILDEN?"}</h3>

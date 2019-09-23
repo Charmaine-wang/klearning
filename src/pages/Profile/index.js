@@ -61,7 +61,7 @@ const Profile = () => {
       <Container padding="0">
         <h1>Sparade kurser</h1>
       </Container>
-      <Container padding="0 0 16px 16px">
+      <Container padding="16px 0">
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
