@@ -11,7 +11,7 @@ const StyledHandInPoints = styled.div`
   align-items: center;
 
   .points-hand-in > h2 {
-    color: black;
+    color: var(--black-font);
     margin-bottom: 12px;
   }
   .points-hand-in > p {
@@ -19,7 +19,7 @@ const StyledHandInPoints = styled.div`
   }
 
   .point-list {
-    color: black;
+    color: var(--black-font);
   }
   .point-list > li {
     padding: 8px 0px;

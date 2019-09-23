@@ -8,7 +8,7 @@ const StyledHandInFeedBackConfirm = styled.div`
   background-color: white;
   border-radius: 10px;
   display: flex;
-  justify-conent: center;
+  justify-content: center;
   align-items: center;
 
   .feedback-confirm-hand-in {
@@ -23,14 +23,14 @@ const StyledHandInFeedBackConfirm = styled.div`
     margin: 8px 0px;
   }
   .booked-time-paragraph {
-    color: black;
+    color: var(--black-font);
     text-align: center;
     margin: 16px;
   }
 
   .feedback-confirm-hand-in > h2 {
     margin: 16px;
-    color: black;
+    color: var(--black-font);
   }
 `;
 const HandInFeedBackConfirm = ({ header, paragraph }) => {

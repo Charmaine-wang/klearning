@@ -4,7 +4,8 @@ import styled from "styled-components";
 const StyledQuizButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
-  background-color: var(--card-color);
+  background-color: ${props =>
+    props.color ? props.color : "var(--card-color)"};
   border: ${props =>
     props.border ? props.border : "1px solid var(--light-grey)"};
   color: ${props => (props.textColor ? props.textColor : "var(--black-font)")};
