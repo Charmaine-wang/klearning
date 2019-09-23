@@ -9,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
   --bg-color: #F5F5F5;
   --card-color: white;
   --soft-orange: #C97C36;
-  --bright-orange: #EC733F;
   --teal: #00C9AC;
   --light-grey: #E0E0E0;
   --dark-grey: #6D6D6D;
@@ -24,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: var(--bg-color);
-    color: var(--font-color);
+    color: var(--black-font);
     font-family: var(--main-font);
     display: block;
     margin: 0;
