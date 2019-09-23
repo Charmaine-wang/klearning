@@ -29,6 +29,10 @@ const StyledCertificate = styled.div`
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      p {
+        color: var(--dark-grey);
+        font-size: 12px;
+      }
     }
 
     h2 {

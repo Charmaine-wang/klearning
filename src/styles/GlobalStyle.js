@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   --light-grey: #E0E0E0;
   --dark-grey: #6D6D6D;
   --font-color: #6D6D6D;
-  --black-font: black;
+  --black-font: #292929;
 
   /* Fonts */
   --accent-font:  Cursive; /* WHAT FONT SHOULD WE HAVE HERE */

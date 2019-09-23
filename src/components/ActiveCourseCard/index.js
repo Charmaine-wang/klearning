@@ -35,6 +35,9 @@ const StyledActiveCourseCard = styled.div`
     color: var(--soft-orange);
     font-weight: 600;
   }
+  div:last-of-type {
+    color: var(--dark-grey);
+  }
 
   & > img {
     /* image should take up higher percantage of div */
