@@ -12,7 +12,8 @@ const StyledCourseInformationCard = styled.div`
 
   h2 {
     font-size: 20px;
-    color: ${props => (props.colorHeader ? props.colorHeader : "black")};
+    color: ${props =>
+      props.colorHeader ? props.colorHeader : "var(--black-font)"};
     padding-bottom: 1.7vw;
     font-weight: 500;
     // margin: 16px 0px;
