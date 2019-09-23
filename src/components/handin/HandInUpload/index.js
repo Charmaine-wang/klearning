@@ -12,7 +12,7 @@ const StyledHandInUpload = styled.div`
   font-size: 12px;
 
   .upload-hand-in > h2 {
-    color: black;
+    color: var(--black-font);
     margin-bottom: 16px;
   }
   .upload-hand-in > p {

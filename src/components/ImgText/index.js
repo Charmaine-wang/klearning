@@ -24,7 +24,7 @@ const StyledImgText = styled.div`
   & > h1,
   p {
     position: absolute;
-    color: #ffffff;
+    color: var(--card-color);
     z-index: 2;
     text-align: center;
   }

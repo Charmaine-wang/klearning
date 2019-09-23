@@ -14,12 +14,12 @@ const StyledHandInFeedBack = styled.div`
     width: 100%;
   }
   .feedback-hand-in > h2 {
-    color: black;
+    color: var(--black-font);
   }
 
   .feedback-day > p {
     margin: 16px 0px;
-    color: black;
+    color: var(--black-font);
   }
 
   .feedback-day {

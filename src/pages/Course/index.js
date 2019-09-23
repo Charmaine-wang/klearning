@@ -21,7 +21,7 @@ const StyledCourse = styled.div`
 
   .course-choices-container {
     margin: 16px;
-    color: black;
+    color: var(--black-font);
     font-weight: 400;
   }
 

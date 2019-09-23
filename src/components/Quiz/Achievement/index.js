@@ -5,7 +5,6 @@ import QuizButton from "../QuizButton";
 const StyledAchievement = styled.div`
   background-color: var(--card-color);
   border-radius: 10px;
-  /* margin-bottom: 10px; */
   height: 60vh;
   width: 90%;
   margin: 0 auto 10px auto;
@@ -24,11 +23,17 @@ const StyledAchievement = styled.div`
   h3 {
     margin: 20px 0;
   }
+
+  & > h3 {
+    color: var(--dark-grey);
+  }
+
   & > div:first-of-type {
     width: 100px;
     height: 100px;
     background-color: black;
   }
+
   & > div:last-of-type {
     width: 100%;
     justify-self: flex-end;
@@ -36,8 +41,8 @@ const StyledAchievement = styled.div`
 
     h3 {
       font-weight: 600;
-      color: var(--black-font);
     }
+
     .row {
       width: 100%;
       display: flex;

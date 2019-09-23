@@ -21,7 +21,7 @@ const StyledAlternativeDrop = styled.div`
 
   flex-direction: column;
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--card-color);
   justify-content: space-around;
   align-items: center;
   animation: fade-in 0.2s ease-in-out;
@@ -32,7 +32,7 @@ const StyledAlternativeDrop = styled.div`
     width: 100%;
     height: 18%;
     border-radius: 10px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--light-grey);
     display: flex;
     justify-content: center;
     align-items: center;
