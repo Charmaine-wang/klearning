@@ -66,12 +66,10 @@ const Course = () => {
     <StyledCourse>
       <Container>
         <div className="image-container">
-          <h1 className="course-header">
-            Kursnamnet är här, bästa danslektionen ever
-          </h1>
+          <h1 className="course-header">Self-tape international</h1>
           <img
             className="hero-image-course"
-            src="images/courseImage.png"
+            src="images/selftape-hero.png"
             alt="course"
           />
           <Button
