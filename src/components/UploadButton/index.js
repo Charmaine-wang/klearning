@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledUploadButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
 
@@ -10,12 +10,21 @@ const StyledButton = styled.button`
   border: ${props => (props.border ? props.border : "1px solid #e0e0e0")};
   color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
   padding: 8px 22px;
-  text-align: ${props => (props.textAlign ? props.textAlign : "center")};
+  text-align: ${props => (props.textAlign ? props.textAlign : "center")}
   text-decoration: none;
   font-size: ${props => (props.fontSize ? props.fontSize : "16px")};
   font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
   border-radius: 8px;
   margin: ${props => (props.margin ? props.margin : "0")};
+
+  .upload-image-div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .upload-image-div > img{
+    margin: 0px 16px;
+  }
 
   &:hover {
     color: #cd7b2a;
@@ -25,11 +34,20 @@ const StyledButton = styled.button`
     color: #cd7b2a;
     text-decoration: underline;
   }
+
+  
   
 `;
-const Button = ({ btnName, ...props }) => {
+const UploadButton = ({ btnName, ...props }) => {
   // eslint-disable-next-line no-undef
-  return <StyledButton {...props}>{btnName}</StyledButton>;
+  return (
+    <StyledUploadButton {...props}>
+      <div className="upload-image-div">
+        <img src="images/upload.png" alt="" />
+        {btnName}
+      </div>
+    </StyledUploadButton>
+  );
 };
 
-export default Button;
+export default UploadButton;

@@ -54,7 +54,7 @@ const HandInExercise = ({ header, paragraph, paragraph2 }) => {
             rel="noopener noreferer"
             target="_blank"
           >
-            Länk till Davinici resolve
+            Länk till Davinci resolve
           </a>
         </div>
       </div>
