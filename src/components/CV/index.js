@@ -4,7 +4,6 @@ import Button from "../Button";
 
 const StyledCV = styled.div`
   width: 100%;
-  /* margin: 3vw auto; */
   background-color: var(--card-color);
   border-radius: 10px;
   display: flex;
@@ -56,7 +55,7 @@ const StyledCV = styled.div`
   li {
     height: 3.5em;
     font-size: 12px;
-    border: solid 1px #e0e0e0;
+    border: solid 1px var(--light-grey);
     border-radius: 6px;
     padding: 2vw;
     margin: 2vw;

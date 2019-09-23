@@ -25,7 +25,7 @@ const VideoCard = props => {
       <GridLayout padding="12% 2.5% 0 0">
         <CourseInformationCard
           header="1. Introduktion"
-          colorHeader=" #292929"
+          colorHeader="var(--dark-grey)"
           paddingInfo="12% 6%"
           paragraph='Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
         />

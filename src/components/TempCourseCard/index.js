@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledTempCourseCard = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   width: 100%;
   height: 13vh;
   border-radius: 10px;
