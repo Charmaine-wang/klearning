@@ -37,7 +37,22 @@ const StyledQuestion = styled.div`
   }
 `;
 
-const Question = ({ question, questionNumber, answerOptions }) => {
+const Question = ({
+  question,
+  questionNumber,
+  answerOptions,
+  correctAnswer
+}) => {
+  function checkAnswer(e) {
+    if (e.target.value === correctAnswer) {
+      // set button class to correct
+      // update quizScore
+      console.log(correctAnswer);
+    } else {
+      // set button class to inCorrect
+      // Loop over other buttons and add class correct to the right button
+    }
+  }
   return (
     <StyledQuestion>
       <div>
@@ -54,6 +69,8 @@ const Question = ({ question, questionNumber, answerOptions }) => {
               margin="3px"
               fontWeight="600"
               key={option}
+              value={option}
+              onClick={e => checkAnswer(e, "value")}
             />
           );
         })}
