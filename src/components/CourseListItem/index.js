@@ -5,13 +5,12 @@ import Bookmark from "../Icons/Bookmark";
 const StyledCourseListItem = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   align-self: flex-start;
   width: 85vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
 
-  /* margin: 15%; */
   & > div {
     display: flex;
     flex-direction: column;
@@ -37,14 +36,13 @@ const StyledCourseListItem = styled.div`
     margin: 2% 5%;
   }
   & > div > h2 {
-    color: #333333;
     font-weight: 600;
     font-size: 16px;
     line-height: 135%;
   }
 
   & > div > p {
-    color: #c97c36;
+    color: var(--soft-orange);
     font-size: 12px;
     line-height: 135%;
   }

@@ -6,7 +6,7 @@ import Bookmark from "../Icons/Bookmark";
 const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   width: 75vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
   border-radius: 10px;
@@ -34,6 +34,9 @@ const StyledActiveCourseCard = styled.div`
   div:first-of-type {
     color: var(--soft-orange);
     font-weight: 600;
+  }
+  div:last-of-type {
+    color: var(--dark-grey);
   }
 
   & > img {

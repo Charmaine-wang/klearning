@@ -11,11 +11,11 @@ const StyledAboutCourse = styled.div`
   .information-header {
     margin-left: 16px;
 
-    color: black;
+    color: var(--black-font);
   }
   .recommended-course-header {
     margin: 16px;
-    color: black;
+    color: var(--black-font);
   }
   .recommended-course {
     margin: 16px;
@@ -24,7 +24,7 @@ const StyledAboutCourse = styled.div`
   .similar-header {
     margin: 16px;
     // margin-top: 16px;
-    color: black;
+    color: var(--black-font);
   }
   .similar-courses {
     margin: 16px;

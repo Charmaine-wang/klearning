@@ -21,7 +21,7 @@ const StyledAlternativeDrop = styled.div`
 
   flex-direction: column;
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--card-color);
   justify-content: space-around;
   align-items: center;
   animation: fade-in 0.2s ease-in-out;
@@ -32,7 +32,7 @@ const StyledAlternativeDrop = styled.div`
     width: 100%;
     height: 18%;
     border-radius: 10px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--light-grey);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,22 +42,23 @@ const StyledAlternativeDrop = styled.div`
   }
 `;
 const AlternativeDrop = props => {
-  // const [selectedAlt, setSelectedAlt] = useState(false);
+  // const [selectedAlt, setSelectedAlt] = useState('video');
+  console.log(props);
 
   return (
     <StyledAlternativeDrop {...props}>
       <h2>Välj metod:</h2>
-      <div onClick={() => console.log("video")}>
+      <div onClick={props.showVideo}>
         <PlayVideo />
         <aside />
         <h3>Video</h3>
       </div>
-      <div onClick={() => console.log("sound")}>
+      <div onClick={props.showSound}>
         <Sound />
         <aside />
         <h3>Ljud</h3>
       </div>
-      <div onClick={() => console.log("text")}>
+      <div onClick={props.showText}>
         <TextIcon />
         <aside />
         <h3>Text</h3>

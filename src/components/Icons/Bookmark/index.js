@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledBookmark = styled.svg`
   path {
-    ${props => (props.isFilled ? "fill: #F8824F" : "fill: none")};
+    ${props => (props.isFilled ? "fill: #var(--dark-grey)" : "fill: none")};
   }
 `;
 const Bookmark = props => {
