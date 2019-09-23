@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
   --teal: #00C9AC;
   --light-grey: #E0E0E0;
   --dark-grey: #6D6D6D;
-  --font-color: #6D6D6D;
   --black-font: #292929;
 
   /* Fonts */

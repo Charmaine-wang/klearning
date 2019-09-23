@@ -12,6 +12,10 @@ const StyledCV = styled.div`
   p {
     color: var(--black-font);
   }
+
+  h2 {
+    margin-bottom: 5px;
+  }
   & > div {
     padding: 5vw 5vw 0 5vw;
   }
@@ -20,7 +24,7 @@ const StyledCV = styled.div`
     padding-bottom: 0;
 
     h2 {
-      color: black;
+      color: var(--black-font);
       font-size: 20px;
     }
 
@@ -42,7 +46,7 @@ const StyledCV = styled.div`
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid var(--black-font);
   }
 
   .orange {
@@ -73,7 +77,7 @@ const StyledCV = styled.div`
   }
 
   .icon-placeholder {
-    background-color: black;
+    background-color: var(--black-font);
     width: 20px;
     height: 20px;
     align-self: flex-start;
@@ -86,7 +90,7 @@ const CV = () => {
       <div className="row">
         <div>
           <h2>Brandon Lane</h2>
-          <h3 className="orange">Skådespelare</h3>
+          <h5 className="orange">Skådespelare</h5>
         </div>
         <div className="icon-placeholder" />
       </div>
@@ -95,8 +99,9 @@ const CV = () => {
         <h3>
           Har en lång bakgrund inom friteatergrupper samt independentfilm runt
           om i Skandinavien. Har tidigare jobbat mycket bakom kameran parallellt
-          med mitt skådespeleri. Önskar nu försöka ta mig an skådespelarjobb i
-          andra länder och vill gärna nätverka med andra i samma situation.
+          med mitt skådespeleri. <br /> Önskar nu försöka ta mig an
+          skådespelarjobb i andra länder och vill gärna nätverka med andra i
+          samma situation.
         </h3>
       </div>
       <div>

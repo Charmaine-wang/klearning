@@ -5,7 +5,7 @@ const StyledCourseLesson = styled.div`
   .header {
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: var(--black-font);
   }
 
   .lesson {
@@ -16,7 +16,7 @@ const StyledCourseLesson = styled.div`
   }
 
   .lesson-header {
-    color: black;
+    color: var(--black-font);
     display: flex;
     align-items: center;
     // justify-content:space-between;

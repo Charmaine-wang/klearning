@@ -11,10 +11,10 @@ const StyledHandInExercise = styled.div`
   align-items: center;
 
   h2:first-of-type {
-    color: black;
+    color: var(--black-font);
   }
   .requirements {
-    color: black;
+    color: var(--black-font);
     font-weight: bold;
   }
 
