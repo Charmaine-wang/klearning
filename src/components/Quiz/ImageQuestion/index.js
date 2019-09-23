@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import QuizButton from "../QuizButton";
 
@@ -56,14 +56,35 @@ const StyledImageQuestion = styled.div`
     }
   }
 `;
-
+// Test onClick in separate views, not working properly in testView with QuestionComponent above
 const ImageQuestion = ({
   question,
   questionNumber,
   answerOptions,
   image,
-  headerQuestion
+  headerQuestion,
+  correctAnswer,
+  score
 }) => {
+  const [isCorrect, setIsCorrect] = useState(null);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [next, setNext] = useState(null);
+  const [quizScore, setQuizScore] = useState(score);
+
+  function checkAnswer() {
+    if (selectedAnswer === correctAnswer) {
+      setIsCorrect(true);
+      setNext(true);
+      setQuizScore(quizScore + 1);
+    } else {
+      setIsCorrect(false);
+      setNext(true);
+    }
+  }
+
+  function nextPage() {
+    console.log("next");
+  }
   return (
     <StyledImageQuestion image={image}>
       <div>
@@ -82,6 +103,8 @@ const ImageQuestion = ({
                 margin="3px"
                 fontWeight="600"
                 key={option}
+                isCorrect={option === selectedAnswer ? isCorrect : null}
+                onClick={() => setSelectedAnswer(option)}
               />
             );
           })}
@@ -92,6 +115,7 @@ const ImageQuestion = ({
         buttonWidth="100%"
         margin="3px"
         fontWeight="600"
+        onClick={() => (next ? nextPage() : checkAnswer())}
       />
     </StyledImageQuestion>
   );
