@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   height: auto;
-  width: 94vw;
+  width: ${({ width }) => width || "94vw"};
   margin: auto;
   padding: ${({ padding }) => padding || "16px 0"};
 
@@ -12,8 +12,12 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Container = ({ padding, children }) => {
-  return <StyledContainer padding={padding}>{children}</StyledContainer>;
+const Container = ({ padding, width, children }) => {
+  return (
+    <StyledContainer padding={padding} width={width}>
+      {children}
+    </StyledContainer>
+  );
 };
 
 export default Container;

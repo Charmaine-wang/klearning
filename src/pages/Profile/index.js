@@ -61,7 +61,7 @@ const Profile = () => {
       <Container padding="0">
         <h1>Sparade kurser</h1>
       </Container>
-      <Container padding="16px 0">
+      <Container padding="16px 0" width="100%">
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
@@ -72,6 +72,7 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
+              padding="0 0 0 3vw"
             />
 
             <ActiveCourseCard
@@ -100,6 +101,7 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
+              padding="0 3vw 0 0"
             />
           </ContainerSlider>
         </FixedContainer>
