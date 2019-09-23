@@ -29,6 +29,7 @@ const QuizPage = () => {
           correctAnswer="Ögonhöjd"
         />
         <ImageQuestion
+          image="images/quiz2.jpg"
           headerQuestion="VAD ÄR DET PÅ BILDEN?"
           question="Vad kallas det här?"
           questionNumber="2"
@@ -36,6 +37,7 @@ const QuizPage = () => {
           correctAnswer="Tripod"
         />
         <ImageQuestion
+          image="images/quiz3.jpg"
           headerQuestion="SANT ELLER FALSKT"
           question="Det är viktigt att den huvudsakliga ljussättningen kommer bakifrån kameran."
           questionNumber="3"
