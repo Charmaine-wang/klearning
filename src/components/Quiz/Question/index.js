@@ -40,6 +40,7 @@ const StyledQuestion = styled.div`
   }
 `;
 
+// Works fine! Test same thing in ImageQuestionComponent.
 const Question = ({
   question,
   questionNumber,
