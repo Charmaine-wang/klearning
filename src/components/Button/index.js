@@ -27,6 +27,7 @@ const StyledButton = styled.button`
     color: var(--soft-orange);
     text-decoration: underline;
   }
+  
 `;
 const Button = ({ btnName, ...props }) => {
   // eslint-disable-next-line no-undef

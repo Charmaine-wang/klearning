@@ -42,22 +42,23 @@ const StyledAlternativeDrop = styled.div`
   }
 `;
 const AlternativeDrop = props => {
-  // const [selectedAlt, setSelectedAlt] = useState(false);
+  // const [selectedAlt, setSelectedAlt] = useState('video');
+  console.log(props);
 
   return (
     <StyledAlternativeDrop {...props}>
       <h2>Välj metod:</h2>
-      <div onClick={() => console.log("video")}>
+      <div onClick={props.showVideo}>
         <PlayVideo />
         <aside />
         <h3>Video</h3>
       </div>
-      <div onClick={() => console.log("sound")}>
+      <div onClick={props.showSound}>
         <Sound />
         <aside />
         <h3>Ljud</h3>
       </div>
-      <div onClick={() => console.log("text")}>
+      <div onClick={props.showText}>
         <TextIcon />
         <aside />
         <h3>Text</h3>

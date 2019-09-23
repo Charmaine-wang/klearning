@@ -21,10 +21,6 @@ const GlobalStyle = createGlobalStyle`
   --backup-font: "cursive";
   }
 
-/* Width & Margins:
-  width: 94vw;
-  side-margin: auto; */
-
   body {
     background-color: var(--bg-color);
     color: var(--black-font);

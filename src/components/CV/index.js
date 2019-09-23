@@ -9,13 +9,20 @@ const StyledCV = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  p {
+    color: var(--black-font);
+  }
   & > div {
     padding: 5vw 5vw 0 5vw;
   }
 
   & > div:first-of-type {
     padding-bottom: 0;
+
+    h2 {
+      color: black;
+      font-size: 20px;
+    }
 
     & > div:last-of-type {
       margin-left: 5vw;
@@ -87,7 +94,9 @@ const CV = () => {
         <h2>Om mig</h2>
         <h3>
           Har en lång bakgrund inom friteatergrupper samt independentfilm runt
-          om i Skandinavien.
+          om i Skandinavien. Har tidigare jobbat mycket bakom kameran parallellt
+          med mitt skådespeleri. Önskar nu försöka ta mig an skådespelarjobb i
+          andra länder och vill gärna nätverka med andra i samma situation.
         </h3>
       </div>
       <div>

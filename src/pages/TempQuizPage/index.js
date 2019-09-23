@@ -26,12 +26,14 @@ const QuizPage = () => {
             "Snett underifrån",
             "Lite från sidan"
           ]}
+          correctAnswer="Ögonhöjd"
         />
         <ImageQuestion
           headerQuestion="VAD ÄR DET PÅ BILDEN?"
           question="Vad kallas det här?"
           questionNumber="2"
           answerOptions={["Tripod", "Micstativ", "Kamerahus"]}
+          correctAnswer="Tripod"
         />
         <ImageQuestion
           headerQuestion="SANT ELLER FALSKT"
@@ -39,6 +41,7 @@ const QuizPage = () => {
           questionNumber="3"
           answerOptions={["Sant", "Falskt"]}
           buttonPadding="8px 10px"
+          correctAnswer="Sant"
         />
         <QuizButton
           btnName="Svarsalternativ"
@@ -46,7 +49,7 @@ const QuizPage = () => {
           fontWeight="600"
           margin="0 0 20px 0"
         />
-        <Achievement buttonPadding="10px 15px" />
+        <Achievement buttonPadding="10px 15px" message="Bra jobbat!" />
       </Container>
     </StyledQuizPage>
   );
