@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCourseInformationCard = styled.div`
+  margin: 16px;
   .course-information-card {
     background-color: white;
-    margin: 16px;
     padding: ${props => (props.paddingInfo ? props.paddingInfo : "16px")};
     border-radius: 10px;
     margin: 0;
@@ -32,11 +32,9 @@ const CourseInformationCard = ({
       colorHeader={colorHeader}
       paddingInfo={paddingInfo}
     >
-      <div>
-        <div className="course-information-card">
-          <h1>{header}</h1>
-          <p>{paragraph}</p>
-        </div>
+      <div className="course-information-card">
+        <h1>{header}</h1>
+        <p>{paragraph}</p>
       </div>
     </StyledCourseInformationCard>
   );
