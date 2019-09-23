@@ -46,7 +46,7 @@ const QuizPage = () => {
           fontWeight="600"
           margin="0 0 20px 0"
         />
-        <Achievement buttonPadding="10px 15px" />
+        <Achievement buttonPadding="10px 15px" message="Bra jobbat!" />
       </Container>
     </StyledQuizPage>
   );
