@@ -10,14 +10,20 @@ const StyledCourseInformationCard = styled.div`
     margin: 0;
   }
 
-  h1 {
-    color: ${props =>
-      props.colorHeader ? props.colorHeader : "var(--soft-orange)"};
+  h2 {
+    font-size: 20px;
+    color: ${props => (props.colorHeader ? props.colorHeader : "black")};
     padding-bottom: 1.7vw;
     font-weight: 500;
+    // margin: 16px 0px;
   }
   p {
     line-height: 1.7em;
+  }
+
+  .course-information-card > a {
+    text-decoration: none;
+    color: var(--soft-orange);
   }
 `;
 
@@ -25,7 +31,9 @@ const CourseInformationCard = ({
   header,
   paragraph,
   colorHeader,
-  paddingInfo
+  paddingInfo,
+  linkHref,
+  linkText
 }) => {
   return (
     <StyledCourseInformationCard
@@ -33,8 +41,9 @@ const CourseInformationCard = ({
       paddingInfo={paddingInfo}
     >
       <div className="course-information-card">
-        <h1>{header}</h1>
+        <h2>{header}</h2>
         <p>{paragraph}</p>
+        <a href={linkHref}>{linkText}</a>
       </div>
     </StyledCourseInformationCard>
   );

@@ -42,36 +42,28 @@ const AboutCourse = () => {
       <CourseChoicesCard lessonAmount="8" handInAmount="3" hoursAmount="4" />
       <CourseInformationCard
         header="Om denna kurs"
-        paragraph="Dolor ut amet culpa voluptate culpa cillum velit reprehenderit
-                deserunt officia dolore. Non adipisicing amet consectetur occaecat.
-                Sit esse ad nostrud esse veniam officia consequat proident proident qui.
-                Et cillum aute commodo do minim aliqua quis aute nulla exercitation aliqua."
+        paragraph="Målet med kursen är att du ska lära dig hur du gör din egen self-tape på bästa sätt. Syftet är att 
+        ge bättre förutsättningar för skådespelare att nå ut till en större och internationell marknad. I kursen får du 
+        verktygen för att på ett bra sätt komma igång med att producera self-tapes. Thomas Chaanhing delar med sig av sin 
+        erfarenhet och metoder och kommer bland annat gå igenom några av sina egna self-tapes, vad fungerar och vad fungerar
+         inte samt en generell set-up utifrån den teknik och redskap du har tillgång till.
+        Poängen är att du ska lära dig att göra ett bra self-tape, oavsett vilken utrustning du har tillgång till."
+      />
+      <CourseInformationCard
+        header="Utrustning"
+        paragraph="En digital kamera eller mobilkamera.
+        En dator, smartphone eller tablet."
       />
       <CourseInformationCard
         header="Målgrupp"
-        paragraph="Professionella utövare inom kulturella och kreativa näringar* verksamma i 
-                Västra Götaland. Vi ser med fördel att det är en bredd av kreatörer och konstnärliga
-                utövare, dels för att stimulera mötet men också det gemensamma lärandet. * Scenkonst,
-                musik, design, arkitektur,
-                mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel."
+        paragraph="Professionella skådespelare."
       />
       <CourseInformationCard
         header="Förkunskaper"
-        paragraph="Professionella utövare inom kulturella och kreativa näringar* verksamma i 
-                    Västra Götaland. Vi ser med fördel att det är en bredd av kreatörer och konstnärliga
-                    utövare, dels för att stimulera mötet men också det gemensamma lärandet. * Scenkonst,
-                    musik, design, arkitektur,
-
-                    mode, konst, konsthantverk, foto, film, kommunikation/reklam, måltid, kulturarv, spel."
+        paragraph="Att du uppfyller våra antagningskriterier."
+        linkText="Läs mer"
+        linkHref="https://www.kulturakademin.com/viktigt-att-veta-om-vara-aktiviteter"
       />
-      {/* <h1 className="recommended-course-header">Rekommenderad Kurs</h1>
-      <div className="recommended-course">
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-      </div> */}
       <h1 className="information-header">Kursinformation</h1>
       <MiscInfoCard
         seatsAmouts="20"
