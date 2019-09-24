@@ -9,6 +9,9 @@ import Overview from "./pages/TempCourseOverviewPage";
 import HandIn from "./pages/TempHandInPage";
 import Quiz from "./pages/TempQuizPage";
 import Media from "./pages/TempMediaPage";
+import CourseInfo from "./pages/CourseInfo";
+import CourseOverview from "./pages/CourseOverview";
+import CourseFlow from "./pages/CourseFlow";
 
 const App = () => {
   return (
@@ -18,12 +21,19 @@ const App = () => {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/course" component={Course} />
             <Route path="/profile" component={Profile} />
+
+            {/* Temporary */}
+            <Route exact path="/course" component={Course} />
             <Route path="/overview" component={Overview} />
             <Route path="/handin" component={HandIn} />
             <Route path="/quiz" component={Quiz} />
             <Route path="/media" component={Media} />
+
+            {/* New Course Routes */}
+            <Route exact path="/course/overview" component={CourseOverview} />
+            <Route exact path="/course/info" component={CourseInfo} />
+            <Route exact path="/course/flow" component={CourseFlow} />
           </Switch>
         </div>
         <Footer />

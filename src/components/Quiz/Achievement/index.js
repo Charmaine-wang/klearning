@@ -5,8 +5,6 @@ import QuizButton from "../QuizButton";
 const StyledAchievement = styled.div`
   background-color: var(--card-color);
   border-radius: 10px;
-  height: 60vh;
-  width: 90%;
   margin: 0 auto 10px auto;
   padding: 30px 20px;
   display: flex;
@@ -29,26 +27,29 @@ const StyledAchievement = styled.div`
   }
 
   & > div:first-of-type {
-    width: 100px;
-    height: 100px;
-    background-color: black;
+    width: 400px;
+    height: 350px;
+    background-image: url("images/Illustrations/quiz.svg");
+    background-position: center;
+    background-size: cover;
+    margin: 0;
   }
 
   & > div:last-of-type {
     width: 100%;
     justify-self: flex-end;
     margin-top: auto;
+  }
 
-    h3 {
-      font-weight: 600;
-    }
+  h3 {
+    font-weight: 600;
+  }
 
-    .row {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 

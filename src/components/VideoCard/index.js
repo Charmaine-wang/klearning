@@ -17,21 +17,28 @@ const StyledVideoCard = styled.div`
   }
 `;
 
-const VideoCard = props => {
+const VideoCard = ({ nextPart, hidePlayer, header, intro }) => {
   return (
-    <StyledVideoCard {...props}>
+    <StyledVideoCard hidePlayer={hidePlayer}>
       {/* LÄGGA IN VIDEO */}
       <VideoPlayer videoId="l2vcqaClw-A" />
       <GridLayout padding="12% 2.5% 0 0">
         <CourseInformationCard
-          header="1. Introduktion"
+          header={header || "1. Introduktion"}
           colorHeader="var(--dark-grey)"
           paddingInfo="12% 6%"
-          paragraph='Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
+          paragraph={
+            intro ||
+            'Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
+          }
         />
         <div className="button-div">
           <Button btnName="Till översikten" buttonWidth="160px" />
-          <Button btnName="Nästa Lektion" buttonWidth="160px" />
+          <Button
+            btnName="Nästa Lektion"
+            buttonWidth="160px"
+            onClick={() => nextPart()}
+          />
         </div>
       </GridLayout>
     </StyledVideoCard>
