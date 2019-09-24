@@ -8,14 +8,20 @@ const StyledActiveCourseCard = styled.div`
   flex-direction: column;
   background-color: var(--card-color);
   width: 75vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "40vh")};
+  height: ${props => (props.expandHeight ? props.expandHeight : "37vh")};
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
   padding: ${props => (props.padding ? props.padding : "0")};
-  /* text-decoration: none; */
+
+  /* & > a > img { 
+  width: 100%;
+} */
   & > a {
     text-decoration: none;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
   }
   & a > div,
   & a > h2,
@@ -29,11 +35,13 @@ const StyledActiveCourseCard = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 5vh;
+    margin: 0;
   }
 
   h2 {
     font-size: 16px;
     font-weight: 600;
+    color: var(--black-font);
   }
 
   div:first-of-type {
@@ -42,10 +50,6 @@ const StyledActiveCourseCard = styled.div`
   }
   div:last-of-type {
     color: var(--dark-grey);
-  }
-
-  & > img {
-    /* image should take up higher percantage of div */
   }
 `;
 const ActiveCourseCard = ({
