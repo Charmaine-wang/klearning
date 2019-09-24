@@ -8,13 +8,13 @@ const StyledHandInPoints = styled.div`
   }
 
   & > div:first-of-type {
-    /* margin: 16px;
-  padding: 16px; */
+    padding: 16px;
     background-color: white;
     border-radius: 10px;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 
     .points-hand-in > h2 {
       font-size: 20px;
@@ -32,9 +32,13 @@ const StyledHandInPoints = styled.div`
     .point-list > li {
       padding: 8px 0px;
       line-height: 1.7em;
-      margin: 16px 0px;
+      /* margin: 16px 0px; */
       // font-size: 16px;
       // font-weight: bold;
+    }
+
+    ul {
+      padding: 16px;
     }
   }
   .row {
@@ -76,6 +80,7 @@ const HandInPoints = ({ header, paragraph, nextPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="150px"
+          textColor="var(--soft-orange)"
           onClick={() => nextPart()}
         />
       </div>

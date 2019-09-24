@@ -72,6 +72,8 @@ const HandInCard = ({
       <Button
         btnName="Nästa Lektion"
         buttonWidth="100%"
+        bgColor="var(--soft-orange)"
+        textColor="var(--card-color)"
         onClick={() => nextPart()}
       />
     </StyledHandInCard>

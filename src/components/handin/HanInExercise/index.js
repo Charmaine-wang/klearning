@@ -8,12 +8,12 @@ const StyledHandInExercise = styled.div`
     margin-bottom: 10px;
   }
   & > div:first-of-type {
-    margin: 16px;
     padding: 16px;
     background-color: white;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 
     h2:first-of-type {
       color: var(--black-font);
@@ -35,12 +35,12 @@ const StyledHandInExercise = styled.div`
       text-decoration: none;
       color: var(--soft-orange);
     }
-    .row {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
@@ -77,6 +77,7 @@ const HandInExercise = ({ header, paragraph, paragraph2, nextPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="150px"
+          textColor="var(--soft-orange)"
           onClick={() => nextPart()}
         />
       </div>

@@ -13,13 +13,14 @@ import HandInExercise from "../../components/handin/HanInExercise";
 import HandInUpload from "../../components/handin/HandInUpload";
 import HandInFeedBack from "../../components/handin/HandInFeedBack";
 import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm";
+import Evaluation from "../../components/handin/Evaluation";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
 `;
 
 const CourseFlow = () => {
-  const [lessonPart, setLessonPart] = useState(8);
+  const [lessonPart, setLessonPart] = useState(12);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
 
@@ -189,6 +190,15 @@ const CourseFlow = () => {
         )}
         {lessonPart === 14 ? (
           <HandInFeedBackConfirm
+            header="Nu har du bokat en tid!"
+            paragraph="Feedback sker via Skype. Klicka på knappen nedan för att komma till mötet."
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 15 ? (
+          <Evaluation
             header="Nu har du bokat en tid!"
             paragraph="Feedback sker via Skype. Klicka på knappen nedan för att komma till mötet."
             nextPart={nextLessonPart}

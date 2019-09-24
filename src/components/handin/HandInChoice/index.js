@@ -10,10 +10,10 @@ const StyledHandInChoice = styled.div`
     margin-bottom: 10px;
   }
   & > div:first-of-type {
-    margin: 16px;
     padding: 16px;
     background-color: white;
     border-radius: 10px;
+    margin-bottom: 10px;
 
     .choice-hand-in > h2 {
       font-size: 20px;
@@ -30,26 +30,12 @@ const StyledHandInChoice = styled.div`
     }
     .button-choices-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
 
-      .choice-hand-in > h2 {
-        color: var(--black-font);
-        margin-bottom: 12px;
-      }
-      .choice-hand-in > p {
-        line-height: 1.4rem;
-      }
-      .choice-header {
-        color: var(--black-font);
-        font-weight: 500;
-        margin-top: 16px;
-      }
-      .button-choices-container {
-        display: flex;
-        flex-direction: column;
-      }
       .choice-button {
+        width: 100%;
         margin: 4px 0px;
       }
     }
@@ -98,6 +84,7 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="150px"
+          textColor="var(--soft-orange)"
           onClick={() => nextPart()}
         />
       </div>

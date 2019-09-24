@@ -6,29 +6,18 @@ const StyledHandInFeedBack = styled.div`
   h1 {
     margin-bottom: 10px;
   }
-  margin: 16px;
-  padding: 16px;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
 
-  .feedback-hand-in {
-    width: 100%;
-  }
-  .feedback-hand-in > h2 {
-    font-size: 20px;
-    color: var(--black-font);
-  }
   & > div:first-of-type {
-    margin: 16px;
     padding: 16px;
     background-color: white;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 
     .feedback-hand-in {
+      font-size: 20px;
       width: 100%;
     }
     .feedback-hand-in > h2 {
@@ -110,6 +99,8 @@ const HandInFeedBack = ({ header, nextPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="150px"
+          bgColor="var(--soft-orange)"
+          textColor="var(--card-color)"
           onClick={() => nextPart()}
         />
       </div>
