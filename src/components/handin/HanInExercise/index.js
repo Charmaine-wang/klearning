@@ -25,7 +25,6 @@ const StyledHandInExercise = styled.div`
 
   a:first-of-type {
     text-decoration: none;
-    font-size: 12px;
     color: var(--soft-orange);
   }
   .link-div {

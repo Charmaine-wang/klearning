@@ -8,6 +8,7 @@ import HandInUpload from "../HandInUpload";
 import HandInFeedBack from "../HandInFeedBack";
 import HandInFeedBackConfirm from "../HandInFeedBackConfirm";
 // import HandInModal from "../HandInModal";
+import Evaluation from "../Evaluation";
 
 const StyledHandIn = styled.div``;
 
@@ -15,7 +16,7 @@ const HandIn = () => {
   return (
     <StyledHandIn>
       <HandInIntroCard
-        introImage="images/selfTape.png"
+        introImage="images/Self-tape.png"
         introHeaderParagraph="Skapa ett self-tape"
         introParagraph1="Nu är det dags att spela in ditt eget self-tape!"
         introParagraph2="Du laddar sedan upp din inspelning och får personlig feedback från din lärare."
@@ -44,6 +45,13 @@ const HandIn = () => {
       <HandInFeedBackConfirm
         header="Nu har du bokat en tid!"
         paragraph="Feedback sker via Skype. Klicka på knappen nedan för att komma till mötet."
+      />
+      <Evaluation
+        header="Bra jobbat!"
+        paragraph="Vi tackar för ditt engagemang hos oss. Vi vill hjälpa till att göra våra kurser
+       så bra som möjligt för våra deltagare. För att kunna göra det behöver vi dina erfarenheter 
+       och åsikter. "
+        imgSrc="images/Rewards.png"
       />
       {/* <HandInModal /> */}
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>
