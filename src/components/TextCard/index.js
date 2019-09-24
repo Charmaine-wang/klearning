@@ -3,23 +3,36 @@ import styled from "styled-components";
 import Button from "../Button";
 
 const StyledTextCard = styled.div`
-  margin: 10px 0;
+  margin: 0;
   height: ${props => props.height};
-  overflow-x: hidden;
-  overflow-y: scroll;
   width: 100%;
+  height: 100vh;
   box-sizing: border-box;
-  padding: 0 15px 0 0;
+  /* padding: 0 15px 0 0; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+
+  & > .massatext {
+    height: 80vh;
+    overflow-y: scroll;
+    padding: 10% 0 0 3vw;
+  }
   & > div:first-child > p {
     height: 400px;
     /* background-color: red; */
   }
-  & > div .button-div {
+  & .button-div {
+    align-self: center;
     display: flex;
     width: 100%;
     height: 45px;
-    justify-content: space-around;
-    margin: 4% 0 0 0;
+    align-items: space-between;
+    padding: 0 3vw;
+
+    justify-content: space-between;
+    /* margin: 4% 0 0 0; */
   }
 `;
 
@@ -61,8 +74,8 @@ const TextCard = () => {
         </p>
       </div>
       <div className="button-div">
-        <Button btnName="Till översikten" buttonWidth="160px" />
-        <Button btnName="Nästa Lektion" buttonWidth="160px" />
+        <Button btnName="Till översikten" buttonWidth="150px" />
+        <Button btnName="Nästa Lektion" buttonWidth="150px" />
       </div>
     </StyledTextCard>
   );

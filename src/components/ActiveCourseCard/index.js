@@ -8,7 +8,7 @@ const StyledActiveCourseCard = styled.div`
   flex-direction: column;
   background-color: var(--card-color);
   width: 75vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
+  height: ${props => (props.expandHeight ? props.expandHeight : "40vh")};
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
