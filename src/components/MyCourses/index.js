@@ -24,7 +24,7 @@ const MyCourses = () => {
               courseTime="4h"
               cardHeader="Self-tape International med Thosmas Chaanhing"
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
-              courseTeacher="Thosmas Chaanhing"
+              courseTeacher="Thomas Chaanhing"
               bookmark="images/bookmark.png"
             />
           </ContainerSlider>

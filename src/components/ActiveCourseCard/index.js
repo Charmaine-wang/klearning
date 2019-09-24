@@ -12,6 +12,7 @@ const StyledActiveCourseCard = styled.div`
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
+  padding: ${props => (props.padding ? props.padding : "0")};
 
   & > div,
   & > h2,
@@ -52,7 +53,8 @@ const ActiveCourseCard = ({
   cardParagraph,
   courseTeacher,
   bookmark,
-  bookmarkAlt
+  bookmarkAlt,
+  padding
 }) => {
   const [isClicked, setClicked] = useState(false);
   console.log(
@@ -68,7 +70,7 @@ const ActiveCourseCard = ({
   );
 
   return (
-    <StyledActiveCourseCard>
+    <StyledActiveCourseCard padding={padding}>
       <img src={activeCourseImg} alt={activeCourseAlt} />
 
       <div>
