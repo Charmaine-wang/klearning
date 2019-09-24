@@ -84,6 +84,7 @@ const QuizPage = () => {
             message="Bra jobbat!"
             nextPart={nextLessonPart}
             score={quizScore}
+            numberOfQuestions="3"
           />
         ) : (
           ""

@@ -52,12 +52,20 @@ const StyledAchievement = styled.div`
   }
 `;
 
-const Achievement = ({ score, buttonPadding, message, nextPart }) => {
+const Achievement = ({
+  score,
+  buttonPadding,
+  message,
+  nextPart,
+  numberOfQuestions
+}) => {
   return (
     <StyledAchievement>
       <h1>{message}</h1>
       <div />
-      <h3>Du fick {score || "siffra"}/3 rätt!</h3>
+      <h3>
+        Du fick {score || "siffra"}/{numberOfQuestions} rätt!
+      </h3>
       <div>
         <h3>Vill du gå vidare eller göra om?</h3>
         <div className="row">
