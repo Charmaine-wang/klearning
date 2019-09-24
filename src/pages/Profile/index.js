@@ -58,10 +58,10 @@ const Profile = () => {
         <Button btnName="CV" onClick={() => setProfileComponent("cv")} />
       </div>
       <Container>{switchComponent()}</Container>
-      <Container>
-        <h1>Rekommenderade kurser</h1>
+      <Container padding="0">
+        <h1>Sparade kurser</h1>
       </Container>
-      <Container padding="0 0 16px 16px">
+      <Container padding="16px 0" width="100%">
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
@@ -72,11 +72,12 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
+              padding="0 0 0 3vw"
             />
 
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
-              courseCat="Dans"
+              courseCat="Film"
               courseTime="4h"
               cardHeader="Film Workshop med Connie Robertson  "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
@@ -85,21 +86,22 @@ const Profile = () => {
             />
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
-              courseCat="Dans"
+              courseCat="Foto"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Foto Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
             />
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
-              courseCat="Dans"
+              courseCat="Studio Ljus"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Ljussättnings Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
+              padding="0 3vw 0 0"
             />
           </ContainerSlider>
         </FixedContainer>

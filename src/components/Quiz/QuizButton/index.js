@@ -4,8 +4,10 @@ import styled from "styled-components";
 const StyledQuizButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
-  background-color: var(--card-color);
-  border: ${props => (props.border ? props.border : "1px solid #e0e0e0")};
+  background-color: ${props =>
+    props.color ? props.color : "var(--card-color)"};
+  border: ${props =>
+    props.border ? props.border : "1px solid var(--light-grey)"};
   color: ${props => (props.textColor ? props.textColor : "var(--black-font)")};
   padding: ${props => (props.padding ? props.padding : "10px 22px")};
   text-align: center;
@@ -16,27 +18,35 @@ const StyledQuizButton = styled.button`
   margin: ${props => (props.margin ? props.margin : "0")};
 
   &:hover {
-    color: #cd7b2a;
-    text-decoration: underline;
+    color: var(--soft-orange);
+    border: solid 1px var(--soft-orange);
   }
   &:active {
-    color: white;
-    background-color: var(--soft-orange);
+    color: var(--soft-orange);
+    border: solid 1px var(--soft-orange);
   }
 
-  .correct {
+  &.correct {
     color: white;
     background-color: var(--teal);
   }
-  .inCorrect {
-    color: var(--soft-orange);
-    background-color: var(--card-color);
-    border: solid 1px var(--soft-orange);
+  &.inCorrect {
+    color: white;
+    background-color: var(--red);
   }
 `;
-const QuizButton = ({ btnName, ...props }) => {
+const QuizButton = ({ btnName, isCorrect, ...props }) => {
   // eslint-disable-next-line no-undef
-  return <StyledQuizButton {...props}>{btnName}</StyledQuizButton>;
+  return (
+    <StyledQuizButton
+      className={
+        isCorrect !== null ? (isCorrect ? "correct" : "inCorrect") : ""
+      }
+      {...props}
+    >
+      {btnName}
+    </StyledQuizButton>
+  );
 };
 
 export default QuizButton;

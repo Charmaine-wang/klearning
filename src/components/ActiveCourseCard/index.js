@@ -6,12 +6,13 @@ import Bookmark from "../Icons/Bookmark";
 const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   width: 75vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "40vh")};
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
+  padding: ${props => (props.padding ? props.padding : "0")};
 
   & > div,
   & > h2,
@@ -35,6 +36,9 @@ const StyledActiveCourseCard = styled.div`
     color: var(--soft-orange);
     font-weight: 600;
   }
+  div:last-of-type {
+    color: var(--dark-grey);
+  }
 
   & > img {
     /* image should take up higher percantage of div */
@@ -49,7 +53,8 @@ const ActiveCourseCard = ({
   cardParagraph,
   courseTeacher,
   bookmark,
-  bookmarkAlt
+  bookmarkAlt,
+  padding
 }) => {
   const [isClicked, setClicked] = useState(false);
   console.log(
@@ -65,7 +70,7 @@ const ActiveCourseCard = ({
   );
 
   return (
-    <StyledActiveCourseCard>
+    <StyledActiveCourseCard padding={padding}>
       <img src={activeCourseImg} alt={activeCourseAlt} />
 
       <div>

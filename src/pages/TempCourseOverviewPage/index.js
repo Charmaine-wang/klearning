@@ -67,9 +67,9 @@ const OwerviewPage = () => {
         <div className="start-course-btn">
           <Button
             btnName="Starta kurs"
-            bgColor="#C97C36"
+            bgColor="var(--soft-orange)"
             buttonWidth="135px"
-            textColor="#ffffff"
+            textColor="var(--card-color)"
           />
         </div>
       </GridLayout>

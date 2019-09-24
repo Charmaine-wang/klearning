@@ -13,7 +13,7 @@ const StyledCourseEpisodes = styled.div`
   }
   .similar-header {
     margin: 16px;
-    color: black;
+    color: var(--black-font);
     font-weight: 400;
   }
   .similar-courses {

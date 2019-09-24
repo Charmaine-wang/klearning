@@ -6,9 +6,11 @@ import TaskItem from "../TaskItem";
 const StyledTask = styled.div`
   width: 95vw;
   height: 100%;
+
   border-radius: 10px;
   padding: 8% 5%;
-  background-color: #ffffff;
+  background-color: var(--card-color);
+
   display: flex;
   flex-direction: column;
 
@@ -19,7 +21,7 @@ const StyledTask = styled.div`
   & > hr {
     width: 100%;
     opacity: 0.2;
-    border-top: 1px solid #6d6d6d;
+    border-top: 1px solid var(--dark-grey);
     /* transform: rotate(90deg); */
   }
 `;

@@ -134,7 +134,7 @@ const Home = () => {
           gridRadius="10px"
           gridGap="3em"
           widthGrid="97%"
-          bgColor="#ffffff"
+          bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
           padding="0 0 15% 0"

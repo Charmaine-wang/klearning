@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../Button";
+// import ToggleContent from "../ToggleContent";
 
 const StyledHandInChoice = styled.div`
   margin: 16px;
@@ -11,27 +12,25 @@ const StyledHandInChoice = styled.div`
   justify-content: center;
   align-items: center;
 
-  .choice-hand-in > h2{
-    color:black;
-    margin-bottom:12px;
-
+  .choice-hand-in > h2 {
+    color: var(--black-font);
+    margin-bottom: 12px;
   }
-  .choice-hand-in > p{
+  .choice-hand-in > p {
     line-height: 1.4rem;
   }
-  .choice-header{
-    color:black;
-    font-weight:500;
-    margin-top:16px;
+  .choice-header {
+    color: var(--black-font);
+    font-weight: 500;
+    margin-top: 16px;
   }
-  .button-choices-container{
-    display:flex;
-    flex-direction:column;
+  .button-choices-container {
+    display: flex;
+    flex-direction: column;
   }
-  .choice-button{
-    margin 4px 0px;
+  .choice-button {
+    margin: 4px 0px;
   }
-
 `;
 
 const HandInChoice = ({ header, paragraph, choiceHeader }) => {
@@ -45,23 +44,33 @@ const HandInChoice = ({ header, paragraph, choiceHeader }) => {
           <Button
             className="choice-button"
             textAlign="left"
-            textColor="black"
+            textColor="var(--black-font)"
             btnName="Scen 1"
           />
           <Button
             className="choice-button"
             textAlign="left"
-            textColor="black"
+            textColor="var(--black-font)"
             btnName="Scen 2"
           />
           <Button
             className="choice-button"
             textAlign="left"
-            textColor="black"
+            textColor="var(--black-font)"
             btnName="Scen 3"
           />
         </div>
       </div>
+
+      {/* <ToggleContent
+      toggle={show => <button type="button" onClick={show}>Open</button>}
+      content={hide => (
+        <p>
+          There is no spoon...
+          <button type="button" onClick={hide}>Close</button>
+        </p>
+      )}
+    /> */}
     </StyledHandInChoice>
   );
 };

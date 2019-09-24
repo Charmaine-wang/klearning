@@ -4,19 +4,29 @@ import Button from "../Button";
 
 const StyledCV = styled.div`
   width: 100%;
-  /* margin: 3vw auto; */
   background-color: var(--card-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  p {
+    color: var(--black-font);
+  }
 
+  h2 {
+    margin-bottom: 5px;
+  }
   & > div {
     padding: 5vw 5vw 0 5vw;
   }
 
   & > div:first-of-type {
     padding-bottom: 0;
+
+    h2 {
+      color: var(--black-font);
+      font-size: 20px;
+    }
 
     & > div:last-of-type {
       margin-left: 5vw;
@@ -36,7 +46,7 @@ const StyledCV = styled.div`
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid var(--black-font);
   }
 
   .orange {
@@ -56,17 +66,18 @@ const StyledCV = styled.div`
   li {
     height: 3.5em;
     font-size: 12px;
-    border: solid 1px #e0e0e0;
+    border: solid 1px var(--light-grey);
     border-radius: 6px;
     padding: 2vw;
     margin: 2vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: var(--dark-grey);
   }
 
   .icon-placeholder {
-    background-color: black;
+    background-color: var(--black-font);
     width: 20px;
     height: 20px;
     align-self: flex-start;
@@ -79,7 +90,7 @@ const CV = () => {
       <div className="row">
         <div>
           <h2>Brandon Lane</h2>
-          <h3 className="orange">Skådespelare</h3>
+          <h5 className="orange">Skådespelare</h5>
         </div>
         <div className="icon-placeholder" />
       </div>
@@ -87,7 +98,10 @@ const CV = () => {
         <h2>Om mig</h2>
         <h3>
           Har en lång bakgrund inom friteatergrupper samt independentfilm runt
-          om i Skandinavien.
+          om i Skandinavien. Har tidigare jobbat mycket bakom kameran parallellt
+          med mitt skådespeleri. <br /> Önskar nu försöka ta mig an
+          skådespelarjobb i andra länder och vill gärna nätverka med andra i
+          samma situation.
         </h3>
       </div>
       <div>
