@@ -7,6 +7,22 @@ const StyledHandInUpload = styled.div`
   h1 {
     margin-bottom: 10px;
   }
+  margin: 16px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  .upload-hand-in > h2 {
+    color: var(--black-font);
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+  .upload-hand-in > p {
+    line-height: 1.2rem;
+  }
   & > div:first-of-type {
     margin: 16px;
     padding: 16px;

@@ -6,7 +6,6 @@ import Button from "../../Button";
 const StyledHandInChoice = styled.div`
   width: 100%;
   margin: auto;
-
   h1 {
     margin-bottom: 10px;
   }
@@ -15,16 +14,14 @@ const StyledHandInChoice = styled.div`
     padding: 16px;
     background-color: white;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     .choice-hand-in > h2 {
+      font-size: 20px;
       color: var(--black-font);
       margin-bottom: 12px;
     }
     .choice-hand-in > p {
-      line-height: 1.4rem;
+      line-height: 1.7em;
     }
     .choice-header {
       color: var(--black-font);
@@ -33,10 +30,28 @@ const StyledHandInChoice = styled.div`
     }
     .button-choices-container {
       display: flex;
-      flex-direction: column;
-    }
-    .choice-button {
-      margin: 4px 0px;
+      justify-content: center;
+      align-items: center;
+
+      .choice-hand-in > h2 {
+        color: var(--black-font);
+        margin-bottom: 12px;
+      }
+      .choice-hand-in > p {
+        line-height: 1.4rem;
+      }
+      .choice-header {
+        color: var(--black-font);
+        font-weight: 500;
+        margin-top: 16px;
+      }
+      .button-choices-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .choice-button {
+        margin: 4px 0px;
+      }
     }
   }
   .row {

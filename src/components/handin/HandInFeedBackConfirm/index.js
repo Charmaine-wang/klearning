@@ -54,7 +54,7 @@ const HandInFeedBackConfirm = ({ header, paragraph, nextPart }) => {
       <h1>Inlämning</h1>
       <div>
         <div className="feedback-confirm-hand-in">
-          <img src="images/feedback.png" alt="" />
+          <img src="images/Communication.png" alt="" />
           <h2>{header}</h2>
           <div className="booked-time-div">
             <p>{day}</p>
@@ -63,11 +63,6 @@ const HandInFeedBackConfirm = ({ header, paragraph, nextPart }) => {
           <div className="booked-time-paragraph">
             <p>{paragraph}</p>
           </div>
-          <Button
-            textColor="white"
-            bgColor="var(--soft-orange)"
-            btnName="Till skype-gruppen"
-          />
         </div>
       </div>
       <div className="row">
