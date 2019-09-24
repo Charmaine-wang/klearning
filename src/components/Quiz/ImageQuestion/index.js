@@ -108,7 +108,7 @@ const ImageQuestion = ({
         </div>
       </div>
       <QuizButton
-        btnName="Svara"
+        btnName={next ? "Nästa fråga" : "Svara"}
         buttonWidth="100%"
         margin="3px"
         fontWeight="600"
