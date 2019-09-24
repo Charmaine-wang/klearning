@@ -14,6 +14,7 @@ const StyledHandInUpload = styled.div`
   .upload-hand-in > h2 {
     color: var(--black-font);
     margin-bottom: 16px;
+    font-size: 20px;
   }
   .upload-hand-in > p {
     line-height: 1.2rem;

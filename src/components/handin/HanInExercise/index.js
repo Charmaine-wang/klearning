@@ -20,7 +20,10 @@ const StyledHandInExercise = styled.div`
 
   .exercise-hand-in > p {
     margin: 16px 0px;
-    line-height: 1.2rem;
+    line-height: 1.7em;
+  }
+  .exercise-hand-in > h2 {
+    font-size: 20px;
   }
 
   a:first-of-type {

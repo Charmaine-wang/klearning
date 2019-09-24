@@ -63,7 +63,7 @@ const HandInFeedBack = ({ header }) => {
           })}
         </div>
         <div className="feedback-day">
-          <p>{availableDay[0]}</p>
+          <p>{availableDay[1]}</p>
         </div>
         <div className="time-button-div">
           {availableTime.map(data => {

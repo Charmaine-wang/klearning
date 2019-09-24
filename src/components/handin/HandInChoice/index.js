@@ -18,7 +18,7 @@ const StyledHandInChoice = styled.div`
     margin-bottom: 12px;
   }
   .choice-hand-in > p {
-    line-height: 1.4rem;
+    line-height: 1.7em;
   }
   .choice-header {
     color: var(--black-font);
