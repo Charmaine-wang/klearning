@@ -11,6 +11,7 @@ const StyledHandInPoints = styled.div`
   align-items: center;
 
   .points-hand-in > h2 {
+    font-size: 20px;
     color: var(--black-font);
     margin-bottom: 12px;
   }
@@ -23,7 +24,7 @@ const StyledHandInPoints = styled.div`
   }
   .point-list > li {
     padding: 8px 0px;
-    font-size: 12px;
+    // font-size: 16px;
     font-weight: bold;
   }
   .point-list {

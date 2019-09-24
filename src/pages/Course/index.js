@@ -50,6 +50,7 @@ const StyledCourse = styled.div`
 
 const Course = () => {
   const [courseComponent, setCourseComponent] = useState("aboutCourse");
+  const [headerText, setHeaderText] = useState("Inlärningsalternativ");
 
   const switchComponent = () => {
     if (courseComponent === "aboutCourse") {
@@ -65,12 +66,10 @@ const Course = () => {
     <StyledCourse>
       <Container>
         <div className="image-container">
-          <h1 className="course-header">
-            Kursnamnet är här, bästa danslektionen ever
-          </h1>
+          <h1 className="course-header">Self-tape international</h1>
           <img
             className="hero-image-course"
-            src="images/courseImage.png"
+            src="images/selftape-hero.png"
             alt="course"
           />
           <Button
@@ -85,16 +84,22 @@ const Course = () => {
           <Button
             btnName="Om kurs"
             buttonWidth="45%"
-            onClick={() => setCourseComponent("aboutCourse")}
+            onClick={() => {
+              setCourseComponent("aboutCourse");
+              setHeaderText("Inlärningsalternativ");
+            }}
           />
           <Button
-            btnName="Kursavsnitt"
+            btnName="Kursinnehåll"
             buttonWidth="45%"
-            onClick={() => setCourseComponent("courseEpisodes")}
+            onClick={() => {
+              setCourseComponent("courseEpisodes");
+              setHeaderText("Kursinnehåll");
+            }}
           />
         </div>
         <div className="course-choices-container">
-          <h1>Kursalternativ</h1>
+          <h1>{headerText}</h1>
         </div>
         <div>{switchComponent()}</div>
       </Container>

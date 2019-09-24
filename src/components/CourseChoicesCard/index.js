@@ -48,43 +48,54 @@ const StyledCourseChoicesCard = styled.div`
     display: flex;
     justify-content: center;
   }
+  .number-text-pair {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon-div {
+    height: 100%;
+  }
 `;
 
 const CourseChoicesCard = ({ lessonAmount, handInAmount, hoursAmount }) => {
   return (
-    <StyledCourseChoicesCard>
-      <div className="choices-card">
-        <div className="choices">
-          <div>
-            <img className="icons" src="images/volume.png" alt="Volume" />
-            <p>Lyssna</p>
-          </div>
-          <div>
-            <img className="icons" src="images/read.png" alt="Read" />
-            <p>Läs</p>
-          </div>
-          <div>
-            <img className="icons" src="images/watch.png" alt="Watch" />
-            <p>Titta</p>
+    <>
+      <StyledCourseChoicesCard>
+        <div className="choices-card">
+          <div className="choices">
+            <div className="icon-div">
+              <img className="icons" src="images/volume.png" alt="Volume" />
+              <p>Lyssna</p>
+            </div>
+            <div className="icon-div">
+              <img className="icons" src="images/read.png" alt="Read" />
+              <p>Läs</p>
+            </div>
+            <div className="icon-div">
+              <img className="icons" src="images/watch.png" alt="Watch" />
+              <p>Titta</p>
+            </div>
           </div>
         </div>
-        <hr />
+      </StyledCourseChoicesCard>
+      {/* <hr /> */}
+      <StyledCourseChoicesCard>
         <div className="information-numbers">
-          <div>
+          <div className="number-text-pair">
             <div className="big-numbers">{lessonAmount}</div>
             <p>lektioner</p>
           </div>
-          <div>
+          <div className="number-text-pair">
             <div className="big-numbers">{handInAmount}</div>
             <p>inlämmingar</p>
           </div>
-          <div>
+          <div className="number-text-pair">
             <div className="big-numbers">{hoursAmount}</div>
             <p>timmar</p>
           </div>
         </div>
-      </div>
-    </StyledCourseChoicesCard>
+      </StyledCourseChoicesCard>
+    </>
   );
 };
 
