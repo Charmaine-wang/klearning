@@ -14,6 +14,7 @@ const StyledHandInFeedBack = styled.div`
     width: 100%;
   }
   .feedback-hand-in > h2 {
+    font-size: 20px;
     color: var(--black-font);
   }
 
@@ -40,12 +41,6 @@ const StyledHandInFeedBack = styled.div`
 `;
 
 const HandInFeedBack = ({ header }) => {
-  //   <ul className="point-list">
-  //   {pointData.map(data => {
-  //     return <li className="dot-style">{data}</li>;
-  //   })}
-  // </ul>
-
   const availableDay = ["Torsdag 1/6", "Fredag 2/6"];
   const availableTime = ["09:00", "09:30", "10:00", "10:30", "11:00"];
 
@@ -68,7 +63,7 @@ const HandInFeedBack = ({ header }) => {
           })}
         </div>
         <div className="feedback-day">
-          <p>{availableDay[0]}</p>
+          <p>{availableDay[1]}</p>
         </div>
         <div className="time-button-div">
           {availableTime.map(data => {

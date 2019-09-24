@@ -13,11 +13,12 @@ const StyledHandInChoice = styled.div`
   align-items: center;
 
   .choice-hand-in > h2 {
+    font-size: 20px;
     color: var(--black-font);
     margin-bottom: 12px;
   }
   .choice-hand-in > p {
-    line-height: 1.4rem;
+    line-height: 1.7em;
   }
   .choice-header {
     color: var(--black-font);
