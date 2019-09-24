@@ -18,12 +18,12 @@ const StyledQuizButton = styled.button`
   margin: ${props => (props.margin ? props.margin : "0")};
 
   &:hover {
-    color: white;
-    background-color: var(--soft-orange);
+    color: var(--soft-orange);
+    border: solid 1px var(--soft-orange);
   }
   &:active {
-    color: white;
-    background-color: var(--soft-orange);
+    color: var(--soft-orange);
+    border: solid 1px var(--soft-orange);
   }
 
   &.correct {
