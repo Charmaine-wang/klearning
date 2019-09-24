@@ -16,7 +16,16 @@ const StyledContainerSlide = styled.div`
       margin: ${props => props.marginBetween};
     }
   }
-  /* background-color:pink; */
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    justify-content: center;
+    padding: ${props => props.paddingScroll};
+    & > div {
+      margin: 0 10px 0 0;
+    }
+
+    /* align-items: center; */
+  }
 `;
 
 const ContainerSlider = props => {

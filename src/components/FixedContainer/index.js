@@ -11,14 +11,17 @@ const StyledFixedContainer = styled.div`
   scroll-behavior: smooth;
   margin: ${props => (props.margin ? props.margin : "0")};
   padding: ${props => (props.padding ? props.padding : "0")};
-
-  @media only screen and (min-width: 700px) {
-    /* Ska vi göra nånting här så slidern blir bättre inramad i desktop? */
-  }
-
-  ::-webkit-scrollbar {
+    ::-webkit-scrollbar {
     display: none;
   }
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    /* justify-content: ${props => props.justifyDesk}; */
+
+    /* align-items: center; */
+  }
+
+
 `;
 const FixedContainer = props => {
   return <StyledFixedContainer {...props} />;

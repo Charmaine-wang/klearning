@@ -35,6 +35,28 @@ const StyledImgText = styled.div`
   & > p {
     top: 70%;
   }
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+    top: 0;
+
+    /* align-items: center; */
+
+    & > h1 {
+      font-size: 40px;
+    }
+    & > p {
+      font-size: 40px;
+      line-height: 100%;
+      width: 70%;
+    }
+  }
 `;
 
 const ImgText = ({
