@@ -199,8 +199,11 @@ const CourseFlow = () => {
         )}
         {lessonPart === 15 ? (
           <Evaluation
-            header="Nu har du bokat en tid!"
-            paragraph="Feedback sker via Skype. Klicka på knappen nedan för att komma till mötet."
+            header="Bra jobbat!"
+            paragraph="Vi tackar för ditt engagemang hos oss. Vi vill hjälpa till att göra våra kurser
+         så bra som möjligt för våra deltagare. För att kunna göra det behöver vi dina erfarenheter 
+         och åsikter. "
+            imgSrc="images/Rewards.png"
             nextPart={nextLessonPart}
           />
         ) : (

@@ -60,7 +60,7 @@ const HandInFeedBack = ({ header, nextPart }) => {
 
   return (
     <StyledHandInFeedBack>
-      <h1>Inlämning</h1>
+      <h1>Feedback</h1>
       <div>
         <div className="feedback-hand-in">
           <h2>{header}</h2>

@@ -7,13 +7,13 @@ const StyledHandInFeedBackConfirm = styled.div`
     margin-bottom: 10px;
   }
   & > div:first-of-type {
-    margin: 16px;
     padding: 16px;
     background-color: white;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 
     .feedback-confirm-hand-in {
       width: 100%;
@@ -51,7 +51,7 @@ const HandInFeedBackConfirm = ({ header, paragraph, nextPart }) => {
 
   return (
     <StyledHandInFeedBackConfirm>
-      <h1>Inlämning</h1>
+      <h1>Feedback</h1>
       <div>
         <div className="feedback-confirm-hand-in">
           <img src="images/Communication.png" alt="" />
@@ -70,6 +70,8 @@ const HandInFeedBackConfirm = ({ header, paragraph, nextPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="150px"
+          bgColor="var(--soft-orange)"
+          textColor="var(--card-color)"
           onClick={() => nextPart()}
         />
       </div>
