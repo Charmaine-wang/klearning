@@ -6,13 +6,14 @@ import Question from "../../components/Quiz/Question";
 import ImageQuestion from "../../components/Quiz/ImageQuestion";
 import Achievement from "../../components/Quiz/Achievement";
 import Media from "../TempMediaPage";
+import HandInIntro from "../../components/handin/HandInIntroCard";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
 `;
 
 const CourseFlow = () => {
-  const [lessonPart, setLessonPart] = useState(1);
+  const [lessonPart, setLessonPart] = useState(7);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
 
@@ -122,13 +123,12 @@ const CourseFlow = () => {
           ""
         )}
         {lessonPart === 8 ? (
-          <Achievement
-            buttonPadding="10px 15px"
-            message="Bra jobbat!"
-            nextPart={nextLessonPart}
-            score={quizScore}
-            numberOfQuestions="3"
-            repeatQuiz={repeatQuiz}
+          <HandInIntro
+            introImage="images/selfTape.png"
+            introHeaderParagraph="Skapa ett self-tape"
+            introParagraph1="Nu är det dags att spela in ditt eget self-tape!"
+            introParagraph2="Du laddar sedan upp din inspelning och får personlig feedback från din lärare."
+            introParagraph3="Du måste själv boka tid för feedback, instruktioner för detta följer."
           />
         ) : (
           ""
