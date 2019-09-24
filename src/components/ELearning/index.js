@@ -16,11 +16,15 @@ const StyledELearning = styled.div`
     font-size: 16px;
     font-weight: 600;
   }
+  & > p {
+    padding: 0 10%;
+    line-height: 165%;
+  }
 `;
 const ELearning = ({ iconElearning, title, text }) => {
   return (
     <StyledELearning>
-      <>{iconElearning}</>
+      <img src={iconElearning} alt="" />
       <h1>{title}</h1>
       <p>{text}</p>
     </StyledELearning>
