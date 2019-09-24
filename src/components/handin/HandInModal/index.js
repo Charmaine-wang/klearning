@@ -1,21 +1,22 @@
 import React from "react";
-import styled from "styled-components";
-// import reactDOM from "react-dom";
+// import styled from "styled-components";
+import { createPortal } from "react-dom";
+import { ModalCard } from "./style";
 
-const StyledHandInModal = styled.div`
-  position: fixed;
-  top: 12px;
-  padding: 12px;
-  background-color: white;
-  border: 1px solid grey;
-`;
+// const StyledHandInModal = styled.div`
+
+// // .modal{
+
+// // }
+
+// `;
 
 const HandInModal = ({ children }) => {
-  return (
-    <StyledHandInModal>
-      <div className="modal">{children}</div>
-      {document.getElementById("modal-root")}
-    </StyledHandInModal>
+  return createPortal(
+    // <StyledHandInModal>
+    <ModalCard>{children}</ModalCard>,
+    // </StyledHandInModal>,
+    document.getElementById("modal-root")
   );
 };
 
