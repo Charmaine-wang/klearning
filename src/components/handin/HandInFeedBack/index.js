@@ -40,12 +40,6 @@ const StyledHandInFeedBack = styled.div`
 `;
 
 const HandInFeedBack = ({ header }) => {
-  //   <ul className="point-list">
-  //   {pointData.map(data => {
-  //     return <li className="dot-style">{data}</li>;
-  //   })}
-  // </ul>
-
   const availableDay = ["Torsdag 1/6", "Fredag 2/6"];
   const availableTime = ["09:00", "09:30", "10:00", "10:30", "11:00"];
 
