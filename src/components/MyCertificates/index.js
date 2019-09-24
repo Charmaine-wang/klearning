@@ -28,8 +28,8 @@ const MyCertificates = () => {
       <Certificate
         courseImg="images/rectangle2.png"
         courseLength="4h"
-        courseTitle="Kom igång med ditt filmskapande 1"
-        courseCreator="Connie Robertsson"
+        courseTitle="Shifting focus"
+        courseCreator="Rene Baker"
       />
     </StyledMyCertificates>
   );

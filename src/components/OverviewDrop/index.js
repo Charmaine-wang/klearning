@@ -11,9 +11,10 @@ const StyledOverviewDrop = styled.div`
   padding: 5%;
   width: 100vw;
   height: 5vh;
-  background-color: #ffffff;
-  border-top: 1px solid #e0e0e0;
+  background-color: var(--card-color);
+  border-top: 1px solid var(--light-grey);
   z-index: 2;
+  margin: 0;
 
   & > div {
     display: flex;

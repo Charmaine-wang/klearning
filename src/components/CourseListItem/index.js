@@ -5,21 +5,28 @@ import Bookmark from "../Icons/Bookmark";
 const StyledCourseListItem = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   align-self: flex-start;
   width: 85vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
 
+  & > a {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+  }
+
   /* margin: 15%; */
-  & > div {
+  & > a > div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
     height: 100%;
   }
-  & > div > div {
+  & > a > div > div {
     display: flex;
     justify-content: space-between;
     margin: 0 5%;
@@ -30,25 +37,36 @@ const StyledCourseListItem = styled.div`
     }
     > h5 {
       align-self: center;
+      color: #6d6d6d;
+    }
+    & > h5:first-child {
+      color: #c97c36;
+    }
+    & > aside {
+      width: 20px;
     }
   }
-  & > div > p,
+  & > a > div > p,
   h2 {
     margin: 2% 5%;
   }
-  & > div > h2 {
+
+  & > a > div > h2 {
     color: #333333;
+
     font-weight: 600;
     font-size: 16px;
     line-height: 135%;
   }
 
-  & > div > p {
+
+  & > a > div > p {
     color: #c97c36;
+
     font-size: 12px;
     line-height: 135%;
   }
-  & > div > p:first-child {
+  & > a > div > p:first-child {
     align-self: flex-end;
   }
   & > .progress-bar {
@@ -64,6 +82,7 @@ const CourseListItem = ({
   courseLength,
   courseTitle,
   courseTimeLeft
+
   // bookmark,
   // bookmarkAlt
 }) => {
@@ -71,19 +90,21 @@ const CourseListItem = ({
 
   return (
     <StyledCourseListItem>
-      {/* <div className=""> */}
-      <img src={courseImg} alt={courseAlt} />
-      <div>
-        <p>{courseLength}</p>
-        <h2>{courseTitle}</h2>
+      <a href="course">
+        <img src={courseImg} alt={courseAlt} />
         <div>
-          <h5>{courseTimeLeft} kvar av lektion</h5>
-          {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
-          <Bookmark />
+          <p>{courseLength}</p>
+          <h2>{courseTitle}</h2>
+          <div>
+            <>
+              <h5>{courseTimeLeft}</h5> <h5>kvar av lektion</h5>
+            </>
+            {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
+            <aside />
+            <Bookmark />
+          </div>
         </div>
-      </div>
-      {/* </div> */}
-      {/* <div className="progress-bar" /> */}
+      </a>
     </StyledCourseListItem>
   );
 };

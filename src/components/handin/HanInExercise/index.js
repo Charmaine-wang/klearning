@@ -11,10 +11,10 @@ const StyledHandInExercise = styled.div`
   align-items: center;
 
   h2:first-of-type {
-    color: black;
+    color: var(--black-font);
   }
   .requirements {
-    color: black;
+    color: var(--black-font);
     font-weight: bold;
   }
 
@@ -54,7 +54,7 @@ const HandInExercise = ({ header, paragraph, paragraph2 }) => {
             rel="noopener noreferer"
             target="_blank"
           >
-            Länk till Davinici resolve
+            Länk till Davinci resolve
           </a>
         </div>
       </div>

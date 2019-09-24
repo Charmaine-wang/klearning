@@ -11,7 +11,7 @@ const StyledCommunication = styled.div`
   /* position: absolute; */
   flex-direction: column;
   border-radius: 10px;
-  background: #ffffff;
+  background: var(--card-color);
   justify-content: space-around;
   align-items: center;
   & > p {

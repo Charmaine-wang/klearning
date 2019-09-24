@@ -11,10 +11,36 @@ const StyledAllCourses = styled.div`
 const AllCourses = () => {
   return (
     <StyledAllCourses>
-      <Button btnName="Scenkonst" buttonHeight="50%" />
-      <Button btnName="film" buttonHeight="50%" />
-      <Button btnName="TV" buttonHeight="50%" />
-      <Button btnName="Musik" buttonHeight="50%" />
+      <Button
+        btnName="Allt"
+        buttonHeight="50%"
+        buttonWidth="140px"
+        margin="0 1% 0 0"
+      />
+      <Button
+        btnName="Scenkonst"
+        buttonHeight="50%"
+        buttonWidth="140px"
+        margin="0 1% 0 0"
+      />
+      <Button
+        btnName="film"
+        buttonHeight="50%"
+        buttonWidth="120px"
+        margin="0 1% 0 0"
+      />
+      <Button
+        btnName="TV"
+        buttonHeight="50%"
+        buttonWidth="130px"
+        margin="0 1% 0 0"
+      />
+      <Button
+        btnName="Musik"
+        buttonHeight="50%"
+        buttonWidth="130px"
+        margin="0 1% 0 0"
+      />
     </StyledAllCourses>
   );
 };

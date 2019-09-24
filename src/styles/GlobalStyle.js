@@ -9,10 +9,11 @@ const GlobalStyle = createGlobalStyle`
   --bg-color: #F5F5F5;
   --card-color: white;
   --soft-orange: #C97C36;
-  --bright-orange: #EC733F;
   --teal: #00C9AC;
+  --light-grey: #E0E0E0;
   --dark-grey: #6D6D6D;
-  --font-color: #6D6D6D;
+  --black-font: #292929;
+  --red: #EB5757;
 
   /* Fonts */
   --accent-font:  Cursive; /* WHAT FONT SHOULD WE HAVE HERE */
@@ -20,13 +21,9 @@ const GlobalStyle = createGlobalStyle`
   --backup-font: "cursive";
   }
 
-/* Width & Margins:
-  width: 94vw;
-  side-margin: auto; */
-
   body {
     background-color: var(--bg-color);
-    color: var(--font-color);
+    color: var(--black-font);
     font-family: var(--main-font);
     display: block;
     margin: 0;
@@ -62,7 +59,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-weight: 400;
     @media only screen and (max-width: 700px) {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     }
   }

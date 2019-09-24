@@ -45,7 +45,7 @@ const Home = () => {
 
       <GridLayout
         // marginGrid="0 0 0 -4%"
-        padding="0 0 0 4%"
+        padding="0 0 0 3vw"
       >
         <FixedContainer heightContainer="10vh">
           <ContainerSlider>
@@ -57,11 +57,7 @@ const Home = () => {
         <CourseList courseWidth />
         <h1>Aktiva biblotek</h1>
 
-        <FixedContainer
-          heightContainer="45vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
+        <FixedContainer heightContainer="40vh">
           <ContainerSlider>
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
@@ -111,46 +107,34 @@ const Home = () => {
         </div>
 
         <FixedContainer
-          heightContainer="13vh"
+          heightContainer="46vh"
           margin="0 0 0 -4%"
           padding="0 0 0 4%"
         >
-          <ContainerSlider>
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-          </ContainerSlider>
-        </FixedContainer>
-
-        <FixedContainer
-          heightContainer="13vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
-          <ContainerSlider>
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-          </ContainerSlider>
-        </FixedContainer>
-
-        <FixedContainer
-          heightContainer="13vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
-          <ContainerSlider>
-            <CourseList courseWidth />
-            <CourseList courseWidth />
-            <CourseList courseWidth />
+          <ContainerSlider height="100%" marginBetween="4% 0 0 0">
+            <div>
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+            </div>
+            <div>
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+            </div>
+            <div>
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+              <CourseList courseWidth />
+            </div>
           </ContainerSlider>
         </FixedContainer>
 
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
-          widthGrid="96%"
-          bgColor="#ffffff"
+          widthGrid="97%"
+          bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
           padding="0 0 15% 0"

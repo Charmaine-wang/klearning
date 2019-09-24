@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "../../Button";
+import UploadButton from "../../UploadButton";
 
 const StyledHandInUpload = styled.div`
   margin: 16px;
@@ -12,7 +12,7 @@ const StyledHandInUpload = styled.div`
   font-size: 12px;
 
   .upload-hand-in > h2 {
-    color: black;
+    color: var(--black-font);
     margin-bottom: 16px;
   }
   .upload-hand-in > p {
@@ -23,17 +23,45 @@ const StyledHandInUpload = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30%;
+    margin-bottom: 16px;
+  }
+  .uploaded-file > p > span {
+    color: var(--soft-orange);
   }
 `;
 
 const HandInUpload = ({ header, paragraph }) => {
+  const [showFile, setShowFile] = useState(false);
+
+  const UploadedFileName = "Selftape.png";
+
   return (
     <StyledHandInUpload>
       <div className="upload-hand-in">
         <h2>{header}</h2>
         <p>{paragraph}</p>
         <div className="upload-div">
-          <Button btnName="Ladda upp fil" />
+          <UploadButton
+            btnImage="images/upload.png"
+            buttonWidth="100%"
+            btnName="Ladda upp fil"
+            onClick={() => {
+              setShowFile(true);
+            }}
+          />
+        </div>
+        <div className="uploaded-file">
+          {showFile && (
+            <p>
+              <span>Uppladdat: </span> {UploadedFileName}
+            </p>
+          )}
+          {!showFile && (
+            <p>
+              <span>Inget uppladdat: </span>
+            </p>
+          )}
         </div>
       </div>
     </StyledHandInUpload>

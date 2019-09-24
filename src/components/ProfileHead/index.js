@@ -9,6 +9,12 @@ const StyledProfileHead = styled.div`
   background-color: var(--card-color);
   border-radius: 10px;
 
+  h2 {
+    margin-bottom: 5px;
+  }
+  h5 {
+    color: var(--soft-orange);
+  }
   & > div {
     padding: 5vw;
   }
@@ -45,10 +51,14 @@ const ProfileHead = () => {
         <div className="profileImage" />
         <div>
           <h2>Brandon Lane</h2>
-          <h3>Skådespelare</h3>
+          <h5>Skådespelare</h5>
           <div className="row">
-            <Button btnName="Film" margin="0 15px 0 0" />
-            <Button btnName="Foto" />
+            <Button
+              btnName="Film"
+              textColor="var(--soft-orange)"
+              margin="0 15px 0 0"
+            />
+            <Button btnName="Foto" textColor="var(--soft-orange)" />
           </div>
         </div>
       </div>
