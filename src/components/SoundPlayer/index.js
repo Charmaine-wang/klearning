@@ -25,7 +25,7 @@ const StyledSound = styled.div`
     width: 40%;
     > button {
       width: 60%;
-      color: red;
+      color: #6d6d6d;
     }
   }
 `;

@@ -8,28 +8,40 @@ const StyledActiveCourseCard = styled.div`
   flex-direction: column;
   background-color: var(--card-color);
   width: 75vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "45vh")};
+  height: ${props => (props.expandHeight ? props.expandHeight : "37vh")};
   border-radius: 10px;
   justify-content: space-between;
   position: relative;
   padding: ${props => (props.padding ? props.padding : "0")};
 
-  & > div,
-  & > h2,
-  & > h5 {
+  /* & > a > img { 
+  width: 100%;
+} */
+  & > a {
+    text-decoration: none;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+  }
+  & a > div,
+  & a > h2,
+  & a > h5 {
     padding: 0 5%;
+    text-decoration: none;
   }
 
-  & > div {
+  & a > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5vh;
+    margin: 0;
   }
 
   h2 {
     font-size: 16px;
     font-weight: 600;
+    color: var(--black-font);
   }
 
   div:first-of-type {
@@ -38,10 +50,6 @@ const StyledActiveCourseCard = styled.div`
   }
   div:last-of-type {
     color: var(--dark-grey);
-  }
-
-  & > img {
-    /* image should take up higher percantage of div */
   }
 `;
 const ActiveCourseCard = ({
@@ -71,21 +79,26 @@ const ActiveCourseCard = ({
 
   return (
     <StyledActiveCourseCard padding={padding}>
-      <img src={activeCourseImg} alt={activeCourseAlt} />
+      <a href="course">
+        <img src={activeCourseImg} alt={activeCourseAlt} />
 
-      <div>
-        <h5>{courseCat}</h5>
-        <h5>{courseTime}</h5>
-      </div>
+        <div>
+          <h5>{courseCat}</h5>
+          <h5>{courseTime}</h5>
+        </div>
 
-      <h2>{cardHeader}</h2>
-      {/* <h5>{cardParagraph}</h5> */}
+        <h2>{cardHeader}</h2>
+        {/* <h5>{cardParagraph}</h5> */}
 
-      <div>
-        <h5>{courseTeacher}</h5>
+        <div>
+          <h5>{courseTeacher}</h5>
 
-        <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked} />
-      </div>
+          <Bookmark
+            onClick={() => setClicked(!isClicked)}
+            isFilled={isClicked}
+          />
+        </div>
+      </a>
     </StyledActiveCourseCard>
   );
 };

@@ -10,9 +10,6 @@ import AllCourses from "../../components/AllCourses";
 import Button from "../../components/Button";
 
 import ELearning from "../../components/ELearning";
-import Computer from "../../components/Icons/Computer";
-import People from "../../components/Icons/People";
-import CertificateIcon from "../../components/Icons/CertificateIcon";
 import ImgText from "../../components/ImgText";
 
 const StyledHome = styled.div`
@@ -45,7 +42,7 @@ const Home = () => {
 
       <GridLayout
         // marginGrid="0 0 0 -4%"
-        padding="0 0 0 4%"
+        padding="0 0 0 3vw"
       >
         <FixedContainer heightContainer="10vh">
           <ContainerSlider>
@@ -57,11 +54,7 @@ const Home = () => {
         <CourseList courseWidth />
         <h1>Aktiva biblotek</h1>
 
-        <FixedContainer
-          heightContainer="45vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
+        <FixedContainer heightContainer="40vh">
           <ContainerSlider>
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
@@ -137,30 +130,31 @@ const Home = () => {
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
-          widthGrid="96%"
+          widthGrid="97%"
           bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
           padding="0 0 15% 0"
         >
           <ELearning
-            iconElearning={<Computer />}
+            iconElearning="/images/Illustrations/Learning.svg"
             title="Praktiskt inlärning"
             text="Genomför projekt och uppdrag som du kan nyttja i arbetslivet."
           />
           <ELearning
-            iconElearning={<People />}
+            iconElearning="/images/Illustrations/communication.svg"
             title="Utvecklas tillsammans"
             text="Jobba med andra kursdeltagare och lär dela kunskap tillsammans."
           />
           <ELearning
-            iconElearning={<CertificateIcon />}
+            iconElearning="/images/Illustrations/rewards.svg"
             title="Belönas med intyg"
             text="Jobba med andra kursdeltagare och lär dela kunskap tillsammans."
           />
         </GridLayout>
       </GridLayout>
       <ImgText
+        imgMargin="10% 0 0 0"
         imgTextPic="images/workshop.png"
         imgTextHeader="Vill du hålla en workshop?"
         imgTextParagraph="Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas."

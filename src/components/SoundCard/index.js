@@ -21,9 +21,9 @@ const StyledSoundCard = styled.div`
 const clientId = process.env.REACT_APP_SOUNDCLOUD_CLIENT_ID;
 
 const soundOne = getData[23];
-const SoundCard = props => {
+const SoundCard = ({ nextPart, hideSound, header, intro }) => {
   return (
-    <StyledSoundCard {...props}>
+    <StyledSoundCard hideSound={hideSound}>
       <SoundPlayer
         title={soundOne.title}
         thumbnail={soundOne.thumbnail}
@@ -33,14 +33,21 @@ const SoundCard = props => {
       />
       <GridLayout padding="12% 2.5% 0 0">
         <CourseInformationCard
-          header="1. Introduktion"
+          header={header || "1. Introduktion"}
           colorHeader="var(--black-font)"
           paddingInfo="12% 6%"
-          paragraph='Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
+          paragraph={
+            intro ||
+            'Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
+          }
         />
         <div className="button-div">
           <Button btnName="Till översikten" buttonWidth="160px" />
-          <Button btnName="Nästa Lektion" buttonWidth="160px" />
+          <Button
+            btnName="Nästa Lektion"
+            buttonWidth="160px"
+            onClick={() => nextPart()}
+          />
         </div>
       </GridLayout>
     </StyledSoundCard>
