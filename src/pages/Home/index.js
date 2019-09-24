@@ -45,7 +45,7 @@ const Home = () => {
 
       <GridLayout
         // marginGrid="0 0 0 -4%"
-        padding="0 0 0 4%"
+        padding="0 0 0 3vw"
       >
         <FixedContainer heightContainer="10vh">
           <ContainerSlider>
@@ -57,11 +57,7 @@ const Home = () => {
         <CourseList courseWidth />
         <h1>Aktiva biblotek</h1>
 
-        <FixedContainer
-          heightContainer="45vh"
-          margin="0 0 0 -4%"
-          padding="0 0 0 4%"
-        >
+        <FixedContainer heightContainer="40vh">
           <ContainerSlider>
             <ActiveCourseCard
               activeCourseImg="images/Bild.png"
@@ -137,7 +133,7 @@ const Home = () => {
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
-          widthGrid="96%"
+          widthGrid="97%"
           bgColor="#ffffff"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"

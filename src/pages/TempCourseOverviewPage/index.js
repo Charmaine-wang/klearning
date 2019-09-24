@@ -4,6 +4,7 @@ import Communication from "../../components/Communication";
 import Task from "../../components/Task";
 import Button from "../../components/Button";
 import GridLayout from "../../components/GridLayout";
+// import ModalAlternative from "../../components/ModalAlternative"
 
 const StyledOwerviewPage = styled.div`
   display: flex;
@@ -21,18 +22,48 @@ const StyledOwerviewPage = styled.div`
 `;
 
 const OwerviewPage = () => {
+  const courseOverview = [
+    {
+      headerTask: "introduktion",
+      course: [
+        { taskNr: "1.", taskName: "Introduktionsfilm", taskTime: "03.53" }
+      ]
+    },
+    {
+      headerTask: "Bakgrund",
+      course: [
+        { taskNr: "2.", taskName: "Vad är ett self-tape", taskTime: "03.53" },
+        { taskNr: "3.", taskName: "Övning", taskTime: "03.53" }
+      ]
+    },
+    {
+      headerTask: "Inlämning",
+      course: [
+        { taskNr: "1.", taskName: "Skapa ett self-tape", taskTime: "03.53" },
+        { taskNr: "2.", taskName: "Att tänka på", taskTime: "03.53" },
+        { taskNr: "3.", taskName: "Inspeling", taskTime: "03.53" },
+        { taskNr: "4.", taskName: "Lämna in inspelning", taskTime: "03.53" },
+        { taskNr: "5.", taskName: "Boka tid för feedback", taskTime: "03.53" }
+      ]
+    },
+    {
+      headerTask: "Intyg",
+      course: [
+        { taskNr: "6.", taskName: "Utvädering", taskTime: "03.53" },
+        { taskNr: "7.", taskName: "Intyg", taskTime: "03.53" }
+      ]
+    }
+  ];
+
   return (
     <StyledOwerviewPage>
       <GridLayout padding="0 0 0 2.5%">
         {/* <ModalAlternative isActive /> */}
         <Communication />
-        <Task
-          headerTask="Introduktion"
-          taskNr="1."
-          taskName="Dansa med korvar"
-          taskTime="03.53"
-        />
 
+        {courseOverview.map(courses => {
+          return <Task courseData={courses} />;
+        })}
         <div className="start-course-btn">
           <Button
             btnName="Starta kurs"
