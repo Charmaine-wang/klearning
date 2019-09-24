@@ -26,8 +26,7 @@ const StyledTask = styled.div`
   }
 `;
 
-const Task = (props, { onClick }) => {
-  console.log(onClick);
+const Task = props => {
   return (
     <StyledTask>
       <h1>{props.courseData.headerTask}</h1>
@@ -38,7 +37,6 @@ const Task = (props, { onClick }) => {
             taskName={item.taskName}
             taskNr={item.taskNr}
             taskTime={item.taskTime}
-            onClick={() => console.log("hej")}
           />
         );
       })}
