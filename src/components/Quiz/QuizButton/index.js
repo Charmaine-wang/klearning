@@ -32,7 +32,7 @@ const StyledQuizButton = styled.button`
   }
   &.inCorrect {
     color: white;
-    background-color: red;
+    background-color: var(--red);
   }
 `;
 const QuizButton = ({ btnName, isCorrect, ...props }) => {
