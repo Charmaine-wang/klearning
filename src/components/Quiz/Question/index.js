@@ -46,27 +46,24 @@ const Question = ({
   questionNumber,
   answerOptions,
   correctAnswer,
-  score
+  nextPart,
+  updateScore
 }) => {
   const [isCorrect, setIsCorrect] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [next, setNext] = useState(null);
-  const [quizScore, setQuizScore] = useState(score);
 
   function checkAnswer() {
     if (selectedAnswer === correctAnswer) {
       setIsCorrect(true);
       setNext(true);
-      setQuizScore(quizScore + 1);
+      updateScore();
     } else {
       setIsCorrect(false);
       setNext(true);
     }
   }
 
-  function nextPage() {
-    console.log("next");
-  }
   return (
     <StyledQuestion>
       <div>
@@ -98,7 +95,7 @@ const Question = ({
         margin="3px"
         fontWeight="600"
         isCorrect={null}
-        onClick={() => (next ? nextPage() : checkAnswer())}
+        onClick={() => (next ? nextPart() : checkAnswer())}
       />
     </StyledQuestion>
   );

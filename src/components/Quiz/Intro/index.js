@@ -36,7 +36,7 @@ const StyledIntro = styled.div`
   }
 `;
 
-const Intro = () => {
+const Intro = ({ nextPart, numberOfQuestions }) => {
   return (
     <StyledIntro>
       <div>
@@ -50,7 +50,7 @@ const Intro = () => {
           vidare.
         </p>
         <h5>
-          Antal frågor: 3 <br /> Beräknad tid: ca 2 min
+          Antal frågor: {numberOfQuestions} <br /> Beräknad tid: ca 2 min
         </h5>
       </div>
       <QuizButton
@@ -58,6 +58,7 @@ const Intro = () => {
         buttonWidth="100%"
         margin="3px"
         fontWeight="600"
+        onClick={() => nextPart()}
       />
     </StyledIntro>
   );

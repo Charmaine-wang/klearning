@@ -52,7 +52,7 @@ const StyledAchievement = styled.div`
   }
 `;
 
-const Achievement = ({ score, buttonPadding, message }) => {
+const Achievement = ({ score, buttonPadding, message, nextPart }) => {
   return (
     <StyledAchievement>
       <h1>{message}</h1>
@@ -67,6 +67,7 @@ const Achievement = ({ score, buttonPadding, message }) => {
             padding={buttonPadding}
             color="var(--soft-orange)"
             textColor="var(--card-color)"
+            onClick={() => nextPart()}
           />
         </div>
       </div>

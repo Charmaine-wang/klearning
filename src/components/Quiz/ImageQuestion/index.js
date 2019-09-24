@@ -64,27 +64,24 @@ const ImageQuestion = ({
   image,
   headerQuestion,
   correctAnswer,
-  score
+  nextPart,
+  updateScore
 }) => {
   const [isCorrect, setIsCorrect] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [next, setNext] = useState(null);
-  const [quizScore, setQuizScore] = useState(score);
 
   function checkAnswer() {
     if (selectedAnswer === correctAnswer) {
       setIsCorrect(true);
       setNext(true);
-      setQuizScore(quizScore + 1);
+      updateScore();
     } else {
       setIsCorrect(false);
       setNext(true);
     }
   }
 
-  function nextPage() {
-    console.log("next");
-  }
   return (
     <StyledImageQuestion image={image}>
       <div>
@@ -115,7 +112,7 @@ const ImageQuestion = ({
         buttonWidth="100%"
         margin="3px"
         fontWeight="600"
-        onClick={() => (next ? nextPage() : checkAnswer())}
+        onClick={() => (next ? nextPart() : checkAnswer())}
       />
     </StyledImageQuestion>
   );

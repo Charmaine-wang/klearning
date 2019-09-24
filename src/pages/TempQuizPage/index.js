@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Intro from "../../components/Quiz/Intro";
 import Question from "../../components/Quiz/Question";
@@ -11,40 +11,83 @@ const StyledQuizPage = styled.div`
 `;
 
 const QuizPage = () => {
+  const [lessonPart, setLessonPart] = useState(2);
+  const [progress, setProgress] = useState(0);
+  const [quizScore, setQuizScore] = useState(0);
+
+  function nextLessonPart() {
+    setLessonPart(lessonPart + 1);
+    setProgress(progress + 10);
+  }
+
+  function updateQuizScore() {
+    setQuizScore(quizScore + 1);
+  }
+
   return (
     <StyledQuizPage>
       <Container>
-        <h1>This is the quizpage</h1>
-        <Intro />
-        <Question
-          question="Vilken vinkel är mest fördelaktig att använda sig av när man ställer upp sin kamera?"
-          questionNumber="1"
-          answerOptions={[
-            "Ögonhöjd",
-            "Snett ovanifrån",
-            "Snett underifrån",
-            "Lite från sidan"
-          ]}
-          correctAnswer="Ögonhöjd"
-        />
-        <ImageQuestion
-          image="images/quiz2.jpg"
-          headerQuestion="VAD ÄR DET PÅ BILDEN?"
-          question="Vad kallas det här?"
-          questionNumber="2"
-          answerOptions={["Tripod", "Micstativ", "Kamerahus"]}
-          correctAnswer="Tripod"
-        />
-        <ImageQuestion
-          image="images/quiz3.jpg"
-          headerQuestion="SANT ELLER FALSKT"
-          question="Det är viktigt att den huvudsakliga ljussättningen kommer bakifrån kameran."
-          questionNumber="3"
-          answerOptions={["Sant", "Falskt"]}
-          buttonPadding="8px 10px"
-          correctAnswer="Sant"
-        />
-        <Achievement buttonPadding="10px 15px" message="Bra jobbat!" />
+        {lessonPart === 2 ? (
+          <Intro numberOfQuestions="3" nextPart={nextLessonPart} />
+        ) : (
+          ""
+        )}
+        {lessonPart === 3 ? (
+          <Question
+            question="Vilken vinkel är mest fördelaktig att använda sig av när man ställer upp sin kamera?"
+            questionNumber="1"
+            answerOptions={[
+              "Ögonhöjd",
+              "Snett ovanifrån",
+              "Snett underifrån",
+              "Lite från sidan"
+            ]}
+            correctAnswer="Ögonhöjd"
+            nextPart={nextLessonPart}
+            updateScore={updateQuizScore}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 4 ? (
+          <ImageQuestion
+            image="images/quiz2.jpg"
+            headerQuestion="VAD ÄR DET PÅ BILDEN?"
+            question="Vad kallas det här?"
+            questionNumber="2"
+            answerOptions={["Tripod", "Micstativ", "Kamerahus"]}
+            correctAnswer="Tripod"
+            nextPart={nextLessonPart}
+            updateScore={updateQuizScore}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 5 ? (
+          <ImageQuestion
+            image="images/quiz3.jpg"
+            headerQuestion="SANT ELLER FALSKT"
+            question="Det är viktigt att den huvudsakliga ljussättningen kommer bakifrån kameran."
+            questionNumber="3"
+            answerOptions={["Sant", "Falskt"]}
+            buttonPadding="8px 10px"
+            correctAnswer="Sant"
+            nextPart={nextLessonPart}
+            updateScore={updateQuizScore}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 6 ? (
+          <Achievement
+            buttonPadding="10px 15px"
+            message="Bra jobbat!"
+            nextPart={nextLessonPart}
+            score={quizScore}
+          />
+        ) : (
+          ""
+        )}
       </Container>
     </StyledQuizPage>
   );
