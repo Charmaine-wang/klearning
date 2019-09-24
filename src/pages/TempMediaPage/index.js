@@ -15,7 +15,7 @@ const StyledMediaPage = styled.div`
   position: relative;
 `;
 
-const MediaPage = props => {
+const MediaPage = ({ nextPart, header, intro, paragraph }) => {
   const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("");
   // console.log(showVideo);
@@ -23,7 +23,7 @@ const MediaPage = props => {
 
   // console.log(showVideo);
   return (
-    <StyledMediaPage {...props}>
+    <StyledMediaPage>
       <OverviewDrop changeMethod={() => setChanged(!isChanged)} />
       <AlternativeDrop
         hideDrop={isChanged}
@@ -40,9 +40,20 @@ const MediaPage = props => {
           setChanged(true);
         }}
       />
-      {selectedAlt === "text" && <TextCard />}
-      {selectedAlt === "video" && <VideoCard />}
-      {selectedAlt === "sound" && <SoundCard />}
+      {selectedAlt === "text" && (
+        <TextCard
+          nextPart={nextPart}
+          header={header}
+          intro={intro}
+          paragraph={paragraph}
+        />
+      )}
+      {selectedAlt === "video" && (
+        <VideoCard nextPart={nextPart} header={header} intro={intro} />
+      )}
+      {selectedAlt === "sound" && (
+        <SoundCard nextPart={nextPart} header={header} intro={intro} />
+      )}
     </StyledMediaPage>
   );
 };

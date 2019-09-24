@@ -1,43 +1,55 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../../Button";
 
 const StyledHandInPoints = styled.div`
-  margin: 16px;
-  padding: 16px;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-  // justify-content: center;
-  align-items: center;
-
-  .points-hand-in > h2 {
-    font-size: 20px;
-    color: var(--black-font);
-    margin-bottom: 12px;
-  }
-  .points-hand-in > p {
-    line-height: 1.7em;
-    font-weight: 600;
+  h1 {
+    margin-bottom: 10px;
   }
 
-  .point-list {
-    color: var(--black-font);
+  & > div:first-of-type {
+    padding: 16px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .points-hand-in > h2 {
+      font-size: 20px;
+      color: var(--black-font);
+      margin-bottom: 12px;
+    }
+    .points-hand-in > p {
+      line-height: 1.7em;
+      font-weight: 600;
+    }
+
+    .point-list {
+      color: var(--black-font);
+    }
+    .point-list > li {
+      padding: 8px 0px;
+      line-height: 1.7em;
+      /* margin: 16px 0px; */
+      // font-size: 16px;
+      // font-weight: bold;
+    }
+
+    ul {
+      padding: 16px;
+    }
   }
-  .point-list > li {
-    padding: 8px 0px;
-    line-height: 1.7em;
-    margin: 16px 0px;
-    // font-size: 16px;
-    // font-weight: bold;
-  }
-  .point-list {
-    margin-left: 16px;
-    padding: 0px;
-    line-height: 1.2rem;
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
 
-const HandInPoints = ({ header, paragraph }) => {
+const HandInPoints = ({ header, paragraph, nextPart }) => {
   const pointData = [
     "Se till att filma i ett rum utan för mycket bakgrundsljud.",
     "Filma framför en enfärgad vägg.",
@@ -49,16 +61,28 @@ const HandInPoints = ({ header, paragraph }) => {
 
   return (
     <StyledHandInPoints>
-      <div className="points-hand-in">
-        <h2>{header}</h2>
-        <p>{paragraph}</p>
-        <div>
-          <ul className="point-list">
-            {pointData.map(data => {
-              return <li className="dot-style">{data}</li>;
-            })}
-          </ul>
+      <h1>Inlämning</h1>
+      <div>
+        <div className="points-hand-in">
+          <h2>{header}</h2>
+          <p>{paragraph}</p>
+          <div>
+            <ul className="point-list">
+              {pointData.map(data => {
+                return <li className="dot-style">{data}</li>;
+              })}
+            </ul>
+          </div>
         </div>
+      </div>
+      <div className="row">
+        <Button btnName="Till översikten" buttonWidth="150px" />
+        <Button
+          btnName="Nästa Lektion"
+          buttonWidth="150px"
+          textColor="var(--soft-orange)"
+          onClick={() => nextPart()}
+        />
       </div>
     </StyledHandInPoints>
   );

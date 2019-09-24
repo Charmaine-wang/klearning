@@ -36,23 +36,13 @@ const StyledTextCard = styled.div`
   }
 `;
 
-const TextCard = () => {
+const TextCard = ({ nextPart, header, intro, paragraph }) => {
   return (
     <StyledTextCard>
       <div className="massatext">
-        <h1>1. Introduktion</h1>
-        <p>
-          Välkommen till kursen “Self-tape - international”. I denna kurs kommer
-          du att få lära dig användbara tekniker och tips som ger dig insikter
-          om vad rollsättare och regissörer tittar på och letar efter i self
-          tapes.
-        </p>
-        <p>
-          Välkommen till kursen “Self-tape - international”. I denna kurs kommer
-          du att få lära dig användbara tekniker och tips som ger dig insikter
-          om vad rollsättare och regissörer tittar på och letar efter i self
-          tapes.
-        </p>
+        <h1>{header}</h1>
+        <p>{intro}</p>
+        <p>{paragraph}</p>
 
         <p>
           Välkommen till kursen “Self-tape - international”. I denna kurs kommer
@@ -75,7 +65,11 @@ const TextCard = () => {
       </div>
       <div className="button-div">
         <Button btnName="Till översikten" buttonWidth="150px" />
-        <Button btnName="Nästa Lektion" buttonWidth="150px" />
+        <Button
+          btnName="Nästa Lektion"
+          buttonWidth="150px"
+          onClick={() => nextPart()}
+        />
       </div>
     </StyledTextCard>
   );
