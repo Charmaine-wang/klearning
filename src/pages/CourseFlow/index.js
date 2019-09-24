@@ -7,13 +7,19 @@ import ImageQuestion from "../../components/Quiz/ImageQuestion";
 import Achievement from "../../components/Quiz/Achievement";
 import Media from "../TempMediaPage";
 import HandInIntro from "../../components/handin/HandInIntroCard";
+import HandInChoice from "../../components/handin/HandInChoice";
+import HandInPoints from "../../components/handin/HandInPoints";
+import HandInExercise from "../../components/handin/HanInExercise";
+import HandInUpload from "../../components/handin/HandInUpload";
+import HandInFeedBack from "../../components/handin/HandInFeedBack";
+import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
 `;
 
 const CourseFlow = () => {
-  const [lessonPart, setLessonPart] = useState(7);
+  const [lessonPart, setLessonPart] = useState(8);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
 
@@ -129,6 +135,63 @@ const CourseFlow = () => {
             introParagraph1="Nu är det dags att spela in ditt eget self-tape!"
             introParagraph2="Du laddar sedan upp din inspelning och får personlig feedback från din lärare."
             introParagraph3="Du måste själv boka tid för feedback, instruktioner för detta följer."
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 9 ? (
+          <HandInChoice
+            header="Skapa ett self-tape"
+            paragraph="Välj en utav de tre scenerna från vårt arkiv här nedan. Öva in den så att du sedan kan spela in dig själv med hjälp av de tips du lärt dig. 
+           Normalt sätt får du fyra dagar på dig att öva in en scen."
+            choiceHeader="Välj scen:"
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 10 ? (
+          <HandInPoints
+            header="Att tänka på"
+            paragraph="Förbered ditt self-tape genom att följa listan nedanför."
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 11 ? (
+          <HandInExercise
+            header="Inspelning"
+            paragraph="Filma din self-tape själv eller ta hjälp av en vän. "
+            paragraph2="När du är klar med filmningen, klipp ihop din Self-Tape, gratisprogram som Davinci resolve finns för alla att använda."
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 12 ? (
+          <HandInUpload
+            header="Lämna in inspelning"
+            paragraph="GUIDE om hur du överför, laddar upp filerna till kursen så att kursledare sedan kan ge feedback."
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 13 ? (
+          <HandInFeedBack
+            header="Boka tid för feedback"
+            nextPart={nextLessonPart}
+          />
+        ) : (
+          ""
+        )}
+        {lessonPart === 14 ? (
+          <HandInFeedBackConfirm
+            header="Nu har du bokat en tid!"
+            paragraph="Feedback sker via Skype. Klicka på knappen nedan för att komma till mötet."
+            nextPart={nextLessonPart}
           />
         ) : (
           ""
