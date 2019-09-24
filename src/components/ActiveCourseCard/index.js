@@ -13,14 +13,18 @@ const StyledActiveCourseCard = styled.div`
   justify-content: space-between;
   position: relative;
   padding: ${props => (props.padding ? props.padding : "0")};
-
-  & > div,
-  & > h2,
-  & > h5 {
+  /* text-decoration: none; */
+  & > a {
+    text-decoration: none;
+  }
+  & a > div,
+  & a > h2,
+  & a > h5 {
     padding: 0 5%;
+    text-decoration: none;
   }
 
-  & > div {
+  & a > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,21 +75,26 @@ const ActiveCourseCard = ({
 
   return (
     <StyledActiveCourseCard padding={padding}>
-      <img src={activeCourseImg} alt={activeCourseAlt} />
+      <a href="course">
+        <img src={activeCourseImg} alt={activeCourseAlt} />
 
-      <div>
-        <h5>{courseCat}</h5>
-        <h5>{courseTime}</h5>
-      </div>
+        <div>
+          <h5>{courseCat}</h5>
+          <h5>{courseTime}</h5>
+        </div>
 
-      <h2>{cardHeader}</h2>
-      {/* <h5>{cardParagraph}</h5> */}
+        <h2>{cardHeader}</h2>
+        {/* <h5>{cardParagraph}</h5> */}
 
-      <div>
-        <h5>{courseTeacher}</h5>
+        <div>
+          <h5>{courseTeacher}</h5>
 
-        <Bookmark onClick={() => setClicked(!isClicked)} isFilled={isClicked} />
-      </div>
+          <Bookmark
+            onClick={() => setClicked(!isClicked)}
+            isFilled={isClicked}
+          />
+        </div>
+      </a>
     </StyledActiveCourseCard>
   );
 };
