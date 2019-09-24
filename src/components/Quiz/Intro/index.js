@@ -59,6 +59,7 @@ const Intro = ({ nextPart, numberOfQuestions }) => {
         margin="3px"
         fontWeight="600"
         onClick={() => nextPart()}
+        isCorrect={null}
       />
     </StyledIntro>
   );

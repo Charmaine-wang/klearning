@@ -61,13 +61,18 @@ const Achievement = ({ score, buttonPadding, message, nextPart }) => {
       <div>
         <h3>Vill du gå vidare eller göra om?</h3>
         <div className="row">
-          <QuizButton btnName="Gör om quiz" padding={buttonPadding} />
+          <QuizButton
+            btnName="Gör om quiz"
+            padding={buttonPadding}
+            isCorrect={null}
+          />
           <QuizButton
             btnName="Nästa lektion"
             padding={buttonPadding}
             color="var(--soft-orange)"
             textColor="var(--card-color)"
             onClick={() => nextPart()}
+            isCorrect={null}
           />
         </div>
       </div>

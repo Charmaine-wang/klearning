@@ -112,6 +112,7 @@ const ImageQuestion = ({
         buttonWidth="100%"
         margin="3px"
         fontWeight="600"
+        isCorrect={null}
         onClick={() => (next ? nextPart() : checkAnswer())}
       />
     </StyledImageQuestion>
