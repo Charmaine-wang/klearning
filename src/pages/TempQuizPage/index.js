@@ -24,6 +24,11 @@ const QuizPage = () => {
     setQuizScore(quizScore + 1);
   }
 
+  function repeatQuiz() {
+    setLessonPart(2);
+    setQuizScore(0);
+  }
+
   return (
     <StyledQuizPage>
       <Container>
@@ -85,6 +90,7 @@ const QuizPage = () => {
             nextPart={nextLessonPart}
             score={quizScore}
             numberOfQuestions="3"
+            repeatQuiz={repeatQuiz}
           />
         ) : (
           ""

@@ -57,7 +57,8 @@ const Achievement = ({
   buttonPadding,
   message,
   nextPart,
-  numberOfQuestions
+  numberOfQuestions,
+  repeatQuiz
 }) => {
   return (
     <StyledAchievement>
@@ -73,6 +74,7 @@ const Achievement = ({
             btnName="Gör om quiz"
             padding={buttonPadding}
             isCorrect={null}
+            onClick={() => repeatQuiz()}
           />
           <QuizButton
             btnName="Nästa lektion"
