@@ -14,6 +14,7 @@ const StyledHandInFeedBack = styled.div`
     width: 100%;
   }
   .feedback-hand-in > h2 {
+    font-size: 20px;
     color: var(--black-font);
   }
 

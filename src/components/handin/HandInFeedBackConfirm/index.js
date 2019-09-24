@@ -41,7 +41,7 @@ const HandInFeedBackConfirm = ({ header, paragraph }) => {
   return (
     <StyledHandInFeedBackConfirm>
       <div className="feedback-confirm-hand-in">
-        <img src="images/feedback.png" alt="" />
+        <img src="images/Communication.png" alt="" />
         <h2>{header}</h2>
         <div className="booked-time-div">
           <p>{day}</p>
