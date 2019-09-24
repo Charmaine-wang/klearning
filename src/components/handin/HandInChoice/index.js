@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../Button";
-import ToggleContent from "../ToggleContent";
+// import ToggleContent from "../ToggleContent";
 
 const StyledHandInChoice = styled.div`
   margin: 16px;
@@ -62,7 +62,7 @@ const HandInChoice = ({ header, paragraph, choiceHeader }) => {
         </div>
       </div>
 
-      <ToggleContent
+      {/* <ToggleContent
         toggle={show => (
           <button type="button" onClick={show}>
             Open
@@ -76,7 +76,7 @@ const HandInChoice = ({ header, paragraph, choiceHeader }) => {
             </button>
           </p>
         )}
-      />
+      /> */}
     </StyledHandInChoice>
   );
 };
