@@ -42,7 +42,12 @@ const StyledCertificate = styled.div`
       max-width: 70%;
     }
   }
-
+  img {
+    height: 100%;
+    width: auto;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
   .icon {
     width: 20px;
     height: 20px;

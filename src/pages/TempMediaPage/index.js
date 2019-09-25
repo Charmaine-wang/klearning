@@ -15,7 +15,7 @@ const StyledMediaPage = styled.div`
   position: relative;
 `;
 
-const MediaPage = ({ nextPart, header, intro, paragraph }) => {
+const MediaPage = ({ nextPart, header, intro, paragraph, previousPart }) => {
   const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("");
   // console.log(showVideo);
@@ -46,13 +46,24 @@ const MediaPage = ({ nextPart, header, intro, paragraph }) => {
           header={header}
           intro={intro}
           paragraph={paragraph}
+          previousPart={previousPart}
         />
       )}
       {selectedAlt === "video" && (
-        <VideoCard nextPart={nextPart} header={header} intro={intro} />
+        <VideoCard
+          nextPart={nextPart}
+          header={header}
+          intro={intro}
+          previousPart={previousPart}
+        />
       )}
       {selectedAlt === "sound" && (
-        <SoundCard nextPart={nextPart} header={header} intro={intro} />
+        <SoundCard
+          nextPart={nextPart}
+          header={header}
+          intro={intro}
+          previousPart={previousPart}
+        />
       )}
     </StyledMediaPage>
   );

@@ -21,7 +21,7 @@ const StyledSoundCard = styled.div`
 const clientId = process.env.REACT_APP_SOUNDCLOUD_CLIENT_ID;
 
 const soundOne = getData[23];
-const SoundCard = ({ nextPart, hideSound, header, intro }) => {
+const SoundCard = ({ nextPart, hideSound, header, intro, previousPart }) => {
   return (
     <StyledSoundCard hideSound={hideSound}>
       <SoundPlayer
@@ -42,7 +42,11 @@ const SoundCard = ({ nextPart, hideSound, header, intro }) => {
           }
         />
         <div className="button-div">
-          <Button btnName="Till översikten" buttonWidth="160px" />
+          <Button
+            btnName="Till översikten"
+            buttonWidth="160px"
+            onClick={() => previousPart()}
+          />
           <Button
             btnName="Nästa Lektion"
             buttonWidth="160px"

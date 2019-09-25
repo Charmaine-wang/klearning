@@ -79,7 +79,7 @@ const Profile = () => {
             />
 
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
+              activeCourseImg="/images/cut.png"
               courseCat="Film"
               courseTime="4h"
               cardHeader="Film Workshop med Connie Robertson  "

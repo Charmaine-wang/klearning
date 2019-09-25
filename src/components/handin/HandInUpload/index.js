@@ -47,7 +47,7 @@ const StyledHandInUpload = styled.div`
   }
 `;
 
-const HandInUpload = ({ header, paragraph, nextPart }) => {
+const HandInUpload = ({ header, paragraph, nextPart, previousPart }) => {
   const [showFile, setShowFile] = useState(false);
 
   const UploadedFileName = "Selftape.png";
@@ -84,7 +84,11 @@ const HandInUpload = ({ header, paragraph, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Nästa"
           buttonWidth="150px"

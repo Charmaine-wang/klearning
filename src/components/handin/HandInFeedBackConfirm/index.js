@@ -44,7 +44,12 @@ const StyledHandInFeedBackConfirm = styled.div`
     justify-content: space-between;
   }
 `;
-const HandInFeedBackConfirm = ({ header, paragraph, nextPart }) => {
+const HandInFeedBackConfirm = ({
+  header,
+  paragraph,
+  nextPart,
+  previousPart
+}) => {
   // take data from feedback component
   const day = "Torsdag 1/6";
   const time = "KL. 09:00";
@@ -66,7 +71,11 @@ const HandInFeedBackConfirm = ({ header, paragraph, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Fortsätt"
           buttonWidth="150px"
