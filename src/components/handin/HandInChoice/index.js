@@ -39,6 +39,10 @@ const StyledHandInChoice = styled.div`
       .choice-button {
         width: 100%;
         margin: 4px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--soft-orange);
       }
     }
   }
@@ -64,19 +68,19 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
               className="choice-button"
               textAlign="left"
               textColor="var(--black-font)"
-              btnName="Scen 1"
+              btnName="Utdrag från Fröken Julie"
             />
             <Button
               className="choice-button"
               textAlign="left"
               textColor="var(--black-font)"
-              btnName="Scen 2"
+              btnName="Utdrag från Pulp Fiction"
             />
             <Button
               className="choice-button"
               textAlign="left"
               textColor="var(--black-font)"
-              btnName="Scen 3"
+              btnName="Utdrag från Sound of music"
             />
           </div>
         </div>
