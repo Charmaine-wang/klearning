@@ -14,7 +14,7 @@ const StyledOwerviewPage = styled.div`
   width: 100vw;
   height: 100%;
   justify-content: center;
-  margin-top: 74px;
+  /* margin-top: 0; */
   & > div > .start-course-btn {
     display: flex;
     width: 100%;

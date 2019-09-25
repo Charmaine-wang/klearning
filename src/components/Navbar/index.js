@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
 import GlobalStyle from "../../styles/GlobalStyle";
 
@@ -51,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);

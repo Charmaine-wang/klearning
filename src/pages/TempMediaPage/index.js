@@ -1,30 +1,37 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-console */
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AlternativeDrop from "../../components/AlternativeDrop";
-import OverviewDrop from "../../components/OverviewDrop";
+import Setup from "../../components/Setup";
 import VideoCard from "../../components/VideoCard";
 import SoundCard from "../../components/SoundCard";
 import TextCard from "../../components/TextCard";
 
 const StyledMediaPage = styled.div`
-  margin-top: 65px;
+  /* margin-top: 65px; */
+
   width: 100%;
   height: 100%;
   overflow-x: none;
 
-  position: relative;
+  /* position: relative; */
 `;
 
-const MediaPage = ({ nextPart, header, intro, paragraph }) => {
+const MediaPage = (props, { nextPart, header, intro, paragraph }) => {
   const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
+  useEffect(() => {
+    props.location.state.mediaPreset === "video" && setSelectedAlt("video");
+    props.location.state.mediaPreset === "sound" && setSelectedAlt("sound");
+    props.location.state.mediaPreset === "text" && setSelectedAlt("text");
+  }, []);
 
-  // console.log(showVideo);
   return (
     <StyledMediaPage>
-      <OverviewDrop changeMethod={() => setChanged(!isChanged)} />
+      <Setup changeMethod={() => setChanged(!isChanged)} />
       <AlternativeDrop
         hideDrop={isChanged}
         showVideo={() => {
