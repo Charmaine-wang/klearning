@@ -14,10 +14,17 @@ const StyledGridLayout = styled.div`
   padding: ${props => (props.padding ? props.padding : "0")};
   background-color: ${props => (props.bgColor ? props.bgColor : "#F5F5F5")};
   border-radius: ${props => props.gridRadius};
-  /* margin: 0 8%; */
-  /* & > img{
-		height: 400px;
-	} */
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    display: ${props => props.displayDesk};
+    width: ${props => (props.widthDesk ? props.widthDesk : "87%")};
+    flex-direction: ${props => props.direction};
+    padding: ${props => props.paddingDesk};
+    grid-gap: ${props => props.gapDesk};
+
+    grid-template-columns: ${props => props.colLayoutDesk};
+    grid-template-rows: ${props => props.rowLayoutDesk};
+  }
 `;
 
 const GridLayout = props => {

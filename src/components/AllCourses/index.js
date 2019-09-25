@@ -6,6 +6,10 @@ const StyledAllCourses = styled.div`
   /* width: 100%; */
   padding: 0;
   display: flex;
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    /* align-items: center; */
+  }
 `;
 
 const AllCourses = () => {

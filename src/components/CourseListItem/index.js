@@ -59,7 +59,6 @@ const StyledCourseListItem = styled.div`
     line-height: 135%;
   }
 
-
   & > a > div > p {
     color: #c97c36;
 
@@ -73,6 +72,17 @@ const StyledCourseListItem = styled.div`
     width: 100%;
     height: 2vh;
     background-color: red;
+  }
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    width: 330px;
+    height: 105px;
+
+    & > a > div > div > aside {
+      width: 40px;
+    }
+
+    /* align-items: center; */
   }
 `;
 

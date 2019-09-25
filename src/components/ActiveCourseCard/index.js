@@ -10,18 +10,24 @@ const StyledActiveCourseCard = styled.div`
   width: 75vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "37vh")};
   border-radius: 10px;
-  justify-content: space-between;
-  position: relative;
+  /* justify-content: space-between; */
+  /* position: relative; */
   padding: ${props => (props.padding ? props.padding : "0")};
 
   /* & > a > img { 
   width: 100%;
 } */
   & > a {
+    justify-content: space-between;
+
+    position: relative;
     text-decoration: none;
     width: 100%;
     flex-direction: column;
     display: flex;
+    & > img {
+      height: 50%;
+    }
   }
   & a > div,
   & a > h2,
@@ -50,6 +56,11 @@ const StyledActiveCourseCard = styled.div`
   }
   div:last-of-type {
     color: var(--dark-grey);
+  }
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    width: 286px;
+    height: 303px;
   }
 `;
 const ActiveCourseCard = ({
