@@ -35,6 +35,9 @@ const StyledAboutCourse = styled.div`
     justify-content: center;
     width: 100%;
   }
+  .course-div {
+    margin: 16px 0px;
+  }
 `;
 
 const AboutCourse = () => {
@@ -92,25 +95,30 @@ const AboutCourse = () => {
 
       <h1 className="similar-header">Liknande Material</h1>
       <div className="similar-courses">
-        <CourseListItem
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="dans dans dans"
-          courseTimeLeft="3min"
-          active="true"
-          timeLeft="3min"
-        />
-        <CourseListItem
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Röstteknik, ljudboksinläsning..."
-          courseTeacher="Jan Cruseman"
-        />
-        <CourseListItem
-          courseImg="images/rectangle2.png"
-          courseTitle="dans dans dans"
-          teacher="test lärares"
-        />
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="4h"
+            courseTitle="Röstteknik, ljudboksinläsning..."
+            courseTeacher="Jan Cruseman"
+          />
+        </div>
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="5h"
+            courseTitle="Kurs i filmskådespeleri"
+            courseTeacher="Lisa Ohlin"
+          />
+        </div>
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="4h"
+            courseTitle="Shifting focus"
+            courseTeacher="Rene Baker"
+          />
+        </div>
 
         {/* <TempCourseCard
           courseImg="images/rectangle2.png"
