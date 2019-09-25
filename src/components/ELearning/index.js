@@ -20,13 +20,32 @@ const StyledELearning = styled.div`
     padding: 0 10%;
     line-height: 165%;
   }
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    & > div {
+      width: 100%;
+      & > h1 {
+        text-align: center;
+        font-size: 50px;
+        line-height: 100%;
+      }
+      & > p {
+        font-size: 20px;
+        line-height: 165%;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 `;
 const ELearning = ({ iconElearning, title, text }) => {
   return (
     <StyledELearning>
       <img src={iconElearning} alt="" />
-      <h1>{title}</h1>
-      <p>{text}</p>
+      <div>
+        <h1>{title}</h1>
+        <p>{text}</p>
+      </div>
     </StyledELearning>
   );
 };

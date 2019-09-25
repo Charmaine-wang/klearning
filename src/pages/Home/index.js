@@ -26,6 +26,17 @@ const StyledHome = styled.div`
     align-items: center;
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 1500px) and (min-width: 600px) {
+    margin: 0;
+    /* align-items: center; */
+    .btnDiv {
+      justify-content: flex-start;
+      & > aside {
+        width: 20px;
+      }
+    }
+  }
 `;
 
 const Home = () => {
@@ -36,16 +47,18 @@ const Home = () => {
       <ImgText
         imgTextPic="images/home.png"
         imgTextHeader="Vi låter kulturen utvecklas."
-        imgTextParagraph="Vi kynter ihop branshen och förser profisionella kulturarbetare med
-          spetskompetens."
+        imgTextParagraph="Vi kynter ihop branshen och förser profesionella kulturarbetare med spetskompetens."
       />
 
       <GridLayout
-        // marginGrid="0 0 0 -4%"
         padding="0 0 0 3vw"
+        displayDesk="grid"
+        // direction="column"
+        paddingDesk="0 14.1%"
+        gapDesk="30px 0"
       >
-        <FixedContainer heightContainer="10vh">
-          <ContainerSlider>
+        <FixedContainer heightContainer="10vh" justifyDesk="center">
+          <ContainerSlider paddingScroll="0 18% 0 0">
             <AllCourses />
           </ContainerSlider>
         </FixedContainer>
@@ -55,9 +68,9 @@ const Home = () => {
         <h1>Aktiva biblotek</h1>
 
         <FixedContainer heightContainer="40vh">
-          <ContainerSlider>
+          <ContainerSlider paddingScroll="0 19% 0 0">
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="images/film.png"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Roberson "
@@ -68,7 +81,7 @@ const Home = () => {
             />
 
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="images/cut.png"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Roberson "
@@ -77,7 +90,7 @@ const Home = () => {
               bookmark="images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="images/camera.png"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Roberson "
@@ -86,7 +99,7 @@ const Home = () => {
               bookmark="images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="images/pic.png"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Roberson "
@@ -100,6 +113,7 @@ const Home = () => {
         <h1>Kursbiblotek</h1>
         <div className="btnDiv">
           <Button btnName="Kurser" buttonHeight="50%" buttonWidth="145px" />
+          <aside />
           <Button btnName="Kplay" buttonHeight="50%" buttonWidth="145px" />
         </div>
 
@@ -107,8 +121,13 @@ const Home = () => {
           heightContainer="46vh"
           margin="0 0 0 -4%"
           padding="0 0 0 4%"
+          paddingFixed="0"
         >
-          <ContainerSlider height="100%" marginBetween="4% 0 0 0">
+          <ContainerSlider
+            height="100%"
+            marginBetween="4% 0 0 0"
+            paddingScroll="0 14% 0 0"
+          >
             <div>
               <CourseList courseWidth />
               <CourseList courseWidth />
@@ -126,7 +145,7 @@ const Home = () => {
             </div>
           </ContainerSlider>
         </FixedContainer>
-
+        {/* FOR MOBILE */}
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
@@ -134,7 +153,10 @@ const Home = () => {
           bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
-          padding="0 0 15% 0"
+          padding="0 0 5% 0"
+          rowLayoutDesk="1fr"
+          colLayoutDesk="1fr 1fr 1fr"
+          widthDesk="80%"
         >
           <ELearning
             iconElearning="/images/Illustrations/Learning.svg"
@@ -152,6 +174,10 @@ const Home = () => {
             text="Jobba med andra kursdeltagare och lär dela kunskap tillsammans."
           />
         </GridLayout>
+        {/* FOR DESKTOP */}
+        {/* <GridLayout paddingDesk="0 22% 0 0">
+          <ELearningDesktop />
+        </GridLayout> */}
       </GridLayout>
       <ImgText
         imgMargin="10% 0 0 0"
