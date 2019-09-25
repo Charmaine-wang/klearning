@@ -50,12 +50,22 @@ const StyledActiveCourseCard = styled.div`
     color: var(--black-font);
   }
 
-  div:first-of-type {
-    color: var(--soft-orange);
+  .semi {
     font-weight: 600;
   }
   div:last-of-type {
     color: var(--dark-grey);
+  }
+  .orange {
+    color: var(--soft-orange);
+  }
+  .progress {
+    width: 70%;
+    height: 5px;
+    background-color: var(--soft-orange);
+    margin: 0;
+    position: absolute;
+    top: 48.5%;
   }
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
@@ -73,7 +83,9 @@ const ActiveCourseCard = ({
   courseTeacher,
   bookmark,
   bookmarkAlt,
-  padding
+  padding,
+  active,
+  timeLeft
 }) => {
   const [isClicked, setClicked] = useState(false);
   console.log(
@@ -92,8 +104,9 @@ const ActiveCourseCard = ({
     <StyledActiveCourseCard padding={padding}>
       <a href="course">
         <img src={activeCourseImg} alt={activeCourseAlt} />
+        {active ? <div className="progress" /> : ""}
 
-        <div>
+        <div className="orange semi">
           <h5>{courseCat}</h5>
           <h5>{courseTime}</h5>
         </div>
@@ -102,7 +115,13 @@ const ActiveCourseCard = ({
         {/* <h5>{cardParagraph}</h5> */}
 
         <div>
-          <h5>{courseTeacher}</h5>
+          {active ? (
+            <h5>
+              <span className="orange">{timeLeft}</span> kvar av lektion
+            </h5>
+          ) : (
+            <h5>{courseTeacher}</h5>
+          )}
 
           <Bookmark
             onClick={() => setClicked(!isClicked)}

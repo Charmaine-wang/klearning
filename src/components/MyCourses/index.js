@@ -26,6 +26,8 @@ const MyCourses = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Thomas Chaanhing"
               bookmark="images/bookmark.png"
+              timeLeft="5 min"
+              active="true"
             />
           </ContainerSlider>
         </FixedContainer>
