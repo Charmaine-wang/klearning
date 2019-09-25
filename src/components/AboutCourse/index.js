@@ -4,8 +4,9 @@ import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from "../CourseChoicesCard";
 // import MiscInfoCard from "../MiscInfoCard";
 import Button from "../Button";
+import CourseListItem from "../CourseListItem";
 
-import TempCourseCard from "../TempCourseCard";
+// import TempCourseCard from "../TempCourseCard";
 
 const StyledAboutCourse = styled.div`
   .information-header {
@@ -91,7 +92,27 @@ const AboutCourse = () => {
 
       <h1 className="similar-header">Liknande Material</h1>
       <div className="similar-courses">
-        <TempCourseCard
+        <CourseListItem
+          courseImg="images/rectangle2.png"
+          courseLength="4h"
+          courseTitle="dans dans dans"
+          courseTimeLeft="3min"
+          active="true"
+          timeLeft="3min"
+        />
+        <CourseListItem
+          courseImg="images/rectangle2.png"
+          courseLength="4h"
+          courseTitle="Röstteknik, ljudboksinläsning..."
+          courseTeacher="Jan Cruseman"
+        />
+        <CourseListItem
+          courseImg="images/rectangle2.png"
+          courseTitle="dans dans dans"
+          teacher="test lärares"
+        />
+
+        {/* <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"
           courseTitle="Kom igång med ditt filmskapande"
@@ -105,7 +126,7 @@ const AboutCourse = () => {
           courseImg="images/rectangle2.png"
           courseLength="4h"
           courseTitle="Kom igång med ditt filmskapande"
-        />
+        /> */}
       </div>
     </StyledAboutCourse>
   );
