@@ -65,42 +65,42 @@ const Profile = () => {
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Bild.png"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
               padding="0 0 0 3vw"
             />
 
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Bild.png"
               courseCat="Film"
               courseTime="4h"
               cardHeader="Film Workshop med Connie Robertson  "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Bild.png"
               courseCat="Foto"
               courseTime="4h"
               cardHeader="Foto Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Bild.png"
               courseCat="Studio Ljus"
               courseTime="4h"
               cardHeader="Ljussättnings Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
               padding="0 3vw 0 0"
             />
           </ContainerSlider>
