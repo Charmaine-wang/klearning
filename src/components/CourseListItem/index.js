@@ -40,7 +40,7 @@ const StyledCourseListItem = styled.div`
       color: #6d6d6d;
     }
     & > h5:first-child {
-      color: #c97c36;
+      // color: #c97c36;
     }
     & > aside {
       width: 20px;
@@ -84,6 +84,9 @@ const StyledCourseListItem = styled.div`
 
     /* align-items: center; */
   }
+  .orange {
+    color: orange;
+  }
 `;
 
 const CourseListItem = ({
@@ -91,8 +94,11 @@ const CourseListItem = ({
   courseAlt,
   courseLength,
   courseTitle,
-  courseTimeLeft
+  active,
+  timeLeft,
+  courseTeacher
 
+  // courseTimeLeft,
   // bookmark,
   // bookmarkAlt
 }) => {
@@ -107,7 +113,13 @@ const CourseListItem = ({
           <h2>{courseTitle}</h2>
           <div>
             <>
-              <h5>{courseTimeLeft}</h5> <h5>kvar av lektion</h5>
+              {active ? (
+                <h5>
+                  <span className="orange">{timeLeft}</span> kvar av lektion
+                </h5>
+              ) : (
+                <h5>{courseTeacher}</h5>
+              )}
             </>
             {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
             <aside />
