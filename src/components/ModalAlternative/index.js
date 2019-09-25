@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import PlayVideo from "../Icons/PlayVideo";
 import TextIcon from "../Icons/TextIcon";
 import Sound from "../Icons/Sound";
@@ -11,7 +12,7 @@ const StyledModalAlternative = styled.div`
   height: 30vh;
   position: fixed;
   z-index: 2;
-  top: 10%;
+  top: 12%;
   flex-direction: column;
   border-radius: 10px;
   background: var(--card-color);
@@ -44,11 +45,20 @@ const StyledModalAlternative = styled.div`
   }
 `;
 const ModalAlternative = props => {
+  // const [selectedAlt, setSelectedAlt] = useState("");
   return (
     <StyledModalAlternative {...props}>
       <h2>Hur vill du ta del av kursen?</h2>
       <div className="icon-div">
-        <PlayVideo /> <Sound /> <TextIcon />
+        <Link to={{ pathname: "/media", state: { mediaPreset: "video" } }}>
+          <PlayVideo />
+        </Link>
+        <Link to={{ pathname: "/media", state: { mediaPreset: "sound" } }}>
+          <Sound />
+        </Link>
+        <Link to={{ pathname: "/media", state: { mediaPreset: "text" } }}>
+          <TextIcon />
+        </Link>
       </div>
       <div className="button-div">
         <Button btnName="Avbryt" buttonWidth="135px" />
