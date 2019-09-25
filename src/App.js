@@ -21,14 +21,14 @@ const App = () => {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/profile" component={Profile} />
+            <Route exact path="/profile" component={Profile} />
 
             {/* Temporary */}
             <Route exact path="/course" component={Course} />
-            <Route path="/overview" component={Overview} />
-            <Route path="/handin" component={HandIn} />
-            <Route path="/quiz" component={Quiz} />
-            <Route path="/media" component={Media} />
+            <Route exact path="/overview" component={Overview} />
+            <Route exact path="/handin" component={HandIn} />
+            <Route exact path="/quiz" component={Quiz} />
+            <Route exact path="/media" component={Media} />
 
             {/* New Course Routes */}
             <Route exact path="/course/overview" component={CourseOverview} />
