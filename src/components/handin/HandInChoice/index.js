@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../Button";
+// import HandInModal from "../HandInModal";
 // import ToggleContent from "../ToggleContent";
 
 const StyledHandInChoice = styled.div`
@@ -9,7 +10,8 @@ const StyledHandInChoice = styled.div`
   h1 {
     margin-bottom: 10px;
   }
-  & > div:first-of-type {
+  .basic-styling {
+    position: relative;
     padding: 16px;
     background-color: white;
     border-radius: 10px;
@@ -52,7 +54,7 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
   return (
     <StyledHandInChoice>
       <h1>Inlämning</h1>
-      <div>
+      <div className="basic-styling">
         <div className="choice-hand-in">
           <h2>{header}</h2>
           <p>{paragraph}</p>

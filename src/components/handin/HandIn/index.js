@@ -53,6 +53,7 @@ const HandIn = () => {
        och åsikter. "
         imgSrc="/images/Rewards.png"
       />
+
       {/* <HandInModal /> */}
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>
     </StyledHandIn>
