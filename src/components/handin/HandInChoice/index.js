@@ -90,21 +90,6 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
           onClick={() => nextPart()}
         />
       </div>
-      {/* <ToggleContent
-        toggle={show => (
-          <button type="button" onClick={show}>
-            Open
-          </button>
-        )}
-        content={hide => (
-          <p>
-            There is no spoon...
-            <button type="button" onClick={hide}>
-              Close
-            </button>
-          </p>
-        )}
-      /> */}
     </StyledHandInChoice>
   );
 };
