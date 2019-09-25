@@ -69,7 +69,7 @@ const Course = () => {
           <h1 className="course-header">Self-tape international</h1>
           <img
             className="hero-image-course"
-            src="images/selftape-hero.png"
+            src="/images/selftape-hero.png"
             alt="course"
           />
           <Button

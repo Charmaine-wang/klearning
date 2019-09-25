@@ -3,6 +3,9 @@ import styled from "styled-components";
 import QuizButton from "../QuizButton";
 
 const StyledIntro = styled.div`
+  h1 {
+    margin-bottom: 10px;
+  }
   & > div:first-of-type {
     background-color: var(--card-color);
     border-radius: 10px;
@@ -41,6 +44,7 @@ const StyledIntro = styled.div`
 const Intro = ({ nextPart, numberOfQuestions }) => {
   return (
     <StyledIntro>
+      <h1>3. Övning</h1>
       <div>
         <div />
         <h3>Quiz</h3>
@@ -48,7 +52,7 @@ const Intro = ({ nextPart, numberOfQuestions }) => {
           Dags för ett quiz för att se om du fick med dig informationen från den
           senaste lektionen!
           <br /> Quizet består av flervalsfrågor. Markera det svar du tror är
-          rätt och klicka på “kolla svar“ och sedan “nästa fråga” för att ta dig
+          rätt och klicka på “svara“ och sedan “nästa fråga” för att ta dig
           vidare.
         </p>
         <h5>

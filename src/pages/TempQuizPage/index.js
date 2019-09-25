@@ -7,7 +7,8 @@ import Achievement from "../../components/Quiz/Achievement";
 import Container from "../../components/Container";
 
 const StyledQuizPage = styled.div`
-  margin-top: 74px;
+  margin-top: 64px;
+  width: 100%;
 `;
 
 const QuizPage = () => {

@@ -17,6 +17,7 @@ import Evaluation from "../../components/handin/Evaluation";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
+  width: 100%;
 `;
 
 const CourseFlow = () => {
@@ -78,7 +79,7 @@ const CourseFlow = () => {
         )}
         {lessonPart === 4 ? (
           <ImageQuestion
-            image="images/quiz2.jpg"
+            image="/images/quiz2.jpg"
             headerQuestion="VAD ÄR DET PÅ BILDEN?"
             question="Vad kallas det här?"
             questionNumber="2"
@@ -92,7 +93,7 @@ const CourseFlow = () => {
         )}
         {lessonPart === 5 ? (
           <ImageQuestion
-            image="images/quiz3.jpg"
+            image="/images/quiz3.jpg"
             headerQuestion="SANT ELLER FALSKT"
             question="Det är viktigt att den huvudsakliga ljussättningen kommer bakifrån kameran."
             questionNumber="3"
@@ -131,7 +132,7 @@ const CourseFlow = () => {
         )}
         {lessonPart === 8 ? (
           <HandInIntro
-            introImage="images/selfTape.png"
+            introImage="/images/selfTape.png"
             introHeaderParagraph="Skapa ett self-tape"
             introParagraph1="Nu är det dags att spela in ditt eget self-tape!"
             introParagraph2="Du laddar sedan upp din inspelning och får personlig feedback från din lärare."
@@ -203,7 +204,7 @@ const CourseFlow = () => {
             paragraph="Vi tackar för ditt engagemang hos oss. Vi vill hjälpa till att göra våra kurser
          så bra som möjligt för våra deltagare. För att kunna göra det behöver vi dina erfarenheter 
          och åsikter. "
-            imgSrc="images/Rewards.png"
+            imgSrc="/images/Rewards.png"
             nextPart={nextLessonPart}
           />
         ) : (
