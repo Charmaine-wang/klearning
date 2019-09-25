@@ -34,15 +34,15 @@ const Navbar = () => {
       <StyledNavbar>
         <div className="navbar">
           <NavLink to="/">
-            <img src="images/logo.svg" alt="" />
+            <img src="/images/logo.svg" alt="" />
           </NavLink>
           {/* <NavLink to="/course">Kurs</NavLink> */}
           <div className="navbarItems">
             <div className="searchIcon">
-              <img src="images/search.png" alt="" />
+              <img src="/images/search.png" alt="" />
             </div>
             <NavLink to="/profile">
-              <img src="images/profile.svg" alt="" />
+              <img src="/images/profile.svg" alt="" />
             </NavLink>
           </div>
         </div>

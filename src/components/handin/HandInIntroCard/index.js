@@ -70,7 +70,7 @@ const HandInCard = ({
         </div>
       </div>
       <Button
-        btnName="Nästa Lektion"
+        btnName="Starta uppgift"
         buttonWidth="100%"
         bgColor="var(--soft-orange)"
         textColor="var(--card-color)"
