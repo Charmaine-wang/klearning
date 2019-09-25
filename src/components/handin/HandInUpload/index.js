@@ -61,7 +61,7 @@ const HandInUpload = ({ header, paragraph, nextPart }) => {
           <p>{paragraph}</p>
           <div className="upload-div">
             <UploadButton
-              btnImage="/images/upload.png"
+              btnImage="/images/Ikoner/Ladda-up.svg"
               buttonWidth="100%"
               btnName="Ladda upp fil"
               onClick={() => {
