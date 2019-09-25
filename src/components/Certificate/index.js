@@ -62,7 +62,11 @@ const Certificate = ({
         <h2>{courseTitle}</h2>
         <div>
           <p>{courseCreator}</p>
-          <img className="icon" src="images/search.png" alt="checkbox" />
+          <img
+            className="icon"
+            src="/images/Ikoner/Nav/search.png"
+            alt="checkbox"
+          />
         </div>
       </div>
     </StyledCertificate>

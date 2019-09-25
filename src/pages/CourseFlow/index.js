@@ -132,7 +132,7 @@ const CourseFlow = () => {
         )}
         {lessonPart === 8 ? (
           <HandInIntro
-            introImage="/images/selfTape.png"
+            introImage="/images/illustrations/self-tape.svg"
             introHeaderParagraph="Skapa ett self-tape"
             introParagraph1="Nu är det dags att spela in ditt eget self-tape!"
             introParagraph2="Du laddar sedan upp din inspelning och får personlig feedback från din lärare."
@@ -204,7 +204,7 @@ const CourseFlow = () => {
             paragraph="Vi tackar för ditt engagemang hos oss. Vi vill hjälpa till att göra våra kurser
          så bra som möjligt för våra deltagare. För att kunna göra det behöver vi dina erfarenheter 
          och åsikter. "
-            imgSrc="/images/Rewards.png"
+            imgSrc="/images/illustrations/rewards.svg"
             nextPart={nextLessonPart}
           />
         ) : (
