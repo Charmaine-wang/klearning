@@ -50,6 +50,8 @@ const StyledCourse = styled.div`
 `;
 
 const Course = () => {
+  const [textColor, setTextColor] = useState("var(--soft-orange)");
+  const [textColor2, setTextColor2] = useState("var(--black-font)");
   const [courseComponent, setCourseComponent] = useState("aboutCourse");
   const [headerText, setHeaderText] = useState("Inlärningsalternativ");
 
@@ -85,19 +87,25 @@ const Course = () => {
         </div>
         <div className="button-container">
           <Button
+            textColor={textColor}
             btnName="Om kurs"
             buttonWidth="45%"
             onClick={() => {
               setCourseComponent("aboutCourse");
               setHeaderText("Inlärningsalternativ");
+              setTextColor2("var(--black-font)");
+              setTextColor("var(--soft-orange)");
             }}
           />
           <Button
+            textColor={textColor2}
             btnName="Kursinnehåll"
             buttonWidth="45%"
             onClick={() => {
               setCourseComponent("courseEpisodes");
               setHeaderText("Kursinnehåll");
+              setTextColor2("var(--soft-orange)");
+              setTextColor("var(--black-font)");
             }}
           />
         </div>
