@@ -77,10 +77,16 @@ const StyledCV = styled.div`
   }
 
   .icon-placeholder {
-    background-color: var(--black-font);
-    width: 20px;
-    height: 20px;
+    background-image: url("/images/Ikoner/edit-2.svg");
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
     align-self: flex-start;
+    @media only screen and (min-width: 700px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 

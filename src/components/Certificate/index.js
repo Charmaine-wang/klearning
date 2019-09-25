@@ -17,6 +17,7 @@ const StyledCertificate = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
+    margin-bottom: 10px;
 
     & > p {
       align-self: flex-end;
@@ -41,7 +42,12 @@ const StyledCertificate = styled.div`
       max-width: 70%;
     }
   }
-
+  img {
+    height: 100%;
+    width: auto;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
   .icon {
     width: 20px;
     height: 20px;
@@ -62,7 +68,6 @@ const Certificate = ({
         <h2>{courseTitle}</h2>
         <div>
           <p>{courseCreator}</p>
-          <img className="icon" src="images/search.png" alt="checkbox" />
         </div>
       </div>
     </StyledCertificate>

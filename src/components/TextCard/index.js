@@ -36,7 +36,7 @@ const StyledTextCard = styled.div`
   }
 `;
 
-const TextCard = ({ nextPart, header, intro, paragraph }) => {
+const TextCard = ({ nextPart, header, intro, paragraph, previousPart }) => {
   return (
     <StyledTextCard>
       <div className="massatext">
@@ -64,7 +64,11 @@ const TextCard = ({ nextPart, header, intro, paragraph }) => {
         </p>
       </div>
       <div className="button-div">
-        <Button btnName="Till översikten" buttonWidth="150px" />
+        <Button
+          btnName="Till översikten"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Nästa Lektion"
           buttonWidth="150px"

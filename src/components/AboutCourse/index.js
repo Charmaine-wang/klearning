@@ -4,8 +4,9 @@ import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from "../CourseChoicesCard";
 // import MiscInfoCard from "../MiscInfoCard";
 import Button from "../Button";
+import CourseListItem from "../CourseListItem";
 
-import TempCourseCard from "../TempCourseCard";
+// import TempCourseCard from "../TempCourseCard";
 
 const StyledAboutCourse = styled.div`
   .information-header {
@@ -33,6 +34,9 @@ const StyledAboutCourse = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  .course-div {
+    margin: 16px 0px;
   }
 `;
 
@@ -64,22 +68,6 @@ const AboutCourse = () => {
         linkText="Läs mer"
         linkHref="https://www.kulturakademin.com/viktigt-att-veta-om-vara-aktiviteter"
       />
-      {/* <h1 className="information-header">Kursinformation</h1> */}
-      {/* <MiscInfoCard
-        seatsAmouts="20"
-        startDate="25 maj"
-        endDate="1 juni"
-        applyDate="24 april, 2020"
-        participator="Juanita Alexander, Soham Alexander, Evan Webb"
-        activity="Danslektioner, tutorials"
-        language="Engelska"
-        moreInfo="Till ansökan ska CV bifogas samt en motivering till 
-                varför just du vill gå. Motiveringen kan vara avgörande vid uttagningen.
-                Urvalet sker veckan efter sista ansökningsdag. Anmälan är bindande, 
-                det är viktigt att du kan delta i de erbjudna aktiviteterna. Frånvaroavgift
-                på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
-                innan aktiviteten startar."
-      /> */}
       <div className="button-div">
         <Button
           bgColor="var(--soft-orange)"
@@ -91,7 +79,32 @@ const AboutCourse = () => {
 
       <h1 className="similar-header">Liknande Material</h1>
       <div className="similar-courses">
-        <TempCourseCard
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="4h"
+            courseTitle="Röstteknik, ljudboksinläsning..."
+            courseTeacher="Jan Cruseman"
+          />
+        </div>
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="5h"
+            courseTitle="Kurs i filmskådespeleri"
+            courseTeacher="Lisa Ohlin"
+          />
+        </div>
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="4h"
+            courseTitle="Shifting focus"
+            courseTeacher="Rene Baker"
+          />
+        </div>
+
+        {/* <TempCourseCard
           courseImg="images/rectangle2.png"
           courseLength="4h"
           courseTitle="Kom igång med ditt filmskapande"
@@ -105,7 +118,7 @@ const AboutCourse = () => {
           courseImg="images/rectangle2.png"
           courseLength="4h"
           courseTitle="Kom igång med ditt filmskapande"
-        />
+        /> */}
       </div>
     </StyledAboutCourse>
   );

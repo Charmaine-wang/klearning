@@ -17,9 +17,10 @@ const StyledCourseChoicesCard = styled.div`
   .information-numbers {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
+    color: var(--dark-grey);
   }
 
   .information-numbers > div {
@@ -41,19 +42,42 @@ const StyledCourseChoicesCard = styled.div`
   div > .big-numbers {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 36px;
   }
 
-  icons {
-    display: flex;
-    justify-content: center;
-  }
   .number-text-pair {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .icon-div {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5px;
+
+    &.watch {
+      background-image: url("/images/Ikoner/Metod/Video.svg");
+    }
+    &.listen {
+      background-image: url("/images/Ikoner/Metod/Ljud.svg");
+    }
+    &.read {
+      background-image: url("/images/Ikoner/Metod/Läsa.svg");
+    }
   }
 `;
 
@@ -64,16 +88,16 @@ const CourseChoicesCard = ({ lessonAmount, handInAmount, hoursAmount }) => {
         <div className="choices-card">
           <div className="choices">
             <div className="icon-div">
-              <img className="icons" src="images/volume.png" alt="Volume" />
+              <div className="icon watch" />
+              <p>Titta</p>
+            </div>
+            <div className="icon-div">
+              <div className="icon listen" />
               <p>Lyssna</p>
             </div>
             <div className="icon-div">
-              <img className="icons" src="images/read.png" alt="Read" />
+              <div className="icon read" />
               <p>Läs</p>
-            </div>
-            <div className="icon-div">
-              <img className="icons" src="images/watch.png" alt="Watch" />
-              <p>Titta</p>
             </div>
           </div>
         </div>
@@ -83,15 +107,15 @@ const CourseChoicesCard = ({ lessonAmount, handInAmount, hoursAmount }) => {
         <div className="information-numbers">
           <div className="number-text-pair">
             <div className="big-numbers">{lessonAmount}</div>
-            <p>lektioner</p>
+            <p>Lektioner</p>
           </div>
           <div className="number-text-pair">
             <div className="big-numbers">{handInAmount}</div>
-            <p>inlämmingar</p>
+            <p>Inlämmingar</p>
           </div>
           <div className="number-text-pair">
             <div className="big-numbers">{hoursAmount}</div>
-            <p>timmar</p>
+            <p>Timmar</p>
           </div>
         </div>
       </StyledCourseChoicesCard>

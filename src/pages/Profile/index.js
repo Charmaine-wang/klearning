@@ -22,6 +22,9 @@ const StyledProfile = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    @media only screen and (min-width: 700px) {
+      width: 700px;
+    }
   }
 `;
 
@@ -76,7 +79,7 @@ const Profile = () => {
             />
 
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
+              activeCourseImg="/images/cut.png"
               courseCat="Film"
               courseTime="4h"
               cardHeader="Film Workshop med Connie Robertson  "

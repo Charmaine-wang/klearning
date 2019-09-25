@@ -49,7 +49,7 @@ const StyledHandInPoints = styled.div`
   }
 `;
 
-const HandInPoints = ({ header, paragraph, nextPart }) => {
+const HandInPoints = ({ header, paragraph, nextPart, previousPart }) => {
   const pointData = [
     "Se till att filma i ett rum utan för mycket bakgrundsljud.",
     "Filma framför en enfärgad vägg.",
@@ -76,7 +76,11 @@ const HandInPoints = ({ header, paragraph, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Nästa"
           buttonWidth="150px"

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../../Button";
+// import HandInModal from "../HandInModal";
 // import ToggleContent from "../ToggleContent";
 
 const StyledHandInChoice = styled.div`
@@ -9,7 +10,8 @@ const StyledHandInChoice = styled.div`
   h1 {
     margin-bottom: 10px;
   }
-  & > div:first-of-type {
+  .basic-styling {
+    position: relative;
     padding: 16px;
     background-color: white;
     border-radius: 10px;
@@ -37,6 +39,10 @@ const StyledHandInChoice = styled.div`
       .choice-button {
         width: 100%;
         margin: 4px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--soft-orange);
       }
     }
   }
@@ -48,11 +54,17 @@ const StyledHandInChoice = styled.div`
   }
 `;
 
-const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
+const HandInChoice = ({
+  header,
+  paragraph,
+  choiceHeader,
+  nextPart,
+  previousPart
+}) => {
   return (
     <StyledHandInChoice>
       <h1>Inlämning</h1>
-      <div>
+      <div className="basic-styling">
         <div className="choice-hand-in">
           <h2>{header}</h2>
           <p>{paragraph}</p>
@@ -62,25 +74,29 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
               className="choice-button"
               textAlign="left"
               textColor="var(--black-font)"
-              btnName="Scen 1"
+              btnName="Utdrag från Fröken Julie"
             />
             <Button
               className="choice-button"
               textAlign="left"
               textColor="var(--black-font)"
-              btnName="Scen 2"
+              btnName="Utdrag från Pulp Fiction"
             />
             <Button
               className="choice-button"
               textAlign="left"
               textColor="var(--black-font)"
-              btnName="Scen 3"
+              btnName="Utdrag från Sound of music"
             />
           </div>
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Nästa"
           buttonWidth="150px"
@@ -88,21 +104,6 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
           onClick={() => nextPart()}
         />
       </div>
-      {/* <ToggleContent
-        toggle={show => (
-          <button type="button" onClick={show}>
-            Open
-          </button>
-        )}
-        content={hide => (
-          <p>
-            There is no spoon...
-            <button type="button" onClick={hide}>
-              Close
-            </button>
-          </p>
-        )}
-      /> */}
     </StyledHandInChoice>
   );
 };

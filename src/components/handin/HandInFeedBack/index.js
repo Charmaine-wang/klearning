@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../Button";
 
@@ -54,9 +54,11 @@ const StyledHandInFeedBack = styled.div`
   }
 `;
 
-const HandInFeedBack = ({ header, nextPart }) => {
+const HandInFeedBack = ({ header, nextPart, previousPart }) => {
+  const [bgColor, setBgColor] = useState("var(--light-grey)");
   const availableDay = ["Torsdag 1/6", "Fredag 2/6"];
-  const availableTime = ["09:00", "09:30", "10:00", "10:30", "11:00"];
+  const availableTimeMonday = ["09:30", "10:00", "10:30", "11:00"];
+  const availableTimeFriday = ["09:00", "09:30", "10:00", "10:30", "11:00"];
 
   return (
     <StyledHandInFeedBack>
@@ -67,13 +69,27 @@ const HandInFeedBack = ({ header, nextPart }) => {
           <div className="feedback-day">
             <p>{availableDay[0]}</p>
           </div>
+          <Button
+            onClick={() => {
+              setBgColor("var(--soft-orange)");
+            }}
+            className="time-button"
+            buttonWidth="100%"
+            btnName="09:00"
+          />
           <div className="time-button-div">
-            {availableTime.map(data => {
+            {availableTimeMonday.map(data => {
               return (
                 <Button
+                  onClick={() => {
+                    setBgColor("var(--light-grey)");
+                  }}
+                  textColor="var(--light-grey)"
                   className="time-button"
                   buttonWidth="100%"
                   btnName={data}
+                  hoverColor="none"
+                  activeColor="none"
                 />
               );
             })}
@@ -82,12 +98,18 @@ const HandInFeedBack = ({ header, nextPart }) => {
             <p>{availableDay[1]}</p>
           </div>
           <div className="time-button-div">
-            {availableTime.map(data => {
+            {availableTimeFriday.map(data => {
               return (
                 <Button
+                  onClick={() => {
+                    setBgColor("var(--light-grey)");
+                  }}
+                  textColor="var(--light-grey)"
                   className="time-button"
                   buttonWidth="100%"
                   btnName={data}
+                  hoverColor="none"
+                  activeColor="none"
                 />
               );
             })}
@@ -95,11 +117,15 @@ const HandInFeedBack = ({ header, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Boka tid"
           buttonWidth="150px"
-          bgColor="var(--soft-orange)"
+          bgColor={bgColor}
           textColor="var(--card-color)"
           onClick={() => nextPart()}
         />

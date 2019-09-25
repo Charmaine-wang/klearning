@@ -17,7 +17,7 @@ const StyledVideoCard = styled.div`
   }
 `;
 
-const VideoCard = ({ nextPart, hidePlayer, header, intro }) => {
+const VideoCard = ({ nextPart, hidePlayer, header, intro, previousPart }) => {
   return (
     <StyledVideoCard hidePlayer={hidePlayer}>
       {/* LÄGGA IN VIDEO */}
@@ -33,7 +33,11 @@ const VideoCard = ({ nextPart, hidePlayer, header, intro }) => {
           }
         />
         <div className="button-div">
-          <Button btnName="Till översikten" buttonWidth="160px" />
+          <Button
+            btnName="Till översikten"
+            buttonWidth="160px"
+            onClick={() => previousPart()}
+          />
           <Button
             btnName="Nästa Lektion"
             buttonWidth="160px"
