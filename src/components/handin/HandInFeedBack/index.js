@@ -54,7 +54,7 @@ const StyledHandInFeedBack = styled.div`
   }
 `;
 
-const HandInFeedBack = ({ header, nextPart }) => {
+const HandInFeedBack = ({ header, nextPart, previousPart }) => {
   const availableDay = ["Torsdag 1/6", "Fredag 2/6"];
   const availableTime = ["09:00", "09:30", "10:00", "10:30", "11:00"];
 
@@ -95,7 +95,11 @@ const HandInFeedBack = ({ header, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Boka tid"
           buttonWidth="150px"

@@ -54,7 +54,13 @@ const StyledHandInChoice = styled.div`
   }
 `;
 
-const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
+const HandInChoice = ({
+  header,
+  paragraph,
+  choiceHeader,
+  nextPart,
+  previousPart
+}) => {
   return (
     <StyledHandInChoice>
       <h1>Inlämning</h1>
@@ -86,7 +92,11 @@ const HandInChoice = ({ header, paragraph, choiceHeader, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Nästa"
           buttonWidth="150px"

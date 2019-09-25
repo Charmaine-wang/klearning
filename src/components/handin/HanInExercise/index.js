@@ -44,7 +44,13 @@ const StyledHandInExercise = styled.div`
   }
 `;
 
-const HandInExercise = ({ header, paragraph, paragraph2, nextPart }) => {
+const HandInExercise = ({
+  header,
+  paragraph,
+  paragraph2,
+  nextPart,
+  previousPart
+}) => {
   const exerciseRequirements = ["Helbild, ", "närbild, ", "halvbild "];
 
   return (
@@ -73,7 +79,11 @@ const HandInExercise = ({ header, paragraph, paragraph2, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Bakåt" buttonWidth="150px" />
+        <Button
+          btnName="Bakåt"
+          buttonWidth="150px"
+          onClick={() => previousPart()}
+        />
         <Button
           btnName="Nästa"
           buttonWidth="150px"
