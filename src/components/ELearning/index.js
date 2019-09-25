@@ -26,11 +26,11 @@ const StyledELearning = styled.div`
       width: 100%;
       & > h1 {
         text-align: center;
-        font-size: 50px;
+        font-size: 24px;
         line-height: 100%;
       }
       & > p {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 165%;
         width: 100%;
         text-align: center;

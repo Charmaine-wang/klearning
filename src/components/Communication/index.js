@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import People from "../Icons/People";
 import Button from "../Button";
 
 const StyledCommunication = styled.div`
   display: flex;
   width: 95vw;
-  height: 50vh;
+  height: 70vh;
   padding: 5%;
   /* position: absolute; */
   flex-direction: column;
@@ -14,21 +13,24 @@ const StyledCommunication = styled.div`
   background: var(--card-color);
   justify-content: space-around;
   align-items: center;
+  & > h3 {
+    font-weight: 600;
+  }
   & > p {
-    line-height: 26px;
+    line-height: 165%;
     text-align: center;
   }
 `;
 const Communication = props => {
   return (
     <StyledCommunication {...props}>
-      <h2>Kommunikation</h2>
-      <People />
+      <h2>Kurskommunikation</h2>
+      <img src="/images/Illustrations/communication.svg" alt="" />
       <h3>Skype gruppen</h3>
       <p>
-        Vi har skapat en skype grupp för dig och dina kursvänner, så att ni kan
-        hålla kontakt under kursens gång. Allt du behöver är ett skypekonto och
-        sedan är det bara att skriva på!
+        Vi har skapat en Skype-grupp för dig och dina kursvänner, så att ni kan
+        hålla kontakt under kursens gång. Allt du behöver är ett Skypekonto och
+        sedan är det bara att sätta igång!
       </p>
       <Button btnName="Skype grupp" buttonWidth="157px" />
     </StyledCommunication>
