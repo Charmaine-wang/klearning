@@ -9,8 +9,9 @@ const StyledModalAlternative = styled.div`
   display: ${props => (props.isActive ? "flex" : "none")};
   width: 90vw;
   height: 30vh;
-  position: absolute;
+  position: fixed;
   z-index: 2;
+  top: 10%;
   flex-direction: column;
   border-radius: 10px;
   background: var(--card-color);
