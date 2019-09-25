@@ -10,12 +10,14 @@ const StyledModalAlternative = styled.div`
   width: 90vw;
   height: 30vh;
   position: absolute;
+  z-index: 2;
   flex-direction: column;
   border-radius: 10px;
   background: var(--card-color);
   justify-content: space-around;
   align-items: center;
   animation: fade-in 0.2s ease-in-out;
+  align-self: center;
   & > h2 {
     font-size: 20px;
   }
@@ -45,11 +47,11 @@ const ModalAlternative = props => {
     <StyledModalAlternative {...props}>
       <h2>Hur vill du ta del av kursen?</h2>
       <div className="icon-div">
-        <PlayVideo /> <Sound /> <TextIcon />{" "}
+        <PlayVideo /> <Sound /> <TextIcon />
       </div>
       <div className="button-div">
-        <Button btnName="Avbryt" buttonWidth="135px" />{" "}
-        <Button btnName="Fortsätt" buttonWidth="135px" />{" "}
+        <Button btnName="Avbryt" buttonWidth="135px" />
+        <Button btnName="Fortsätt" buttonWidth="135px" />
       </div>
     </StyledModalAlternative>
   );
