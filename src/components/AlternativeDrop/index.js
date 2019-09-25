@@ -14,7 +14,7 @@ const StyledAlternativeDrop = styled.div`
   height: 30vh;
   padding: 5%;
   position: absolute;
-  top: ${props => (props.hideDrop ? "-252px" : "43px")};
+  top: ${props => (props.hideDrop ? "-300px" : "74px")};
   transition: top 0.5s ease-in-out;
   z-index: 1;
   left: 2.5%;

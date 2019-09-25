@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
 import CourseEpisodes from "../../components/CourseEpisodes";
@@ -72,13 +73,15 @@ const Course = () => {
             src="images/selftape-hero.png"
             alt="course"
           />
-          <Button
-            bgColor="var(--soft-orange)"
-            textColor="white"
-            btnName="Ansök till kurs"
-            className="image-apply-button"
-            border="none"
-          />
+          <NavLink to="/course/overview">
+            <Button
+              bgColor="var(--soft-orange)"
+              textColor="white"
+              btnName="Ansök till kurs"
+              className="image-apply-button"
+              border="none"
+            />
+          </NavLink>
         </div>
         <div className="button-container">
           <Button

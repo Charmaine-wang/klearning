@@ -34,6 +34,7 @@ const Task = props => {
       {props.courseData.course.map(item => {
         return (
           <TaskItem
+            onClick={props.onClick}
             taskName={item.taskName}
             taskNr={item.taskNr}
             taskTime={item.taskTime}

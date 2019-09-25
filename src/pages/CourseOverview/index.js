@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Communication from "../../components/Communication";
 import Task from "../../components/Task";
 import Button from "../../components/Button";
 import GridLayout from "../../components/GridLayout";
-// import ModalAlternative from "../../components/ModalAlternative"
+import ImgButton from "../../components/ImgButton";
+
+import ModalAlternative from "../../components/ModalAlternative";
 
 const StyledOwerviewPage = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100%;
   justify-content: center;
@@ -55,14 +58,29 @@ const OwerviewPage = () => {
     }
   ];
 
+  const [isTakingCourse, setTakingCourse] = useState(false);
+
   return (
     <StyledOwerviewPage>
+      <ModalAlternative isActive={isTakingCourse} />
+      <ImgButton
+        imgBtn="/images/selftape-hero.png"
+        btnName="Starta kurs"
+        buttonWidth="160px"
+        buttonHeight="buttonHeight"
+        onClick={() => setTakingCourse(!isTakingCourse)}
+      />
       <GridLayout padding="0 0 0 2.5%">
         {/* <ModalAlternative isActive /> */}
         <Communication />
 
         {courseOverview.map(courses => {
-          return <Task courseData={courses} />;
+          return (
+            <Task
+              courseData={courses}
+              onClick={() => setTakingCourse(!isTakingCourse)}
+            />
+          );
         })}
         <div className="start-course-btn">
           <Button
@@ -70,6 +88,7 @@ const OwerviewPage = () => {
             bgColor="var(--soft-orange)"
             buttonWidth="135px"
             textColor="var(--card-color)"
+            onClick={() => setTakingCourse(!isTakingCourse)}
           />
         </div>
       </GridLayout>
