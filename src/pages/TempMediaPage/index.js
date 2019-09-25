@@ -18,7 +18,10 @@ const StyledMediaPage = styled.div`
   /* position: relative; */
 `;
 
-const MediaPage = (props, { nextPart, header, intro, paragraph }) => {
+const MediaPage = (
+  props,
+  { nextPart, header, intro, paragraph, previousPart }
+) => {
   const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("");
   // console.log(showVideo);
