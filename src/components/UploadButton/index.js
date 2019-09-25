@@ -33,12 +33,12 @@ const StyledUploadButton = styled.button`
     text-decoration: underline;
   }
 `;
-const UploadButton = ({ btnName, ...props }) => {
+const UploadButton = ({ btnName, btnImage, ...props }) => {
   // eslint-disable-next-line no-undef
   return (
     <StyledUploadButton {...props}>
       <div className="upload-image-div">
-        <img src="images/upload.png" alt="" />
+        <img src={btnImage} alt="upload" />
         {btnName}
       </div>
     </StyledUploadButton>
