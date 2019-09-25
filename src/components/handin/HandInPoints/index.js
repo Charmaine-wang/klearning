@@ -76,9 +76,9 @@ const HandInPoints = ({ header, paragraph, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Till översikten" buttonWidth="150px" />
+        <Button btnName="Bakåt" buttonWidth="150px" />
         <Button
-          btnName="Nästa Lektion"
+          btnName="Nästa"
           buttonWidth="150px"
           textColor="var(--soft-orange)"
           onClick={() => nextPart()}

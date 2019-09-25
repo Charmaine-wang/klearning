@@ -51,7 +51,7 @@ const HandIn = () => {
         paragraph="Vi tackar för ditt engagemang hos oss. Vi vill hjälpa till att göra våra kurser
        så bra som möjligt för våra deltagare. För att kunna göra det behöver vi dina erfarenheter 
        och åsikter. "
-        imgSrc="images/Rewards.png"
+        imgSrc="/images/Rewards.png"
       />
       {/* <HandInModal /> */}
       <h1>NÄSTA KORT ÄR NÄSTA SIDA</h1>

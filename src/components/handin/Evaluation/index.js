@@ -47,9 +47,9 @@ const Evaluation = ({ header, paragraph, imgSrc, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Till översikten" buttonWidth="150px" />
+        {/* <Button btnName="Till översikten" buttonWidth="150px" /> */}
         <Button
-          btnName="Nästa Lektion"
+          btnName="Utvärdering"
           buttonWidth="150px"
           bgColor="var(--soft-orange)"
           textColor="var(--card-color)"
