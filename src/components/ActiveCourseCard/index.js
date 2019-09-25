@@ -23,10 +23,13 @@ const StyledActiveCourseCard = styled.div`
     position: relative;
     text-decoration: none;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     display: flex;
     & > img {
       height: 50%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
   }
   & a > div,

@@ -19,7 +19,7 @@ const MyCourses = () => {
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="images/selftape-hero.png"
               courseCat="Scenekonst"
               courseTime="4h"
               cardHeader="Self-tape International med Thosmas Chaanhing"
