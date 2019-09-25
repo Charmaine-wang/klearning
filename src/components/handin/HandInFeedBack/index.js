@@ -95,9 +95,9 @@ const HandInFeedBack = ({ header, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Till översikten" buttonWidth="150px" />
+        <Button btnName="Bakåt" buttonWidth="150px" />
         <Button
-          btnName="Nästa Lektion"
+          btnName="Boka tid"
           buttonWidth="150px"
           bgColor="var(--soft-orange)"
           textColor="var(--card-color)"
