@@ -17,7 +17,7 @@ const StyledFixedContainer = styled.div`
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     /* justify-content: ${props => props.justifyDesk}; */
-
+padding: ${props => props.paddingFixed}
     /* align-items: center; */
   }
 

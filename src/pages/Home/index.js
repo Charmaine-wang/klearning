@@ -11,7 +11,6 @@ import Button from "../../components/Button";
 
 import ELearning from "../../components/ELearning";
 import ImgText from "../../components/ImgText";
-import ELearningDesktop from "../../components/ElearningDesktop";
 
 const StyledHome = styled.div`
   display: flex;
@@ -55,7 +54,7 @@ const Home = () => {
         padding="0 0 0 3vw"
         displayDesk="grid"
         // direction="column"
-        paddingDesk="0 14%"
+        paddingDesk="0 14.1%"
         gapDesk="30px 0"
       >
         <FixedContainer heightContainer="10vh" justifyDesk="center">
@@ -69,7 +68,7 @@ const Home = () => {
         <h1>Aktiva biblotek</h1>
 
         <FixedContainer heightContainer="40vh">
-          <ContainerSlider paddingScroll="0 20% 0 0">
+          <ContainerSlider paddingScroll="0 19% 0 0">
             <ActiveCourseCard
               activeCourseImg="images/film.png"
               courseCat="Dans"
@@ -122,12 +121,12 @@ const Home = () => {
           heightContainer="46vh"
           margin="0 0 0 -4%"
           padding="0 0 0 4%"
-          paddingDesk="0 14%"
+          paddingFixed="0"
         >
           <ContainerSlider
             height="100%"
             marginBetween="4% 0 0 0"
-            paddingScroll="0 21% 0 0"
+            paddingScroll="0 14% 0 0"
           >
             <div>
               <CourseList courseWidth />
@@ -154,8 +153,10 @@ const Home = () => {
           bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
-          padding="0 0 15% 0"
-          displayDesk="none"
+          padding="0 0 5% 0"
+          rowLayoutDesk="1fr"
+          colLayoutDesk="1fr 1fr 1fr"
+          widthDesk="80%"
         >
           <ELearning
             iconElearning="/images/Illustrations/Learning.svg"
@@ -174,9 +175,9 @@ const Home = () => {
           />
         </GridLayout>
         {/* FOR DESKTOP */}
-        <GridLayout paddingDesk="0 22% 0 0">
+        {/* <GridLayout paddingDesk="0 22% 0 0">
           <ELearningDesktop />
-        </GridLayout>
+        </GridLayout> */}
       </GridLayout>
       <ImgText
         imgMargin="10% 0 0 0"

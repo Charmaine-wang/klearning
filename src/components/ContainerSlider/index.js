@@ -19,9 +19,11 @@ const StyledContainerSlide = styled.div`
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     justify-content: center;
-    padding: ${props => props.paddingScroll};
+    width: ${props => (props.widthDesk ? props.widthDesk : "100%")};
+    padding: ${props => (props.paddingScroll ? props.paddingScroll : "0")};
+
     & > div {
-      margin: 0 10px 0 0;
+      margin: ${props => (props.marginDesk ? props.marginDesk : "0 19px 0 0")};
     }
 
     /* align-items: center; */

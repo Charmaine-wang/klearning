@@ -22,20 +22,18 @@ const StyledELearning = styled.div`
   }
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
-    background-color: pink;
-    flex-direction: row-reverse;
     & > div {
-      width: 60%;
+      width: 100%;
       & > h1 {
-        text-align: left;
+        text-align: center;
         font-size: 50px;
         line-height: 100%;
       }
       & > p {
         font-size: 20px;
         line-height: 165%;
-        width: 70%;
-        text-align: left;
+        width: 100%;
+        text-align: center;
       }
     }
   }
