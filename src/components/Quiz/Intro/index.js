@@ -3,7 +3,6 @@ import styled from "styled-components";
 import QuizButton from "../QuizButton";
 
 const StyledIntro = styled.div`
-  margin-bottom: 10px;
   & > div:first-of-type {
     background-color: var(--card-color);
     border-radius: 10px;
@@ -15,11 +14,12 @@ const StyledIntro = styled.div`
     text-align: center;
     padding: 30px;
     line-height: 165%;
+    margin-bottom: 10px;
 
-    & > div {
-      width: 95px;
-      height: 95px;
-      background-color: black;
+    & > div,
+    h3,
+    p {
+      margin-bottom: 15px;
     }
 
     & > h5,
@@ -27,11 +27,13 @@ const StyledIntro = styled.div`
       font-weight: 600;
       line-height: 135%;
     }
-
-    & > div,
-    h3,
-    p {
-      margin-bottom: 15px;
+    & > div {
+      width: 400px;
+      height: 350px;
+      background-image: url("images/Illustrations/quiz.svg");
+      background-position: center;
+      background-size: cover;
+      margin: 0;
     }
   }
 `;
@@ -58,6 +60,8 @@ const Intro = ({ nextPart, numberOfQuestions }) => {
         buttonWidth="100%"
         margin="3px"
         fontWeight="600"
+        color="var(--soft-orange)"
+        textColor="var(--card-color)"
         onClick={() => nextPart()}
         isCorrect={null}
       />
