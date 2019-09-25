@@ -81,6 +81,9 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
             {availableTimeMonday.map(data => {
               return (
                 <Button
+                  onClick={() => {
+                    setBgColor("var(--light-grey)");
+                  }}
                   textColor="var(--light-grey)"
                   className="time-button"
                   buttonWidth="100%"
@@ -96,6 +99,9 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
             {availableTimeFriday.map(data => {
               return (
                 <Button
+                  onClick={() => {
+                    setBgColor("var(--light-grey)");
+                  }}
                   textColor="var(--light-grey)"
                   className="time-button"
                   buttonWidth="100%"
