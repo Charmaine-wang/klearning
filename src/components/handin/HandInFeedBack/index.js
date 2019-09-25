@@ -88,6 +88,8 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
                   className="time-button"
                   buttonWidth="100%"
                   btnName={data}
+                  hoverColor="none"
+                  activeColor="none"
                 />
               );
             })}
@@ -106,6 +108,8 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
                   className="time-button"
                   buttonWidth="100%"
                   btnName={data}
+                  hoverColor="none"
+                  activeColor="none"
                 />
               );
             })}
