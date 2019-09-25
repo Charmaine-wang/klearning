@@ -61,7 +61,7 @@ const HandInUpload = ({ header, paragraph, nextPart }) => {
           <p>{paragraph}</p>
           <div className="upload-div">
             <UploadButton
-              btnImage="images/upload.png"
+              btnImage="/images/upload.png"
               buttonWidth="100%"
               btnName="Ladda upp fil"
               onClick={() => {
@@ -84,9 +84,9 @@ const HandInUpload = ({ header, paragraph, nextPart }) => {
         </div>
       </div>
       <div className="row">
-        <Button btnName="Till översikten" buttonWidth="150px" />
+        <Button btnName="Bakåt" buttonWidth="150px" />
         <Button
-          btnName="Nästa Lektion"
+          btnName="Nästa"
           buttonWidth="150px"
           textColor="var(--soft-orange)"
           onClick={() => nextPart()}
