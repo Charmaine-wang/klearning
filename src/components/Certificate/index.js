@@ -17,6 +17,7 @@ const StyledCertificate = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     padding: 10px;
+    margin-bottom: 10px;
 
     & > p {
       align-self: flex-end;
@@ -62,7 +63,6 @@ const Certificate = ({
         <h2>{courseTitle}</h2>
         <div>
           <p>{courseCreator}</p>
-          <img className="icon" src="images/search.png" alt="checkbox" />
         </div>
       </div>
     </StyledCertificate>
