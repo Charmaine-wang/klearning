@@ -8,6 +8,8 @@ const StyledTaskItem = styled.div`
   width: 100%;
   height: 7vh;
   align-items: center;
+  pointer-events: auto;
+  /* color: var(--light-grey); */
   justify-content: space-between;
   border-top: 1px solid #6d6d6d;
   & > div {
@@ -25,6 +27,17 @@ const StyledTaskItem = styled.div`
   }
   & > h3 {
     color: var(--soft-orange);
+  }
+
+  &:hover {
+    color: ${props =>
+      props.hoverColor ? props.hoverColor : "var(--soft-orange)"};
+    text-decoration: underline;
+  }
+  &:active {
+    color: ${props =>
+      props.activeColor ? props.activeColor : "var(--soft-orange)"};
+    text-decoration: underline;
   }
 `;
 

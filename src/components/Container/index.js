@@ -12,9 +12,9 @@ const StyledContainer = styled.div`
   }
 `;
 
-const Container = ({ padding, width, children }) => {
+const Container = ({ padding, width, children, className }) => {
   return (
-    <StyledContainer padding={padding} width={width}>
+    <StyledContainer className={className} padding={padding} width={width}>
       {children}
     </StyledContainer>
   );

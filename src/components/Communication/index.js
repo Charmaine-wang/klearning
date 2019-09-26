@@ -21,6 +21,11 @@ const StyledCommunication = styled.div`
     line-height: 165%;
     text-align: center;
   }
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
 `;
 const Communication = props => {
   return (

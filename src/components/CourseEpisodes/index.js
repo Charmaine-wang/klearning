@@ -55,7 +55,7 @@ const CourseEpisodes = () => {
       <div className="similar-courses">
         <div className="course-div">
           <CourseListItem
-            courseImg="/images/rectangle2.jpg"
+            courseImg="/images/Photos/voice.jpg"
             courseLength="4h"
             courseTitle="Röstteknik, ljudboksinläsning..."
             courseTeacher="Jan Cruseman"
