@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Button from "../../Button";
 
 const StyledEvaluation = styled.div`
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
   h1 {
     margin-bottom: 10px;
   }
@@ -28,6 +31,9 @@ const StyledEvaluation = styled.div`
     .evaluation > p {
     }
   }
+  .grow {
+    flex-grow: 1;
+  }
   .row {
     width: 100%;
     display: flex;
@@ -41,7 +47,7 @@ const StyledEvaluation = styled.div`
   }
 `;
 
-const Evaluation = ({ header, paragraph, imgSrc, nextPart }) => {
+const Evaluation = ({ header, paragraph, imgSrc }) => {
   return (
     <StyledEvaluation>
       <h1>Feedback</h1>
@@ -52,6 +58,7 @@ const Evaluation = ({ header, paragraph, imgSrc, nextPart }) => {
           <p>{paragraph}</p>
         </div>
       </div>
+      <div className="grow" />
       <div className="row">
         {/* <Button btnName="Till översikten" buttonWidth="150px" /> */}
         <Button
@@ -59,7 +66,6 @@ const Evaluation = ({ header, paragraph, imgSrc, nextPart }) => {
           buttonWidth="150px"
           bgColor="var(--soft-orange)"
           textColor="var(--card-color)"
-          onClick={() => nextPart()}
         />
       </div>
     </StyledEvaluation>
