@@ -11,6 +11,7 @@ const StyledHandInChoice = styled.div`
     margin-bottom: 10px;
   }
   .basic-styling {
+    box-shadow: var(--shadow);
     position: relative;
     padding: 16px;
     background-color: white;
