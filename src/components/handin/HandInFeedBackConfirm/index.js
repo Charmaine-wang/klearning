@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Button from "../../Button";
 
 const StyledHandInFeedBackConfirm = styled.div`
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -37,6 +41,9 @@ const StyledHandInFeedBackConfirm = styled.div`
       margin: 16px;
       color: var(--black-font);
     }
+  }
+  .grow {
+    flex-grow: 1;
   }
   .row {
     width: 100%;
@@ -76,6 +83,7 @@ const HandInFeedBackConfirm = ({
           </div>
         </div>
       </div>
+      <div className="grow"> </div>
       <div className="row">
         <Button
           btnName="Bakåt"

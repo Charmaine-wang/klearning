@@ -4,6 +4,10 @@ import UploadButton from "../../UploadButton";
 import Button from "../../Button";
 
 const StyledHandInUpload = styled.div`
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -39,6 +43,9 @@ const StyledHandInUpload = styled.div`
     .uploaded-file > p > span {
       color: var(--soft-orange);
     }
+  }
+  .grow {
+    flex-grow: 1;
   }
   .row {
     width: 100%;
@@ -84,6 +91,7 @@ const HandInUpload = ({ header, paragraph, nextPart, previousPart }) => {
           </div>
         </div>
       </div>
+      <div className="grow" />
       <div className="row">
         <Button
           btnName="Bakåt"
