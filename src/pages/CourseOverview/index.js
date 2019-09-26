@@ -32,7 +32,7 @@ const StyledOwerviewPage = styled.div`
 const OwerviewPage = () => {
   const courseOverview = [
     {
-      headerTask: "introduktion",
+      headerTask: "Introduktion",
       course: [
         {
           taskNr: "1.",
