@@ -16,7 +16,6 @@ const StyledTextCard = styled.div`
   & > .text-card {
     height: 80vh;
     overflow-y: scroll;
-    scroll: orange;
     padding: 10% 0 0 3%;
   }
   & > div > p {

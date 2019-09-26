@@ -102,6 +102,8 @@ const Mediatwo = (props, { previousPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="160px"
+          bgColor="var(--soft-orange)"
+          textColor="var(--card-color)"
           onClick={() => props.nextPart()}
         />
       </div>
