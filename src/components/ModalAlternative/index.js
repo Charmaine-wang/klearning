@@ -50,13 +50,29 @@ const ModalAlternative = props => {
     <StyledModalAlternative {...props}>
       <h2>Hur vill du ta del av kursen?</h2>
       <div className="icon-div">
-        <Link to={{ pathname: "/media", state: { mediaPreset: "video" } }}>
+        <Link
+          to={{ pathname: "/course/flow", state: { mediaPreset: "video" } }}
+        >
           <PlayVideo />
         </Link>
-        <Link to={{ pathname: "/media", state: { mediaPreset: "sound" } }}>
+        <Link
+          to={{
+            pathname: "/course/flow",
+            state: {
+              mediaPreset: "sound"
+            }
+          }}
+        >
           <Sound />
         </Link>
-        <Link to={{ pathname: "/media", state: { mediaPreset: "text" } }}>
+        <Link
+          to={{
+            pathname: "/course/flow",
+            state: {
+              mediaPreset: "text"
+            }
+          }}
+        >
           <TextIcon />
         </Link>
       </div>

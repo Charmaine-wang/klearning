@@ -12,14 +12,14 @@ import Media from "./pages/TempMediaPage";
 import CourseInfo from "./pages/CourseInfo";
 import CourseOverview from "./pages/CourseOverview";
 import CourseFlow from "./pages/CourseFlow";
-import OverviewDrop from "./components/OverviewDrop";
+// import OverviewDrop from "./components/OverviewDrop";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Navbar />
-        <OverviewDrop />
+        {/* <OverviewDrop /> */}
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
