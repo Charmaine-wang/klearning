@@ -57,6 +57,8 @@ const StyledHandInFeedBack = styled.div`
 `;
 
 const HandInFeedBack = ({ header, nextPart, previousPart }) => {
+  const [textColor, setTextColor] = useState("var(--black-font)");
+  const [border, setBorder] = useState("1px solid var(--light-grey)");
   const [bgColor, setBgColor] = useState("var(--light-grey)");
   const availableDay = ["Torsdag 1/6", "Fredag 2/6"];
   const availableTimeMonday = ["09:30", "10:00", "10:30", "11:00"];
@@ -74,7 +76,11 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
           <Button
             onClick={() => {
               setBgColor("var(--soft-orange)");
+              setBorder("1px solid var(--soft-orange)");
+              setTextColor("var(--soft-orange)");
             }}
+            textColor={textColor}
+            border={border}
             className="time-button"
             buttonWidth="100%"
             btnName="09:00"
@@ -85,6 +91,8 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
                 <Button
                   onClick={() => {
                     setBgColor("var(--light-grey)");
+                    setBorder("1px solid var(--light-grey)");
+                    setTextColor("var(--black-font)");
                   }}
                   textColor="var(--light-grey)"
                   className="time-button"
@@ -105,6 +113,8 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
                 <Button
                   onClick={() => {
                     setBgColor("var(--light-grey)");
+                    setBorder("1px solid var(--light-grey)");
+                    setTextColor("var(--black-font)");
                   }}
                   textColor="var(--light-grey)"
                   className="time-button"
