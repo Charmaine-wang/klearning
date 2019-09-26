@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-// import CourseEpisodesCard from "../CourseEpisodesCard";
 import Button from "../Button";
-import TempCourseCard from "../TempCourseCard";
 import MiscInfoCard from "../MiscInfoCard";
+import CourseListItem from "../CourseListItem";
 
 const StyledCourseEpisodes = styled.div`
   .apply-button {
@@ -20,11 +19,13 @@ const StyledCourseEpisodes = styled.div`
   .similar-courses {
     margin: 16px;
   }
+  .course-div {
+    margin: 16px 0px;
+  }
 `;
 const CourseEpisodes = () => {
   return (
     <StyledCourseEpisodes>
-      {/* <CourseEpisodesCard /> */}
       <MiscInfoCard
         teacher="Tommy Chaanhing"
         seatsAmouts="20"
@@ -52,21 +53,30 @@ const CourseEpisodes = () => {
 
       <h1 className="similar-header">Liknande Material</h1>
       <div className="similar-courses">
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="4h"
+            courseTitle="Röstteknik, ljudboksinläsning..."
+            courseTeacher="Jan Cruseman"
+          />
+        </div>
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="5h"
+            courseTitle="Kurs i filmskådespeleri"
+            courseTeacher="Lisa Ohlin"
+          />
+        </div>
+        <div className="course-div">
+          <CourseListItem
+            courseImg="images/rectangle2.png"
+            courseLength="4h"
+            courseTitle="Shifting focus"
+            courseTeacher="Rene Baker"
+          />
+        </div>
       </div>
       <div className="apply-button">
         <Button

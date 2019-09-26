@@ -68,22 +68,6 @@ const AboutCourse = () => {
         linkText="Läs mer"
         linkHref="https://www.kulturakademin.com/viktigt-att-veta-om-vara-aktiviteter"
       />
-      {/* <h1 className="information-header">Kursinformation</h1> */}
-      {/* <MiscInfoCard
-        seatsAmouts="20"
-        startDate="25 maj"
-        endDate="1 juni"
-        applyDate="24 april, 2020"
-        participator="Juanita Alexander, Soham Alexander, Evan Webb"
-        activity="Danslektioner, tutorials"
-        language="Engelska"
-        moreInfo="Till ansökan ska CV bifogas samt en motivering till 
-                varför just du vill gå. Motiveringen kan vara avgörande vid uttagningen.
-                Urvalet sker veckan efter sista ansökningsdag. Anmälan är bindande, 
-                det är viktigt att du kan delta i de erbjudna aktiviteterna. Frånvaroavgift
-                på 500 kr/workshop debiteras om du uteblir utan att avanmäla dig senast 24 timmar
-                innan aktiviteten startar."
-      /> */}
       <div className="button-div">
         <Button
           bgColor="var(--soft-orange)"

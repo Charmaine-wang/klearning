@@ -68,7 +68,7 @@ const Profile = () => {
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
+              activeCourseImg="/images/Photos/dance.jpg"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Robertson "
@@ -79,7 +79,7 @@ const Profile = () => {
             />
 
             <ActiveCourseCard
-              activeCourseImg="/images/cut.png"
+              activeCourseImg="/images/Photos/action.jpg"
               courseCat="Film"
               courseTime="4h"
               cardHeader="Film Workshop med Connie Robertson  "
@@ -88,7 +88,7 @@ const Profile = () => {
               bookmark="/images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
+              activeCourseImg="/images/Photos/camera.jpg"
               courseCat="Foto"
               courseTime="4h"
               cardHeader="Foto Workshop med Connie Robertson "
@@ -97,7 +97,7 @@ const Profile = () => {
               bookmark="/images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
+              activeCourseImg="/images/Photos/light.jpg"
               courseCat="Studio Ljus"
               courseTime="4h"
               cardHeader="Ljussättnings Workshop med Connie Robertson "
