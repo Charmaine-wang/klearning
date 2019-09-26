@@ -17,7 +17,7 @@ import HandInUpload from "../../components/handin/HandInUpload";
 import HandInFeedBack from "../../components/handin/HandInFeedBack";
 import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm";
 import Evaluation from "../../components/handin/Evaluation";
-// import OverviewDrop from "../../components/OverviewDrop";
+import OverviewDrop from "../../components/OverviewDrop";
 import Setup from "../../components/Setup";
 
 const StyledCourseFlow = styled.div`
@@ -31,7 +31,7 @@ const CourseFlow = props => {
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
   const [mediaState, setMediaState] = useState(
-    props.location.state.mediaPreset
+    props.location && props.location.state && props.location.state.mediaPreset
       ? props.location.state.mediaPreset
       : "video"
   );
@@ -54,20 +54,24 @@ const CourseFlow = props => {
     setLessonPart(2);
     setQuizScore(0);
   }
+  const [isChanged, setChanged] = useState(true);
 
-  console.log(nextLessonPart);
   return (
     <StyledCourseFlow>
-      <Setup />
-      {/* <OverviewDrop /> */}
+      {lessonPart !== 1 && <OverviewDrop />}
+
       <Container>
         {lessonPart === 1 ? (
           <>
+            <Setup changeMethod={() => setChanged(!isChanged)} />
+
             {mediaState === "video" && (
               <Media
                 nextPart={nextLessonPart}
                 previousPart={previousLessonPart}
                 video
+                setChanged={setChanged}
+                isChanged={isChanged}
               />
             )}
             {mediaState === "sound" && (
@@ -75,6 +79,8 @@ const CourseFlow = props => {
                 nextPart={nextLessonPart}
                 previousPart={previousLessonPart}
                 sound
+                setChanged={setChanged}
+                isChanged={isChanged}
               />
             )}
             {mediaState === "text" && (
@@ -82,6 +88,8 @@ const CourseFlow = props => {
                 nextPart={nextLessonPart}
                 previousPart={previousLessonPart}
                 text
+                setChanged={setChanged}
+                isChanged={isChanged}
               />
             )}
           </>

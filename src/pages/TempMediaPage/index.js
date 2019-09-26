@@ -15,12 +15,15 @@ const StyledMediaPage = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: none;
+  margin: 0;
+  background-color: red;
+  /* margin:0; */
 
   /* position: relative; */
 `;
 
 const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
-  const [isChanged, setChanged] = useState(true);
+  // const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("video");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
@@ -43,18 +46,18 @@ const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
     <StyledMediaPage>
       {/* <Setup changeMethod={() => setChanged(!isChanged)} /> */}
       <AlternativeDrop
-        hideDrop={isChanged}
+        hideDrop={props.isChanged}
         showVideo={() => {
           setSelectedAlt("video");
-          setChanged(true);
+          props.setChanged(true);
         }}
         showSound={() => {
           setSelectedAlt("sound");
-          setChanged(true);
+          props.setChanged(true);
         }}
         showText={() => {
           setSelectedAlt("text");
-          setChanged(true);
+          props.setChanged(true);
         }}
       />
       {selectedAlt === "text" && (
