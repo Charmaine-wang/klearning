@@ -4,18 +4,20 @@ import styled from "styled-components";
 import TaskItem from "../TaskItem";
 
 const StyledTask = styled.div`
-  width: 95vw;
+  width: 100%;
   height: 100%;
 
   border-radius: 10px;
-  padding: 8% 5%;
+  padding: 5% 5% 0 5%;
   background-color: var(--card-color);
 
   display: flex;
   flex-direction: column;
 
   & > h1 {
-    margin: 0 0 10% 0;
+    margin: 0 0 6% 0;
+    font-size: 20px;
+    font-weight: 600;
   }
 
   & > hr {
@@ -38,6 +40,8 @@ const Task = props => {
             taskName={item.taskName}
             taskNr={item.taskNr}
             taskTime={item.taskTime}
+            icon={item.icon}
+            key={item.taskNr}
           />
         );
       })}

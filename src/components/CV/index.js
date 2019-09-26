@@ -42,11 +42,10 @@ const StyledCV = styled.div`
   .profileImage {
     width: 30%;
     padding-top: 30%;
-    background: url("images/logo192.png");
+    background: url("/images/Photos/Emmy.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    border: 1px solid var(--black-font);
   }
 
   .orange {
@@ -95,8 +94,8 @@ const CV = () => {
     <StyledCV>
       <div className="row">
         <div>
-          <h2>Brandon Lane</h2>
-          <h5 className="orange">Skådespelare</h5>
+          <h2>Piper Main</h2>
+          <h5 className="orange">Skådespelerska</h5>
         </div>
         <div className="icon-placeholder" />
       </div>

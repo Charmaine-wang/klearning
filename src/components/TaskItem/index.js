@@ -1,10 +1,11 @@
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
 import styled from "styled-components";
-import PlayVideo from "../Icons/PlayVideo";
+// import PlayVideo from "../Icons/PlayVideo";
 
 const StyledTaskItem = styled.div`
   display: flex;
+  width: 100%;
   height: 7vh;
   align-items: center;
   justify-content: space-between;
@@ -19,15 +20,24 @@ const StyledTaskItem = styled.div`
       margin: 0 7px 0 0;
     }
   }
+  h3 {
+    font-weight: 600;
+  }
+  img {
+    /* width: 40px;
+    height: 40px; */
+  }
 `;
 
 const TaskItem = props => {
+  console.log(props.icon);
   return (
     <StyledTaskItem {...props}>
-      <PlayVideo />
+      {/* <PlayVideo /> */}
+      <img src={props.icon} alt="icon" />
       <div>
-        <h2>{props.taskNr}</h2>
-        <h2>{props.taskName}</h2>
+        <h3>{props.taskNr}</h3>
+        <h3>{props.taskName}</h3>
       </div>
       <aside />
       <h3>{props.taskTime}</h3>
