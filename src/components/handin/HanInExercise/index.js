@@ -8,6 +8,7 @@ const StyledHandInExercise = styled.div`
     margin-bottom: 10px;
   }
   & > div:first-of-type {
+    box-shadow: var(--shadow);
     padding: 16px;
     background-color: white;
     border-radius: 10px;

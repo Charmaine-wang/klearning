@@ -21,7 +21,7 @@ const StyledCourseFlow = styled.div`
 `;
 
 const CourseFlow = () => {
-  const [lessonPart, setLessonPart] = useState(1);
+  const [lessonPart, setLessonPart] = useState(8);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
 

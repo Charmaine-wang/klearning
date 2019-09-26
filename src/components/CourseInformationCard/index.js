@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 const StyledCourseInformationCard = styled.div`
   margin: 16px;
+
   .course-information-card {
+    box-shadow: var(--shadow);
     background-color: white;
     padding: ${props => (props.paddingInfo ? props.paddingInfo : "16px")};
     border-radius: 10px;

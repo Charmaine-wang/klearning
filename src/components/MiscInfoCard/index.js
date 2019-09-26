@@ -6,6 +6,7 @@ const StyledMiscInfoCard = styled.div`
   padding: 16px;
   background-color: white;
   border-radius: 10px;
+  box-shadow: var(--shadow);
 
   h2 {
     color: var(--soft-orange);
