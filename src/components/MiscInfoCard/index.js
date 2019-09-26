@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledMiscInfoCard = styled.div`
-  margin: 16px;
+  margin: 16px 0px;
   padding: 16px;
   background-color: white;
   border-radius: 10px;
+  box-shadow: var(--shadow);
 
   h2 {
     color: var(--soft-orange);
@@ -24,13 +25,18 @@ const MiscInfoCard = ({
   startDate,
   endDate,
   applyDate,
-  participator,
+  teacher,
   activity,
   language,
-  moreInfo
+  cost,
+  selection
 }) => {
   return (
     <StyledMiscInfoCard>
+      <div>
+        <h2>KURSLEDARE</h2>
+        <p>{teacher}</p>
+      </div>
       <div>
         <h2>ANTAL PLATSER</h2>
         <p>{seatsAmouts} platser</p>
@@ -45,10 +51,6 @@ const MiscInfoCard = ({
         <p>{applyDate}</p>
       </div>
       <div>
-        <h2>MEDVERKANDE</h2>
-        <p>{participator}</p>
-      </div>
-      <div>
         <h2>AKTIVITET</h2>
         <p>{activity}</p>
       </div>
@@ -57,8 +59,12 @@ const MiscInfoCard = ({
         <p>{language}</p>
       </div>
       <div>
-        <h2>ÖVRIGT</h2>
-        <p>{moreInfo}</p>
+        <h2>KOSTNAD</h2>
+        <p>{cost}</p>
+      </div>
+      <div>
+        <h2>URVAL</h2>
+        <p>{selection}</p>
       </div>
     </StyledMiscInfoCard>
   );

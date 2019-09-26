@@ -1,52 +1,75 @@
 import React from "react";
 import styled from "styled-components";
+import QuizButton from "../QuizButton";
 
 const StyledIntro = styled.div`
-  background-color: var(--card-color);
-  border-radius: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
-  line-height: 165%;
-
-  & > div {
-    width: 95px;
-    height: 95px;
-    background-color: black;
+  h1 {
+    margin-bottom: 10px;
   }
+  & > div:first-of-type {
+    background-color: var(--card-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    line-height: 165%;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow);
 
-  & > h5,
-  h3 {
-    font-weight: 600;
-    line-height: 135%;
-  }
+    & > div,
+    h3,
+    p {
+      margin-bottom: 15px;
+    }
 
-  & > div,
-  h3,
-  p {
-    margin-bottom: 15px;
+    & > h5,
+    h3 {
+      font-weight: 600;
+      line-height: 135%;
+    }
+    & > div {
+      width: 400px;
+      height: 350px;
+      background-image: url("/images/Illustrations/quiz.svg");
+      background-position: center;
+      background-size: cover;
+      margin: 0;
+    }
   }
 `;
 
-const Intro = () => {
+const Intro = ({ nextPart, numberOfQuestions }) => {
   return (
     <StyledIntro>
-      <div />
-      <h3>Quiz</h3>
-      <p>
-        Dags för ett quiz för att se om du fick med dig informationen från den
-        senaste lektionen!
-        <br /> Quizet består av flervalsfrågor. Markera det svar du tror är rätt
-        och klicka på “kolla svar“ och sedan “nästa fråga” för att ta dig
-        vidare.
-      </p>
-      <h5>
-        Antal frågor: 3 <br /> Beräknad tid: ca 2 min
-      </h5>
+      <h1>3. Övning</h1>
+      <div>
+        <div />
+        <h3>Quiz</h3>
+        <p>
+          Dags för ett quiz för att se om du fick med dig informationen från den
+          senaste lektionen!
+          <br /> Quizet består av flervalsfrågor. Markera det svar du tror är
+          rätt och klicka på “svara“ och sedan “nästa fråga” för att ta dig
+          vidare.
+        </p>
+        <h5>
+          Antal frågor: {numberOfQuestions} <br /> Beräknad tid: ca 2 min
+        </h5>
+      </div>
+      <QuizButton
+        btnName="Starta Quiz"
+        buttonWidth="100%"
+        margin="3px"
+        fontWeight="600"
+        color="var(--soft-orange)"
+        textColor="var(--card-color)"
+        onClick={() => nextPart()}
+        isCorrect={null}
+      />
     </StyledIntro>
   );
 };

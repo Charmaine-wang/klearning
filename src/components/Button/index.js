@@ -20,14 +20,15 @@ const StyledButton = styled.button`
   margin: ${props => (props.margin ? props.margin : "0")};
 
   &:hover {
-    color: var(--soft-orange);
+    color: ${props =>
+      props.hoverColor ? props.hoverColor : "var(--soft-orange)"};
     text-decoration: underline;
   }
   &:active {
-    color: var(--soft-orange);
+    color: ${props =>
+      props.activeColor ? props.activeColor : "var(--soft-orange)"};
     text-decoration: underline;
   }
-  
 `;
 const Button = ({ btnName, ...props }) => {
   // eslint-disable-next-line no-undef

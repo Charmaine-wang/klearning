@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
 import GlobalStyle from "../../styles/GlobalStyle";
 
@@ -34,15 +35,15 @@ const Navbar = () => {
       <StyledNavbar>
         <div className="navbar">
           <NavLink to="/">
-            <img src="images/logo.svg" alt="" />
+            <img src="/images/LogoImage/logo.svg" alt="" />
           </NavLink>
           {/* <NavLink to="/course">Kurs</NavLink> */}
           <div className="navbarItems">
             <div className="searchIcon">
-              <img src="images/search.png" alt="" />
+              <img src="/images/Ikoner/Nav/Sök.svg" alt="" />
             </div>
             <NavLink to="/profile">
-              <img src="images/profile.svg" alt="" />
+              <img src="/images/Ikoner/Nav/Profil.svg" alt="" />
             </NavLink>
           </div>
         </div>
@@ -51,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);

@@ -1,20 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-// import reactDOM from "react-dom";
 
 const StyledHandInModal = styled.div`
-  position: fixed;
-  top: 12px;
-  padding: 12px;
-  background-color: white;
-  border: 1px solid grey;
+
+// display: ${props => (props.isActive ? "flex" : "none")};
+display:flex;
+justify-content:center;
+height:100%;
+width:100%;
+position:absolute;
+background-color:white;
+padding: 16px;
+background-color: orange;
+left:0%;
+top:0%;
+border-radius:10px;
+
 `;
 
-const HandInModal = ({ children }) => {
+const HandInModal = ({ header, paragraph, pdfText }) => {
   return (
     <StyledHandInModal>
-      <div className="modal">{children}</div>
-      {document.getElementById("modal-root")}
+      <div>
+        <h2>{header}</h2>
+        <p>{paragraph}</p>
+        <p>{pdfText}</p>
+      </div>
     </StyledHandInModal>
   );
 };

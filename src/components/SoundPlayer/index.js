@@ -5,7 +5,7 @@ import { PlayButton, Timer } from "react-soundplayer/components";
 import { withSoundCloudAudio } from "react-soundplayer/addons";
 
 const StyledSound = styled.div`
-  height: 30vh;
+  height: 35vh;
   width: 100%;
   background-image: url(${props => props.thumbnail});
   background-repeat: no-repeat, repeat;
@@ -16,7 +16,7 @@ const StyledSound = styled.div`
 
   & > .info-sound {
     width: 100vw;
-    height: 8vh;
+    padding: 2%;
     background-color: white;
     align-items: center;
     display: flex;
@@ -25,7 +25,13 @@ const StyledSound = styled.div`
     width: 40%;
     > button {
       width: 60%;
-      color: red;
+      color: #6d6d6d;
+    }
+  }
+  .div-h3 {
+    height: 100%;
+    & > h3 {
+      height: 100%;
     }
   }
 `;
@@ -43,7 +49,7 @@ const Sound = withSoundCloudAudio(props => {
             {...props}
           />
         </div>
-        <div>
+        <div className="div-h3">
           <h3>{props.title}</h3>
           <Timer className="custom-player-timer" {...props} />
         </div>

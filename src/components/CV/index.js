@@ -9,6 +9,7 @@ const StyledCV = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: var(--shadow);
   p {
     color: var(--black-font);
   }
@@ -42,11 +43,10 @@ const StyledCV = styled.div`
   .profileImage {
     width: 30%;
     padding-top: 30%;
-    background: url("images/logo192.png");
+    background: url("/images/Photos/Emmy.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    border: 1px solid var(--black-font);
   }
 
   .orange {
@@ -77,10 +77,16 @@ const StyledCV = styled.div`
   }
 
   .icon-placeholder {
-    background-color: var(--black-font);
-    width: 20px;
-    height: 20px;
+    background-image: url("/images/Ikoner/edit-2.svg");
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
     align-self: flex-start;
+    @media only screen and (min-width: 700px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 
@@ -89,8 +95,8 @@ const CV = () => {
     <StyledCV>
       <div className="row">
         <div>
-          <h2>Brandon Lane</h2>
-          <h5 className="orange">Skådespelare</h5>
+          <h2>Piper Main</h2>
+          <h5 className="orange">Skådespelerska</h5>
         </div>
         <div className="icon-placeholder" />
       </div>

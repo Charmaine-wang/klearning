@@ -13,12 +13,18 @@ const GlobalStyle = createGlobalStyle`
   --light-grey: #E0E0E0;
   --dark-grey: #6D6D6D;
   --black-font: #292929;
+  --red: #EB5757;
 
   /* Fonts */
   --accent-font:  Cursive; /* WHAT FONT SHOULD WE HAVE HERE */
   --main-font: "Open sans";
   --backup-font: "cursive";
+
+  /* Shadow */
+  --shadow: 0px 0px 20px 1px rgba(199,199,199,0.5);
+  
   }
+
 
   body {
     background-color: var(--bg-color);

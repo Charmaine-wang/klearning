@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
 import CourseEpisodes from "../../components/CourseEpisodes";
@@ -49,7 +50,10 @@ const StyledCourse = styled.div`
 `;
 
 const Course = () => {
+  const [textColor, setTextColor] = useState("var(--soft-orange)");
+  const [textColor2, setTextColor2] = useState("var(--black-font)");
   const [courseComponent, setCourseComponent] = useState("aboutCourse");
+  const [headerText, setHeaderText] = useState("Inlärningsalternativ");
 
   const switchComponent = () => {
     if (courseComponent === "aboutCourse") {
@@ -63,38 +67,50 @@ const Course = () => {
 
   return (
     <StyledCourse>
-      <Container>
+      <Container padding="0">
         <div className="image-container">
-          <h1 className="course-header">
-            Kursnamnet är här, bästa danslektionen ever
-          </h1>
+          <h1 className="course-header">Self-tape international</h1>
           <img
             className="hero-image-course"
-            src="images/courseImage.png"
+            src="images/selftape-hero.png"
             alt="course"
           />
-          <Button
-            bgColor="var(--soft-orange)"
-            textColor="white"
-            btnName="Ansök till kurs"
-            className="image-apply-button"
-            border="none"
-          />
+          <NavLink to="/course/overview">
+            <Button
+              bgColor="var(--soft-orange)"
+              textColor="white"
+              btnName="Ansök till kurs"
+              className="image-apply-button"
+              border="none"
+            />
+          </NavLink>
         </div>
         <div className="button-container">
           <Button
+            textColor={textColor}
             btnName="Om kurs"
             buttonWidth="45%"
-            onClick={() => setCourseComponent("aboutCourse")}
+            onClick={() => {
+              setCourseComponent("aboutCourse");
+              setHeaderText("Inlärningsalternativ");
+              setTextColor2("var(--black-font)");
+              setTextColor("var(--soft-orange)");
+            }}
           />
           <Button
-            btnName="Kursavsnitt"
+            textColor={textColor2}
+            btnName="Kursinnehåll"
             buttonWidth="45%"
-            onClick={() => setCourseComponent("courseEpisodes")}
+            onClick={() => {
+              setCourseComponent("courseEpisodes");
+              setHeaderText("Kursinnehåll");
+              setTextColor2("var(--soft-orange)");
+              setTextColor("var(--black-font)");
+            }}
           />
         </div>
         <div className="course-choices-container">
-          <h1>Kursalternativ</h1>
+          <h1>{headerText}</h1>
         </div>
         <div>{switchComponent()}</div>
       </Container>

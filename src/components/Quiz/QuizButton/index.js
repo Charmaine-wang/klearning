@@ -16,29 +16,38 @@ const StyledQuizButton = styled.button`
   font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
   border-radius: 8px;
   margin: ${props => (props.margin ? props.margin : "0")};
+  box-shadow: var(--shadow);
 
   &:hover {
     color: var(--soft-orange);
-    text-decoration: underline;
+    border: solid 1px var(--soft-orange);
   }
   &:active {
-    color: white;
-    background-color: var(--soft-orange);
+    color: var(--soft-orange);
+    border: solid 1px var(--soft-orange);
   }
 
-  .correct {
+  &.correct {
     color: white;
     background-color: var(--teal);
   }
-  .inCorrect {
-    color: var(--soft-orange);
-    background-color: var(--card-color);
-    border: solid 1px var(--soft-orange);
+  &.inCorrect {
+    color: white;
+    background-color: var(--red);
   }
 `;
-const QuizButton = ({ btnName, ...props }) => {
+const QuizButton = ({ btnName, isCorrect, ...props }) => {
   // eslint-disable-next-line no-undef
-  return <StyledQuizButton {...props}>{btnName}</StyledQuizButton>;
+  return (
+    <StyledQuizButton
+      className={
+        isCorrect !== null ? (isCorrect ? "correct" : "inCorrect") : ""
+      }
+      {...props}
+    >
+      {btnName}
+    </StyledQuizButton>
+  );
 };
 
 export default QuizButton;

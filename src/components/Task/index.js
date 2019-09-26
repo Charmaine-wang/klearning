@@ -1,25 +1,25 @@
+/* eslint-disable react/destructuring-assignment */
 import React from "react";
 import styled from "styled-components";
-import PlayVideo from "../Icons/PlayVideo";
+import TaskItem from "../TaskItem";
 
 const StyledTask = styled.div`
-  width: 95vw;
+  width: 100%;
   height: 100%;
-  padding: 5%;
+
+  border-radius: 10px;
+  padding: 5% 5% 0 5%;
   background-color: var(--card-color);
+
   display: flex;
   flex-direction: column;
 
-  & > .task-step {
-    display: flex;
-    justify-content: space-between;
-    & > div {
-      display: flex;
-      & > :first-child {
-        margin: 0 7px 0 0;
-      }
-    }
+  & > h1 {
+    margin: 0 0 6% 0;
+    font-size: 20px;
+    font-weight: 600;
   }
+
   & > hr {
     width: 100%;
     opacity: 0.2;
@@ -28,21 +28,23 @@ const StyledTask = styled.div`
   }
 `;
 
-const Task = ({ headerTask, taskNr, taskName, taskTime }) => {
+const Task = props => {
   return (
     <StyledTask>
-      <h1>{headerTask}</h1>
-      <hr />
-      <div className="task-step">
-        <PlayVideo />
-        <div>
-          <h2>{taskNr}</h2>
-          <h2>{taskName}</h2>
-        </div>
-        <aside />
-        <h3>{taskTime}</h3>
-      </div>
-      <hr />
+      <h1>{props.courseData.headerTask}</h1>
+
+      {props.courseData.course.map(item => {
+        return (
+          <TaskItem
+            onClick={props.onClick}
+            taskName={item.taskName}
+            taskNr={item.taskNr}
+            taskTime={item.taskTime}
+            icon={item.icon}
+            key={item.taskNr}
+          />
+        );
+      })}
     </StyledTask>
   );
 };

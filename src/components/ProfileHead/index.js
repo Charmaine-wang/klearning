@@ -8,6 +8,7 @@ const StyledProfileHead = styled.div`
   /* margin: 3vw auto; */
   background-color: var(--card-color);
   border-radius: 10px;
+  box-shadow: var(--shadow);
 
   h2 {
     margin-bottom: 5px;
@@ -36,11 +37,10 @@ const StyledProfileHead = styled.div`
   .profileImage {
     width: 30%;
     padding-top: 30%;
-    background: url("images/logo192.png");
+    background: url("/images/Photos/Emmy.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    border: 1px solid black;
   }
 `;
 
@@ -50,8 +50,8 @@ const ProfileHead = () => {
       <div className="row">
         <div className="profileImage" />
         <div>
-          <h2>Brandon Lane</h2>
-          <h5>Skådespelare</h5>
+          <h2>Piper Main</h2>
+          <h5>Skådespelerska</h5>
           <div className="row">
             <Button
               btnName="Film"

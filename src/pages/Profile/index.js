@@ -14,6 +14,11 @@ const StyledProfile = styled.div`
   margin-top: 64px;
   width: 100%;
 
+  h1 {
+    @media only screen and (min-width: 700px) {
+      margin-bottom: 10px;
+    }
+  }
   .buttonSwitch {
     width: 90vw;
     margin: auto;
@@ -22,6 +27,20 @@ const StyledProfile = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    @media only screen and (min-width: 700px) {
+      width: 700px;
+    }
+  }
+
+  .scroller {
+    padding: 3vw;
+    @media only screen and (min-width: 700px) {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
 
@@ -61,49 +80,53 @@ const Profile = () => {
       <Container padding="0">
         <h1>Sparade kurser</h1>
       </Container>
-      <Container padding="0 0 16px 16px">
-        <FixedContainer>
-          <ContainerSlider>
+      {/* <Container padding="16px 0" width="100%"> */}
+      <div className="scroller">
+        <FixedContainer heightContainer="40vh">
+          <ContainerSlider paddingScroll="0 0 0 19px">
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Photos/dance.jpg"
               courseCat="Dans"
               courseTime="4h"
               cardHeader="Dans Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
+              // padding="0 0 0 3vw"
             />
 
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Photos/action.jpg"
               courseCat="Film"
               courseTime="4h"
               cardHeader="Film Workshop med Connie Robertson  "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Photos/camera.jpg"
               courseCat="Foto"
               courseTime="4h"
               cardHeader="Foto Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="images/Bild.png"
+              activeCourseImg="/images/Photos/light.jpg"
               courseCat="Studio Ljus"
               courseTime="4h"
               cardHeader="Ljussättnings Workshop med Connie Robertson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
-              bookmark="images/bookmark.png"
+              bookmark="/images/bookmark.png"
+              // padding="0 3vw 0 0"
             />
           </ContainerSlider>
         </FixedContainer>
-      </Container>
+      </div>
+      {/* </Container> */}
     </StyledProfile>
   );
 };
