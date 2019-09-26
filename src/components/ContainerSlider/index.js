@@ -4,7 +4,8 @@ import styled from "styled-components";
 const StyledContainerSlide = styled.div`
   display: flex;
   position: relative;
-  /* width: auto; */
+  padding: ${props => props.padding};
+
   flex-direction: ${props => props.column};
   width: 100%;
   height: 100%;

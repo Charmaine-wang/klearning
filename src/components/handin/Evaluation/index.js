@@ -7,6 +7,7 @@ const StyledEvaluation = styled.div`
     margin-bottom: 10px;
   }
   & > div:first-of-type {
+    box-shadow: var(--shadow);
     padding: 16px;
     background-color: white;
     border-radius: 10px;
@@ -31,7 +32,7 @@ const StyledEvaluation = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
   }
 `;
 

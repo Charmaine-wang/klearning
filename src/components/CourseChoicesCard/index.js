@@ -3,9 +3,11 @@ import styled from "styled-components";
 
 const StyledCourseChoicesCard = styled.div`
   background-color: white;
-  margin: 16px;
+  margin: 16px 0px;
   padding: 16px;
   border-radius: 10px;
+
+  box-shadow: var(--shadow);
 
   .choices {
     display: flex;

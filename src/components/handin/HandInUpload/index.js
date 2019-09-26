@@ -9,6 +9,7 @@ const StyledHandInUpload = styled.div`
   }
 
   & > div:first-of-type {
+    box-shadow: var(--shadow);
     padding: 16px;
     background-color: white;
     border-radius: 10px;

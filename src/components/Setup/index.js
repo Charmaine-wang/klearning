@@ -4,11 +4,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from "react";
 import styled from "styled-components";
-import { withRouter } from "react-router";
-// import More from "../Icons/More";
 import ChevronLeft from "../Icons/ChevronLeft";
 
-const StyledOverviewDrop = styled.div`
+const StyledSetup = styled.div`
   display: ${props => (props.hideOverview ? "none" : "fixed")};
   flex-direction: row;
   align-items: center;
@@ -24,33 +22,24 @@ const StyledOverviewDrop = styled.div`
   & > div {
     display: flex;
     align-items: center;
-  }
-  & > img {
-    background-color: red;
-    display: ${props => (props.showIcon ? "block" : "none")};
+    > a {
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--black-font);
+    }
   }
 `;
 
-const OverviewDrop = ({ changeMethod, location, className, showIcon }) => {
+const Setup = ({ changeMethod, className }) => {
   return (
-    <StyledOverviewDrop
-      className={className}
-      hideOverview={["/", "/profile", "/course", "/media"].includes(
-        location.pathname
-      )}
-    >
+    <StyledSetup className={className}>
       <div>
         <ChevronLeft />
-        <h5>Översikt</h5>
+        <a href="/course/overview">Översikt</a>
       </div>
-      <img
-        src="/images/Ikoner/setup.svg"
-        alt=""
-        onClick={changeMethod}
-        style={{ display: showIcon ? "block" : "none" }}
-      />
+      <img src="/images/Ikoner/setup.svg" alt="" onClick={changeMethod} />
       {/* <More onClick={changeMethod} /> */}
-    </StyledOverviewDrop>
+    </StyledSetup>
   );
 };
-export default withRouter(OverviewDrop);
+export default Setup;

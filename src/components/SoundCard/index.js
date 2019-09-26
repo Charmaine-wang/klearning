@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
-import Button from "../Button";
 import GridLayout from "../GridLayout";
 import SoundPlayer from "../SoundPlayer";
 
@@ -21,7 +20,7 @@ const StyledSoundCard = styled.div`
 const clientId = process.env.REACT_APP_SOUNDCLOUD_CLIENT_ID;
 
 const soundOne = getData[23];
-const SoundCard = ({ nextPart, hideSound, header, intro, previousPart }) => {
+const SoundCard = ({ hideSound, header, intro }) => {
   return (
     <StyledSoundCard hideSound={hideSound}>
       <SoundPlayer
@@ -41,18 +40,6 @@ const SoundCard = ({ nextPart, hideSound, header, intro, previousPart }) => {
             'Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
           }
         />
-        <div className="button-div">
-          <Button
-            btnName="Till översikten"
-            buttonWidth="160px"
-            onClick={() => previousPart()}
-          />
-          <Button
-            btnName="Nästa Lektion"
-            buttonWidth="160px"
-            onClick={() => nextPart()}
-          />
-        </div>
       </GridLayout>
     </StyledSoundCard>
   );

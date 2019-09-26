@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledMiscInfoCard = styled.div`
-  margin: 16px;
+  margin: 16px 0px;
   padding: 16px;
   background-color: white;
   border-radius: 10px;
+  box-shadow: var(--shadow);
 
   h2 {
     color: var(--soft-orange);

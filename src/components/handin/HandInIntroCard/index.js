@@ -10,6 +10,7 @@ const StyledHandInCard = styled.div`
     margin-bottom: 10px;
   }
   & > div {
+    box-shadow: var(--shadow);
     /* margin: 16px; */
     /* padding: 16px; */
     background-color: white;

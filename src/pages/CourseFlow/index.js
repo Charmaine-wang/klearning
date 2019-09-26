@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react/destructuring-assignment */
 import React, { useState } from "react";
 import styled from "styled-components";
 import Container from "../../components/Container";
@@ -14,21 +17,29 @@ import HandInUpload from "../../components/handin/HandInUpload";
 import HandInFeedBack from "../../components/handin/HandInFeedBack";
 import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm";
 import Evaluation from "../../components/handin/Evaluation";
+// import OverviewDrop from "../../components/OverviewDrop";
+import Setup from "../../components/Setup";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
   width: 100%;
 `;
 
-const CourseFlow = () => {
-  const [lessonPart, setLessonPart] = useState(9);
+const CourseFlow = props => {
+  console.log(props);
+  const [lessonPart, setLessonPart] = useState(1);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
+  const [mediaState, setMediaState] = useState(
+    props.location.state.mediaPreset
+      ? props.location.state.mediaPreset
+      : "video"
+  );
 
-  function nextLessonPart() {
+  const nextLessonPart = () => {
     setLessonPart(lessonPart + 1);
     setProgress(progress + 10);
-  }
+  };
 
   function previousLessonPart() {
     setLessonPart(lessonPart - 1);
@@ -43,20 +54,37 @@ const CourseFlow = () => {
     setLessonPart(2);
     setQuizScore(0);
   }
+
+  console.log(nextLessonPart);
   return (
     <StyledCourseFlow>
+      <Setup />
+      {/* <OverviewDrop /> */}
       <Container>
         {lessonPart === 1 ? (
-          <Media
-            nextPart={nextLessonPart}
-            header="1. Introduktion"
-            intro="Välkommen till kursen “Self-tape - international”.  I denna kurs kommer du att få lära dig användbara tekniker och tips som
-            ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.
-            
-            Den här introduktionen kommer ge dig en översikt om vad kursen kommer innehålla, hur tjänsten fungerar och viktiga datum att hålla reda på. "
-            paragraph="Här står en längre text till text-sidan."
-            previousPart={previousLessonPart}
-          />
+          <>
+            {mediaState === "video" && (
+              <Media
+                nextPart={nextLessonPart}
+                previousPart={previousLessonPart}
+                video
+              />
+            )}
+            {mediaState === "sound" && (
+              <Media
+                nextPart={nextLessonPart}
+                previousPart={previousLessonPart}
+                sound
+              />
+            )}
+            {mediaState === "text" && (
+              <Media
+                nextPart={nextLessonPart}
+                previousPart={previousLessonPart}
+                text
+              />
+            )}
+          </>
         ) : (
           ""
         )}

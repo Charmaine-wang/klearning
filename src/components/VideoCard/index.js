@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
-import Button from "../Button";
 import GridLayout from "../GridLayout";
 import VideoPlayer from "../VideoPlayer";
 // import getData from '../../data/tracks.json'
@@ -17,7 +16,7 @@ const StyledVideoCard = styled.div`
   }
 `;
 
-const VideoCard = ({ nextPart, hidePlayer, header, intro, previousPart }) => {
+const VideoCard = ({ hidePlayer, header, intro }) => {
   return (
     <StyledVideoCard hidePlayer={hidePlayer}>
       {/* LÄGGA IN VIDEO */}
@@ -32,18 +31,6 @@ const VideoCard = ({ nextPart, hidePlayer, header, intro, previousPart }) => {
             'Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
           }
         />
-        <div className="button-div">
-          <Button
-            btnName="Till översikten"
-            buttonWidth="160px"
-            onClick={() => previousPart()}
-          />
-          <Button
-            btnName="Nästa Lektion"
-            buttonWidth="160px"
-            onClick={() => nextPart()}
-          />
-        </div>
       </GridLayout>
     </StyledVideoCard>
   );

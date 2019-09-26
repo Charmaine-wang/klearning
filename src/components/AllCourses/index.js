@@ -18,7 +18,7 @@ const AllCourses = () => {
       <Button
         btnName="Allt"
         buttonHeight="50%"
-        buttonWidth="140px"
+        buttonWidth="100px"
         margin="0 1% 0 0"
       />
       <Button
@@ -30,19 +30,19 @@ const AllCourses = () => {
       <Button
         btnName="film"
         buttonHeight="50%"
-        buttonWidth="120px"
+        buttonWidth="100px"
         margin="0 1% 0 0"
       />
       <Button
         btnName="TV"
         buttonHeight="50%"
-        buttonWidth="130px"
+        buttonWidth="100px"
         margin="0 1% 0 0"
       />
       <Button
         btnName="Musik"
         buttonHeight="50%"
-        buttonWidth="130px"
+        buttonWidth="110px"
         margin="0 1% 0 0"
       />
     </StyledAllCourses>

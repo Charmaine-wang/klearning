@@ -8,8 +8,14 @@ const StyledCourseListItem = styled.div`
   background-color: var(--card-color);
   align-self: flex-start;
   width: 85vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
+  height: ${props => (props.expandHeight ? props.expandHeight : "12.5vh")};
   border-radius: 10px;
+
+  & > a > img {
+    width: 45%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+  }
 
   & > a {
     width: 100%;
@@ -76,7 +82,7 @@ const StyledCourseListItem = styled.div`
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     width: 330px;
-    height: 105px;
+    height: 90px;
 
     & > a > div > div > aside {
       width: 40px;

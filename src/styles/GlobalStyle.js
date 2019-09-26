@@ -19,7 +19,12 @@ const GlobalStyle = createGlobalStyle`
   --accent-font:  Cursive; /* WHAT FONT SHOULD WE HAVE HERE */
   --main-font: "Open sans";
   --backup-font: "cursive";
+
+  /* Shadow */
+  --shadow: 0px 0px 20px 1px rgba(199,199,199,0.5);
+  
   }
+
 
   body {
     background-color: var(--bg-color);
