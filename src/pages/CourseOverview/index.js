@@ -34,31 +34,82 @@ const OwerviewPage = () => {
     {
       headerTask: "introduktion",
       course: [
-        { taskNr: "1.", taskName: "Introduktionsfilm", taskTime: "03.53" }
+        {
+          taskNr: "1.",
+          taskName: "Introduktionsfilm",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Video.svg",
+          onClick: ""
+        }
       ]
     },
     {
       headerTask: "Bakgrund",
       course: [
-        { taskNr: "2.", taskName: "Vad är ett self-tape", taskTime: "03.53" },
-        { taskNr: "3.", taskName: "Övning", taskTime: "03.53" }
+        {
+          taskNr: "2.",
+          taskName: "Vad är ett self-tape",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Video.svg"
+        },
+        {
+          taskNr: "3.",
+          taskName: "Övning",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Quiz.svg"
+        }
       ]
     },
     {
       headerTask: "Inlämning",
       course: [
-        { taskNr: "1.", taskName: "Skapa ett self-tape", taskTime: "03.53" },
-        { taskNr: "2.", taskName: "Att tänka på", taskTime: "03.53" },
-        { taskNr: "3.", taskName: "Inspeling", taskTime: "03.53" },
-        { taskNr: "4.", taskName: "Lämna in inspelning", taskTime: "03.53" },
-        { taskNr: "5.", taskName: "Boka tid för feedback", taskTime: "03.53" }
+        {
+          taskNr: "1.",
+          taskName: "Skapa ett self-tape",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Uppgift.svg"
+        },
+        {
+          taskNr: "2.",
+          taskName: "Att tänka på",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Uppgift.svg"
+        },
+        {
+          taskNr: "3.",
+          taskName: "Inspeling",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Uppgift.svg"
+        },
+        {
+          taskNr: "4.",
+          taskName: "Lämna in inspelning",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Ladda-up.svg"
+        },
+        {
+          taskNr: "5.",
+          taskName: "Boka tid för feedback",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Feedback.svg"
+        }
       ]
     },
     {
       headerTask: "Intyg",
       course: [
-        { taskNr: "6.", taskName: "Utvädering", taskTime: "03.53" },
-        { taskNr: "7.", taskName: "Intyg", taskTime: "03.53" }
+        {
+          taskNr: "6.",
+          taskName: "Utvädering",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Utvärdering.svg"
+        },
+        {
+          taskNr: "7.",
+          taskName: "Intyg",
+          taskTime: "03.53",
+          icon: "/images/Ikoner/Kursöversikt/Intyg.svg"
+        }
       ]
     }
   ];
@@ -84,10 +135,11 @@ const OwerviewPage = () => {
 
       {courseOverview.map(courses => {
         return (
-          <Container>
+          <Container key={courses.headerTask}>
             <Task
               courseData={courses}
               onClick={() => setTakingCourse(!isTakingCourse)}
+              key={courses.taskNr}
             />
           </Container>
         );
