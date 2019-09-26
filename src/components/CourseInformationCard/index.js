@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledCourseInformationCard = styled.div`
-  margin: 16px;
+  margin: 16px 0px;
 
   .course-information-card {
     box-shadow: var(--shadow);
