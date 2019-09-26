@@ -78,11 +78,11 @@ const StyledActiveCourseCard = styled.div`
     height: 303px;
 
     & > a {
-      width: 286px;
+      width: 100%;
     }
     & > a > img {
       height: 50%;
-      width: 286px;
+      width: 100%;
     }
   }
 `;

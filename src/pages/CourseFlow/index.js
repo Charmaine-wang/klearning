@@ -19,6 +19,7 @@ import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm
 import Evaluation from "../../components/handin/Evaluation";
 import OverviewDrop from "../../components/OverviewDrop";
 import Setup from "../../components/Setup";
+import Mediatwo from "../../components/Mediatwo";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
@@ -168,14 +169,17 @@ const CourseFlow = props => {
           ""
         )}
         {lessonPart === 7 ? (
-          <Media
+          <Mediatwo
             nextPart={nextLessonPart}
+            previousPart={previousLessonPart}
+            video
+            setChanged={setChanged}
+            isChanged={isChanged}
             header="2. Vad är en self-tape?"
             intro="I den här lektionen får vi kunskap om vad ett self-tape är och hur det används i film branchen. "
             paragraph="Self taping – den provfilmning som skådespelaren gör med sig själv framför kameran - blir allt vanligare inom rollsättning/casting. Den förekommer som ett första steg i processen då skådespelare och rollsättare inte kan träffas personligen t. ex när utländska casting directors söker svenska skådespelare.
 
             För många känns det som en utmaning att stå för såväl gestaltning som den tekniska utformningen av en self tape. I workshopen går Tommy Chaanhing igenom de nödvändiga grundelementen i filmarbetet och ger skådespelaren insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes. Workshopen blandar föreläsningar och praktiska filmövningar. Genom Tommys återkoppling kring övningarna och diskussioner i gruppen får deltagarna kunskap och kompetens att skapa self tapes som når fram, gör intryck och håller så god kvalité som möjligt."
-            previousPart={previousLessonPart}
           />
         ) : (
           ""
