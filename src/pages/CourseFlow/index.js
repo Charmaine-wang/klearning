@@ -19,6 +19,7 @@ import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm
 import Evaluation from "../../components/handin/Evaluation";
 import OverviewDrop from "../../components/OverviewDrop";
 import Setup from "../../components/Setup";
+import GridLayout from "../../components/GridLayout";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;

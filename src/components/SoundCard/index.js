@@ -8,6 +8,7 @@ import getData from "../../data/tracks.json";
 
 const StyledSoundCard = styled.div`
   display: ${props => (props.hideSound ? "none" : "block")};
+
   & > div .button-div {
     display: flex;
     width: 100%;
