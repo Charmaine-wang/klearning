@@ -61,43 +61,43 @@ const CourseFlow = props => {
     <StyledCourseFlow>
       {lessonPart !== 1 && <OverviewDrop />}
 
+      {lessonPart === 1 ? (
+        <>
+          <Setup changeMethod={() => setChanged(!isChanged)} />
+
+          {mediaState === "video" && (
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              video
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+          {mediaState === "sound" && (
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              sound
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+          {mediaState === "text" && (
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              text
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+        </>
+      ) : (
+        ""
+      )}
+
       <Container>
-        {lessonPart === 1 ? (
-          <>
-            <Setup changeMethod={() => setChanged(!isChanged)} />
-
-            {mediaState === "video" && (
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                video
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            )}
-            {mediaState === "sound" && (
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                sound
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            )}
-            {mediaState === "text" && (
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                text
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            )}
-          </>
-        ) : (
-          ""
-        )}
-
         {lessonPart === 2 ? (
           <Intro
             numberOfQuestions="3"
