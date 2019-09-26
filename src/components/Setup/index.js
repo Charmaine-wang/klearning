@@ -17,7 +17,7 @@ const StyledSetup = styled.div`
   background-color: var(--card-color);
   border-top: 1px solid var(--light-grey);
   z-index: 2;
-  margin: 17% 0 0 0;
+  margin: 0 0 0 0;
 
   & > div {
     display: flex;
