@@ -32,7 +32,7 @@ const StyledIntro = styled.div`
       line-height: 135%;
     }
     & > div {
-      width: 400px;
+      width: 350px;
       height: 350px;
       background-image: url("/images/Illustrations/quiz.svg");
       background-position: center;

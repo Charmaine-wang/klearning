@@ -28,7 +28,7 @@ const StyledAchievement = styled.div`
   }
 
   & > div:first-of-type {
-    width: 400px;
+    width: 350px;
     height: 350px;
     background-image: url("/images/Illustrations/quiz.svg");
     background-position: center;
