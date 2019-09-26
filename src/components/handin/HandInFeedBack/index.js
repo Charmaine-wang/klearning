@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Button from "../../Button";
 
 const StyledHandInFeedBack = styled.div`
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -47,7 +51,9 @@ const StyledHandInFeedBack = styled.div`
       margin: 8px 0px;
     }
   }
-
+  .grow {
+    flex-grow: 1;
+  }
   .row {
     width: 100%;
     display: flex;
@@ -128,6 +134,7 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
           </div>
         </div>
       </div>
+      <div className="grow" />
       <div className="row">
         <Button
           btnName="Bakåt"

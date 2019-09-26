@@ -7,6 +7,11 @@ import Button from "../../Button";
 const StyledHandInChoice = styled.div`
   width: 100%;
   margin: auto;
+
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -46,6 +51,9 @@ const StyledHandInChoice = styled.div`
         color: var(--soft-orange);
       }
     }
+  }
+  .grow {
+    flex-grow: 1;
   }
   .row {
     width: 100%;
@@ -92,6 +100,7 @@ const HandInChoice = ({
           </div>
         </div>
       </div>
+      <div className="grow" />
       <div className="row">
         <Button
           btnName="Bakåt"
