@@ -49,7 +49,8 @@ const MediaPage = (
     if (props.video) {
       setSelectedAlt("video");
     }
-  });
+  }, []);
+  console.log(selectedAlt);
 
   return (
     <StyledMediaPage>

@@ -11,7 +11,7 @@ const StyledSetup = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0 -16px;
+  /* margin: 0 -16px; */
   padding: 0 10px;
   width: 100vw;
   height: 5vh;
@@ -30,14 +30,14 @@ const StyledSetup = styled.div`
   }
 `;
 
-const Setup = ({ changeMethod, className }) => {
+const Setup = (props, { className }) => {
   return (
     <StyledSetup className={className}>
       <div>
         <ChevronLeft />
         <a href="/course/overview">Översikt</a>
       </div>
-      <img src="/images/Ikoner/setup.svg" alt="" onClick={changeMethod} />
+      <img src="/images/Ikoner/setup.svg" alt="" onClick={props.changeMethod} />
       {/* <More onClick={changeMethod} /> */}
     </StyledSetup>
   );
