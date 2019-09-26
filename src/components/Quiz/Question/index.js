@@ -3,7 +3,10 @@ import styled from "styled-components";
 import QuizButton from "../QuizButton";
 
 const StyledQuestion = styled.div`
-  margin-bottom: 10px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   & > div:first-of-type {
     height: 70vh;
     background-color: var(--card-color);
@@ -19,6 +22,10 @@ const StyledQuestion = styled.div`
     h3 {
       font-weight: 600;
       color: var(--black-font);
+    }
+
+    & > p {
+      line-height: 165%;
     }
 
     & > div:first-of-type {
@@ -38,6 +45,10 @@ const StyledQuestion = styled.div`
       align-items: center;
       margin-top: auto;
     }
+  }
+  & > button:last-of-type {
+    justify-self: flex-end;
+    margin: auto;
   }
 `;
 

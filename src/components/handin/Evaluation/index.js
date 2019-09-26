@@ -34,6 +34,11 @@ const StyledEvaluation = styled.div`
     flex-direction: row;
     justify-content: center;
   }
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
 `;
 
 const Evaluation = ({ header, paragraph, imgSrc, nextPart }) => {

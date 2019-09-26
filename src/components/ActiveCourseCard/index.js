@@ -7,7 +7,7 @@ const StyledActiveCourseCard = styled.div`
   display: flex;
   flex-direction: column;
   background-color: var(--card-color);
-  width: 75vw;
+  width: ${props => (props.singleCard ? props.singleCard : "75vw")};
   height: ${props => (props.expandHeight ? props.expandHeight : "37vh")};
   border-radius: 10px;
   /* justify-content: space-between; */
@@ -98,7 +98,8 @@ const ActiveCourseCard = ({
   bookmarkAlt,
   padding,
   active,
-  timeLeft
+  timeLeft,
+  singleCard
 }) => {
   const [isClicked, setClicked] = useState(false);
   console.log(
@@ -114,7 +115,7 @@ const ActiveCourseCard = ({
   );
 
   return (
-    <StyledActiveCourseCard padding={padding}>
+    <StyledActiveCourseCard padding={padding} singleCard={singleCard}>
       <a href="course/info">
         <img src={activeCourseImg} alt={activeCourseAlt} />
         {active ? <div className="progress" /> : ""}

@@ -127,13 +127,15 @@ const OwerviewPage = props => {
         onClick={() => setTakingCourse(!isTakingCourse)}
       />
       {/* <ModalAlternative isActive /> */}
-      <Container>
+      <Container padding="30px 0 30px 0">
         <Communication />
       </Container>
-
+      <Container padding="0 0 10px 0">
+        <h1>Kursöversikt</h1>
+      </Container>
       {courseOverview.map(courses => {
         return (
-          <Container key={courses.headerTask}>
+          <Container padding="0 0 20px 0" key={courses.headerTask}>
             <Task
               courseData={courses}
               onClick={() => setTakingCourse(!isTakingCourse)}
@@ -142,7 +144,7 @@ const OwerviewPage = props => {
           </Container>
         );
       })}
-      <Container>
+      <Container padding="0 0 20px 0">
         <div className="start-course-btn">
           <Button
             btnName="Starta kurs"
