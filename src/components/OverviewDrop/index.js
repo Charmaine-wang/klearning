@@ -5,7 +5,6 @@
 import React from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router";
-// import More from "../Icons/More";
 import ChevronLeft from "../Icons/ChevronLeft";
 
 const StyledOverviewDrop = styled.div`
@@ -13,15 +12,15 @@ const StyledOverviewDrop = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* padding: 5%; */
+
   width: 100vw;
   height: 5vh;
   background-color: var(--card-color);
   border-top: 1px solid var(--light-grey);
   z-index: 2;
-  margin: 17% 0 0 0;
+  margin: 15% 0 0 0;
 
-    & > div {
+  & > div {
     display: flex;
     align-items: center;
     > a {
@@ -29,6 +28,7 @@ const StyledOverviewDrop = styled.div`
       text-decoration: none;
       color: var(--black-font);
     }
+  }
   & > img {
     background-color: red;
     display: ${props => (props.showIcon ? "block" : "none")};

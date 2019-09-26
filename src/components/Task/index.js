@@ -6,11 +6,9 @@ import TaskItem from "../TaskItem";
 const StyledTask = styled.div`
   width: 100%;
   height: 100%;
-
   border-radius: 10px;
   padding: 5% 5% 0 5%;
   background-color: var(--card-color);
-
   display: flex;
   flex-direction: column;
 
@@ -36,6 +34,7 @@ const Task = props => {
       {props.courseData.course.map(item => {
         return (
           <TaskItem
+            className={props.className}
             onClick={props.onClick}
             taskName={item.taskName}
             taskNr={item.taskNr}

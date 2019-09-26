@@ -210,6 +210,7 @@ const Home = () => {
           </ContainerSlider>
         </FixedContainer>
         {/* FOR MOBILE */}
+        <h1>Varför e-learning?</h1>
         <GridLayout
           gridRadius="10px"
           gridGap="3em"

@@ -7,13 +7,7 @@ import VideoPlayer from "../VideoPlayer";
 
 const StyledVideoCard = styled.div`
   display: ${props => (props.hidePlayer ? "none" : "block")};
-  & > div .button-div {
-    display: flex;
-    width: 100%;
-    height: 45px;
-    justify-content: space-around;
-    margin: 4% 0 0 0;
-  }
+  /* height: 40vh; */
 `;
 
 const VideoCard = ({ hidePlayer, header, intro }) => {
@@ -21,15 +15,17 @@ const VideoCard = ({ hidePlayer, header, intro }) => {
     <StyledVideoCard hidePlayer={hidePlayer}>
       {/* LÄGGA IN VIDEO */}
       <VideoPlayer videoId="l2vcqaClw-A" />
-      <GridLayout padding="12% 2.5% 0 0">
+      <GridLayout padding="1% 3vw">
         <CourseInformationCard
+          heightAside={{ height: "20px" }}
           header={header || "1. Introduktion"}
           colorHeader="var(--dark-grey)"
-          paddingInfo="12% 6%"
+          paddingInfo="5% 6%"
           paragraph={
             intro ||
-            'Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes.'
+            'Välkommen till kursen "Self-tape - international".  I denna kurs kommer du att få lära dig användbara tekniker och tips som ger dig insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes. '
           }
+          paragraphtwo=" Den här introduktionen kommer ge dig en översikt om vad kursen kommer innehålla, hur tjänsten fungerar och viktiga datum att hålla reda på. "
         />
       </GridLayout>
     </StyledVideoCard>

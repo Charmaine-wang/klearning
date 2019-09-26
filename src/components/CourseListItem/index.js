@@ -7,8 +7,8 @@ const StyledCourseListItem = styled.div`
   flex-direction: row;
   background-color: var(--card-color);
   align-self: flex-start;
-  width: 85vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "12.5vh")};
+  width: 90vw;
+  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
 
   & > a > img {
@@ -29,17 +29,19 @@ const StyledCourseListItem = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 4%;
     width: 100%;
     height: 100%;
   }
   & > a > div > div {
     display: flex;
     justify-content: space-between;
-    margin: 0 5%;
-    > img {
-      height: 50%;
+    margin: 0;
+    > svg {
+      /* height: 50%;
       width: 12%;
       align-self: center;
+      background-color: red; */
     }
     > h5 {
       align-self: center;
@@ -54,7 +56,7 @@ const StyledCourseListItem = styled.div`
   }
   & > a > div > p,
   h2 {
-    margin: 2% 5%;
+    margin: 2% 0;
   }
 
   & > a > div > h2 {
@@ -87,8 +89,6 @@ const StyledCourseListItem = styled.div`
     & > a > div > div > aside {
       width: 40px;
     }
-
-    /* align-items: center; */
   }
   .orange {
     color: orange;
@@ -103,13 +103,7 @@ const CourseListItem = ({
   active,
   timeLeft,
   courseTeacher
-
-  // courseTimeLeft,
-  // bookmark,
-  // bookmarkAlt
 }) => {
-  // const [isClicked, setClicked] = useState(false)
-
   return (
     <StyledCourseListItem>
       <a href="course/info">

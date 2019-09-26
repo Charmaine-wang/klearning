@@ -4,7 +4,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AlternativeDrop from "../../components/AlternativeDrop";
-// import Setup from "../../components/Setup";
 import VideoCard from "../../components/VideoCard";
 import SoundCard from "../../components/SoundCard";
 import TextCard from "../../components/TextCard";
@@ -15,12 +14,15 @@ const StyledMediaPage = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: none;
+  overflow-y: hidden;
   margin: 0;
-  padding: 0 -16px;
+  /* padding: 0 -16px; */
   & > div:last-child {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    height: 12vh;
+    padding: 0 3vw;
+    justify-content: space-between;
     align-items: center;
   }
 `;
@@ -58,6 +60,7 @@ const MediaPage = (
   return (
     <StyledMediaPage>
       {/* <Setup changeMethod={() => setChanged(!isChanged)} /> */}
+
       <AlternativeDrop
         hideDrop={props.isChanged}
         showVideo={() => {
@@ -87,6 +90,10 @@ const MediaPage = (
           paragraph2="Den här introduktionen kommer ge dig en översikt om vad 
            kursen kommer innehålla, 
            hur tjänsten fungerar och viktiga datum att hålla reda på. "
+          date="Viktiga datum"
+          paragraph3="- 29 maj: Skicka in första utkast av self-tape"
+          paragraph4="- 30 maj: Boka tid för feedback"
+          paragraph5="- 3 juni: Skicka in andra utkast av self-tape"
           intro={intro}
           previousPart={previousPart}
         />
@@ -99,6 +106,7 @@ const MediaPage = (
           previousPart={previousPart}
         />
       )}
+
       {selectedAlt === "sound" && (
         <SoundCard
           nextPart={props.nextPart}
