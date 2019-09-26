@@ -30,7 +30,7 @@ const StyledSetup = styled.div`
   }
 `;
 
-const Setup = props => {
+const Setup = (props, { className }) => {
   return (
     <StyledSetup className={className}>
       <div>
