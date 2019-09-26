@@ -81,7 +81,7 @@ const AboutCourse = () => {
       <div className="similar-courses">
         <div className="course-div">
           <CourseListItem
-            courseImg="/images/rectangle2.png"
+            courseImg="/images/Photos/voice.jpg"
             courseLength="4h"
             courseTitle="Röstteknik, ljudboksinläsning..."
             courseTeacher="Jan Cruseman"

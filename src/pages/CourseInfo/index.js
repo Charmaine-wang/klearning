@@ -71,7 +71,7 @@ const Course = () => {
         <h1 className="course-header">Self-tape international</h1>
         <img
           className="hero-image-course"
-          src="/images/selftape-hero.png"
+          src="/images/Photos/Self-tape-cover.jpg"
           alt="course"
         />
         <NavLink to="/course/overview">
