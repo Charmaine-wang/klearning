@@ -12,6 +12,7 @@ const StyledAchievement = styled.div`
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  box-shadow: var(--shadow);
 
   h1 {
     color: var(--black-font);

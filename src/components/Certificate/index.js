@@ -9,6 +9,7 @@ const StyledCertificate = styled.div`
   height: 13vh;
   border-radius: 10px;
   margin: 10px auto;
+  box-shadow: var(--shadow);
 
   & > div {
     width: 100%;

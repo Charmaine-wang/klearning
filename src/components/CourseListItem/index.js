@@ -112,7 +112,7 @@ const CourseListItem = ({
 
   return (
     <StyledCourseListItem>
-      <a href="course">
+      <a href="course/info">
         <img src={courseImg} alt={courseAlt} />
         <div>
           <p>{courseLength}</p>

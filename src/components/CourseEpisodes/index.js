@@ -55,7 +55,7 @@ const CourseEpisodes = () => {
       <div className="similar-courses">
         <div className="course-div">
           <CourseListItem
-            courseImg="images/rectangle2.png"
+            courseImg="/images/rectangle2.jpg"
             courseLength="4h"
             courseTitle="Röstteknik, ljudboksinläsning..."
             courseTeacher="Jan Cruseman"
@@ -63,7 +63,7 @@ const CourseEpisodes = () => {
         </div>
         <div className="course-div">
           <CourseListItem
-            courseImg="images/rectangle2.png"
+            courseImg="/images/Photos/light.jpg"
             courseLength="5h"
             courseTitle="Kurs i filmskådespeleri"
             courseTeacher="Lisa Ohlin"
@@ -71,7 +71,7 @@ const CourseEpisodes = () => {
         </div>
         <div className="course-div">
           <CourseListItem
-            courseImg="images/rectangle2.png"
+            courseImg="/images/Photos/filming.jpg"
             courseLength="4h"
             courseTitle="Shifting focus"
             courseTeacher="Rene Baker"

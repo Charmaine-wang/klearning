@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import Button from "../../components/Button";
 import AboutCourse from "../../components/AboutCourse";
 import CourseEpisodes from "../../components/CourseEpisodes";
@@ -49,6 +50,8 @@ const StyledCourse = styled.div`
 `;
 
 const Course = () => {
+  const [textColor, setTextColor] = useState("var(--soft-orange)");
+  const [textColor2, setTextColor2] = useState("var(--black-font)");
   const [courseComponent, setCourseComponent] = useState("aboutCourse");
   const [headerText, setHeaderText] = useState("Inlärningsalternativ");
 
@@ -71,30 +74,38 @@ const Course = () => {
           src="/images/selftape-hero.png"
           alt="course"
         />
-        <Button
-          bgColor="var(--soft-orange)"
-          textColor="white"
-          btnName="Ansök till kurs"
-          className="image-apply-button"
-          border="none"
-        />
+        <NavLink to="/course/overview">
+          <Button
+            bgColor="var(--soft-orange)"
+            textColor="white"
+            btnName="Ansök till kurs"
+            className="image-apply-button"
+            border="none"
+          />
+        </NavLink>
       </div>
       <Container>
         <div className="button-container">
           <Button
+            textColor={textColor}
             btnName="Om kurs"
             buttonWidth="45%"
             onClick={() => {
               setCourseComponent("aboutCourse");
               setHeaderText("Inlärningsalternativ");
+              setTextColor2("var(--black-font)");
+              setTextColor("var(--soft-orange)");
             }}
           />
           <Button
+            textColor={textColor2}
             btnName="Kursinnehåll"
             buttonWidth="45%"
             onClick={() => {
               setCourseComponent("courseEpisodes");
               setHeaderText("Kursinnehåll");
+              setTextColor2("var(--soft-orange)");
+              setTextColor("var(--black-font)");
             }}
           />
         </div>
