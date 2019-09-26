@@ -31,7 +31,7 @@ const CourseFlow = props => {
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
   const [mediaState, setMediaState] = useState(
-    props.location.state.mediaPreset
+    props.location && props.location.state && props.location.state.mediaPreset
       ? props.location.state.mediaPreset
       : "video"
   );
