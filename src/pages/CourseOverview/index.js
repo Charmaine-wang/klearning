@@ -130,14 +130,15 @@ const OwerviewPage = () => {
         buttonHeight="buttonHeight"
         onClick={() => setTakingCourse(!isTakingCourse)}
       />
-
       <Container>
         <Communication />
       </Container>
-
+      <Container padding="0 0 10px 0">
+        <h1>Kursöversikt</h1>
+      </Container>
       {courseOverview.map(courses => {
         return (
-          <Container key={courses.headerTask}>
+          <Container padding="0 0 20px 0" key={courses.headerTask}>
             <Task
               // className="task-div"
               courseData={courses}
@@ -147,7 +148,7 @@ const OwerviewPage = () => {
           </Container>
         );
       })}
-      <Container>
+      <Container padding="0 0 20px 0">
         <div className="start-course-btn">
           <Button
             btnName="Starta kurs"

@@ -68,13 +68,19 @@ const Profile = () => {
       <div className="buttonSwitch">
         <Button
           btnName="Kurser"
+          buttonWidth="100px"
           onClick={() => setProfileComponent("courses")}
         />
         <Button
           btnName="Intyg"
+          buttonWidth="100px"
           onClick={() => setProfileComponent("certificates")}
         />
-        <Button btnName="CV" onClick={() => setProfileComponent("cv")} />
+        <Button
+          btnName="CV"
+          buttonWidth="100px"
+          onClick={() => setProfileComponent("cv")}
+        />
       </div>
       <Container>{switchComponent()}</Container>
       <Container padding="0">

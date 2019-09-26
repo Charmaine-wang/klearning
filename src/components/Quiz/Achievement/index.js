@@ -13,6 +13,7 @@ const StyledAchievement = styled.div`
   align-items: center;
   text-align: center;
   box-shadow: var(--shadow);
+  min-height: 80vh;
 
   h1 {
     color: var(--black-font);
@@ -28,7 +29,7 @@ const StyledAchievement = styled.div`
   }
 
   & > div:first-of-type {
-    width: 400px;
+    width: 350px;
     height: 350px;
     background-image: url("/images/Illustrations/quiz.svg");
     background-position: center;
@@ -57,17 +58,17 @@ const StyledAchievement = styled.div`
 const Achievement = ({
   score,
   buttonPadding,
-  message,
+  // message,
   nextPart,
   numberOfQuestions,
   repeatQuiz
 }) => {
   return (
     <StyledAchievement>
-      <h1>{message}</h1>
+      <h1>{score === 3 ? "Bra jobbat!" : "Försök igen!"}</h1>
       <div />
       <h3>
-        Du fick {score || "siffra"}/{numberOfQuestions} rätt!
+        Du fick {score}/{numberOfQuestions} rätt!
       </h3>
       <div>
         <h3>Vill du gå vidare eller göra om?</h3>

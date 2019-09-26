@@ -19,7 +19,7 @@ const MyCourses = () => {
         <FixedContainer>
           <ContainerSlider>
             <ActiveCourseCard
-              activeCourseImg="images/selftape-hero.png"
+              activeCourseImg="/images/Photos/Self-tape-cover.jpg"
               courseCat="Scenekonst"
               courseTime="4h"
               cardHeader="Self-tape International med Thosmas Chaanhing"
@@ -28,6 +28,7 @@ const MyCourses = () => {
               bookmark="images/bookmark.png"
               timeLeft="5 min"
               active="true"
+              singleCard="72wv"
             />
           </ContainerSlider>
         </FixedContainer>

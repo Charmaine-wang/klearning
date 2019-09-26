@@ -3,8 +3,12 @@ import styled from "styled-components";
 import QuizButton from "../QuizButton";
 
 const StyledImageQuestion = styled.div`
-  margin-bottom: 10px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   & > div:first-of-type {
+    width: 100%;
     height: 70vh;
     background-color: var(--card-color);
     border-radius: 10px;
@@ -21,7 +25,9 @@ const StyledImageQuestion = styled.div`
       color: var(--black-font);
       margin-bottom: 5px;
     }
-
+    & > p {
+      line-height: 165%;
+    }
     & > div:first-of-type {
       background-image: url(${({ image }) => image || "images/Bild.png"});
       background-position: center;
@@ -56,8 +62,12 @@ const StyledImageQuestion = styled.div`
       padding: 0 15px;
     }
   }
+  & > button:last-of-type {
+    justify-self: flex-end;
+    margin: auto;
+  }
 `;
-// Test onClick in separate views, not working properly in testView with QuestionComponent above
+
 const ImageQuestion = ({
   question,
   questionNumber,

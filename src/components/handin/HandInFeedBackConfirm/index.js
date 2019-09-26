@@ -44,6 +44,11 @@ const StyledHandInFeedBackConfirm = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
+  img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+  }
 `;
 const HandInFeedBackConfirm = ({
   header,

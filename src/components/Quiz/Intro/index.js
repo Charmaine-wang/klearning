@@ -32,7 +32,7 @@ const StyledIntro = styled.div`
       line-height: 135%;
     }
     & > div {
-      width: 400px;
+      width: 350px;
       height: 350px;
       background-image: url("/images/Illustrations/quiz.svg");
       background-position: center;
@@ -53,8 +53,7 @@ const Intro = ({ nextPart, numberOfQuestions }) => {
           Dags för ett quiz för att se om du fick med dig informationen från den
           senaste lektionen!
           <br /> Quizet består av flervalsfrågor. Markera det svar du tror är
-          rätt och klicka på “svara“ och sedan “nästa fråga” för att ta dig
-          vidare.
+          rätt och klicka på “svara” för att ta dig vidare.
         </p>
         <h5>
           Antal frågor: {numberOfQuestions} <br /> Beräknad tid: ca 2 min

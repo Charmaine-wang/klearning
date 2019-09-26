@@ -15,17 +15,21 @@ const StyledCertificate = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 10px;
-    margin-bottom: 10px;
+    position: relative;
+    /* margin-bottom: 10px; */
 
     & > p {
       align-self: flex-end;
       color: var(--soft-orange);
+      font-size: 12px;
     }
 
     & > div {
+      position: absolute;
+      bottom: 10px;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -41,6 +45,7 @@ const StyledCertificate = styled.div`
       font-size: 16px;
       font-weight: 600;
       max-width: 70%;
+      padding-top: 10px;
     }
   }
   img {
