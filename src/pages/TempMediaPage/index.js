@@ -15,12 +15,24 @@ const StyledMediaPage = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: none;
+  margin: 0;
+  padding: 0 -16px;
+  /* margin:0; */
 
   /* position: relative; */
 `;
 
-const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
-  const [isChanged, setChanged] = useState(true);
+const MediaPage = (
+  props,
+  {
+    // paragraph, paragraph2, pdf,
+    header,
+    intro,
+    previousPart
+  }
+) => {
+  // const [isChanged, setChanged] = useState(true);
+
   const [selectedAlt, setSelectedAlt] = useState("video");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
@@ -43,26 +55,35 @@ const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
     <StyledMediaPage>
       {/* <Setup changeMethod={() => setChanged(!isChanged)} /> */}
       <AlternativeDrop
-        hideDrop={isChanged}
+        hideDrop={props.isChanged}
         showVideo={() => {
           setSelectedAlt("video");
-          setChanged(true);
+          props.setChanged(true);
         }}
         showSound={() => {
           setSelectedAlt("sound");
-          setChanged(true);
+          props.setChanged(true);
         }}
         showText={() => {
           setSelectedAlt("text");
-          setChanged(true);
+          props.setChanged(true);
         }}
       />
       {selectedAlt === "text" && (
         <TextCard
           nextPart={props.nextPart}
-          header={header}
+          pdf="Ladda ner som pdf"
+          pageCurrent="1"
+          pageAmount="3"
+          header="1. Introduktion"
+          paragraph="Välkommen till kursen “Self-tape - international”. 
+           I denna kurs kommer du att få lära dig användbara tekniker och 
+           tips som ger dig insikter om vad rollsättare och regissörer tittar 
+           på och letar efter i self tapes."
+          paragraph2="Den här introduktionen kommer ge dig en översikt om vad 
+           kursen kommer innehålla, 
+           hur tjänsten fungerar och viktiga datum att hålla reda på. "
           intro={intro}
-          paragraph={paragraph}
           previousPart={previousPart}
         />
       )}
