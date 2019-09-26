@@ -8,7 +8,7 @@ import Intro from "../../components/Quiz/Intro";
 import Question from "../../components/Quiz/Question";
 import ImageQuestion from "../../components/Quiz/ImageQuestion";
 import Achievement from "../../components/Quiz/Achievement";
-import Media from "../TempMediaPage";
+import Media from "../../components/MediaOne";
 import HandInIntro from "../../components/handin/HandInIntroCard";
 import HandInChoice from "../../components/handin/HandInChoice";
 import HandInPoints from "../../components/handin/HandInPoints";

@@ -3,11 +3,11 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import AlternativeDrop from "../../components/AlternativeDrop";
-import VideoCard from "../../components/VideoCard";
-import SoundCard from "../../components/SoundCard";
-import TextCard from "../../components/TextCard";
-import Button from "../../components/Button";
+import AlternativeDrop from "../AlternativeDrop";
+import VideoCard from "../VideoCard";
+import SoundCard from "../SoundCard";
+import TextCard from "../TextCard";
+import Button from "../Button";
 
 const StyledMediaPage = styled.div`
   /* margin-top: 65px; */
