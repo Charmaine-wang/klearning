@@ -217,7 +217,7 @@ const Home = () => {
           bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
-          padding="0 0 14% 0"
+          padding="0 3vw 14% 0"
           rowLayoutDesk="1fr"
           colLayoutDesk="1fr 1fr 1fr"
           widthDesk="80%"
