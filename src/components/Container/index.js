@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div`
   height: auto;
-  width: ${({ width }) => width || "94vw"};
-  margin: auto;
-  padding: ${({ padding }) => padding || "16px 0"};
+  width: ${({ width }) => width || "100vw"};
+  /* margin: auto; */
+  padding: ${({ padding }) => padding || "0 16px"};
 
   @media only screen and (min-width: 700px) {
     width: 700px;
