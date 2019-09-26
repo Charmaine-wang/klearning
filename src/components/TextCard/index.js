@@ -6,6 +6,8 @@ const StyledTextCard = styled.div`
   padding: 16px;
   display:flex;
   background-color: var(--card-color);
+  min-height: 70vh;
+  margin-bottom: 20px;
   
 
   .text-card > h1{
