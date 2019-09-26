@@ -115,7 +115,7 @@ const ActiveCourseCard = ({
 
   return (
     <StyledActiveCourseCard padding={padding}>
-      <a href="course">
+      <a href="course/info">
         <img src={activeCourseImg} alt={activeCourseAlt} />
         {active ? <div className="progress" /> : ""}
 
