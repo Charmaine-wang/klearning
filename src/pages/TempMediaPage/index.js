@@ -16,7 +16,7 @@ const StyledMediaPage = styled.div`
   height: 100%;
   overflow-x: none;
   margin: 0;
-  background-color: red;
+  padding: 0 -16px;
   /* margin:0; */
 
   /* position: relative; */
