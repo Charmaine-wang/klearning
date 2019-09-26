@@ -59,8 +59,13 @@ const StyledCV = styled.div`
   }
 
   ul {
+    width: 100%;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   li {
@@ -74,6 +79,18 @@ const StyledCV = styled.div`
     justify-content: flex-start;
     align-items: center;
     color: var(--dark-grey);
+    width: 100%;
+  }
+
+  .buttonDiv {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (min-width: 700px) {
+      width: 100%;
+    }
   }
 
   .icon-placeholder {
@@ -124,18 +141,20 @@ const CV = () => {
             Multimedia AB -{" "}
             <span className="orange"> Assisterande filmfotograf</span>
           </li>
+          <div className="buttonDiv">
+            <Button
+              btnName="Ladda ner CV"
+              className="center"
+              buttonWidth="100%"
+              buttonHeight="3.5em"
+              textColor="var(--soft-orange)"
+              margin="2vw"
+              fontSize="12px"
+              fontWeight="600"
+            />
+          </div>
         </ul>
       </div>
-      <Button
-        btnName="Ladda ner CV"
-        className="center"
-        buttonWidth="50vw"
-        buttonHeight="3.5em"
-        textColor="var(--soft-orange)"
-        margin="0 0 15px 0"
-        fontSize="12px"
-        fontWeight="600"
-      />
     </StyledCV>
   );
 };
