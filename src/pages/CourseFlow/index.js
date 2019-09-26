@@ -19,7 +19,6 @@ import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm
 import Evaluation from "../../components/handin/Evaluation";
 import OverviewDrop from "../../components/OverviewDrop";
 import Setup from "../../components/Setup";
-import GridLayout from "../../components/GridLayout";
 
 const StyledCourseFlow = styled.div`
   margin-top: 64px;
@@ -27,7 +26,6 @@ const StyledCourseFlow = styled.div`
 `;
 
 const CourseFlow = props => {
-  console.log(props);
   const [lessonPart, setLessonPart] = useState(1);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
@@ -61,7 +59,7 @@ const CourseFlow = props => {
     <StyledCourseFlow>
       {lessonPart !== 1 && <OverviewDrop />}
 
-      <Container>
+      <Container padding=" 0">
         {lessonPart === 1 ? (
           <>
             <Setup changeMethod={() => setChanged(!isChanged)} />

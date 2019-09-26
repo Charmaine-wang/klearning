@@ -24,7 +24,7 @@ const StyledMediaPage = styled.div`
 
 const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
   // const [isChanged, setChanged] = useState(true);
-  const [selectedAlt, setSelectedAlt] = useState("video");
+  const [selectedAlt, setSelectedAlt] = useState("");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
   console.log(props);
@@ -40,7 +40,8 @@ const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
     if (props.video) {
       setSelectedAlt("video");
     }
-  });
+  }, []);
+  console.log(selectedAlt);
 
   return (
     <StyledMediaPage>

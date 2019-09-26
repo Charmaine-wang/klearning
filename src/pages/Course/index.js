@@ -67,7 +67,7 @@ const Course = () => {
 
   return (
     <StyledCourse>
-      <Container>
+      <Container padding="0">
         <div className="image-container">
           <h1 className="course-header">Self-tape international</h1>
           <img
