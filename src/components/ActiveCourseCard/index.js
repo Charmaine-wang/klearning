@@ -92,27 +92,16 @@ const ActiveCourseCard = ({
   courseCat,
   courseTime,
   cardHeader,
-  cardParagraph,
+  // cardParagraph,
   courseTeacher,
-  bookmark,
-  bookmarkAlt,
+  // bookmark,
+  // bookmarkAlt,
   padding,
   active,
   timeLeft,
   singleCard
 }) => {
   const [isClicked, setClicked] = useState(false);
-  console.log(
-    activeCourseImg,
-    activeCourseAlt,
-    courseCat,
-    courseTime,
-    cardHeader,
-    cardParagraph,
-    courseTeacher,
-    bookmark,
-    bookmarkAlt
-  );
 
   return (
     <StyledActiveCourseCard padding={padding} singleCard={singleCard}>

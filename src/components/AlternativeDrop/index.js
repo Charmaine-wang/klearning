@@ -43,7 +43,6 @@ const StyledAlternativeDrop = styled.div`
 `;
 const AlternativeDrop = props => {
   // const [selectedAlt, setSelectedAlt] = useState('video');
-  console.log(props);
 
   return (
     <StyledAlternativeDrop {...props}>

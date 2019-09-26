@@ -39,9 +39,7 @@ const MediaPage = (
   // const [isChanged, setChanged] = useState(true);
 
   const [selectedAlt, setSelectedAlt] = useState("video");
-  // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
-  console.log(props);
   useEffect(() => {
     if (props.sound) {
       setSelectedAlt("sound");
@@ -55,7 +53,6 @@ const MediaPage = (
       setSelectedAlt("video");
     }
   }, []);
-  console.log(selectedAlt);
 
   return (
     <StyledMediaPage>
