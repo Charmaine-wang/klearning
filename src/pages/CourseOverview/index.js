@@ -138,9 +138,12 @@ const OwerviewPage = () => {
       </Container>
       {courseOverview.map(courses => {
         return (
-          <Container padding="0 0 20px 0" key={courses.headerTask}>
+          <Container
+            className="task-div"
+            padding="0 0 20px 0"
+            key={courses.headerTask}
+          >
             <Task
-              // className="task-div"
               courseData={courses}
               onClick={() => setTakingCourse(!isTakingCourse)}
               key={courses.taskNr}
