@@ -13,13 +13,11 @@ const StyledActiveCourseCard = styled.div`
   /* justify-content: space-between; */
   /* position: relative; */
   padding: ${props => (props.padding ? props.padding : "0")};
-
   /* & > a > img { 
   width: 100%;
 } */
   & > a {
     justify-content: space-between;
-
     position: relative;
     text-decoration: none;
     width: 70vw;
@@ -40,7 +38,6 @@ const StyledActiveCourseCard = styled.div`
     padding: 0 5%;
     text-decoration: none;
   }
-
   & a > div {
     display: flex;
     justify-content: space-between;
@@ -48,13 +45,11 @@ const StyledActiveCourseCard = styled.div`
     height: 5vh;
     margin: 0;
   }
-
   h2 {
     font-size: 16px;
     font-weight: 600;
     color: var(--black-font);
   }
-
   .semi {
     font-weight: 600;
   }
@@ -72,17 +67,11 @@ const StyledActiveCourseCard = styled.div`
     position: absolute;
     top: 48.5%;
   }
-
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     width: 286px;
     height: 303px;
-
     & > a {
-      width: 286px;
-    }
-    & > a > img {
-      height: 50%;
-      width: 286px;
+      width: 100%;
     }
   }
 `;
