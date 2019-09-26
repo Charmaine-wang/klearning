@@ -13,7 +13,7 @@ const StyledAchievement = styled.div`
   align-items: center;
   text-align: center;
   box-shadow: var(--shadow);
-  height: 80vh;
+  min-height: 80vh;
 
   h1 {
     color: var(--black-font);

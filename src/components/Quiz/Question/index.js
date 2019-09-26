@@ -3,7 +3,7 @@ import styled from "styled-components";
 import QuizButton from "../QuizButton";
 
 const StyledQuestion = styled.div`
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
