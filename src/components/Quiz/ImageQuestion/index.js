@@ -14,6 +14,7 @@ const StyledImageQuestion = styled.div`
     align-items: flex-start;
     margin-bottom: 10px;
     padding-bottom: 20px;
+    box-shadow: var(--shadow);
 
     h3 {
       font-weight: 600;

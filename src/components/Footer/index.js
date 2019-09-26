@@ -30,7 +30,7 @@ const StyledFooter = styled.div`
 
 const Footer = ({ location }) => {
   return (
-    <StyledFooter hideFooter={["/media"].includes(location.pathname)}>
+    <StyledFooter hideFooter={["/course/flow"].includes(location.pathname)}>
       <div>
         <h3>About</h3>
         <h3>FAQ</h3>

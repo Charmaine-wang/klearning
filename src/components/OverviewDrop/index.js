@@ -21,10 +21,14 @@ const StyledOverviewDrop = styled.div`
   z-index: 2;
   margin: 17% 0 0 0;
 
-  & > div {
+    & > div {
     display: flex;
     align-items: center;
-  }
+    > a {
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--black-font);
+    }
   & > img {
     background-color: red;
     display: ${props => (props.showIcon ? "block" : "none")};
@@ -41,7 +45,7 @@ const OverviewDrop = ({ changeMethod, location, className, showIcon }) => {
     >
       <div>
         <ChevronLeft />
-        <h5>Översikt</h5>
+        <a href="/course/overview">Översikt</a>
       </div>
       <img
         src="/images/Ikoner/setup.svg"

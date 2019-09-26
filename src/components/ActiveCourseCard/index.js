@@ -76,7 +76,12 @@ const StyledActiveCourseCard = styled.div`
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     width: 286px;
     height: 303px;
+
     & > a {
+      width: 100%;
+    }
+    & > a > img {
+      height: 50%;
       width: 100%;
     }
   }
@@ -110,7 +115,7 @@ const ActiveCourseCard = ({
 
   return (
     <StyledActiveCourseCard padding={padding}>
-      <a href="course">
+      <a href="course/info">
         <img src={activeCourseImg} alt={activeCourseAlt} />
         {active ? <div className="progress" /> : ""}
 

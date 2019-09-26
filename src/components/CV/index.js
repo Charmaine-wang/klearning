@@ -9,6 +9,7 @@ const StyledCV = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: var(--shadow);
   p {
     color: var(--black-font);
   }

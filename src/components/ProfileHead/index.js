@@ -8,6 +8,7 @@ const StyledProfileHead = styled.div`
   /* margin: 3vw auto; */
   background-color: var(--card-color);
   border-radius: 10px;
+  box-shadow: var(--shadow);
 
   h2 {
     margin-bottom: 5px;

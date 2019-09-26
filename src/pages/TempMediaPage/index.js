@@ -35,7 +35,8 @@ const MediaPage = (
   }
 ) => {
   // const [isChanged, setChanged] = useState(true);
-  const [selectedAlt, setSelectedAlt] = useState("");
+
+  const [selectedAlt, setSelectedAlt] = useState("video");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
   console.log(props);

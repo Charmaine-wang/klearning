@@ -119,15 +119,13 @@ const OwerviewPage = props => {
   return (
     <StyledOwerviewPage>
       <ModalAlternative isActive={isTakingCourse} />
-      <Container padding="0">
-        <ImgButton
-          imgBtn="/images/Photos/Self-tape-cover.jpg"
-          btnName="Starta kurs"
-          buttonWidth="160px"
-          buttonHeight="buttonHeight"
-          onClick={() => setTakingCourse(!isTakingCourse)}
-        />
-      </Container>
+      <ImgButton
+        imgBtn="/images/Photos/Self-tape-cover.jpg"
+        btnName="Starta kurs"
+        buttonWidth="160px"
+        buttonHeight="buttonHeight"
+        onClick={() => setTakingCourse(!isTakingCourse)}
+      />
       {/* <ModalAlternative isActive /> */}
       <Container>
         <Communication />

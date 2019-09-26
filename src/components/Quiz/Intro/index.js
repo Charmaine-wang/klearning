@@ -18,6 +18,7 @@ const StyledIntro = styled.div`
     padding: 30px;
     line-height: 165%;
     margin-bottom: 10px;
+    box-shadow: var(--shadow);
 
     & > div,
     h3,
