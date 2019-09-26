@@ -24,7 +24,7 @@ const StyledOwerviewPage = styled.div`
   }
 `;
 
-const OwerviewPage = () => {
+const OwerviewPage = props => {
   const courseOverview = [
     {
       headerTask: "introduktion",
@@ -59,7 +59,7 @@ const OwerviewPage = () => {
   ];
 
   const [isTakingCourse, setTakingCourse] = useState(false);
-
+  console.log(props);
   return (
     <StyledOwerviewPage>
       <ModalAlternative isActive={isTakingCourse} />

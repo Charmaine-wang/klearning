@@ -8,7 +8,7 @@ const StyledImgText = styled.div`
   margin: ${props => props.imgMargin};
   background-image: url(${props =>
     props.imgTextPic ? props.imgTextPic : "images/home.png"});
-
+  background-size: cover;
   /* background-image: url("images/home.png"); */
   & > .overlayer {
     height: 100%;

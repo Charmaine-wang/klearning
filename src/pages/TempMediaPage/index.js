@@ -1,16 +1,17 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-console */
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import AlternativeDrop from "../../components/AlternativeDrop";
-import Setup from "../../components/Setup";
+// import Setup from "../../components/Setup";
 import VideoCard from "../../components/VideoCard";
 import SoundCard from "../../components/SoundCard";
 import TextCard from "../../components/TextCard";
+import Button from "../../components/Button";
 
 const StyledMediaPage = styled.div`
   /* margin-top: 65px; */
-
   width: 100%;
   height: 100%;
   overflow-x: none;
@@ -18,23 +19,29 @@ const StyledMediaPage = styled.div`
   /* position: relative; */
 `;
 
-const MediaPage = (
-  props,
-  { nextPart, header, intro, paragraph, previousPart }
-) => {
+const MediaPage = (props, { header, intro, paragraph, previousPart }) => {
   const [isChanged, setChanged] = useState(true);
-  const [selectedAlt, setSelectedAlt] = useState("");
+  const [selectedAlt, setSelectedAlt] = useState("video");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
+  console.log(props);
   useEffect(() => {
-    props.location.state.mediaPreset === "video" && setSelectedAlt("video");
-    props.location.state.mediaPreset === "sound" && setSelectedAlt("sound");
-    props.location.state.mediaPreset === "text" && setSelectedAlt("text");
-  }, []);
+    if (props.sound) {
+      setSelectedAlt("sound");
+    }
+
+    if (props.text) {
+      setSelectedAlt("text");
+    }
+
+    if (props.video) {
+      setSelectedAlt("video");
+    }
+  });
 
   return (
     <StyledMediaPage>
-      <Setup changeMethod={() => setChanged(!isChanged)} />
+      {/* <Setup changeMethod={() => setChanged(!isChanged)} /> */}
       <AlternativeDrop
         hideDrop={isChanged}
         showVideo={() => {
@@ -52,7 +59,7 @@ const MediaPage = (
       />
       {selectedAlt === "text" && (
         <TextCard
-          nextPart={nextPart}
+          nextPart={props.nextPart}
           header={header}
           intro={intro}
           paragraph={paragraph}
@@ -61,7 +68,7 @@ const MediaPage = (
       )}
       {selectedAlt === "video" && (
         <VideoCard
-          nextPart={nextPart}
+          nextPart={props.nextPart}
           header={header}
           intro={intro}
           previousPart={previousPart}
@@ -69,12 +76,25 @@ const MediaPage = (
       )}
       {selectedAlt === "sound" && (
         <SoundCard
-          nextPart={nextPart}
+          nextPart={props.nextPart}
           header={header}
           intro={intro}
           previousPart={previousPart}
         />
       )}
+
+      <div className="button-div">
+        <Button
+          btnName="Till översikten"
+          buttonWidth="160px"
+          onClick={() => props.previousPart()}
+        />
+        <Button
+          btnName="Nästa Lektion"
+          buttonWidth="160px"
+          onClick={() => props.nextPart()}
+        />
+      </div>
     </StyledMediaPage>
   );
 };

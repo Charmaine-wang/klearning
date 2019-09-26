@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Button";
 
 const StyledTextCard = styled.div`
   margin: 0;
@@ -36,7 +35,7 @@ const StyledTextCard = styled.div`
   }
 `;
 
-const TextCard = ({ nextPart, header, intro, paragraph, previousPart }) => {
+const TextCard = ({ header, intro, paragraph }) => {
   return (
     <StyledTextCard>
       <div className="massatext">
@@ -62,18 +61,6 @@ const TextCard = ({ nextPart, header, intro, paragraph, previousPart }) => {
           om vad rollsättare och regissörer tittar på och letar efter i self
           tapes.
         </p>
-      </div>
-      <div className="button-div">
-        <Button
-          btnName="Till översikten"
-          buttonWidth="150px"
-          onClick={() => previousPart()}
-        />
-        <Button
-          btnName="Nästa Lektion"
-          buttonWidth="150px"
-          onClick={() => nextPart()}
-        />
       </div>
     </StyledTextCard>
   );
