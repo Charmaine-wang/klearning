@@ -76,6 +76,14 @@ const StyledActiveCourseCard = styled.div`
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     width: 286px;
     height: 303px;
+
+    & > a {
+      width: 286px;
+    }
+    & > a > img {
+      height: 50%;
+      width: 286px;
+    }
   }
 `;
 const ActiveCourseCard = ({
