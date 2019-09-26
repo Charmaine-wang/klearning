@@ -49,7 +49,7 @@ const StyledCourse = styled.div`
   }
 `;
 
-const Course = () => {
+const Course = props => {
   const [textColor, setTextColor] = useState("var(--soft-orange)");
   const [textColor2, setTextColor2] = useState("var(--black-font)");
   const [courseComponent, setCourseComponent] = useState("aboutCourse");
@@ -64,7 +64,7 @@ const Course = () => {
     }
     return null;
   };
-
+  console.log(props);
   return (
     <StyledCourse>
       <Container>

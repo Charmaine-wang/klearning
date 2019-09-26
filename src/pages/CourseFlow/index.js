@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { useState } from "react";
 import styled from "styled-components";
 import Container from "../../components/Container";
@@ -20,7 +21,7 @@ const StyledCourseFlow = styled.div`
   width: 100%;
 `;
 
-const CourseFlow = () => {
+const CourseFlow = props => {
   const [lessonPart, setLessonPart] = useState(1);
   const [progress, setProgress] = useState(0);
   const [quizScore, setQuizScore] = useState(0);
@@ -43,8 +44,10 @@ const CourseFlow = () => {
     setLessonPart(2);
     setQuizScore(0);
   }
+  console.log(props);
   return (
     <StyledCourseFlow>
+      ¥¢
       <Container>
         {lessonPart === 1 ? (
           <Media

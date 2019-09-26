@@ -3,7 +3,7 @@ import styled from "styled-components";
 // import SearchField from "../../components/SearchField";
 import FixedContainer from "../../components/FixedContainer";
 import GridLayout from "../../components/GridLayout";
-import CourseList from "../../components/CourseList";
+import CourseListItem from "../../components/CourseListItem";
 import ContainerSlider from "../../components/ContainerSlider";
 import ActiveCourseCard from "../../components/ActiveCourseCard";
 import AllCourses from "../../components/AllCourses";
@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <StyledHome expandHeight>
       <ImgText
-        imgTextPic="images/home.png"
+        imgTextPic="images/Photos/frontcover.jpg"
         imgTextHeader="Vi låter kulturen utvecklas."
         imgTextParagraph="Vi kynter ihop branshen och förser profesionella kulturarbetare med spetskompetens."
       />
@@ -57,52 +57,62 @@ const Home = () => {
         paddingDesk="0 14.1%"
         gapDesk="30px 0"
       >
-        <FixedContainer heightContainer="10vh" justifyDesk="center">
+        <FixedContainer
+          heightContainer="10vh"
+          justifyDesk="center"
+          margin="0 0 0 -4%"
+          padding="0 0 0 4%"
+        >
           <ContainerSlider paddingScroll="0 18% 0 0">
             <AllCourses />
           </ContainerSlider>
         </FixedContainer>
 
         <h1>Mina Aktiva Kurser</h1>
-        <CourseList courseWidth />
+        <CourseListItem
+          courseImg="/images/Photos/action.jpg"
+          courseLength="4h"
+          courseTitle="Kom igång med ditt filmskapande"
+          courseTimeLeft="2min"
+        />
         <h1>Aktiva biblotek</h1>
 
         <FixedContainer heightContainer="40vh">
           <ContainerSlider paddingScroll="0 19% 0 0">
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
-              courseCat="Dans"
+              activeCourseImg="/images/Photos/Self-tape-cover.jpg"
+              courseCat="Scenkonst"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Self-tape International"
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
-              courseTeacher="Connie Robertson"
+              courseTeacher="Tommy Chaanhing"
               // bookmark="images/bookmark.png"
               // setClicked={() => setClicked(!isClicked)}
             />
 
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
-              courseCat="Dans"
+              activeCourseImg="/images/Photos/action.jpg"
+              courseCat="Film"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Film Workshop med Connie Roberson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
-              courseCat="Dans"
+              activeCourseImg="/images/Photos/camera.jpg"
+              courseCat="Foto"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Foto Workshop med Connie Roberson "
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
             />
             <ActiveCourseCard
-              activeCourseImg="/images/Bild.png"
-              courseCat="Dans"
+              activeCourseImg="/images/Photos/light.jpg"
+              courseCat="Studio ljus"
               courseTime="4h"
-              cardHeader="Dans Workshop med Connie Roberson "
+              cardHeader="Ljussättnings Workshop med Connie Roberson"
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
@@ -118,7 +128,7 @@ const Home = () => {
         </div>
 
         <FixedContainer
-          heightContainer="46vh"
+          heightContainer="44vh"
           margin="0 0 0 -4%"
           padding="0 0 0 4%"
           paddingFixed="0"
@@ -129,19 +139,73 @@ const Home = () => {
             paddingScroll="0 14% 0 0"
           >
             <div>
-              <CourseList courseWidth />
-              <CourseList courseWidth />
-              <CourseList courseWidth />
+              <CourseListItem
+                courseImg="/images/Photos/Self-tape-cover.jpg"
+                courseLength="4h"
+                courseTitle="Röstteknik, ljudboksinläsning..."
+                courseTimeLeft="3min"
+                courseTeacher="Jan Cruseman"
+              />
+              <CourseListItem
+                courseImg="/images/Photos/camera.jpg"
+                courseLength="4h"
+                courseTitle="Kurs i filmskådespeleri"
+                courseTimeLeft="3min"
+                courseTeacher="Lisa Ohlin"
+              />
+              <CourseListItem
+                courseImg="/images/Photos/dance.jpg"
+                courseLength="4h"
+                courseTitle="Shifting focus"
+                courseTimeLeft="3min"
+                courseTeacher="Rene Baker"
+              />
             </div>
             <div>
-              <CourseList courseWidth />
-              <CourseList courseWidth />
-              <CourseList courseWidth />
+              <CourseListItem
+                courseImg="/images/Photos/filming.jpg"
+                courseLength="4h"
+                courseTitle="Storytelling och klipp tekniker..."
+                courseTimeLeft="3min"
+                courseTeacher="Connie Robertson"
+              />
+              <CourseListItem
+                courseImg="/images/Photos/light.jpg"
+                courseLength="4h"
+                courseTitle="Koreografi för operan..."
+                courseTimeLeft="3min"
+                courseTeacher="Robert Lane"
+              />
+              <CourseListItem
+                courseImg="/images/Photos/Self-tape-cover.jpg"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande..."
+                courseTimeLeft="3min"
+                courseTeacher="Connie Robertso"
+              />
             </div>
             <div>
-              <CourseList courseWidth />
-              <CourseList courseWidth />
-              <CourseList courseWidth />
+              <CourseListItem
+                courseImg="images/Photos/action.jpg"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande..."
+                courseTimeLeft="3min"
+                courseTeacher="Connie Robertson"
+              />
+              <CourseListItem
+                courseImg="/images/Photos/window.jpg"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande..."
+                courseTimeLeft="3min"
+                courseTeacher="Connie Robertson"
+              />
+              <CourseListItem
+                courseImg="/images/Photos/pencil.jpg"
+                courseLength="4h"
+                courseTitle="Kom igång med ditt filmskapande..."
+                courseTimeLeft="3min"
+                courseTeacher="Connie Robertson"
+              />
             </div>
           </ContainerSlider>
         </FixedContainer>
@@ -149,11 +213,11 @@ const Home = () => {
         <GridLayout
           gridRadius="10px"
           gridGap="3em"
-          widthGrid="97%"
+          widthGrid="97.4%"
           bgColor="var(--card-color)"
           colLayout="1fr"
           rowLayout="1fr 1fr 1fr"
-          padding="0 0 5% 0"
+          padding="0 0 14% 0"
           rowLayoutDesk="1fr"
           colLayoutDesk="1fr 1fr 1fr"
           widthDesk="80%"
@@ -181,7 +245,7 @@ const Home = () => {
       </GridLayout>
       <ImgText
         imgMargin="10% 0 0 0"
-        imgTextPic="/images/workshop.png"
+        imgTextPic="/images/Photos/photoshoot.jpg"
         imgTextHeader="Vill du hålla en workshop?"
         imgTextParagraph="Kontakta oss gärna om du vill hjälpa branshcen kulturarbetare att uttvecklas."
       />

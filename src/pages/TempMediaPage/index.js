@@ -23,13 +23,21 @@ const MediaPage = (
   { nextPart, header, intro, paragraph, previousPart }
 ) => {
   const [isChanged, setChanged] = useState(true);
-  const [selectedAlt, setSelectedAlt] = useState("");
+  const [selectedAlt, setSelectedAlt] = useState("video");
   // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
   useEffect(() => {
-    props.location.state.mediaPreset === "video" && setSelectedAlt("video");
-    props.location.state.mediaPreset === "sound" && setSelectedAlt("sound");
-    props.location.state.mediaPreset === "text" && setSelectedAlt("text");
+    if (props.location) {
+      if (props.location.state) {
+        if (props.location.state.mediaPreset) {
+          props.location.state.mediaPreset === "video" &&
+            setSelectedAlt("video");
+          props.location.state.mediaPreset === "sound" &&
+            setSelectedAlt("sound");
+          props.location.state.mediaPreset === "text" && setSelectedAlt("text");
+        }
+      }
+    }
   }, []);
 
   return (
