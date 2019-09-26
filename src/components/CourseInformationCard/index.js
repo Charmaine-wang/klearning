@@ -34,10 +34,12 @@ const StyledCourseInformationCard = styled.div`
 const CourseInformationCard = ({
   header,
   paragraph,
+  paragraphtwo,
   colorHeader,
   paddingInfo,
   linkHref,
-  linkText
+  linkText,
+  heightAside
 }) => {
   return (
     <StyledCourseInformationCard
@@ -47,6 +49,8 @@ const CourseInformationCard = ({
       <div className="course-information-card">
         <h2>{header}</h2>
         <p>{paragraph}</p>
+        <aside style={heightAside} />
+        <p>{paragraphtwo}</p>
         <a className="link-tag" href={linkHref}>
           {linkText}
         </a>

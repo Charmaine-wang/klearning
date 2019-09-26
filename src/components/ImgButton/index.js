@@ -5,7 +5,7 @@ import Button from "../Button";
 
 const StyledImgButton = styled.div`
   width: 100%;
-  height: 35vh;
+  height: 31.5vh;
   background-repeat: no-repeat;
   /* position:relative; */
   display: flex;

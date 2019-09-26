@@ -2,65 +2,29 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledTextCard = styled.div`
-  margin: 0px 0px;
-  padding: 16px;
-  display:flex;
-  background-color: var(--card-color);
-  min-height: 70vh;
-  margin-bottom: 20px;
-  
+  margin: 0;
+  height: ${props => props.height};
+  width: 100%;
+  height: 78vh;
+  box-sizing: border-box;
+  padding: 0 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
 
-  .text-card > h1{
-    margin:16px 0px;
-
+  & > .text-card {
+    height: 80vh;
+    overflow-y: scroll;
+    padding: 10% 0 0 3%;
   }
-  .text-card > p{
-    line-height: 1.7em;
-    margin-bottom:16px;
+  & > div > p {
+    height: 40%;
+    line-height: 165%;
+    /* background-color: red; */
   }
-
-  .top-div > p:first-of-type{
-    color: var(--soft-orange);
+  & .button-div {
   }
-
-  .top-div{
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-  }
-
-
-  // margin: 0;
-  // height: ${props => props.height};
-  // width: 100%;
-  // height: 100vh;
-  // box-sizing: border-box;
-  // /* padding: 0 15px 0 0; */
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // background-color: #ffffff;
-
-  // & > .massatext {
-  //   height: 80vh;
-  //   overflow-y: scroll;
-  //   padding: 10% 0 0 3vw;
-  // }
-  // & > div:first-child > p {
-  //   height: 400px;
-  //   /* background-color: red; */
-  // }
-  // & .button-div {
-  //   align-self: center;
-  //   display: flex;
-  //   width: 100%;
-  //   height: 45px;
-  //   align-items: space-between;
-  //   padding: 0 3vw;
-
-  //   justify-content: space-between;
-  //   /* margin: 4% 0 0 0; */
-  // }
 `;
 
 const TextCard = ({
@@ -68,9 +32,13 @@ const TextCard = ({
   intro,
   paragraph,
   paragraph2,
+  paragraph3,
+  paragraph4,
+  paragraph5,
   pdf,
   pageCurrent,
-  pageAmount
+  pageAmount,
+  date
 }) => {
   return (
     <StyledTextCard>
@@ -85,6 +53,12 @@ const TextCard = ({
         <p>{intro}</p>
         <p>{paragraph}</p>
         <p>{paragraph2}</p>
+        <div>
+          <h1>{date}</h1>
+          <p>{paragraph3}</p>
+          <p>{paragraph4}</p>
+          <p>{paragraph5}</p>
+        </div>
       </div>
     </StyledTextCard>
   );

@@ -23,14 +23,12 @@ const StyledTaskItem = styled.div`
   h3 {
     font-weight: 600;
   }
-  img {
-    /* width: 40px;
-    height: 40px; */
+  & > h3 {
+    color: var(--soft-orange);
   }
 `;
 
 const TaskItem = props => {
-  console.log(props.icon);
   return (
     <StyledTaskItem {...props}>
       {/* <PlayVideo /> */}

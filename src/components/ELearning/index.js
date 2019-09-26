@@ -16,9 +16,10 @@ const StyledELearning = styled.div`
     font-size: 16px;
     font-weight: 600;
   }
-  & > p {
+  & > div > p {
     padding: 0 10%;
     line-height: 165%;
+    /* padding: 1% 10%; */
   }
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {

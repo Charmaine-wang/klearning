@@ -12,10 +12,14 @@ const StyledOwerviewPage = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  /* -webkit-filter: blur(5px) grayscale(50%); */
+
   height: 100%;
   margin: auto;
   justify-content: center;
-  margin-top: 74px;
+  margin-top: 59px;
+  padding: 0;
+
   @media screen and (min-width: 600px) {
     width: 700px;
   }
@@ -29,7 +33,7 @@ const StyledOwerviewPage = styled.div`
   }
 `;
 
-const OwerviewPage = props => {
+const OwerviewPage = () => {
   const courseOverview = [
     {
       headerTask: "Introduktion",
@@ -64,31 +68,31 @@ const OwerviewPage = props => {
       headerTask: "Inlämning",
       course: [
         {
-          taskNr: "1.",
+          taskNr: "4.",
           taskName: "Skapa ett self-tape",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Uppgift.svg"
         },
         {
-          taskNr: "2.",
+          taskNr: "5.",
           taskName: "Att tänka på",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Uppgift.svg"
         },
         {
-          taskNr: "3.",
+          taskNr: "6.",
           taskName: "Inspeling",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Uppgift.svg"
         },
         {
-          taskNr: "4.",
+          taskNr: "7.",
           taskName: "Lämna in inspelning",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Ladda-up.svg"
         },
         {
-          taskNr: "5.",
+          taskNr: "8.",
           taskName: "Boka tid för feedback",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Feedback.svg"
@@ -99,13 +103,13 @@ const OwerviewPage = props => {
       headerTask: "Intyg",
       course: [
         {
-          taskNr: "6.",
+          taskNr: "9.",
           taskName: "Utvädering",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Utvärdering.svg"
         },
         {
-          taskNr: "7.",
+          taskNr: "10.",
           taskName: "Intyg",
           taskTime: "03.53",
           icon: "/images/Ikoner/Kursöversikt/Intyg.svg"
@@ -115,10 +119,10 @@ const OwerviewPage = props => {
   ];
 
   const [isTakingCourse, setTakingCourse] = useState(false);
-  console.log(props);
   return (
     <StyledOwerviewPage>
       <ModalAlternative isActive={isTakingCourse} />
+
       <ImgButton
         imgBtn="/images/Photos/Self-tape-cover.jpg"
         btnName="Starta kurs"
@@ -126,8 +130,7 @@ const OwerviewPage = props => {
         buttonHeight="buttonHeight"
         onClick={() => setTakingCourse(!isTakingCourse)}
       />
-      {/* <ModalAlternative isActive /> */}
-      <Container padding="30px 0 30px 0">
+      <Container>
         <Communication />
       </Container>
       <Container padding="0 0 10px 0">
@@ -137,6 +140,7 @@ const OwerviewPage = props => {
         return (
           <Container padding="0 0 20px 0" key={courses.headerTask}>
             <Task
+              // className="task-div"
               courseData={courses}
               onClick={() => setTakingCourse(!isTakingCourse)}
               key={courses.taskNr}

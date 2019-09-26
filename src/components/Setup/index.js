@@ -16,7 +16,7 @@ const StyledSetup = styled.div`
   width: 100vw;
   height: 5vh;
   background-color: var(--card-color);
-  border-top: 1px solid var(--light-grey);
+  border-top: 1px solid #bdbdbd;
   z-index: 2;
 
   & > div {
