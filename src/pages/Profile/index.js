@@ -14,6 +14,11 @@ const StyledProfile = styled.div`
   margin-top: 64px;
   width: 100%;
 
+  h1 {
+    @media only screen and (min-width: 700px) {
+      margin-bottom: 10px;
+    }
+  }
   .buttonSwitch {
     width: 90vw;
     margin: auto;
@@ -24,6 +29,17 @@ const StyledProfile = styled.div`
     justify-content: space-around;
     @media only screen and (min-width: 700px) {
       width: 700px;
+    }
+  }
+
+  .scroller {
+    padding: 3vw;
+    @media only screen and (min-width: 700px) {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 `;
@@ -64,9 +80,10 @@ const Profile = () => {
       <Container padding="0">
         <h1>Sparade kurser</h1>
       </Container>
-      <Container padding="16px 0" width="100%">
-        <FixedContainer>
-          <ContainerSlider>
+      {/* <Container padding="16px 0" width="100%"> */}
+      <div className="scroller">
+        <FixedContainer heightContainer="40vh">
+          <ContainerSlider paddingScroll="0 0 0 19px">
             <ActiveCourseCard
               activeCourseImg="/images/Photos/dance.jpg"
               courseCat="Dans"
@@ -75,7 +92,7 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
-              padding="0 0 0 3vw"
+              // padding="0 0 0 3vw"
             />
 
             <ActiveCourseCard
@@ -104,11 +121,12 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
-              padding="0 3vw 0 0"
+              // padding="0 3vw 0 0"
             />
           </ContainerSlider>
         </FixedContainer>
-      </Container>
+      </div>
+      {/* </Container> */}
     </StyledProfile>
   );
 };
