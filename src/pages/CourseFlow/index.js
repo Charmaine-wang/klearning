@@ -59,43 +59,43 @@ const CourseFlow = props => {
     <StyledCourseFlow>
       {lessonPart !== 1 && <OverviewDrop />}
 
-      <Container padding=" 0">
-        {lessonPart === 1 ? (
-          <>
-            <Setup changeMethod={() => setChanged(!isChanged)} />
+      {lessonPart === 1 ? (
+        <>
+          <Setup changeMethod={() => setChanged(!isChanged)} />
 
-            {mediaState === "video" && (
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                video
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            )}
-            {mediaState === "sound" && (
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                sound
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            )}
-            {mediaState === "text" && (
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                text
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            )}
-          </>
-        ) : (
-          ""
-        )}
+          {mediaState === "video" && (
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              video
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+          {mediaState === "sound" && (
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              sound
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+          {mediaState === "text" && (
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              text
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+        </>
+      ) : (
+        ""
+      )}
 
+      <Container>
         {lessonPart === 2 ? (
           <Intro
             numberOfQuestions="3"

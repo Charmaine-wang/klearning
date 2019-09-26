@@ -64,22 +64,22 @@ const Course = () => {
 
   return (
     <StyledCourse>
+      <div className="image-container">
+        <h1 className="course-header">Self-tape international</h1>
+        <img
+          className="hero-image-course"
+          src="/images/selftape-hero.png"
+          alt="course"
+        />
+        <Button
+          bgColor="var(--soft-orange)"
+          textColor="white"
+          btnName="Ansök till kurs"
+          className="image-apply-button"
+          border="none"
+        />
+      </div>
       <Container>
-        <div className="image-container">
-          <h1 className="course-header">Self-tape international</h1>
-          <img
-            className="hero-image-course"
-            src="/images/selftape-hero.png"
-            alt="course"
-          />
-          <Button
-            bgColor="var(--soft-orange)"
-            textColor="white"
-            btnName="Ansök till kurs"
-            className="image-apply-button"
-            border="none"
-          />
-        </div>
         <div className="button-container">
           <Button
             btnName="Om kurs"
