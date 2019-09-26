@@ -13,6 +13,7 @@ const StyledCommunication = styled.div`
   background: var(--card-color);
   justify-content: space-around;
   align-items: center;
+
   & > h3 {
     font-weight: 600;
   }
@@ -32,7 +33,13 @@ const Communication = props => {
         hålla kontakt under kursens gång. Allt du behöver är ett Skypekonto och
         sedan är det bara att sätta igång!
       </p>
-      <Button btnName="Skype grupp" buttonWidth="157px" />
+      <Button
+        btnName="Skype grupp"
+        buttonWidth="157px"
+        bgColor="var(--soft-orange)"
+        textColor="var(--card-color)"
+        activeColor="var(--card-color)"
+      />
     </StyledCommunication>
   );
 };

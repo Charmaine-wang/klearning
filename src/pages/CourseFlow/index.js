@@ -22,7 +22,7 @@ import Setup from "../../components/Setup";
 import Mediatwo from "../../components/Mediatwo";
 
 const StyledCourseFlow = styled.div`
-  margin-top: 64px;
+  margin-top: 59px;
   width: 100%;
 `;
 
@@ -65,22 +65,26 @@ const CourseFlow = props => {
           <Setup changeMethod={() => setChanged(!isChanged)} />
 
           {mediaState === "video" && (
-            <Media
-              nextPart={nextLessonPart}
-              previousPart={previousLessonPart}
-              video
-              setChanged={setChanged}
-              isChanged={isChanged}
-            />
+            <Container>
+              <Media
+                nextPart={nextLessonPart}
+                previousPart={previousLessonPart}
+                video
+                setChanged={setChanged}
+                isChanged={isChanged}
+              />
+            </Container>
           )}
           {mediaState === "sound" && (
-            <Media
-              nextPart={nextLessonPart}
-              previousPart={previousLessonPart}
-              sound
-              setChanged={setChanged}
-              isChanged={isChanged}
-            />
+            <Container>
+              <Media
+                nextPart={nextLessonPart}
+                previousPart={previousLessonPart}
+                sound
+                setChanged={setChanged}
+                isChanged={isChanged}
+              />
+            </Container>
           )}
           {mediaState === "text" && (
             <Media

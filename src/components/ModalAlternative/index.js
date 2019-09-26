@@ -12,7 +12,7 @@ const StyledModalAlternative = styled.div`
   height: 30vh;
   position: fixed;
   z-index: 2;
-  top: 12%;
+  top: 34%;
   flex-direction: column;
   border-radius: 10px;
   background: var(--card-color);
