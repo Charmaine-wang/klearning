@@ -90,7 +90,7 @@ const MediaPage = (
           paragraph2="Den här introduktionen kommer ge dig en översikt om vad 
            kursen kommer innehålla, 
            hur tjänsten fungerar och viktiga datum att hålla reda på. "
-          date="Viktiga datum"
+          header2="Viktiga datum"
           paragraph3="- 29 maj: Skicka in första utkast av self-tape"
           paragraph4="- 30 maj: Boka tid för feedback"
           paragraph5="- 3 juni: Skicka in andra utkast av self-tape"
