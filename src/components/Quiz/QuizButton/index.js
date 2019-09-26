@@ -16,7 +16,6 @@ const StyledQuizButton = styled.button`
   font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
   border-radius: 8px;
   margin: ${props => (props.margin ? props.margin : "0")};
-  box-shadow: var(--shadow);
 
   &:hover {
     color: var(--soft-orange);
