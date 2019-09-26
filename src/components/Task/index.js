@@ -4,7 +4,7 @@ import styled from "styled-components";
 import TaskItem from "../TaskItem";
 
 const StyledTask = styled.div`
-  width: 95vw;
+  width: 100%;
   height: 100%;
 
   border-radius: 10px;

@@ -5,6 +5,7 @@ import PlayVideo from "../Icons/PlayVideo";
 
 const StyledTaskItem = styled.div`
   display: flex;
+  width: 100%;
   height: 7vh;
   align-items: center;
   justify-content: space-between;

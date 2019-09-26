@@ -4,7 +4,7 @@ import Button from "../Button";
 
 const StyledCommunication = styled.div`
   display: flex;
-  width: 95vw;
+  width: 100%;
   height: 70vh;
   padding: 5%;
   /* position: absolute; */

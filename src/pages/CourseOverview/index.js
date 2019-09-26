@@ -3,18 +3,23 @@ import styled from "styled-components";
 import Communication from "../../components/Communication";
 import Task from "../../components/Task";
 import Button from "../../components/Button";
-import GridLayout from "../../components/GridLayout";
 import ImgButton from "../../components/ImgButton";
 
 import ModalAlternative from "../../components/ModalAlternative";
+import Container from "../../components/Container";
 
 const StyledOwerviewPage = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100%;
+  margin: auto;
   justify-content: center;
   margin-top: 74px;
+  @media screen and (min-width: 600px) {
+    width: 700px;
+  }
+
   & > div > .start-course-btn {
     display: flex;
     width: 100%;
@@ -63,25 +68,31 @@ const OwerviewPage = () => {
   return (
     <StyledOwerviewPage>
       <ModalAlternative isActive={isTakingCourse} />
-      <ImgButton
-        imgBtn="/images/selftape-hero.png"
-        btnName="Starta kurs"
-        buttonWidth="160px"
-        buttonHeight="buttonHeight"
-        onClick={() => setTakingCourse(!isTakingCourse)}
-      />
-      <GridLayout padding="0 0 0 2.5%">
-        {/* <ModalAlternative isActive /> */}
+      <Container>
+        <ImgButton
+          imgBtn="/images/Photos/Self-tape-cover.jpg"
+          btnName="Starta kurs"
+          buttonWidth="160px"
+          buttonHeight="buttonHeight"
+          onClick={() => setTakingCourse(!isTakingCourse)}
+        />
+      </Container>
+      {/* <ModalAlternative isActive /> */}
+      <Container>
         <Communication />
+      </Container>
 
-        {courseOverview.map(courses => {
-          return (
+      {courseOverview.map(courses => {
+        return (
+          <Container>
             <Task
               courseData={courses}
               onClick={() => setTakingCourse(!isTakingCourse)}
             />
-          );
-        })}
+          </Container>
+        );
+      })}
+      <Container>
         <div className="start-course-btn">
           <Button
             btnName="Starta kurs"
@@ -91,7 +102,7 @@ const OwerviewPage = () => {
             onClick={() => setTakingCourse(!isTakingCourse)}
           />
         </div>
-      </GridLayout>
+      </Container>
     </StyledOwerviewPage>
   );
 };

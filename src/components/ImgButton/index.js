@@ -14,6 +14,8 @@ const StyledImgButton = styled.div`
   align-items: center;
   justify-content: space-between;
   background-image: url(${props => props.imgBtn});
+  background-size: cover;
+  background-position: center;
   & > h1 {
     align-self: flex-start;
     color: var(--bg-color);
