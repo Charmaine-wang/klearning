@@ -8,7 +8,7 @@ import Intro from "../../components/Quiz/Intro";
 import Question from "../../components/Quiz/Question";
 import ImageQuestion from "../../components/Quiz/ImageQuestion";
 import Achievement from "../../components/Quiz/Achievement";
-import Media from "../TempMediaPage";
+import Media from "../../components/MediaOne";
 import HandInIntro from "../../components/handin/HandInIntroCard";
 import HandInChoice from "../../components/handin/HandInChoice";
 import HandInPoints from "../../components/handin/HandInPoints";
@@ -19,7 +19,7 @@ import HandInFeedBackConfirm from "../../components/handin/HandInFeedBackConfirm
 import Evaluation from "../../components/handin/Evaluation";
 import OverviewDrop from "../../components/OverviewDrop";
 import Setup from "../../components/Setup";
-import Mediatwo from "../../components/Mediatwo";
+import Media2 from "../../components/Mediatwo";
 
 const StyledCourseFlow = styled.div`
   margin-top: 59px;
@@ -100,8 +100,10 @@ const CourseFlow = props => {
         ""
       )}
 
+      {lessonPart === 2 ? <Media2 /> : ""}
+
       <Container>
-        {lessonPart === 2 ? (
+        {lessonPart === 3 ? (
           <Intro
             numberOfQuestions="3"
             nextPart={nextLessonPart}
@@ -110,7 +112,7 @@ const CourseFlow = props => {
         ) : (
           ""
         )}
-        {lessonPart === 3 ? (
+        {lessonPart === 4 ? (
           <Question
             question="Vilken vinkel är mest fördelaktig att använda sig av när man ställer upp sin kamera?"
             questionNumber="1"
@@ -128,7 +130,7 @@ const CourseFlow = props => {
         ) : (
           ""
         )}
-        {lessonPart === 4 ? (
+        {lessonPart === 5 ? (
           <ImageQuestion
             image="/images/quiz2.jpg"
             headerQuestion="VAD ÄR DET PÅ BILDEN?"
@@ -143,7 +145,7 @@ const CourseFlow = props => {
         ) : (
           ""
         )}
-        {lessonPart === 5 ? (
+        {lessonPart === 6 ? (
           <ImageQuestion
             image="/images/quiz3.jpg"
             headerQuestion="SANT ELLER FALSKT"
@@ -159,7 +161,7 @@ const CourseFlow = props => {
         ) : (
           ""
         )}
-        {lessonPart === 6 ? (
+        {lessonPart === 7 ? (
           <Achievement
             buttonPadding="10px 15px"
             message="Bra jobbat!"
@@ -168,22 +170,6 @@ const CourseFlow = props => {
             numberOfQuestions="3"
             repeatQuiz={repeatQuiz}
             previousPart={previousLessonPart}
-          />
-        ) : (
-          ""
-        )}
-        {lessonPart === 7 ? (
-          <Mediatwo
-            nextPart={nextLessonPart}
-            previousPart={previousLessonPart}
-            video
-            setChanged={setChanged}
-            isChanged={isChanged}
-            header="2. Vad är en self-tape?"
-            intro="I den här lektionen får vi kunskap om vad ett self-tape är och hur det används i film branchen. "
-            paragraph="Self taping – den provfilmning som skådespelaren gör med sig själv framför kameran - blir allt vanligare inom rollsättning/casting. Den förekommer som ett första steg i processen då skådespelare och rollsättare inte kan träffas personligen t. ex när utländska casting directors söker svenska skådespelare.
-
-            För många känns det som en utmaning att stå för såväl gestaltning som den tekniska utformningen av en self tape. I workshopen går Tommy Chaanhing igenom de nödvändiga grundelementen i filmarbetet och ger skådespelaren insikter om vad rollsättare och regissörer tittar på och letar efter i self tapes. Workshopen blandar föreläsningar och praktiska filmövningar. Genom Tommys återkoppling kring övningarna och diskussioner i gruppen får deltagarna kunskap och kompetens att skapa self tapes som når fram, gör intryck och håller så god kvalité som möjligt."
           />
         ) : (
           ""

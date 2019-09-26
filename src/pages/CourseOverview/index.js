@@ -130,7 +130,6 @@ const OwerviewPage = () => {
         buttonHeight="buttonHeight"
         onClick={() => setTakingCourse(!isTakingCourse)}
       />
-
       <Container>
         <Communication />
       </Container>

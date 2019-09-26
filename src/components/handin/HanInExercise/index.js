@@ -4,6 +4,10 @@ import styled from "styled-components";
 import Button from "../../Button";
 
 const StyledHandInExercise = styled.div`
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -36,6 +40,9 @@ const StyledHandInExercise = styled.div`
       text-decoration: none;
       color: var(--soft-orange);
     }
+  }
+  .grow {
+    flex-grow: 1;
   }
   .row {
     width: 100%;
@@ -79,6 +86,8 @@ const HandInExercise = ({
           </div>
         </div>
       </div>
+      <div className="grow" />
+
       <div className="row">
         <Button
           btnName="Bakåt"

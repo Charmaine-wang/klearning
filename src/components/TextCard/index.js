@@ -2,29 +2,40 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledTextCard = styled.div`
-  margin: 0;
-  height: ${props => props.height};
-  width: 100%;
-  height: 78vh;
-  box-sizing: border-box;
-  padding: 0 3vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
+  .basic-styling-read {
+    margin: 0px 0px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-color);
+  }
 
-  & > .text-card {
-    height: 80vh;
-    overflow-y: scroll;
-    scroll: orange;
-    padding: 10% 0 0 3%;
+  .text-card > h1 {
+    margin: 16px 0px;
   }
-  & > div > p {
-    height: 40%;
-    line-height: 165%;
-    /* background-color: red; */
+  .text-card > p {
+    line-height: 1.7em;
+    margin-bottom: 16px;
   }
-  & .button-div {
+  .top-div > p:first-of-type {
+    color: var(--soft-orange);
+  }
+  .top-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .second-part > p {
+    line-height: 1.7em;
+    margin-bottom: 16px;
+  }
+  .important-dates {
+    margin: 16px 0px;
+  }
+  .read-date {
+    line-height: 1.7em;
+    margin-bottom: 16px;
   }
 `;
 
@@ -39,26 +50,28 @@ const TextCard = ({
   pdf,
   pageCurrent,
   pageAmount,
-  date
+  header2
 }) => {
   return (
     <StyledTextCard>
-      <div className="text-card">
-        <div className="top-div">
-          <p>{pdf}</p>
-          <p>
-            {pageCurrent}/{pageAmount}
-          </p>
+      <div className="basic-styling-read">
+        <div className="text-card">
+          <div className="top-div">
+            <p>{pdf}</p>
+            <p>
+              {pageCurrent}/{pageAmount}
+            </p>
+          </div>
+          <h1>{header}</h1>
+          <p>{intro}</p>
+          <p>{paragraph}</p>
+          <p>{paragraph2}</p>
         </div>
-        <h1>{header}</h1>
-        <p>{intro}</p>
-        <p>{paragraph}</p>
-        <p>{paragraph2}</p>
-        <div>
-          <h1>{date}</h1>
-          <p>{paragraph3}</p>
-          <p>{paragraph4}</p>
-          <p>{paragraph5}</p>
+        <div calssName="second-part">
+          <h1 className="important-dates">{header2}</h1>
+          <p className="read-date">{paragraph3}</p>
+          <p className="read-date">{paragraph4}</p>
+          <p className="read-date">{paragraph5}</p>
         </div>
       </div>
     </StyledTextCard>

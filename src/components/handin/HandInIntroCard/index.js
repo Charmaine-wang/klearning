@@ -6,6 +6,16 @@ const StyledHandInCard = styled.div`
   width: 100%;
   margin: auto;
 
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  
+  .grow{
+    flex-grow:1;
+    background-color:var(--bg-color);
+    box-shadow:none;
+  }
+
   h1 {
     margin-bottom: 10px;
   }
@@ -33,7 +43,7 @@ const StyledHandInCard = styled.div`
       text-align: center;
       // font-weight: bold;
       padding: 16px;
-      line-height: 1.2rem;
+      line-height: 1.7em;
     }
 
     .intro-header-paragraph {
@@ -45,7 +55,6 @@ const StyledHandInCard = styled.div`
       justify-content: center;
       align-items: center;
     }
-  }
 `;
 
 const HandInCard = ({
@@ -70,13 +79,16 @@ const HandInCard = ({
           <p>{introParagraph3}</p>
         </div>
       </div>
-      <Button
-        btnName="Starta uppgift"
-        buttonWidth="100%"
-        bgColor="var(--soft-orange)"
-        textColor="var(--card-color)"
-        onClick={() => nextPart()}
-      />
+      <div className="grow" />
+      <div className="button-div">
+        <Button
+          btnName="Starta uppgift"
+          buttonWidth="100%"
+          bgColor="var(--soft-orange)"
+          textColor="var(--card-color)"
+          onClick={() => nextPart()}
+        />
+      </div>
     </StyledHandInCard>
   );
 };

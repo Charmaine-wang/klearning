@@ -43,9 +43,7 @@ const Sound = withSoundCloudAudio(props => {
         <div className="play-sound">
           <PlayButton
             className="custom-player-btn"
-            onPlayClick={() => {
-              console.log("play button clicked!");
-            }}
+            onPlayClick={() => {}}
             {...props}
           />
         </div>

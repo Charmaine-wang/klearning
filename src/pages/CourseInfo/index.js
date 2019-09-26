@@ -13,7 +13,6 @@ const StyledCourse = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 16px 0px;
   }
 
   .hero-image-course {
@@ -36,6 +35,9 @@ const StyledCourse = styled.div`
 
   .image-container {
     position: relative;
+  }
+  .image-container > h1 {
+    font-weight: bold;
   }
 
   .image-apply-button {
