@@ -23,6 +23,7 @@ const StyledHandInFeedBack = styled.div`
     }
     .feedback-hand-in > h2 {
       color: var(--black-font);
+      font-size: 20px;
     }
 
     .feedback-day > p {

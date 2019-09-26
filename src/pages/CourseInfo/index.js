@@ -13,7 +13,6 @@ const StyledCourse = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    // padding: 16px 16px 0px;
   }
 
   .hero-image-course {
