@@ -28,9 +28,7 @@ const StyledMediatwo = styled.div`
 const Mediatwo = (props, { previousPart }) => {
   // const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("");
-  // console.log(showVideo);
   // const [selectedAlt, setSelectedAlt] = useState(false);
-  console.log(props);
   useEffect(() => {
     if (props.sound) {
       setSelectedAlt("sound");
@@ -44,7 +42,6 @@ const Mediatwo = (props, { previousPart }) => {
       setSelectedAlt("video");
     }
   }, []);
-  console.log(selectedAlt);
 
   return (
     <StyledMediatwo>
