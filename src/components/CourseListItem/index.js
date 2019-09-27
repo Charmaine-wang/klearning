@@ -10,6 +10,7 @@ const StyledCourseListItem = styled.div`
   width: 90vw;
   height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
   border-radius: 10px;
+  box-shadow: var(--shadow);
 
   & > a > img {
     width: 45%;

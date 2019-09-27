@@ -8,36 +8,27 @@ const StyledSound = styled.svg`
 const Sound = () => {
   return (
     <StyledSound
-      width="25"
-      height="20"
-      viewBox="0 0 25 20"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#clip0)">
-        <path
-          d="M12.2017 1.23071L6.18414 6.15379H1.37012V13.5384H6.18414L12.2017 18.4615V1.23071Z"
-          stroke="#6D6D6D"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M15.8604 5.48964C16.9885 6.64365 17.6222 8.20863 17.6222 9.8404C17.6222 11.4722 16.9885 13.0372 15.8604 14.1912M20.1087 1.14502C22.3649 3.45305 23.6324 6.583 23.6324 9.84656C23.6324 13.1101 22.3649 16.2401 20.1087 18.5481V1.14502Z"
-          stroke="#6D6D6D"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0">
-          <rect
-            width="24"
-            height="19.6923"
-            fill="white"
-            transform="translate(0.371094)"
-          />
-        </clipPath>
-      </defs>
+      <path
+        d="M3 18V12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12V18"
+        stroke="#6D6D6D"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M21 19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H18C17.4696 21 16.9609 20.7893 16.5858 20.4142C16.2107 20.0391 16 19.5304 16 19V16C16 15.4696 16.2107 14.9609 16.5858 14.5858C16.9609 14.2107 17.4696 14 18 14H21V19ZM3 19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H6C6.53043 21 7.03914 20.7893 7.41421 20.4142C7.78929 20.0391 8 19.5304 8 19V16C8 15.4696 7.78929 14.9609 7.41421 14.5858C7.03914 14.2107 6.53043 14 6 14H3V19Z"
+        fill="#6D6D6D"
+        stroke="#6D6D6D"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </StyledSound>
   );
 };
