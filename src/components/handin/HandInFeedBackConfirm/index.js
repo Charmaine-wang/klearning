@@ -26,6 +26,11 @@ const StyledHandInFeedBackConfirm = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      & > img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
     }
 
     .booked-time-div > p {
@@ -51,11 +56,6 @@ const StyledHandInFeedBackConfirm = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
-  img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-  }
 `;
 const HandInFeedBackConfirm = ({
   header,
@@ -72,7 +72,10 @@ const HandInFeedBackConfirm = ({
       <h1>Feedback</h1>
       <div>
         <div className="feedback-confirm-hand-in">
-          <img src="/images/Communication.png" alt="" />
+          <img
+            src="/images/illustrations/Communication.svg"
+            alt="illustration"
+          />
           <h2>{header}</h2>
           <div className="booked-time-div">
             <p>{day}</p>

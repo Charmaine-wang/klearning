@@ -67,7 +67,7 @@ const TextCard = ({
           <p>{paragraph}</p>
           <p>{paragraph2}</p>
         </div>
-        <div calssName="second-part">
+        <div className="second-part">
           <h1 className="important-dates">{header2}</h1>
           <p className="read-date">{paragraph3}</p>
           <p className="read-date">{paragraph4}</p>
