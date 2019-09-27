@@ -14,6 +14,7 @@ const StyledGridLayout = styled.div`
   padding: ${props => (props.padding ? props.padding : "0")};
   background-color: ${props => (props.bgColor ? props.bgColor : "#F5F5F5")};
   border-radius: ${props => props.gridRadius};
+  box-shadow: ${props => (props.shadow ? props.shadow : "0")};
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     display: ${props => props.displayDesk};

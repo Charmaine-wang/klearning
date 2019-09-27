@@ -222,6 +222,7 @@ const Home = () => {
           rowLayoutDesk="1fr"
           colLayoutDesk="1fr 1fr 1fr"
           widthDesk="80%"
+          shadow="var(--shadow)"
         >
           <ELearning
             iconElearning="/images/Illustrations/Learning.svg"
