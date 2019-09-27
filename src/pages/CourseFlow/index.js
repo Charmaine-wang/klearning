@@ -58,33 +58,29 @@ const CourseFlow = props => {
 
   return (
     <StyledCourseFlow>
-      {lessonPart !== 1 && <OverviewDrop />}
+      {lessonPart !== 1 && lessonPart !== 2 && <OverviewDrop />}
 
       {lessonPart === 1 ? (
         <>
           <Setup changeMethod={() => setChanged(!isChanged)} />
 
           {mediaState === "video" && (
-            <Container>
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                video
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            </Container>
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              video
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
           )}
           {mediaState === "sound" && (
-            <Container>
-              <Media
-                nextPart={nextLessonPart}
-                previousPart={previousLessonPart}
-                sound
-                setChanged={setChanged}
-                isChanged={isChanged}
-              />
-            </Container>
+            <Media
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              sound
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
           )}
           {mediaState === "text" && (
             <Media
@@ -100,7 +96,43 @@ const CourseFlow = props => {
         ""
       )}
 
-      {lessonPart === 2 ? <Media2 /> : ""}
+      {lessonPart === 2 ? (
+        <>
+          <Setup changeMethod={() => setChanged(!isChanged)} />
+
+          {mediaState === "video" && (
+            <Media2
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              video
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+          {mediaState === "sound" && (
+            <Media2
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              sound
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+          {mediaState === "text" && (
+            <Media2
+              nextPart={nextLessonPart}
+              previousPart={previousLessonPart}
+              text
+              setChanged={setChanged}
+              isChanged={isChanged}
+            />
+          )}
+        </>
+      ) : (
+        ""
+      )}
+
+      {/* {lessonPart === 2 ? <Media2 /> : ""} */}
 
       <Container>
         {lessonPart === 3 ? (
