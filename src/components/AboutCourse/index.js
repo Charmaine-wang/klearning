@@ -85,6 +85,7 @@ const AboutCourse = () => {
             courseLength="4h"
             courseTitle="Röstteknik, ljudboksinläsning..."
             courseTeacher="Jan Cruseman"
+            courseAlt="course cover"
           />
         </div>
         <div className="course-div">
@@ -93,6 +94,7 @@ const AboutCourse = () => {
             courseLength="5h"
             courseTitle="Kurs i filmskådespeleri"
             courseTeacher="Lisa Ohlin"
+            courseAlt="course cover"
           />
         </div>
         <div className="course-div">
@@ -101,24 +103,9 @@ const AboutCourse = () => {
             courseLength="4h"
             courseTitle="Shifting focus"
             courseTeacher="Rene Baker"
+            courseAlt="course cover"
           />
         </div>
-
-        {/* <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        /> */}
       </div>
     </StyledAboutCourse>
   );

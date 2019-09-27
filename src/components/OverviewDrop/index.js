@@ -49,7 +49,7 @@ const OverviewDrop = ({ changeMethod, location, className, showIcon }) => {
       </div>
       <img
         src="/images/Ikoner/setup.svg"
-        alt=""
+        alt="settings"
         onClick={changeMethod}
         style={{ display: showIcon ? "block" : "none" }}
       />

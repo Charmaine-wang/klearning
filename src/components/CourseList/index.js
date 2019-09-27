@@ -26,6 +26,7 @@ const CourseList = props => {
         courseLength="4h"
         courseTitle="dans dans dans"
         courseTimeLeft="3min"
+        courseAlt="course cover"
       />
       {/* <div className="progress-bar" /> */}
     </StyledCourseList>
