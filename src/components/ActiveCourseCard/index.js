@@ -26,6 +26,7 @@ const StyledActiveCourseCard = styled.div`
     height: 100%;
     flex-direction: column;
     display: flex;
+    box-shadow: var(--shadow);
     & > img {
       height: 50%;
       width: 100%;
