@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import Button from "../../Button";
 
 const StyledEvaluation = styled.div`
@@ -41,8 +42,8 @@ const StyledEvaluation = styled.div`
     justify-content: center;
   }
   img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
   }
 `;
@@ -50,10 +51,10 @@ const StyledEvaluation = styled.div`
 const Evaluation = ({ header, paragraph, imgSrc }) => {
   return (
     <StyledEvaluation>
-      <h1>Feedback</h1>
+      <h1>Utvärdering</h1>
       <div>
         <div className="evaluation">
-          <img src={imgSrc} alt="" />
+          <img src={imgSrc} alt="illustration" />
           <h2>{header}</h2>
           <p>{paragraph}</p>
         </div>
@@ -61,12 +62,14 @@ const Evaluation = ({ header, paragraph, imgSrc }) => {
       <div className="grow" />
       <div className="row">
         {/* <Button btnName="Till översikten" buttonWidth="150px" /> */}
-        <Button
-          btnName="Utvärdering"
-          buttonWidth="150px"
-          bgColor="var(--soft-orange)"
-          textColor="var(--card-color)"
-        />
+        <NavLink to="/">
+          <Button
+            btnName="Utvärdering"
+            buttonWidth="150px"
+            bgColor="var(--soft-orange)"
+            textColor="var(--card-color)"
+          />
+        </NavLink>
       </div>
     </StyledEvaluation>
   );

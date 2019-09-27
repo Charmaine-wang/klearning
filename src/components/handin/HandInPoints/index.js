@@ -70,7 +70,11 @@ const HandInPoints = ({ header, paragraph, nextPart, previousPart }) => {
           <div>
             <ul className="point-list">
               {pointData.map(data => {
-                return <li className="dot-style">{data}</li>;
+                return (
+                  <li key={data} className="dot-style">
+                    {data}
+                  </li>
+                );
               })}
             </ul>
           </div>

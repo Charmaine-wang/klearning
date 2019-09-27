@@ -70,7 +70,11 @@ const HandInExercise = ({
           <p>
             {paragraph}
             {exerciseRequirements.map(data => {
-              return <span className="requirements">{data}</span>;
+              return (
+                <span key={data} className="requirements">
+                  {data}
+                </span>
+              );
             })}
           </p>
           <p>{paragraph2}</p>

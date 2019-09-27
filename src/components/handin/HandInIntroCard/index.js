@@ -9,11 +9,11 @@ const StyledHandInCard = styled.div`
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  
-  .grow{
-    flex-grow:1;
-    background-color:var(--bg-color);
-    box-shadow:none;
+
+  .grow {
+    flex-grow: 1;
+    background-color: var(--bg-color);
+    box-shadow: none;
   }
 
   h1 {
@@ -54,7 +54,13 @@ const StyledHandInCard = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+      }
     }
+  }
 `;
 
 const HandInCard = ({
@@ -71,7 +77,7 @@ const HandInCard = ({
       <div>
         <div className="intro-hand-in">
           <div>
-            <img src={introImage} alt="" />
+            <img src={introImage} alt="illustration" />
           </div>
           <p className="intro-header-paragraph">{introHeaderParagraph}</p>
           <p>{introParagraph1}</p>

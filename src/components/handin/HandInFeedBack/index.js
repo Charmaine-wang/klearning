@@ -106,6 +106,7 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
                   btnName={data}
                   hoverColor="none"
                   activeColor="none"
+                  key={data}
                 />
               );
             })}
@@ -128,6 +129,7 @@ const HandInFeedBack = ({ header, nextPart, previousPart }) => {
                   btnName={data}
                   hoverColor="none"
                   activeColor="none"
+                  key={data}
                 />
               );
             })}
