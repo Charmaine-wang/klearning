@@ -10,7 +10,6 @@ const StyledCertificate = styled.div`
   border-radius: 10px;
   margin: 10px auto;
   box-shadow: var(--shadow);
-
   & > div {
     width: 100%;
     display: flex;
@@ -19,7 +18,6 @@ const StyledCertificate = styled.div`
     align-items: flex-start;
     padding: 10px;
     position: relative;
-    /* margin-bottom: 10px; */
 
     & > p {
       align-self: flex-end;

@@ -37,7 +37,6 @@ const Navbar = () => {
           <NavLink to="/">
             <img src="/images/Ikoner/Nav/logo.svg" alt="" />
           </NavLink>
-          {/* <NavLink to="/course">Kurs</NavLink> */}
           <div className="navbarItems">
             <div className="searchIcon">
               <img src="/images/Ikoner/Nav/search.svg" alt="" />

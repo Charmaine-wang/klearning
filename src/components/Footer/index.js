@@ -12,7 +12,6 @@ const StyledFooter = styled.div`
   align-items: center;
   padding: 1vh 3vh 3vh 3vh;
   color: var(--dark-grey);
-
   & > div {
     width: 90%;
     margin: auto;
@@ -21,7 +20,6 @@ const StyledFooter = styled.div`
     justify-content: space-around;
     align-items: flex-start;
   }
-
   h3 {
     font-weight: 600;
     font-size: 16px;

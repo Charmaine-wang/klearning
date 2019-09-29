@@ -3,11 +3,11 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import AlternativeDrop from "../AlternativeDrop";
-import VideoCard from "../VideoCard";
-import SoundCard from "../SoundCard";
-import TextCard from "../TextCard";
-import Button from "../Button";
+import AlternativeDrop from "../../components/AlternativeDrop";
+import VideoCard from "../../components/VideoCard";
+import SoundCard from "../../components/SoundCard";
+import TextCard from "../../components/TextCard";
+import Button from "../../components/Button";
 
 const StyledMediaPage = styled.div`
   width: 100%;
@@ -27,6 +27,7 @@ const StyledMediaPage = styled.div`
 
 const MediaPage = (props, { header, intro, previousPart }) => {
   const [selectedAlt, setSelectedAlt] = useState("video");
+
   useEffect(() => {
     if (props.sound) {
       setSelectedAlt("sound");
@@ -40,6 +41,7 @@ const MediaPage = (props, { header, intro, previousPart }) => {
       setSelectedAlt("video");
     }
   }, []);
+  console.log(selectedAlt);
 
   return (
     <StyledMediaPage>
@@ -72,7 +74,7 @@ const MediaPage = (props, { header, intro, previousPart }) => {
           paragraph2="Den här introduktionen kommer ge dig en översikt om vad 
            kursen kommer innehålla, 
            hur tjänsten fungerar och viktiga datum att hålla reda på. "
-          header2="Viktiga datum"
+          date="Viktiga datum"
           paragraph3="- 29 maj: Skicka in första utkast av self-tape"
           paragraph4="- 30 maj: Boka tid för feedback"
           paragraph5="- 3 juni: Skicka in andra utkast av self-tape"
@@ -107,8 +109,6 @@ const MediaPage = (props, { header, intro, previousPart }) => {
         <Button
           btnName="Nästa Lektion"
           buttonWidth="160px"
-          bgColor="var(--soft-orange)"
-          textColor="var(--card-color)"
           onClick={() => props.nextPart()}
         />
       </div>

@@ -12,8 +12,6 @@ const StyledOwerviewPage = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  /* -webkit-filter: blur(5px) grayscale(50%); */
-
   height: 100%;
   margin: auto;
   justify-content: center;

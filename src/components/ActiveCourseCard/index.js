@@ -10,16 +10,9 @@ const StyledActiveCourseCard = styled.div`
   width: ${props => (props.singleCard ? props.singleCard : "75vw")};
   height: ${props => (props.expandHeight ? props.expandHeight : "37vh")};
   border-radius: 10px;
-  /* justify-content: space-between; */
-  /* position: relative; */
   padding: ${props => (props.padding ? props.padding : "0")};
-
-  /* & > a > img { 
-  width: 100%;
-} */
   & > a {
     justify-content: space-between;
-
     position: relative;
     text-decoration: none;
     width: 70vw;
@@ -93,10 +86,7 @@ const ActiveCourseCard = ({
   courseCat,
   courseTime,
   cardHeader,
-  // cardParagraph,
   courseTeacher,
-  // bookmark,
-  // bookmarkAlt,
   padding,
   active,
   timeLeft,
@@ -109,15 +99,11 @@ const ActiveCourseCard = ({
       <a href="course/info">
         <img src={activeCourseImg} alt={activeCourseAlt} />
         {active ? <div className="progress" /> : ""}
-
         <div className="orange semi">
           <h5>{courseCat}</h5>
           <h5>{courseTime}</h5>
         </div>
-
         <h2>{cardHeader}</h2>
-        {/* <h5>{cardParagraph}</h5> */}
-
         <div>
           {active ? (
             <h5>

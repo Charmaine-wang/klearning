@@ -7,7 +7,6 @@ const StyledImgButton = styled.div`
   width: 100%;
   height: 31.5vh;
   background-repeat: no-repeat;
-  /* position:relative; */
   display: flex;
   padding: 5%;
   flex-direction: column;
@@ -19,7 +18,6 @@ const StyledImgButton = styled.div`
   & > h1 {
     align-self: flex-start;
     color: var(--bg-color);
-    /* position: absolute; */
   }
 `;
 
@@ -28,11 +26,6 @@ const ImgButton = props => {
   return (
     <StyledImgButton {...props} className="image-container">
       <h1 className="course-header">Self-tape international</h1>
-      {/* <img
-            className="hero-image-course"
-            src={imgBtn}
-            alt=""
-          /> */}
       <NavLink to={linkTo}>
         <Button
           bgColor="var(--soft-orange)"

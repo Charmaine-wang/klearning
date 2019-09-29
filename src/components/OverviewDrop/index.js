@@ -12,14 +12,12 @@ const StyledOverviewDrop = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
   width: 100vw;
   height: 5vh;
   background-color: var(--card-color);
   border-top: 1px solid var(--light-grey);
   z-index: 2;
   margin: 15% 0 0 0;
-
   & > div {
     display: flex;
     align-items: center;
@@ -53,7 +51,6 @@ const OverviewDrop = ({ changeMethod, location, className, showIcon }) => {
         onClick={changeMethod}
         style={{ display: showIcon ? "block" : "none" }}
       />
-      {/* <More onClick={changeMethod} /> */}
     </StyledOverviewDrop>
   );
 };

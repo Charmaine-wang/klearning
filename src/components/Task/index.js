@@ -22,7 +22,6 @@ const StyledTask = styled.div`
     width: 100%;
     opacity: 0.2;
     border-top: 1px solid var(--dark-grey);
-    /* transform: rotate(90deg); */
   }
 `;
 

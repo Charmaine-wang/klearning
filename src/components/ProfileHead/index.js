@@ -4,8 +4,6 @@ import Button from "../Button";
 
 const StyledProfileHead = styled.div`
   width: 100%;
-  /* height: 50wh; */
-  /* margin: 3vw auto; */
   background-color: var(--card-color);
   border-radius: 10px;
   box-shadow: var(--shadow);

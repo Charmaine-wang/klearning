@@ -11,7 +11,6 @@ import TextCard from "../TextCard";
 import Button from "../Button";
 
 const StyledMediatwo = styled.div`
-  /* margin-top: 65px; */
   width: 100%;
   height: 100%;
   overflow-x: none;
@@ -26,9 +25,7 @@ const StyledMediatwo = styled.div`
 `;
 
 const Mediatwo = (props, { previousPart }) => {
-  // const [isChanged, setChanged] = useState(true);
   const [selectedAlt, setSelectedAlt] = useState("");
-  // const [selectedAlt, setSelectedAlt] = useState(false);
   useEffect(() => {
     if (props.sound) {
       setSelectedAlt("sound");
@@ -45,7 +42,6 @@ const Mediatwo = (props, { previousPart }) => {
 
   return (
     <StyledMediatwo>
-      {/* <Setup changeMethod={() => setChanged(!isChanged)} /> */}
       <AlternativeDrop
         hideDrop={props.isChanged}
         showVideo={() => {

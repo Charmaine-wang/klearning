@@ -19,7 +19,6 @@ const StyledCourseLesson = styled.div`
     color: var(--black-font);
     display: flex;
     align-items: center;
-    // justify-content:space-between;
   }
   .lesson-header > .time {
     margin-left: auto;

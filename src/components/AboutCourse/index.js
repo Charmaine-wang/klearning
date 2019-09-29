@@ -2,11 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
 import CourseChoicesCard from "../CourseChoicesCard";
-// import MiscInfoCard from "../MiscInfoCard";
 import Button from "../Button";
 import CourseListItem from "../CourseListItem";
-
-// import TempCourseCard from "../TempCourseCard";
 
 const StyledAboutCourse = styled.div`
   .information-header {
@@ -103,22 +100,6 @@ const AboutCourse = () => {
             courseTeacher="Rene Baker"
           />
         </div>
-
-        {/* <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        />
-        <TempCourseCard
-          courseImg="images/rectangle2.png"
-          courseLength="4h"
-          courseTitle="Kom igång med ditt filmskapande"
-        /> */}
       </div>
     </StyledAboutCourse>
   );

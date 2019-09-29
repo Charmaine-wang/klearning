@@ -10,7 +10,7 @@ const StyledGridLayout = styled.div`
   display: ${props => (props.hidden ? "none" : "grid")};
   grid-template-columns: ${props => props.colLayout};
   grid-template-rows: ${props => props.rowLayout};
-  grid-gap: ${props => (props.gridGap ? props.gridGap : "20px 0")};
+  grid-gap: ${props => (props.gridGap ? props.gridGap : "5px 0")};
   padding: ${props => (props.padding ? props.padding : "0")};
   background-color: ${props => (props.bgColor ? props.bgColor : "#F5F5F5")};
   border-radius: ${props => props.gridRadius};
@@ -22,7 +22,6 @@ const StyledGridLayout = styled.div`
     flex-direction: ${props => props.direction};
     padding: ${props => props.paddingDesk};
     grid-gap: ${props => props.gapDesk};
-
     grid-template-columns: ${props => props.colLayoutDesk};
     grid-template-rows: ${props => props.rowLayoutDesk};
   }

@@ -1,5 +1,4 @@
 import React from "react";
-// import Computer from '../Icons/Computer'
 import styled from "styled-components";
 
 const StyledELearning = styled.div`
@@ -11,7 +10,6 @@ const StyledELearning = styled.div`
   justify-content: space-around;
   flex-direction: column;
   text-align: center;
-
   & > h1 {
     font-size: 16px;
     font-weight: 600;
@@ -19,7 +17,6 @@ const StyledELearning = styled.div`
   & > div > p {
     padding: 0 10%;
     line-height: 165%;
-    /* padding: 1% 10%; */
   }
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {

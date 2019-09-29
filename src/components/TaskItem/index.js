@@ -1,7 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
 import styled from "styled-components";
-// import PlayVideo from "../Icons/PlayVideo";
 
 const StyledTaskItem = styled.div`
   display: flex;
@@ -9,7 +8,6 @@ const StyledTaskItem = styled.div`
   height: 7vh;
   align-items: center;
   pointer-events: auto;
-  /* color: var(--light-grey); */
   justify-content: space-between;
   border-top: 1px solid #6d6d6d;
   & > div {
@@ -44,7 +42,6 @@ const StyledTaskItem = styled.div`
 const TaskItem = props => {
   return (
     <StyledTaskItem {...props}>
-      {/* <PlayVideo /> */}
       <img src={props.icon} alt="icon" />
       <div>
         <h3>{props.taskNr}</h3>
