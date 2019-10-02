@@ -1,3 +1,14 @@
+# Kulturakademin
+This is our prototype for Kulturakademins E-Learning platform.
+
+## Install
+Download this repo, run npm install and then npm start and you should be good to go!
+
+
+
+
+# React info
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
