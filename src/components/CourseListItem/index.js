@@ -25,12 +25,11 @@ const StyledCourseListItem = styled.div`
     text-decoration: none;
   }
 
-  /* margin: 15%; */
   & > a > div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 4%;
+    padding: 10px;
     width: 100%;
     height: 100%;
   }
@@ -38,12 +37,6 @@ const StyledCourseListItem = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 0;
-    > svg {
-      /* height: 50%;
-      width: 12%;
-      align-self: center;
-      background-color: red; */
-    }
     > h5 {
       align-self: center;
       color: #6d6d6d;
@@ -62,7 +55,6 @@ const StyledCourseListItem = styled.div`
 
   & > a > div > h2 {
     color: #333333;
-
     font-weight: 600;
     font-size: 16px;
     line-height: 135%;
@@ -70,7 +62,6 @@ const StyledCourseListItem = styled.div`
 
   & > a > div > p {
     color: #c97c36;
-
     font-size: 12px;
     line-height: 135%;
   }
@@ -122,7 +113,6 @@ const CourseListItem = ({
                 <h5>{courseTeacher}</h5>
               )}
             </>
-            {/* BOOLEAN IF PROPS.BOOKMARK or NONE */}
             <aside />
             <Bookmark />
           </div>

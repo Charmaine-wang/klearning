@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import SearchField from "../../components/SearchField";
 import FixedContainer from "../../components/FixedContainer";
 import GridLayout from "../../components/GridLayout";
 import CourseListItem from "../../components/CourseListItem";
@@ -29,7 +28,6 @@ const StyledHome = styled.div`
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     margin: 0;
-    /* align-items: center; */
     .btnDiv {
       justify-content: flex-start;
       & > aside {
@@ -40,8 +38,6 @@ const StyledHome = styled.div`
 `;
 
 const Home = () => {
-  // const [isClicked, setClicked] = useState(false);
-
   return (
     <StyledHome expandHeight>
       <ImgText
@@ -53,7 +49,6 @@ const Home = () => {
       <GridLayout
         padding="0 0 0 3vw"
         displayDesk="grid"
-        // direction="column"
         paddingDesk="0 14.1%"
         gapDesk="30px 0"
       >
@@ -77,7 +72,7 @@ const Home = () => {
         />
         <h1>Aktiva bibliotek</h1>
 
-        <FixedContainer heightContainer="40vh">
+        <FixedContainer heightContainer="100%">
           <ContainerSlider paddingScroll="0 19% 0 0">
             <ActiveCourseCard
               activeCourseImg="/images/Photos/Self-tape-cover.jpg"
@@ -86,8 +81,6 @@ const Home = () => {
               cardHeader="Self-tape International"
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Tommy Chaanhing"
-              // bookmark="images/bookmark.png"
-              // setClicked={() => setClicked(!isClicked)}
             />
 
             <ActiveCourseCard
@@ -131,7 +124,7 @@ const Home = () => {
         </div>
 
         <FixedContainer
-          heightContainer="44vh"
+          heightContainer="100%"
           margin="0 0 0 -4%"
           padding="0 0 0 4%"
           paddingFixed="0"
@@ -221,7 +214,6 @@ const Home = () => {
             </div>
           </ContainerSlider>
         </FixedContainer>
-        {/* FOR MOBILE */}
         <h1>Varför e-learning?</h1>
         <GridLayout
           gridRadius="10px"
@@ -252,10 +244,6 @@ const Home = () => {
             text="Jobba med andra kursdeltagare och lär dela kunskap tillsammans."
           />
         </GridLayout>
-        {/* FOR DESKTOP */}
-        {/* <GridLayout paddingDesk="0 22% 0 0">
-          <ELearningDesktop />
-        </GridLayout> */}
       </GridLayout>
       <ImgText
         imgMargin="10% 0 0 0"

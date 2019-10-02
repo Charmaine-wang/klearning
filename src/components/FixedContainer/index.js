@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import ContainerSlider from '../ContainerSlider';
 
 const StyledFixedContainer = styled.div`
   display: flex;
@@ -11,17 +10,13 @@ const StyledFixedContainer = styled.div`
   scroll-behavior: smooth;
   margin: ${props => (props.margin ? props.margin : "0")};
   padding: ${props => (props.padding ? props.padding : "0")};
-    ::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     display: none;
   }
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
-    /* justify-content: ${props => props.justifyDesk}; */
-padding: ${props => props.paddingFixed}
-    /* align-items: center; */
+    padding: ${props => props.paddingFixed};
   }
-
-
 `;
 const FixedContainer = props => {
   return <StyledFixedContainer {...props} />;

@@ -3,16 +3,11 @@ import styled from "styled-components";
 import Button from "../Button";
 
 const StyledAllCourses = styled.div`
-  /* width: 100%; */
   padding: 0;
   display: flex;
   height: 100%;
   align-items: center;
   border-bottom: 1px solid var(--light-grey);
-
-  @media screen and (max-width: 1500px) and (min-width: 600px) {
-    /* align-items: center; */
-  }
 `;
 
 const AllCourses = () => {

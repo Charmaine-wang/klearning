@@ -6,9 +6,7 @@ const StyledCourseChoicesCard = styled.div`
   margin: 16px 0px;
   padding: 16px;
   border-radius: 10px;
-
   box-shadow: var(--shadow);
-
   .choices {
     display: flex;
     flex-direction: row;
