@@ -1,3 +1,15 @@
+# Kulturakademin
+This is our prototype for Kulturakademin E-Learning platform.
+
+## Install
+Download this repo, run npm install and then npm start and you should be good to go!
+
+## View prototype
+View our prototype at: https://klearning.netlify.com/
+
+
+# React info
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
