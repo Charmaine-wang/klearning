@@ -11,6 +11,7 @@ const StyledTask = styled.div`
   background-color: var(--card-color);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow);
 
   & > h1 {
     margin: 0 0 6% 0;

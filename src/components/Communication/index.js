@@ -12,6 +12,7 @@ const StyledCommunication = styled.div`
   background: var(--card-color);
   justify-content: space-around;
   align-items: center;
+  box-shadow: var(--shadow);
 
   & > h3 {
     font-weight: 600;
@@ -30,7 +31,7 @@ const Communication = props => {
   return (
     <StyledCommunication {...props}>
       <h2>Kurskommunikation</h2>
-      <img src="/images/Illustrations/communication.svg" alt="" />
+      <img src="/images/Illustrations/communication.svg" alt="illustration" />
       <h3>Skype gruppen</h3>
       <p>
         Vi har skapat en Skype-grupp för dig och dina kursvänner, så att ni kan

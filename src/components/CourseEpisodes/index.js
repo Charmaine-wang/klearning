@@ -59,6 +59,7 @@ const CourseEpisodes = () => {
             courseLength="4h"
             courseTitle="Röstteknik, ljudboksinläsning..."
             courseTeacher="Jan Cruseman"
+            courseAlt="course cover"
           />
         </div>
         <div className="course-div">
@@ -67,6 +68,7 @@ const CourseEpisodes = () => {
             courseLength="5h"
             courseTitle="Kurs i filmskådespeleri"
             courseTeacher="Lisa Ohlin"
+            courseAlt="course cover"
           />
         </div>
         <div className="course-div">
@@ -75,6 +77,7 @@ const CourseEpisodes = () => {
             courseLength="4h"
             courseTitle="Shifting focus"
             courseTeacher="Rene Baker"
+            courseAlt="course cover"
           />
         </div>
       </div>

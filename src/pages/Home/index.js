@@ -41,9 +41,9 @@ const Home = () => {
   return (
     <StyledHome expandHeight>
       <ImgText
-        imgTextPic="images/Photos/frontcover.jpg"
+        imgTextPic="/images/Photos/frontcover.jpg"
         imgTextHeader="Vi låter kulturen utvecklas."
-        imgTextParagraph="Vi kynter ihop branshen och förser profesionella kulturarbetare med spetskompetens."
+        imgTextParagraph="Vi knyter ihop branschen och förser professionella kulturarbetare med spetskompetens."
       />
 
       <GridLayout
@@ -91,6 +91,7 @@ const Home = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
+              activeCourseAlt="course cover"
             />
             <ActiveCourseCard
               activeCourseImg="/images/Photos/camera.jpg"
@@ -100,6 +101,7 @@ const Home = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="images/bookmark.png"
+              activeCourseAlt="course cover"
             />
             <ActiveCourseCard
               activeCourseImg="/images/Photos/light.jpg"
@@ -109,11 +111,12 @@ const Home = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
+              activeCourseAlt="course cover"
             />
           </ContainerSlider>
         </FixedContainer>
 
-        <h1>Kursbiblotek</h1>
+        <h1>Kursbibliotek</h1>
         <div className="btnDiv">
           <Button btnName="Kurser" buttonHeight="50%" buttonWidth="145px" />
           <aside />
@@ -138,6 +141,7 @@ const Home = () => {
                 courseTitle="Röstteknik, ljudboksinläsning..."
                 courseTimeLeft="3min"
                 courseTeacher="Jan Cruseman"
+                courseAlt="course cover"
               />
               <CourseListItem
                 courseImg="/images/Photos/camera.jpg"
@@ -145,6 +149,7 @@ const Home = () => {
                 courseTitle="Kurs i filmskådespeleri"
                 courseTimeLeft="3min"
                 courseTeacher="Lisa Ohlin"
+                courseAlt="course cover"
               />
               <CourseListItem
                 courseImg="/images/Photos/dance.jpg"
@@ -152,6 +157,7 @@ const Home = () => {
                 courseTitle="Shifting focus"
                 courseTimeLeft="3min"
                 courseTeacher="Rene Baker"
+                courseAlt="course cover"
               />
             </div>
             <div>
@@ -161,6 +167,7 @@ const Home = () => {
                 courseTitle="Storytelling och klipp tekniker..."
                 courseTimeLeft="3min"
                 courseTeacher="Connie Robertson"
+                courseAlt="course cover"
               />
               <CourseListItem
                 courseImg="/images/Photos/light.jpg"
@@ -168,13 +175,15 @@ const Home = () => {
                 courseTitle="Koreografi för operan..."
                 courseTimeLeft="3min"
                 courseTeacher="Robert Lane"
+                courseAlt="course cover"
               />
               <CourseListItem
                 courseImg="/images/Photos/Self-tape-cover.jpg"
                 courseLength="4h"
                 courseTitle="Kom igång med ditt filmskapande..."
                 courseTimeLeft="3min"
-                courseTeacher="Connie Robertso"
+                courseTeacher="Connie Robertson"
+                courseAlt="course cover"
               />
             </div>
             <div>
@@ -184,6 +193,7 @@ const Home = () => {
                 courseTitle="Kom igång med ditt filmskapande..."
                 courseTimeLeft="3min"
                 courseTeacher="Connie Robertson"
+                courseAlt="course cover"
               />
               <CourseListItem
                 courseImg="/images/Photos/window.jpg"
@@ -191,6 +201,7 @@ const Home = () => {
                 courseTitle="Kom igång med ditt filmskapande..."
                 courseTimeLeft="3min"
                 courseTeacher="Connie Robertson"
+                courseAlt="course cover"
               />
               <CourseListItem
                 courseImg="/images/Photos/pencil.jpg"
@@ -198,6 +209,7 @@ const Home = () => {
                 courseTitle="Kom igång med ditt filmskapande..."
                 courseTimeLeft="3min"
                 courseTeacher="Connie Robertson"
+                courseAlt="course cover"
               />
             </div>
           </ContainerSlider>

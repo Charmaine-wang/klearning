@@ -109,6 +109,7 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
+              activeCourseAlt="course cover"
             />
             <ActiveCourseCard
               activeCourseImg="/images/Photos/camera.jpg"
@@ -118,6 +119,7 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
+              activeCourseAlt="course cover"
             />
             <ActiveCourseCard
               activeCourseImg="/images/Photos/light.jpg"
@@ -127,6 +129,8 @@ const Profile = () => {
               cardParagraph="Consequat officia pariatur consectetur culpa ad laborum magna est irure nulla. Ipsum enim minim amet minim."
               courseTeacher="Connie Robertson"
               bookmark="/images/bookmark.png"
+              activeCourseAlt="course cover"
+              // padding="0 3vw 0 0"
             />
           </ContainerSlider>
         </FixedContainer>

@@ -37,7 +37,7 @@ const CourseLesson = ({ lessonNumber, lessonName, lessonLength, image }) => {
     <StyledCourseLesson>
       <div className="lesson">
         <div className="lesson-header">
-          <img src={image} alt="" />
+          <img src={image} alt="icon" />
           <p className="title">
             {lessonNumber}. {lessonName}
           </p>

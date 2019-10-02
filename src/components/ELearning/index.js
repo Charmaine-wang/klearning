@@ -39,7 +39,7 @@ const StyledELearning = styled.div`
 const ELearning = ({ iconElearning, title, text }) => {
   return (
     <StyledELearning>
-      <img src={iconElearning} alt="" />
+      <img src={iconElearning} alt="icon" />
       <div>
         <h1>{title}</h1>
         <p>{text}</p>

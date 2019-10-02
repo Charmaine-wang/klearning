@@ -6,7 +6,7 @@ const StyledCertificate = styled.div`
   flex-direction: row;
   background-color: var(--card-color);
   width: 100%;
-  height: 13vh;
+  height: 100px;
   border-radius: 10px;
   margin: 10px auto;
   box-shadow: var(--shadow);

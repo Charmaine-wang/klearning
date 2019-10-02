@@ -29,6 +29,7 @@ const MyCourses = () => {
               timeLeft="5 min"
               active="true"
               singleCard="72wv"
+              activeCourseAlt="course cover"
             />
           </ContainerSlider>
         </FixedContainer>

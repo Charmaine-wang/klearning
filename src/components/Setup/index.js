@@ -35,7 +35,12 @@ const Setup = (props, { className }) => {
         <ChevronLeft />
         <a href="/course/overview">Översikt</a>
       </div>
-      <img src="/images/Ikoner/setup.svg" alt="" onClick={props.changeMethod} />
+      <img
+        src="/images/Ikoner/setup.svg"
+        alt="settings"
+        onClick={props.changeMethod}
+      />
+      {/* <More onClick={changeMethod} /> */}
     </StyledSetup>
   );
 };
