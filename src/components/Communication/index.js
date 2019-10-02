@@ -13,6 +13,7 @@ const StyledCommunication = styled.div`
   background: var(--card-color);
   justify-content: space-around;
   align-items: center;
+  box-shadow: var(--shadow);
 
   & > h3 {
     font-weight: 600;
