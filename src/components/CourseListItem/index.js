@@ -8,7 +8,7 @@ const StyledCourseListItem = styled.div`
   background-color: var(--card-color);
   align-self: flex-start;
   width: 90vw;
-  height: ${props => (props.expandHeight ? props.expandHeight : "13vh")};
+  height: ${props => (props.expandHeight ? props.expandHeight : "100px")};
   border-radius: 10px;
   box-shadow: var(--shadow);
 
@@ -85,7 +85,7 @@ const StyledCourseListItem = styled.div`
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
     width: 330px;
-    height: 90px;
+    height: 100px;
 
     & > a > div > div > aside {
       width: 40px;
