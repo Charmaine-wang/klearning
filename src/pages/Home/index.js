@@ -45,9 +45,9 @@ const Home = () => {
   return (
     <StyledHome expandHeight>
       <ImgText
-        imgTextPic="images/Photos/frontcover.jpg"
+        imgTextPic="/images/Photos/frontcover.jpg"
         imgTextHeader="Vi låter kulturen utvecklas."
-        imgTextParagraph="Vi kynter ihop branshen och förser profesionella kulturarbetare med spetskompetens."
+        imgTextParagraph="Vi knyter ihop branshen och förser profesionella kulturarbetare med spetskompetens."
       />
 
       <GridLayout
@@ -75,7 +75,7 @@ const Home = () => {
           courseTitle="Kom igång med ditt filmskapande"
           courseTimeLeft="2min"
         />
-        <h1>Aktiva biblotek</h1>
+        <h1>Aktiva bibliotek</h1>
 
         <FixedContainer heightContainer="40vh">
           <ContainerSlider paddingScroll="0 19% 0 0">
@@ -123,7 +123,7 @@ const Home = () => {
           </ContainerSlider>
         </FixedContainer>
 
-        <h1>Kursbiblotek</h1>
+        <h1>Kursbibliotek</h1>
         <div className="btnDiv">
           <Button btnName="Kurser" buttonHeight="50%" buttonWidth="145px" />
           <aside />
