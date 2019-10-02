@@ -47,7 +47,7 @@ const Home = () => {
       <ImgText
         imgTextPic="/images/Photos/frontcover.jpg"
         imgTextHeader="Vi låter kulturen utvecklas."
-        imgTextParagraph="Vi knyter ihop branshen och förser profesionella kulturarbetare med spetskompetens."
+        imgTextParagraph="Vi knyter ihop branschen och förser professionella kulturarbetare med spetskompetens."
       />
 
       <GridLayout
