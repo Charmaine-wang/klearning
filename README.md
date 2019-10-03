@@ -7,6 +7,8 @@ Download this repo, run npm install and then npm start and you should be good to
 ## View prototype
 View our prototype at: https://klearning.netlify.com/
 
+## Feedback from group 5
+[Feedback.md](Feedback.md)
 
 # React info
 
