@@ -4,10 +4,8 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   width: ${props => (props.buttonWidth ? props.buttonWidth : "auto")};
   height: ${props => (props.buttonHeight ? props.buttonHeight : "auto")};
-
   background-color: ${props =>
     props.bgColor ? props.bgColor : "var(--card-color)"};
-
   border: ${props =>
     props.border ? props.border : "1px solid var(--light-grey)"};
   color: ${props => (props.textColor ? props.textColor : "var(--font-color)")};
@@ -18,7 +16,6 @@ const StyledButton = styled.button`
   font-weight: ${props => (props.fontWeight ? props.fontWeight : "400")};
   border-radius: 8px;
   margin: ${props => (props.margin ? props.margin : "0")};
-
   &:hover {
     color: ${props =>
       props.hoverColor ? props.hoverColor : "var(--soft-orange)"};

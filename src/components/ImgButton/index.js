@@ -7,7 +7,6 @@ const StyledImgButton = styled.div`
   width: 100%;
   height: 31.5vh;
   background-repeat: no-repeat;
-  /* position:relative; */
   display: flex;
   padding: 5%;
   flex-direction: column;
@@ -19,7 +18,6 @@ const StyledImgButton = styled.div`
   & > h1 {
     align-self: flex-start;
     color: var(--bg-color);
-    /* position: absolute; */
   }
 `;
 

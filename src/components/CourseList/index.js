@@ -8,17 +8,9 @@ const StyledCourseList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 10% 0; */
-  /* & >  .progress-bar{
-    width: 100%;
-    height: 2vh;
-    background-color: red;
-  } */
 `;
 
 const CourseList = props => {
-  //   const [isClicked, setClicked] = useState(false)
-
   return (
     <StyledCourseList {...props}>
       <CourseListItem
@@ -28,7 +20,6 @@ const CourseList = props => {
         courseTimeLeft="3min"
         courseAlt="course cover"
       />
-      {/* <div className="progress-bar" /> */}
     </StyledCourseList>
   );
 };

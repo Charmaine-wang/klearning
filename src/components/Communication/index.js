@@ -7,7 +7,6 @@ const StyledCommunication = styled.div`
   width: 100%;
   height: 70vh;
   padding: 5%;
-  /* position: absolute; */
   flex-direction: column;
   border-radius: 10px;
   background: var(--card-color);
@@ -42,9 +41,8 @@ const Communication = props => {
       <Button
         btnName="Skype grupp"
         buttonWidth="157px"
-        bgColor="var(--soft-orange)"
-        textColor="var(--card-color)"
-        activeColor="var(--card-color)"
+        border="1px solid var(--soft-orange)"
+        textColor="var(--soft-orange)"
       />
     </StyledCommunication>
   );

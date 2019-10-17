@@ -18,7 +18,6 @@ const StyledAlternativeDrop = styled.div`
   transition: top 0.5s ease-in-out;
   z-index: 1;
   left: 2.5%;
-
   flex-direction: column;
   border-radius: 10px;
   background: var(--card-color);
@@ -42,8 +41,6 @@ const StyledAlternativeDrop = styled.div`
   }
 `;
 const AlternativeDrop = props => {
-  // const [selectedAlt, setSelectedAlt] = useState('video');
-
   return (
     <StyledAlternativeDrop {...props}>
       <h2>Välj metod:</h2>

@@ -135,7 +135,6 @@ const Profile = () => {
           </ContainerSlider>
         </FixedContainer>
       </div>
-      {/* </Container> */}
     </StyledProfile>
   );
 };

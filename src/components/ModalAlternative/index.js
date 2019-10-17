@@ -45,7 +45,6 @@ const StyledModalAlternative = styled.div`
   }
 `;
 const ModalAlternative = props => {
-  // const [selectedAlt, setSelectedAlt] = useState("");
   return (
     <StyledModalAlternative {...props}>
       <h2>Hur vill du ta del av kursen?</h2>

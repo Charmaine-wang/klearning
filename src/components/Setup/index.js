@@ -11,14 +11,12 @@ const StyledSetup = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /* margin: 0 -16px; */
   padding: 0 10px;
   width: 100vw;
   height: 5vh;
   background-color: var(--card-color);
   border-top: 1px solid #bdbdbd;
   z-index: 2;
-
   & > div {
     display: flex;
     align-items: center;

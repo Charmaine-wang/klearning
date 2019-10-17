@@ -131,9 +131,6 @@ const CourseFlow = props => {
       ) : (
         ""
       )}
-
-      {/* {lessonPart === 2 ? <Media2 /> : ""} */}
-
       <Container>
         {lessonPart === 3 ? (
           <Intro

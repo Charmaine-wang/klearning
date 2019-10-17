@@ -9,7 +9,6 @@ const StyledImgText = styled.div`
   background-image: url(${props =>
     props.imgTextPic ? props.imgTextPic : "images/home.png"});
   background-size: cover;
-  /* background-image: url("images/home.png"); */
   & > .overlayer {
     height: 100%;
     width: 100%;
@@ -20,7 +19,6 @@ const StyledImgText = styled.div`
     );
     position: absolute;
   }
-
   & > h1,
   p {
     position: absolute;
@@ -45,9 +43,6 @@ const StyledImgText = styled.div`
     width: 100vw;
     height: 60vh;
     top: 0;
-
-    /* align-items: center; */
-
     & > h1 {
       font-size: 40px;
     }
@@ -73,7 +68,6 @@ const ImgText = ({
       imgMargin={imgMargin}
     >
       <div className="overlayer" />
-
       <h1>{imgTextHeader}</h1>
       <p>{imgTextParagraph}</p>
     </StyledImgText>

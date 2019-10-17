@@ -3,11 +3,9 @@ import styled from "styled-components";
 import CourseInformationCard from "../CourseInformationCard";
 import GridLayout from "../GridLayout";
 import VideoPlayer from "../VideoPlayer";
-// import getData from '../../data/tracks.json'
 
 const StyledVideoCard = styled.div`
   display: ${props => (props.hidePlayer ? "none" : "block")};
-  /* height: 40vh; */
 `;
 
 const VideoCard = ({ hidePlayer, header, intro }) => {
