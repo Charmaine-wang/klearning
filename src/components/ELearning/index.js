@@ -23,6 +23,7 @@ const StyledELearning = styled.div`
   }
 
   @media screen and (max-width: 1500px) and (min-width: 600px) {
+    width: 100%;
     & > div {
       width: 100%;
       & > h1 {

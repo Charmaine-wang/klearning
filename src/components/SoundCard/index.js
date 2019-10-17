@@ -31,7 +31,7 @@ const SoundCard = ({ hideSound, header, intro }) => {
         resolveUrl={soundOne.trackUrl}
         duration={soundOne ? soundOne.duration / 1000 : 0}
       />
-      <GridLayout padding="0 3vw">
+      <GridLayout padding="0 3vw" marginDesk="auto">
         <CourseInformationCard
           heightAside={{ height: "20px" }}
           header={header || "1. Introduktion"}

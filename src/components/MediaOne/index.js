@@ -16,6 +16,10 @@ const StyledMediaPage = styled.div`
   overflow-x: none;
   overflow-y: hidden;
   margin: 0;
+  @media only screen and (min-width: 700px) {
+    width: 700px;
+    margin: auto;
+  }
   /* padding: 0 -16px; */
   & > div:last-child {
     display: flex;
