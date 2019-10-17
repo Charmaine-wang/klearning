@@ -47,7 +47,7 @@ const StyledImgText = styled.div`
       font-size: 40px;
     }
     & > p {
-      font-size: 40px;
+      font-size: 30px;
       line-height: 100%;
       width: 70%;
     }

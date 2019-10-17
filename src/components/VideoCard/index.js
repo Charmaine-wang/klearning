@@ -13,7 +13,7 @@ const VideoCard = ({ hidePlayer, header, intro }) => {
     <StyledVideoCard hidePlayer={hidePlayer}>
       {/* LÄGGA IN VIDEO */}
       <VideoPlayer videoId="l2vcqaClw-A" />
-      <GridLayout padding="1% 3vw">
+      <GridLayout padding="1% 3vw" marginDesk="auto">
         <CourseInformationCard
           heightAside={{ height: "20px" }}
           header={header || "1. Introduktion"}

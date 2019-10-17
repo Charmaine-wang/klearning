@@ -24,6 +24,7 @@ const StyledGridLayout = styled.div`
     grid-gap: ${props => props.gapDesk};
     grid-template-columns: ${props => props.colLayoutDesk};
     grid-template-rows: ${props => props.rowLayoutDesk};
+    margin: ${props => props.marginDesk};
   }
 `;
 

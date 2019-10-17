@@ -16,6 +16,10 @@ const StyledMediatwo = styled.div`
   overflow-x: none;
   margin: 0;
   padding: 0 -16px;
+  @media only screen and (min-width: 700px) {
+    width: 700px;
+    margin: auto;
+  }
   & > div:last-child {
     display: flex;
     width: 100%;

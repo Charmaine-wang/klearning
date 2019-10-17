@@ -35,6 +35,10 @@ const StyledCourse = styled.div`
 
   .image-container {
     position: relative;
+    @media only screen and (min-width: 700px) {
+      width: 700px;
+      margin: auto;
+    }
   }
   .image-container > h1 {
     font-weight: bold;
@@ -43,7 +47,10 @@ const StyledCourse = styled.div`
   .image-apply-button {
     position: absolute;
     top: 80%;
-    left: 30%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h1 {
